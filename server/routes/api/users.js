@@ -49,6 +49,22 @@ router.post('/register', (req, res) => {
             .catch(err => console.log(err));
         });
       });
+      //TODO uncomment below lines to implement mail verification
+
+      // const verifyToken = new VerifyToken({
+      //     _userId: user._id,
+      //     token:crypto.randomBytes(16).toString('hex')
+      //   });
+      // verifyToken.save().then(token => res.json(token))
+      //   .catch(err => console.log(err));
+      // // Send the email
+      // const transporter = nodemailer.createTransport({ service: 'Sendgrid', auth: { user: process.env.SENDGRID_USERNAME, pass: process.env.SENDGRID_PASSWORD } });
+      // const mailOptions = { from: 'no-reply@yourwebapplication.com', to: user.email, subject: 'Account Verification' +
+      //     ' Token', text: 'Hello,\n\n' + 'Please verify your account by clicking the link: \nhttp:\/\/' + req.headers.host + '\/confirmation\/' + token.token + '.\n' };
+      // transporter.sendMail(mailOptions, err => {
+      //   if (err) { return res.status(500).send({ msg: err.message }); }
+      //   res.status(200).send('A verification email has been sent to ' + user.email + '.');
+      // });
     }
   });
 });
@@ -74,6 +90,11 @@ router.post('/login', (req, res) => {
 
     bcrypt.compare(password,user.password).then(isMatch => {
       if(isMatch) {
+        //TODO unComment below lines to implement mail verification
+
+        // if(!user.isVerified) {
+        //   return res.status(401).json({type: not-Verified, msg: 'Your account is not verified'});
+        // }
         const payload = {id: user.id, avatar: user.avatar};
         //TODO change secret key and signIn options
         jwt.sign(payload,keys.secretOrKey,{expiresIn: '12h'},

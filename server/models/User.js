@@ -24,6 +24,10 @@ const UserSchema = new Schema({
   departmentName: {
     type: String,
     required: true
+  },
+  isVerified: {
+    type: Boolean,
+    default: false
   }
 });
 

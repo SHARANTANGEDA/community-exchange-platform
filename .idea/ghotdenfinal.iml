@@ -17,5 +17,6 @@
     <orderEntry type="library" name="@types/axios-case-converter" level="application" />
     <orderEntry type="library" name="@types/passport" level="application" />
     <orderEntry type="library" name="@types/bcryptjs" level="application" />
+    <orderEntry type="library" name="@types/nodemailer" level="application" />
   </component>
 </module>
