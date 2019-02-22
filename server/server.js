@@ -7,6 +7,7 @@ const users = require('./routes/api/users');
 const questions = require('./routes/api/questions');
 const answers = require('./routes/api/answers');
 const comments = require('./routes/api/comments')
+const publicProfile = require('./routes/api/publicProfile');
 
 //@MongoDB Atlas Connection
 const db = require('./config/keys').mongoURI;
@@ -26,6 +27,7 @@ app.use('/api/users',users);
 app.use('/api/questions',questions);
 app.use('/api/answers',answers);
 app.use('/api/comments',comments)
+app.use('/api/publicProfile',publicProfile);
 
 
 const port = process.env.PORT || 5000;

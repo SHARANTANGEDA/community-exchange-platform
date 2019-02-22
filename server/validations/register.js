@@ -45,7 +45,9 @@ module.exports = (data) => {
   if (!Validator.equals(data.password, data.repassword)) {
     errors.repassword = 'Passwords must match';
   }
-
+  if(Validator.isEmpty(data.departmentName)) {
+    errors.departmentName = 'Please select your department'
+  }
   return {
     errors,
     isValid: isEmpty(errors)

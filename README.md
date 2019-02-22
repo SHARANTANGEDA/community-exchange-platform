@@ -7,7 +7,8 @@
 In server/config folder please use your own keys from Mongo Atlas Cloud and store it as **keys.js**.
 
 `module.exports = {
-   mongoURI: 'YOUR_KEY'
+   mongoURI: 'YOUR_KEY',
+   secretOrKey: 'Your secret key',
  };
 `
 

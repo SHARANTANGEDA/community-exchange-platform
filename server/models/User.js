@@ -25,9 +25,16 @@ const UserSchema = new Schema({
     type: String,
     required: true
   },
-  isVerified: {
-    type: Boolean,
-    default: false
+  githubUsername: {
+    type: String
+  },
+ // isVerified: {
+ //  type: Boolean,
+   // default: false
+ // },
+  time: {
+    type: Date,
+    default: Date.now
   }
 });
 
