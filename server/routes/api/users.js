@@ -8,7 +8,9 @@ const passport = require('passport')
 
 const validateRegisterInput = require('../../validations/register')
 const validateLoginInput = require('../../validations/login')
+const validatePassword = require('../../validations/password')
 const User = require('../../models/User')
+const Question = require('../../models/Question')
 
 //@desc Register
 router.post('/register', (req, res) => {
@@ -44,16 +46,16 @@ router.post('/register', (req, res) => {
           newUser
             .save()
             .then(user => {
-              const payload = {id: user.id, avatar: user.avatar};
+              const payload = { id: user.id, avatar: user.avatar }
               //TODO change secret key and signIn options
-              jwt.sign(payload,keys.secretOrKey,{expiresIn: '12h'},
-                (err,token) => {
+              jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
+                (err, token) => {
                   res.json({
                     user,
                     success: true,
-                    token: 'Bearer '+token
-                  });
-                });
+                    token: 'Bearer ' + token
+                  })
+                })
             })
             .catch(err => console.log(err))
         })
@@ -122,13 +124,111 @@ router.post('/login', (req, res) => {
 })
 
 //Logged In Session currentUser
-router.get('/current', passport.authenticate('jwt', { session: false }),
+router.get('/myAccount', passport.authenticate('jwt', { session: false }),
   (req, res) => {
-    res.json({
-      name: req.user.firstName + ' ' + req.user.lastName,
-      email: req.user.emailId,
-      department: req.user.departmentName
+    let activity = {};
+    const userId=req.user._id;
+    Question.find({ user: userId }, { 'title': 1, 'tags': 1, 'description': 1, 'time': 1, '_id': 0 })
+      .then(questions => {
+        if (!questions) {
+        } else {
+          activity.questions = questions;
+          Question.find({ 'comments.user': userId }, {
+            'title': 1,
+            'tags': 1,
+            'comments.text': 1,
+            'comments.time': 1,
+            'time': 1,
+            '_id': 0
+          }).then(comments => {
+            if (!comments) {
+            } else {
+              activity.comments = comments;
+              Question.find({ 'answer.user': userId }, {
+                'title': 1,
+                'tags': 1,
+                'time': 1,
+                '_id': 0,
+                'answer.text': 1,
+                'answer.time': 1
+              }).then(answers => {
+                if (!answers) {
+                } else {
+                  activity.answers = answers;
+                  res.json({
+                    firstName: req.user.firstName,
+                    lastName: req.user.lastName,
+                    email: req.user.emailId,
+                    departmentName: req.user.departmentName,
+                    githubUsername: req.user.githubUsername,
+                    avatar: req.user.avatar,
+                    questionsAsked: activity.questions,
+                    questionsAnswered: activity.answers,
+                    questionsCommented: activity.comments
+                  })
+                }
+              }).catch(err => {
+                return res.status(404).json({ err })
+              })
+            }
+          }).catch(err => {
+            return res.status(404).json({ err })
+          })
+        }
+      }).catch(err => {
+      return res.status(404).json({ err })
     })
+
+
+
+
+  })
+
+//Change Password
+router.post('/myAccount/change', passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+    const { errors, isValid } = validatePassword(req.body)
+    if (!isValid) {
+      res.status(404).json(errors)
+    }
+    const password = req.body.password
+    let newPassword = req.body.newPassword
+    bcrypt.compare(password, req.user.password).then(isMatch => {
+      if (isMatch) {
+        bcrypt.genSalt(10, (err, salt) => {
+          bcrypt.hash(newPassword, salt, (err, hash) => {
+            if (err) throw err
+            newPassword = hash
+            User.findByIdAndUpdate(req.user._id, { password: newPassword }, (err, res) => {
+              if (err) throw err
+            }).then(user => {
+              res.json({ success: 'password is changed successfully' })
+            }).catch(err => {
+              return res.status(404).json({ failed: 'Your password is not updated', err })
+            })
+          })
+        })
+      } else {
+        errors.password = 'Incorrect Password'
+        return res.status(400).json(errors.password)
+      }
+    })
+  })
+
+//Change github handle
+router.post('/myAccount/gitUsername', passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+    if (req.body.githubUsername !== req.user.githubUsername) {
+      User.findByIdAndUpdate(req.user._id, { githubUsername: req.body.githubUsername }, (err, res) => {
+        if (err) throw err
+      }).then(user => {
+        res.json({ githubUsername: user.githubUsername })
+      }).catch(err => {
+        return res.status(404).json({ failed: 'userName failed to Update', err })
+      })
+    } else {
+      return res.json({ failed: 'userName is stored already enter other name to change' })
+    }
   })
 
 module.exports = router
