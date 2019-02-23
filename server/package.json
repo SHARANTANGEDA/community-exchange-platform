@@ -5,13 +5,17 @@
   "main": "server.js",
   "scripts": {
     "start": "nodejs server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client-install": "cd .. && cd client && npm install",
+    "client": "cd .. && cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Sai Sharan Tangeda",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
     "crypto": "^1.0.1",
     "express": "^4.16.4",
     "gravatar": "^1.8.0",

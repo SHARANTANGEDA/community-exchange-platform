@@ -18,5 +18,10 @@
     <orderEntry type="library" name="@types/passport" level="application" />
     <orderEntry type="library" name="@types/bcryptjs" level="application" />
     <orderEntry type="library" name="@types/nodemailer" level="application" />
+    <orderEntry type="library" name="@types/react" level="application" />
+    <orderEntry type="library" name="@types/create-react-class" level="application" />
+    <orderEntry type="library" name="@types/react-app" level="application" />
+    <orderEntry type="library" name="@types/react-autocomplete" level="application" />
+    <orderEntry type="library" name="@types/react-bootstrap" level="application" />
   </component>
 </module>
