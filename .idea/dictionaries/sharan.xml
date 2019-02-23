@@ -2,6 +2,7 @@
   <dictionary name="sharan">
     <words>
       <w>bcrypt</w>
+      <w>classnames</w>
       <w>ghot</w>
       <w>ghotden</w>
       <w>gmail</w>
