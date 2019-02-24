@@ -10,7 +10,7 @@ module.exports = (data) => {
   data.emailId = !isEmpty(data.emailId) ? data.emailId : '';
   data.password = !isEmpty(data.password) ? data.password : '';
   data.repassword = !isEmpty(data.repassword) ? data.repassword : '';
-  data.departmentName = !isEmpty(data.departmentName) ? data.departmentName : '';
+  data.departmentName = !isEmpty(data.departmentName) ? data.departmentName : 'Choose Department';
   if (!Validator.isLength(data.firstName ,{min: 2, max: 30})) {
     errors.firstName = 'Name must be between 2 and 30 characters';
   }
@@ -45,7 +45,7 @@ module.exports = (data) => {
   if (!Validator.equals(data.password, data.repassword)) {
     errors.repassword = 'Passwords must match';
   }
-  if(Validator.isEmpty(data.departmentName)) {
+  if(Validator.equals(data.departmentName,'Choose Department')) {
     errors.departmentName = 'Please select your department'
   }
   return {

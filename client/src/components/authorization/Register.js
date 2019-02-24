@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import axios from 'axios'
+import { Link, withRouter } from 'react-router-dom'
+import { PropTypes } from 'prop-types';
 import classnames from 'classnames'
+import {connect} from 'react-redux';
+import {registerUser} from '../../actions/authActions'
 
 class Register extends Component {
   constructor () {
@@ -23,6 +25,18 @@ class Register extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+  componentDidMount () {
+    if(this.props.auth.isAuthenticated) {
+      this.props.history.push('/dashboard');
+    }
+  }
+
+  componentWillReceiveProps (nextProps, nextContext) {
+    if(nextProps.errors) {
+      this.setState({errors: nextProps.errors});
+    }
+  }
+
   onSubmit (e) {
     e.preventDefault()
     const newUser = {
@@ -33,9 +47,8 @@ class Register extends Component {
       repassword: this.state.repassword,
       departmentName: this.state.departmentName
     }
-    axios.post('/api/users/register', newUser)
-      .then(res => console.log(res))
-      .catch(err => this.state({ errors: err.response.data }))
+    this.props.registerUser(newUser,this.props.history);
+
   }
 
   render () {
@@ -90,26 +103,23 @@ class Register extends Component {
                   <small className="form-text text-muted mt-0">Please use BITS Email for Registration</small>
                 </div>
                 <div className="form-group">
-                  <input type="password" className={classnames("form-control form-control-lg",{'is-invalid': errors.password})}' +
-                      ' placeholder="Password"
-                         name="password" value={this.state.password} onChange={this.changeHandler}/>
+                  <input type="password" className={classnames("form-control form-control-lg",{'is-invalid': errors.password})}
+                       placeholder="Password" name="password" value={this.state.password} onChange={this.changeHandler}/>
                   {errors.password && (
                     <div className="invalid-feedback">{errors.password}</div>
                   )}
                 </div>
                 <div className="form-group">
-                  <input type="password" className={classnames("form-control form-control-lg",{'is-invalid': errors.repassword})}' +
-                    ' placeholder="Confirm Password"
-                         name="repassword" value={this.state.repassword} onChange={this.changeHandler}/>
+                  <input type="password" className={classnames("form-control form-control-lg",{'is-invalid': errors.repassword})}
+                     placeholder="Confirm Password" name="repassword" value={this.state.repassword} onChange={this.changeHandler}/>
                   {errors.repassword && (
                     <div className="invalid-feedback">{errors.repassword}</div>
                   )}
                 </div>
                 <div className="wrap-input100 input100-select form-group">
                   <div>
-                    <select className={classnames("selection-2 form-control form-control-lg",{'is-invalid': errors.departmentName})}' +
-                        ' name="departmentName"
-                            value={this.state.departmentName} onChange={this.changeHandler}>
+                    <select className={classnames("selection-2 form-control form-control-lg",{'is-invalid': errors.departmentName})}
+                         name="departmentName" value={this.state.departmentName} onChange={this.changeHandler}>
                       <option>Choose Department</option>
                       <option>Computer Science Engineering</option>
                       <option>Electrical and Electronics Engineering</option>
@@ -132,4 +142,15 @@ class Register extends Component {
   }
 }
 
-export default Register
+Register.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+}
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+  errors: state.errors
+})
+
+export default connect(mapStateToProps,{registerUser})(withRouter(Register));
