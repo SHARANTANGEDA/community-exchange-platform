@@ -6,6 +6,15 @@ const QuestionSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'users'
   },
+  firstName: {
+    type: String
+  },
+  lastName: {
+    type: String
+  },
+  avatar: {
+    type: String
+  },
   time: {
     type: Date,
     default: Date.now
@@ -29,15 +38,18 @@ const QuestionSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'users'
       },
-      text: {
-        type: String,
-        required: true
+      firstName: {
+        type: String
+      },
+      lastName: {
+        type: String
       },
       avatar: {
         type: String
       },
-      name: {
+      text: {
         type: String,
+        required: true
       },
       time: {
         type: Date,
@@ -51,8 +63,11 @@ const QuestionSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'users'
       },
-      name: {
-        type: String,
+      firstName: {
+        type: String
+      },
+      lastName: {
+        type: String
       },
       avatar: {
         type: String
@@ -73,10 +88,13 @@ const QuestionSchema = new Schema({
             type: String,
             required: true
           },
-          avatar: {
+          firstName: {
             type: String
           },
-          name: {
+          lastName: {
+            type: String
+          },
+          avatar: {
             type: String
           },
           time: {

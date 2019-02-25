@@ -4,6 +4,7 @@ import { PropTypes } from 'prop-types';
 import classnames from 'classnames'
 import {connect} from 'react-redux';
 import {registerUser} from '../../actions/authActions'
+import TextFieldGroup from '../common/TextFieldGroup';
 
 class Register extends Component {
   constructor () {
@@ -61,61 +62,36 @@ class Register extends Component {
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Sign Up</h1>
               <p className="lead text-center">Create your GhotDen account</p>
-              <form onSubmit={this.onSubmit}>
+              <form noValidate onSubmit={this.onSubmit}>
                 <div className="row">
                   <div className="col-md-6">
-                    <div className="form-group">
-                      <input type="text" className={classnames('form-control form-control-lg', { 'is-invalid': errors.firstName })}
-                                                       placeholder="First Name" name="firstName"
-                                                       value={this.state.firstName} onChange={this.changeHandler}/>
-                      {errors.firstName && (
-                        <div className="invalid-feedback">{errors.firstName}</div>
-                      )}
-                    </div>
+                    <TextFieldGroup placeholder="First Name" error={errors.firstName}
+                      type="text" onChange={this.changeHandler} value={this.state.firstName} name="firstName"
+                    />
                   </div>
                   <div className="col-md-6">
-                    <div className="form-group">
-                      <input type="text" className={classnames('form-control form-control-lg',{'is-invalid': errors.lastName})}
-                                                       placeholder="Last Name" name="lastName"
-                                                       value={this.state.lastName} onChange={this.changeHandler}/>
-                      {errors.lastName && (
-                        <div className="invalid-feedback">{errors.lastName}</div>
-                      )}
-                    </div>
+                      <TextFieldGroup placeholder="Last Name" error={errors.lastName}
+                                      type="text" onChange={this.changeHandler} value={this.state.lastName} name="lastName"
+                      />
+
                   </div>
                 </div>
-                <div className="form-group">
                   <div className="form-group mb-0 mt-0">
                     <div className="row">
                       <div className="col-md-9 pt-0 mb-0">
-                        <div className="form-group">
-                          <input type="email" className={classnames("form-control form-control-lg mt-0",{'is-invalid': errors.emailId})}
-                                                           placeholder="Email Address" name="emailId"
-                                                           value={this.state.emailId} onChange={this.changeHandler}/>
-                          {errors.emailId && (
-                            <div className="invalid-feedback">{errors.emailId}</div>
-                          )}
-                        </div>
+                        <TextFieldGroup placeholder="Email Address" error={errors.emailId} info="Please use BITS Email for Registration"
+                                        type="email" onChange={this.changeHandler} value={this.state.emailId} name="emailId"
+                        />
                       </div>
                       <div className="col-md-3"><Link className="btn btn-primary w-50 my-1" to="#">Verify</Link></div>
                     </div>
                   </div>
-                  <small className="form-text text-muted mt-0">Please use BITS Email for Registration</small>
-                </div>
-                <div className="form-group">
-                  <input type="password" className={classnames("form-control form-control-lg",{'is-invalid': errors.password})}
-                       placeholder="Password" name="password" value={this.state.password} onChange={this.changeHandler}/>
-                  {errors.password && (
-                    <div className="invalid-feedback">{errors.password}</div>
-                  )}
-                </div>
-                <div className="form-group">
-                  <input type="password" className={classnames("form-control form-control-lg",{'is-invalid': errors.repassword})}
-                     placeholder="Confirm Password" name="repassword" value={this.state.repassword} onChange={this.changeHandler}/>
-                  {errors.repassword && (
-                    <div className="invalid-feedback">{errors.repassword}</div>
-                  )}
-                </div>
+                <TextFieldGroup placeholder="Password" error={errors.password}
+                                type="password" onChange={this.changeHandler} value={this.state.password} name="password"
+                />
+                <TextFieldGroup placeholder="Confirm Password" error={errors.repassword}
+                                type="password" onChange={this.changeHandler} value={this.state.repassword} name="repassword"
+                />
                 <div className="wrap-input100 input100-select form-group">
                   <div>
                     <select className={classnames("selection-2 form-control form-control-lg",{'is-invalid': errors.departmentName})}

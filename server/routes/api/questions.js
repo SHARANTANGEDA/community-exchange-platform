@@ -17,9 +17,17 @@ router.get('/',passport.authenticate('jwt',{session: false}),(req,res) => {
   Question.find()
     .sort({time: -1})
     .then(questions => res.json(questions))
-    .catch(err => res.status(404).json({noPostsFound: 'No posts found'}));
+    .catch(err => res.status(404).json({noPostsFound: 'No questions found'}));
 });
 
+//@Get 10 Questions for display
+router.get('/home',passport.authenticate('jwt',{session: false}),(req,res) => {
+  Question.find()
+    .sort({time: -1})
+    .limit(10)
+    .then(questions => res.json(questions))
+    .catch(err => res.status(404).json({noPostsFound: 'No posts found'}));
+});
 //@get Question by Id
 router.get('/:id',passport.authenticate('jwt',{session: false}),(req,res) => {
   Question.findById(req.params.id)
@@ -38,14 +46,14 @@ router.post('/ask',passport.authenticate('jwt',{session: false}),
   }
   const newQuestion = new Question({
     title: req.body.title,
+    firstName: req.user.firstName,
+    lastName: req.user.lastName,
     tags: req.body.tags,
     description: req.body.description,
-    avatar: req.body.avatar,
+    avatar: req.user.avatar,
     user: req.user.id
   });
-  newQuestion.save().then(question => res.json({question,name: req.user.firstName+' '+req.user.lastName,
-    email: req.user.emailId,
-    department: req.user.departmentName}));
+  newQuestion.save().then(question => res.json(question));
   }
 );
 

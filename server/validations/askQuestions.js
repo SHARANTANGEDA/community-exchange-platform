@@ -11,10 +11,10 @@ module.exports = (data) => {
     errors.title = 'Title Field is Required';
   }
   if(Validator.isEmpty(data.description)) {
-    errors.description = 'Status Field is Required';
+    errors.description = 'Description Field is Required';
   }
   if(Validator.isEmpty(data.tags)) {
-    errors.tags = 'Adding tags will help other users to finad and answer your Question';
+    errors.tags = 'Adding tags will help other users to find and answer your Question';
   }
 
   return{errors,

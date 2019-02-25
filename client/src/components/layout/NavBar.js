@@ -11,6 +11,16 @@ class Navbar extends Component {
   }
   render() {
     const {isAuthenticated,user} = this.props.auth;
+    const authLinkO = (
+      <Link className="navbar-brand" to="/dashboard">
+        GhotDen
+      </Link>
+    );
+    const guestLinkO = (
+      <Link className="navbar-brand" to="/">
+        GhotDen
+      </Link>
+    );
 
     const authLinksI = (
     <div className="input-group md-form form-sm form-2 pl-0" style={{maxWidth: '750px'}}>
@@ -25,12 +35,12 @@ class Navbar extends Component {
     const authLinksII = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link" to="/dashboard">
+          <Link className="nav-link" to="/myAccount">
             My Account
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="" onClick={this.onLogoutClick.bind(this)}>
+          <Link className="nav-link" to="/login" onClick={this.onLogoutClick.bind(this)}>
             <img className="rounded-circle" style={{width: '25px',marginRight:'5px'}}
                  src={user.avatar} alt={user.firstName}
                  title=""/>
@@ -47,7 +57,7 @@ class Navbar extends Component {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/login">
+          <Link className="nav-link" to="login">
             Login
           </Link>
         </li>
@@ -57,9 +67,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
         <div className="container">
-          <Link className="navbar-brand" to="/landing">
-            GhotDen
-          </Link>
+          {isAuthenticated ? authLinkO : guestLinkO}
           <button
             className="navbar-toggler"
             type="button"
