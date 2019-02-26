@@ -20,6 +20,8 @@ import Sidebar from'./components/layout/Sidebar';
 import AllQuestions from './components/QuestionGet/AllQuestions'
 import AllUsers from './components/Users/AllUsers'
 import UserProfile from './components/Users/UserProfile'
+import MyAccount from './components/MyAccount/MyAccount'
+import ViewQuestion from './components/SingleQuestion/ViewQuestion'
 
 
 //Check for token
@@ -65,6 +67,13 @@ class App extends Component {
             <Switch>
               <PrivateRoute exact path='/publicProfile/:id' component={UserProfile}/>
             </Switch>
+            <Switch>
+              <PrivateRoute exact path='/myAccount' component={MyAccount}/>
+            </Switch>
+            <Switch>
+              <PrivateRoute exact path='/viewQuestion/:id' component={ViewQuestion}/>
+            </Switch>
+
           </div>
         </div>
         <Footer/>

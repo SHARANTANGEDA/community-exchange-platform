@@ -1,12 +1,14 @@
 import {
   QUESTION_LOADING,
-  HOME_QUESTIONS, ASK_QUESTION, ALL_QUESTIONS
+  HOME_QUESTIONS, ASK_QUESTION, ALL_QUESTIONS, GET_QUESTION, GET_COMMENT, GET_ANSWER, CLEAR_ERRORS
 } from '../actions/types'
 
 const initialState = {
-  question: null,
+  question: {},
   questions: [],
-  loading: false
+  loading: true,
+  comment:{},
+  answer: {}
 };
 
 export default function(state = initialState, action) {
@@ -18,12 +20,32 @@ export default function(state = initialState, action) {
         ...state,
         loading: true,
       }
+    case CLEAR_ERRORS:
+      return {};
     case HOME_QUESTIONS:
       return {
         ...state,
         questions: action.payload,
         loading: false
       };
+    case GET_QUESTION:
+      return {
+        ...state,
+        question: action.payload,
+        loading: false
+      }
+    case GET_COMMENT:
+      return {
+        ...state,
+        comment: action.payload,
+        loading: false
+      }
+    case GET_ANSWER:
+      return {
+        ...state,
+        answer: action.payload,
+        loading: false
+      }
     case ALL_QUESTIONS:
       return {
         ...state,

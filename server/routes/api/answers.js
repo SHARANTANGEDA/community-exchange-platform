@@ -23,8 +23,9 @@ router.post(
       .then(question => {
         const newAnswer = {
           text: req.body.text,
-          name: req.user.name,
-          avatar: req.body.avatar
+          firstName: req.user.firstName,
+          lastName: req.user.lastName,
+          avatar: req.user.avatar
         };
         question.answer.unshift(newAnswer);
         question.save().then(question => res.json(question));

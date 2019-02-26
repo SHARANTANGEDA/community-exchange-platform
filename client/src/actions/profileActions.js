@@ -5,18 +5,17 @@ import {
   GET_MY_PROFILE,
   GET_ALL_PROFILES,
   PROFILE_LOADING,
-  CLEAR_CURRENT_PROFILE
-} from './types';
+  CLEAR_CURRENT_PROFILE, GET_ERRORS
+} from './types'
 
 // Get current profile
-export const getMyAcccount = () => dispatch => {
+export const getMyAccount = () => dispatch => {
   dispatch(setProfileLoading());
   axios
-    .get('/api/profile')
+    .get('/api/users/myAccount')
     .then(res =>
       dispatch({
         type:   GET_MY_PROFILE,
-
         payload: res.data
       })
     )
@@ -68,6 +67,19 @@ export const getAllProfiles = () => dispatch => {
       dispatch({
         type: GET_ALL_PROFILES,
         payload: null
+      })
+    );
+};
+
+// Add education
+export const changeGithubUsername = (data, history) => dispatch => {
+  axios
+    .post('/api/users/myAccount/gitUsername', data)
+    .then(res => history.push('/myAccount'))
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
       })
     );
 };

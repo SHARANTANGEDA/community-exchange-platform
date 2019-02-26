@@ -43,7 +43,8 @@ router.get('/emailId/:id', (req, res) => {
           errors.noprofile = 'There is no profile for this user'
           res.status(404).json(errors)
         }
-        Question.find({user: user._id},{'title': 1, 'tags': 1, 'description': 1, 'time': 1, '_id': 0})
+        Question.find({user: user._id},{'title': 1, 'tags': 1, 'description': 1, 'time': 1,'firstName': 1
+          ,'lastName': 1,'avatar':1, '_id': 0})
           .then(questions => {
             if(!questions) {
               res.json(user);
@@ -67,7 +68,8 @@ router.get('/:id', (req, res) => {
         errors.noprofile = 'There is no profile for this user'
         res.status(404).json(errors)
       }
-      Question.find({user: req.params.id},{'title': 1, 'tags': 1, 'description': 1, 'time': 1, '_id': 0})
+      Question.find({user: req.params.id},{'title': 1, 'tags': 1, 'description': 1, 'time': 1,'firstName': 1
+        ,'lastName': 1,'avatar':1,  '_id': 0})
         .then(questions => {
           if(!questions) {
             res.json(user);

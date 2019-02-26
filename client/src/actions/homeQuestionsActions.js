@@ -6,7 +6,8 @@ import {
   ASK_QUESTION,
   QUESTION_LOADING,
   HOME_QUESTIONS,
-  ALL_QUESTIONS, PROFILE_LOADING, GET_ALL_PROFILES
+  ALL_QUESTIONS, PROFILE_LOADING,
+  GET_QUESTION, GET_COMMENT,GET_ANSWER
 } from './types'
 
 // Add Post
@@ -27,6 +28,64 @@ export const askQuestion = questionData => dispatch => {
       })
     );
 };
+
+//Add Comments
+export const addComment = (id, commentData) => dispatch => {
+  dispatch(clearErrors());
+  axios
+    .post(`/api/comments/question/${id}`, commentData)
+    .then(res =>
+      dispatch({
+        type: GET_COMMENT,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
+
+//Add Comments
+export const addAnswerComment = (id,ansId, commentData) => dispatch => {
+  dispatch(clearErrors());
+  axios
+    .post(`/api/comments/answer/${id}/${ansId}`, commentData)
+    .then(res =>
+      dispatch({
+        type: GET_COMMENT,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
+
+//Add Answers
+export const addAnswer = (id, commentData) => dispatch => {
+  dispatch(clearErrors());
+  axios
+    .post(`/api/answers/answer/${id}`, commentData)
+    .then(res =>
+      dispatch({
+        type: GET_ANSWER,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
+
 
 //Get Questions for home
 export const getQuestionsHome = () => dispatch => {
@@ -79,23 +138,22 @@ export const getAllQuestions = () => dispatch => {
 
     );
 };
-// Get all profiles
-export const getAllProfiles = () => dispatch => {
-  console.log("Started Loading In AllUsers")
+export const getQuestionById = id => dispatch => {
+  console.log("Started Loading In profile")
+  dispatch(setQuestionLoading());
+  console.log("In profile action")
 
-  dispatch(setProfileLoading());
-  console.log("In All Profiles Action")
   axios
-    .get('/api/publicProfile/')
+    .get(`/api/questions/${id}`)
     .then(res =>
       dispatch({
-        type: GET_ALL_PROFILES,
+        type: GET_QUESTION,
         payload: res.data
       })
     )
     .catch(err =>
       dispatch({
-        type: GET_ALL_PROFILES,
+        type: GET_QUESTION,
         payload: null
       })
     );

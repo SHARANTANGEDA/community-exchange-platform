@@ -5,7 +5,7 @@ import QuestionItem from './QuestionItem'
 class QuestionsFeed extends Component {
   render() {
     const  {questions}  = this.props;
-    console.log({'Feed':questions});
+    console.log({'QuestionFeed':questions});
     return questions.map(question => (
       <QuestionItem question={question} key={question._id}/>
     ));

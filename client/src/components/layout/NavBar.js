@@ -11,6 +11,7 @@ class Navbar extends Component {
   }
   render() {
     const {isAuthenticated,user} = this.props.auth;
+    console.log({isAuthenticated: isAuthenticated,User:user});
     const authLinkO = (
       <Link className="navbar-brand" to="/dashboard">
         GhotDen
@@ -35,7 +36,7 @@ class Navbar extends Component {
     const authLinksII = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link" to="/myAccount">
+          <Link className="nav-link" to={`/publicProfile/${user.id}`}>
             My Account
           </Link>
         </li>

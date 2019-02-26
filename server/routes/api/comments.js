@@ -20,7 +20,8 @@ router.post('/question/:id',passport.authenticate('jwt',{session: false}),
     .then(question => {
       const newComment = {
         text: req.body.text,
-        name: req.user.name,
+        firstName: req.user.firstName,
+        lastName: req.user.lastName,
         avatar: req.body.avatar
       };
       question.comments.unshift(newComment);

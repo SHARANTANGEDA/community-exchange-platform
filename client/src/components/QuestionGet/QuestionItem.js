@@ -7,12 +7,13 @@ import TagFeed from './Tags/TagFeed'
 class QuestionItem extends Component {
   render () {
     const {question,auth} = this.props;
+    console.log({QuestionId: question})
     const name=question.firstName+' '+question.lastName;
     return (
       <div className="card card-body mb-3">
         <div className="row">
           <div className="col-md-12">
-            <Link className="lead" style={{color: '#0000EE',fontSize: '18'}} to={`/questions/${question._id}`} >
+            <Link className="lead" style={{color: '#0000EE',fontSize: '18'}} to={`/viewQuestion/${question._id}`} >
               {question.title}
             </Link>
           </div>
@@ -34,11 +35,12 @@ class QuestionItem extends Component {
       </div>
     )
   }
-};
+}
 
 QuestionItem.defaultProps = {
   showActions: true
 }
+
 QuestionItem.propTypes = {
   question: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired
