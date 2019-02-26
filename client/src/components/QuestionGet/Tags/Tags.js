@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 class Tags extends Component {
   render () {
     const {tag} = this.props;
+    console.log({SingleTag: tag})
     return (
       <Link className="btn btn-info mx-3 d-inline-flex flex-grow-1" to="/">{tag}</Link>
     )

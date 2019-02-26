@@ -9,15 +9,24 @@ import {
 const initialState = {
   profile: null,
   profiles: [],
-  loading: false
+  loading: true
 };
 
 export default function(state = initialState, action) {
+  console.log({'ProfileReducer':action.payload});
+
   switch (action.type) {
     case PROFILE_LOADING:
       return {
         ...state,
         loading: true
+      };
+    case GET_ALL_PROFILES:
+      console.log("In all profiles")
+      return {
+        ...state,
+        profiles: action.payload,
+        loading: false
       };
     case GET_MY_PROFILE:
       return {
@@ -31,13 +40,7 @@ export default function(state = initialState, action) {
         profile: action.payload,
         loading: false
       };
-    case GET_ALL_PROFILES:
-      console.log("In all profiles")
-      return {
-        ...state,
-        profiles: action.payload,
-        loading: false
-      };
+
     case CLEAR_CURRENT_PROFILE:
       return {
         ...state,

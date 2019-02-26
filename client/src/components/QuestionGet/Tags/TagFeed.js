@@ -5,8 +5,9 @@ import Tags from './Tags'
 class TagFeed extends Component {
   render() {
     const  {tags}  = this.props;
-    console.log({'Feed':tags});
-    return tags.map(tag => (
+    console.log({'Tags':tags});
+    let tagsArray= tags[0].split(",");
+    return tagsArray.map(tag => (
       <Tags tag={tag} key={tag}/>
     ));
   }

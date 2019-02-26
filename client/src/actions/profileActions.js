@@ -5,9 +5,7 @@ import {
   GET_MY_PROFILE,
   GET_ALL_PROFILES,
   PROFILE_LOADING,
-  CLEAR_CURRENT_PROFILE,
-  GET_ERRORS,
-  SET_CURRENT_USER
+  CLEAR_CURRENT_PROFILE
 } from './types';
 
 // Get current profile
@@ -31,10 +29,13 @@ export const getMyAcccount = () => dispatch => {
 };
 
 // Get profile by handle
-export const getProfileById = handle => dispatch => {
+export const getProfileById = id => dispatch => {
+  console.log("Started Loading In profile")
   dispatch(setProfileLoading());
+  console.log("In profile action")
+
   axios
-    .get(`/api/publicProfile/${handle}`)
+    .get(`/api/publicProfile/${id}`)
     .then(res =>
       dispatch({
         type: GET_OTHER_PROFILE,
@@ -51,19 +52,21 @@ export const getProfileById = handle => dispatch => {
 
 // Get all profiles
 export const getAllProfiles = () => dispatch => {
+  console.log("Started Loading In AllUsers")
+
   dispatch(setProfileLoading());
   console.log("In All Profiles Action")
   axios
     .get('/api/publicProfile/')
     .then(res =>
       dispatch({
-        type:   GET_ALL_PROFILES,
+        type: GET_ALL_PROFILES,
         payload: res.data
       })
     )
     .catch(err =>
       dispatch({
-        type:   GET_ALL_PROFILES,
+        type: GET_ALL_PROFILES,
         payload: null
       })
     );

@@ -53,7 +53,7 @@ router.post('/ask',passport.authenticate('jwt',{session: false}),
     avatar: req.user.avatar,
     user: req.user.id
   });
-  newQuestion.save().then(question => res.json(question));
+  newQuestion.save().then(question => res.json(question)).catch(err => res.json(errors));
   }
 );
 

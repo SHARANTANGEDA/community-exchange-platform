@@ -5,16 +5,10 @@ import UserRow from './UserRow'
 class UserRowFeed extends Component {
   render() {
     const  {users}  = this.props;
-    console.log({'Feed':users});
-    let i,j,subUsers,chunk = 3;
-    for (i=0,j=users.length; i<j; i+=chunk) {
-      subUsers = users.slice(i,i+chunk);
-      // do whatever
-    }
-    return (
-      <UserRow users={subUsers}/>
-    )
-
+    console.log({'User Feed':users});
+    return users.map(user => (
+      <UserRow users={user}/>
+    ));
   }
 }
 

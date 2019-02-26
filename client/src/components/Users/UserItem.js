@@ -10,8 +10,8 @@ class UserItem extends Component {
     const name = user.firstName+' '+user.lastName;
     return (
       <div className="col-md-4" style={{margin: '10px'}}>
-        <img src={user.avatar} alt='http://pinegrow.com/placeholders/img19.jpg' style={{height: "40%", width: "70%"}}/>
-        <h3><Link to="">{name}</Link></h3>
+        <img src={user.avatar} alt='http://pinegrow.com/placeholders/img19.jpg' style={{height: "20%", width: "35%"}}/>
+        <h3><Link to={`/publicProfile/${user._id}`}>{name}</Link></h3>
         <p>{user.emailId}</p>
         <p>{user.departmentName}</p>
       </div>
@@ -20,7 +20,7 @@ class UserItem extends Component {
 }
 
 UserItem.propTypes = {
-  user: PropTypes.string.isRequired,
+  user: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired
 };
 const mapStateToProps = state => ({

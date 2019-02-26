@@ -6,8 +6,8 @@ import {
   ASK_QUESTION,
   QUESTION_LOADING,
   HOME_QUESTIONS,
-  ALL_QUESTIONS
-} from './types';
+  ALL_QUESTIONS, PROFILE_LOADING, GET_ALL_PROFILES
+} from './types'
 
 // Add Post
 export const askQuestion = questionData => dispatch => {
@@ -78,6 +78,33 @@ export const getAllQuestions = () => dispatch => {
       }
 
     );
+};
+// Get all profiles
+export const getAllProfiles = () => dispatch => {
+  console.log("Started Loading In AllUsers")
+
+  dispatch(setProfileLoading());
+  console.log("In All Profiles Action")
+  axios
+    .get('/api/publicProfile/')
+    .then(res =>
+      dispatch({
+        type: GET_ALL_PROFILES,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ALL_PROFILES,
+        payload: null
+      })
+    );
+};
+// Profile loading
+export const setProfileLoading = () => {
+  return {
+    type: PROFILE_LOADING
+  };
 };
 // Set loading state
 export const setQuestionLoading = () => {

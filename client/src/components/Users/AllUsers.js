@@ -9,16 +9,30 @@ class AllUsers extends Component {
 
   componentDidMount () {
     this.props.getAllProfiles(this.props.match.params.id);
-    console.log("Called");
-  }
+    console.log("Called DidMount in All Users");
+  };
+
+
   render () {
-    const { users, loading} = this.props.profile
+    const { profiles, loading} = this.props.profile;
+    console.log({StateOfAllUsers: loading,Prof: profiles});
     let allUserContent;
-    if ((users === null) || loading ) {
+    if (profiles === null || loading ) {
       allUserContent = <Spinner/>
     } else {
+      let chunkCreate= (arr, len) => {
+        let chunks = [],
+          i = 0,
+          n = arr.length;
+        while (i < n) {
+          chunks.push(arr.slice(i, i += len));
+        }
+        return chunks;
+      };
+      let chunkArray=chunkCreate(profiles,2);
       allUserContent = (
-          <UserRowFeed users={users}/>
+    //    <h1>Does not Load</h1>
+        <UserRowFeed users={chunkArray}/>
       )
     }
 

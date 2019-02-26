@@ -5,13 +5,14 @@ import { askQuestion } from '../../actions/homeQuestionsActions'
 import classnames from 'classnames';
 
 class AskQuestions extends Component {
-  constructor (props) {
-    super(props)
+  constructor () {
+    super()
     this.state = {
       title: '',
       description: '',
       tags: '',
       errors: {}
+
     }
 
     this.onChange = this.onChange.bind(this)
@@ -22,10 +23,12 @@ class AskQuestions extends Component {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors })
     }
+
   }
 
+
   onSubmit (e) {
-    e.preventDefault()
+    e.preventDefault();
     const { user } = this.props.auth
     const newQuestion = {
       title: this.state.title,
@@ -36,13 +39,11 @@ class AskQuestions extends Component {
       avatar: user.avatar
     }
     this.props.askQuestion(newQuestion);
-    this.setState({ title: '' })
-    this.setState({ description: '' })
-    this.setState({ tags: '' })
-    this.props.history.push('/dashboard');
+    if(this.state.title==='' || this.state.description==='' || this.state.tags==='') {
 
-
-
+    }else {
+      this.props.history.push('/dashboard');
+    }
   }
 
   onChange (e) {
@@ -62,7 +63,7 @@ class AskQuestions extends Component {
       <div className='askQuestion'>
         <div id="content" className="snippet-hidden">
         <div className="ask-mainbar box-border">
-          <form noValidate  className="post-form" onSubmit={this.onSubmit}>
+          <form  className="post-form" onSubmit={this.onSubmit}>
             <div id="question-form">
               <div className="question-context-title">
                 <h2>Ask a question</h2>
@@ -89,20 +90,14 @@ class AskQuestions extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="js-wz-element" >
-                  <div id="question-suggestions">
-                  </div>
-                </div>
               </div>
             </div>
-            <div id="post-editor" className="post-editor js-post-editor js-wz-element"
-                 data-wz-state="8,16,32,64,128,256">
+            <div id="post-editor" className="post-editor js-post-editor js-wz-element">
               <div className="ps-relative w-75">
                 <label className="s-label mb4 d-block w-100" htmlFor="wmd-input">
                   <h4>Body</h4>
                 </label>
                 <div className="wmd-container mb8 w-100 form-group">
-                  <div className="js-stacks-validation w-100" >
                     <textarea className={classnames("wmd-input js-wz-element s-input bar0 w-100 form-control"
                       ,{'is-invalid':errors.description})} name="description"
                               cols="90" rows="15" tabIndex="101" onChange={this.onChange}
@@ -110,13 +105,10 @@ class AskQuestions extends Component {
                     {errors.description &&
                     (<div className="invalid-feedback" >{errors.description}</div>)
                     }
-                  </div>
-
                 </div>
               </div>
             </div>
             <div className="ps-relative">
-              <div className="form-item p0 js-stacks-validation">
                 <label htmlFor="tagNames" className="s-label mb4 d-block">
                   <h4>Tags</h4>
                 </label>
@@ -128,9 +120,8 @@ class AskQuestions extends Component {
                   (<div className="invalid-feedback" >{errors.tags}</div>)
                   }
                 </div>
-              </div>
             </div>
-            <div className="js-wz-element" id="question-only-section" data-wz-state="256">
+            <div className="js-wz-element" id="question-only-section">
               <div className="form-submit cbt grid gsx gs4 p0 mt32">
                 <button className="btn btn-primary w-20 my-1" type="submit" tabIndex="120"
                         style={{width: "30%",margin: "10px"}}> Post Your Question
