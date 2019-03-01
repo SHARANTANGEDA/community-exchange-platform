@@ -4,7 +4,7 @@ import {
 } from '../actions/types'
 
 const initialState = {
-  question: {},
+  question: null,
   questions: [],
   loading: true,
   comment:{},
