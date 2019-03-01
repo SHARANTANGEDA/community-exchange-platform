@@ -9,7 +9,8 @@
     "client-install": "npm install --prefix client",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "herok-postbuild": "NPM_CONFIG_PRODUCTION=false cd.. && cd client && npm install && npm run build"
+    "heroku-postbuild":
+    "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Sai Sharan Tangeda",
   "license": "MIT",
@@ -32,6 +33,6 @@
     "nodemon": "^1.18.10"
   },
   "engines": {
-    "nodejs": "10.15.1"
+    "nodejs": "10.x"
   }
 }
