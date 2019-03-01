@@ -32,6 +32,6 @@
     "nodemon": "^1.18.10"
   },
   "engines": {
-    "nodejs": "10.x"
+    "nodejs": "10.15.1"
   }
 }
