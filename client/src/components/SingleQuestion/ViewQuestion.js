@@ -24,7 +24,7 @@ class ViewQuestion extends Component {
       questionContent = <Spinner/>
     } else {
       let name = question.firstName + ' '+question.lastName;
-      console.log({INViewQues:name});
+        console.log({INViewQues:name});
       let ansNoDisplay;
       if(question.answer === null) {
         ansNoDisplay = '0 Answers';
