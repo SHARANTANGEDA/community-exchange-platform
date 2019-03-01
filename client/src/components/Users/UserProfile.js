@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import Spinner from '../common/Spinner';
 import { getProfileById } from '../../actions/profileActions';
 import QuestionsFeed from '../QuestionGet/QuestionsFeed'

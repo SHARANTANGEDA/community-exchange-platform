@@ -5,7 +5,7 @@ import UserItem from './UserItem'
 
 class UserRow extends Component {
   render () {
-    const {users,auth} = this.props;
+    const {users} = this.props;
     let showUsers = ( users.map(user => (
       <UserItem user={user} key={user._id}/>
     )));

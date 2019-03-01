@@ -62,7 +62,7 @@ class AnswerForm extends Component {
                   classnames(
                     " form-control form-control-lg wmd-input js-wz-element s-input bar0 mt-1 d-flex flex-grow-1 w-100"
                     ,{'is-invalid':errors.text})}
-                name="post-text" cols="90" rows="15" tabIndex="101"
+                name="text" cols="90" rows="10" tabIndex="101"
                 placeholder="Write Your Answer Here" value={this.state.text} onChange={this.onChange}/>
               {errors.text &&
               (<div className="invalid-feedback" >{errors.text}</div>)

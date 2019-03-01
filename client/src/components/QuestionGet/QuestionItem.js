@@ -6,7 +6,7 @@ import TagFeed from './Tags/TagFeed'
 
 class QuestionItem extends Component {
   render () {
-    const {question,auth} = this.props;
+    const {question} = this.props;
     console.log({QuestionId: question})
     const name=question.firstName+' '+question.lastName;
     return (

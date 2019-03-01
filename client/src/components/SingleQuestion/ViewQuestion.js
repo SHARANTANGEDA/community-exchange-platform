@@ -24,7 +24,19 @@ class ViewQuestion extends Component {
       questionContent = <Spinner/>
     } else {
       let name = question.firstName + ' '+question.lastName;
-      console.log({INViewQues:name})
+      console.log({INViewQues:name});
+      let ansNoDisplay;
+      if(question.answer === null) {
+        ansNoDisplay = '0 Answers';
+      } else {
+        if(question.answer.length===1) {
+          ansNoDisplay='1 Answer';
+        }else if(question.answer.length>1) {
+          ansNoDisplay = question.answer.length + ' Answers';
+        } else {
+          ansNoDisplay = '0 Answers';
+        }
+      }
       questionContent = (
         <div id="mainbar">
           <div className="card">
@@ -84,7 +96,7 @@ class ViewQuestion extends Component {
           <div className="col-md-12 my-2">
             <div id="answers-header">
               <div className="subheader answers-subheader">
-                <h2 data-answercount="1"> 1 Answer <span style={{display:"none"}} itemProp="answerCount">1</span>
+                <h2>{ansNoDisplay} <span style={{display:"none"}} itemProp="answerCount">1</span>
                 </h2>
               </div>
             </div>
@@ -102,7 +114,7 @@ class ViewQuestion extends Component {
     return (
       <div className='/viewQuestion/:id'>
         <div className=" snippet-hidden d-flex justify-content-start w-100">
-          <div className="inner-content w-75">
+          <div className="inner-content w-100" style={{margin:'15px'}}>
             {questionContent}
           </div>
         </div>

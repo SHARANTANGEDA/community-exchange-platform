@@ -1,6 +1,6 @@
 import {
   QUESTION_LOADING,
-  HOME_QUESTIONS, ASK_QUESTION, ALL_QUESTIONS, GET_QUESTION, GET_COMMENT, GET_ANSWER, CLEAR_ERRORS
+  HOME_QUESTIONS, ASK_QUESTION, ALL_QUESTIONS, GET_QUESTION, GET_COMMENT, GET_ANSWER
 } from '../actions/types'
 
 const initialState = {
@@ -18,10 +18,8 @@ export default function(state = initialState, action) {
       console.log("IN HOME Reducer Question loading")
       return {
         ...state,
-        loading: true,
+        loading: true
       }
-    case CLEAR_ERRORS:
-      return {};
     case HOME_QUESTIONS:
       return {
         ...state,

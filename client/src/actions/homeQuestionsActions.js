@@ -6,7 +6,7 @@ import {
   ASK_QUESTION,
   QUESTION_LOADING,
   HOME_QUESTIONS,
-  ALL_QUESTIONS, PROFILE_LOADING,
+  ALL_QUESTIONS,
   GET_QUESTION, GET_COMMENT,GET_ANSWER
 } from './types'
 
@@ -159,11 +159,11 @@ export const getQuestionById = id => dispatch => {
     );
 };
 // Profile loading
-export const setProfileLoading = () => {
-  return {
-    type: PROFILE_LOADING
-  };
-};
+// export const setProfileLoading = () => {
+//   return {
+//     type: PROFILE_LOADING
+//   };
+// };
 // Set loading state
 export const setQuestionLoading = () => {
   return {

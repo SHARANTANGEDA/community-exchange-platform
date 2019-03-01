@@ -9,6 +9,8 @@ const answers = require('./routes/api/answers');
 const comments = require('./routes/api/comments')
 const publicProfile = require('./routes/api/publicProfile');
 
+const path = require('path');
+
 //@MongoDB Atlas Connection
 const db = require('./config/keys').mongoURI;
 mongoose.connect(db)
@@ -29,6 +31,14 @@ app.use('/api/answers',answers);
 app.use('/api/comments',comments)
 app.use('/api/publicProfile',publicProfile);
 
+//Server static assets if in production
+if(process.env.NODE_ENV === 'production') {
+  //Set static folder
+  app.use(express.static('../client/build'));
+  app.get('*',(req,res) => {
+    res.sendFile(path.resolve(__dirname,'../client','build','index.html'));
+  })
+}
 
 const port = process.env.PORT || 5000;
 
