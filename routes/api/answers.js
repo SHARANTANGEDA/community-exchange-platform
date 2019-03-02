@@ -25,7 +25,8 @@ router.post(
           text: req.body.text,
           firstName: req.user.firstName,
           lastName: req.user.lastName,
-          avatar: req.user.avatar
+          avatar: req.user.avatar,
+          userId: req.user._id
         };
         question.answer.unshift(newAnswer);
         question.save().then(question => res.json(question));

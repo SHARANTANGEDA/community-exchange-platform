@@ -7,7 +7,7 @@ import {
   QUESTION_LOADING,
   HOME_QUESTIONS,
   ALL_QUESTIONS,
-  GET_QUESTION, GET_COMMENT,GET_ANSWER
+  GET_QUESTION, GET_COMMENT, GET_ANSWER, ADD_ANSWER
 } from './types'
 
 // Add Post
@@ -68,13 +68,14 @@ export const addAnswerComment = (id,ansId, commentData) => dispatch => {
 };
 
 //Add Answers
-export const addAnswer = (id, commentData) => dispatch => {
+export const addAnswer = (id, answerData) => dispatch => {
   dispatch(clearErrors());
+  console.log({Answer: answerData})
   axios
-    .post(`/api/answers/answer/${id}`, commentData)
+    .post(`/api/answers/answer/${id}`, answerData)
     .then(res =>
       dispatch({
-        type: GET_ANSWER,
+        type: ADD_ANSWER,
         payload: res.data
       })
     )

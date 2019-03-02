@@ -87,7 +87,7 @@ class ViewQuestion extends Component {
                 <div className="comment-text js-comment-text-and-form w-75">
                   <div className="comment-body js-comment-edit-hide">
                     {question.comments ? (<CommentFeed comments={question.comments}/>) : null}
-                    <CommentForm />
+                    <CommentForm questionId={question._id}/>
                   </div>
                 </div>
               </div>
@@ -102,9 +102,10 @@ class ViewQuestion extends Component {
             </div>
           </div>
           <div className="card">
-            {question.answer ? (<AnswerFeed answers={question.answer}/>) : null}
+            {question.answer!==null ? (<AnswerFeed answers={question.answer} questionId={question._id}/>) : null}
             <div className="card">
-              {<AnswerForm/>}
+              {<AnswerForm questionId={question._id}/>}
+              {console.log({Answer: question.answer})}
             </div>
           </div>
         </div>

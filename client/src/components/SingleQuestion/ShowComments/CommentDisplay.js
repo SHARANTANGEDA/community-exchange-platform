@@ -13,7 +13,7 @@ class CommentDisplay extends Component {
       <div className="row d-flex justify-content-end border-bottom border-top">
         <span className="comment-copy d-inline-flex flex-grow-1">
          {comment.text}</span> –&nbsp;
-        <Link to={`/publicProfile/${comment.user._id}`} title="74 reputation"
+        <Link to={`/publicProfile/${comment.userId}`} title="74 reputation"
            className="comment-user owner">{name}</Link>
         <span className="comment-date" dir="ltr">
           <span title="2019-02-25 12:56:03Z"

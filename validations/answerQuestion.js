@@ -6,7 +6,7 @@ module.exports = (data) => {
   data.text = !isEmpty(data.text) ? data.text : '';
 
   if(Validator.isEmpty(data.text)) {
-    errors.text = 'Comment field is required';
+    errors.text = 'Answer field is required';
   }
 
   return {

@@ -22,7 +22,8 @@ router.post('/question/:id',passport.authenticate('jwt',{session: false}),
         text: req.body.text,
         firstName: req.user.firstName,
         lastName: req.user.lastName,
-        avatar: req.body.avatar
+        avatar: req.body.avatar,
+        userId: req.user._id
       };
       question.comments.unshift(newComment);
       question.save().then(question => res.json(question));
@@ -51,8 +52,10 @@ router.post('/answer/:id/:answerId',passport.authenticate('jwt',{session: false}
           .indexOf(req.params.answerId);
             const newAnswerComment = {
               text: req.body.text,
-              name: req.user.name,
-              avatar: req.body.avatar
+              firstName: req.user.firstName,
+              lastName: req.user.lastName,
+              avatar: req.body.avatar,
+              userId: req.user._id
             };
         question.answer[ans].comments.unshift(newAnswerComment);
             question.save().then(post => res.json(post));

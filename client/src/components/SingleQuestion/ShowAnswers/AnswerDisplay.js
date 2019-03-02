@@ -8,7 +8,7 @@ import AnswerCommentForm from './AnswerCommentForm'
 
 class AnswerDisplay extends Component {
   render () {
-    const {answer,auth} = this.props;
+    const {answer,auth,questionId} = this.props;
     console.log({SingleAnswer: answer,auth: auth})
     let name=answer.firstName + ' '+answer.lastName;
     return (
@@ -35,8 +35,8 @@ class AnswerDisplay extends Component {
               className="relativeTime m-1 d-inline-flex flex-grow-0">{answer.time}</span>
             </div>
             <div className="user-details d-flex justify-content-end">
-              <Link to={`/publicProfile/${answer.user._id}`}
-                    style={{'text-shadow': "0px 0px 1px #0000ff",fontSize:"24"}}
+              <Link to={`/publicProfile/${answer.userId}`}
+                    style={{textShadow: "0px 0px 1px #0000ff",fontSize:"24"}}
                  className="d-inline-flex flex-grow-1 align-items-end justify-content-end">{name}</Link>
             </div>
           </div>
@@ -45,7 +45,7 @@ class AnswerDisplay extends Component {
           <div className="comment-text js-comment-text-and-form w-75">
             <div className="comment-body js-comment-edit-hide">
              <CommentFeed comments={answer.comments}/>
-              <AnswerCommentForm />
+              <AnswerCommentForm answerId={answer._id} questionId={questionId}/>
             </div>
           </div>
         </div>
@@ -55,8 +55,9 @@ class AnswerDisplay extends Component {
 }
 
 AnswerDisplay.propTypes = {
-  comment: PropTypes.object.isRequired,
-  auth: PropTypes.object.isRequired
+  //comment: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired,
+  questionId: PropTypes.string.isRequired
 };
 const mapStateToProps = state => ({
   auth: state.auth

@@ -5,8 +5,8 @@ import classnames from 'classnames';
 import { addAnswer } from '../../actions/homeQuestionsActions'
 
 class AnswerForm extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       text: '',
       errors: {}
@@ -32,16 +32,17 @@ class AnswerForm extends Component {
       text: this.state.text,
       firstName: user.firstName,
       lastName: user.lastName,
-      avatar: user.avatar
+      avatar: user.avatar,
+      userId: user._id
     };
 
     this.props.addAnswer(questionId, newAnswer);
     if(this.state.text==='') {
-
     }else {
-      this.props.history.push(`/viewQuestion/${questionId}`);
+      console.log({"Adding answer here": newAnswer})
+      window.location.reload();
+      this.setState({ text: '' });
     }
-    this.setState({ text: '' });
   }
 
   onChange(e) {
@@ -52,7 +53,7 @@ class AnswerForm extends Component {
     const { errors } = this.state;
 
     return (
-      <form>
+      <form onSubmit={this.onSubmit}>
         <div className="card-body">
           <h3 className="card-title"><b>Post your Answer Here</b></h3>
           <div className="row">
@@ -60,7 +61,7 @@ class AnswerForm extends Component {
               <textarea
                 className={
                   classnames(
-                    " form-control form-control-lg wmd-input js-wz-element s-input bar0 mt-1 d-flex flex-grow-1 w-100"
+                    " form-control form-control-lg  mt-1 d-flex flex-grow-1 w-100"
                     ,{'is-invalid':errors.text})}
                 name="text" cols="90" rows="10" tabIndex="101"
                 placeholder="Write Your Answer Here" value={this.state.text} onChange={this.onChange}/>

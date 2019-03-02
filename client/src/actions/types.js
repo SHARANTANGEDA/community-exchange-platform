@@ -13,3 +13,4 @@ export const GET_OTHER_PROFILE='GET_OTHER_PROFILE';
 export const GET_QUESTION='GET_QUESTION';
 export const GET_COMMENT='GET_COMMENT';
 export const GET_ANSWER='GET_ANSWER';
+export const ADD_ANSWER='ADD_ANSWER';

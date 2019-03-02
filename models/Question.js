@@ -51,6 +51,10 @@ const QuestionSchema = new Schema({
         type: String,
         required: true
       },
+      userId: {
+        type: String,
+        required: true
+      },
       time: {
         type: Date,
         default: Date.now
@@ -71,6 +75,10 @@ const QuestionSchema = new Schema({
       },
       avatar: {
         type: String
+      },
+      userId: {
+        type: String,
+        required: true
       },
       text: {
         type: String,
@@ -96,6 +104,10 @@ const QuestionSchema = new Schema({
           },
           avatar: {
             type: String
+          },
+          userId: {
+            type: String,
+            required: true
           },
           time: {
             type: Date,

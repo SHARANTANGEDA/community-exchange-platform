@@ -32,14 +32,15 @@ class AnswerCommentForm extends Component {
       text: this.state.text,
       firstName: user.firstName,
       lastName: user.lastName,
-      avatar: user.avatar
+      avatar: user.avatar,
+      userId: user._id
     };
 
     this.props.addAnswerComment(questionId,answerId,newComment);
     if(this.state.text==='') {
 
     }else {
-      this.props.history.push(`/viewQuestion/${questionId}`);
+      window.location.reload();
     }
     this.setState({ text: '' });
   }
@@ -52,14 +53,14 @@ class AnswerCommentForm extends Component {
     const { errors } = this.state;
 
     return (
-      <form>
+      <form onSubmit={this.onSubmit}>
         <div className="row">
           <div className="col-lg-12 form-group">
             <textarea
               className=
                 {classnames("form-control form-control-lg wmd-input js-wz-element s-input bar0 d-flex flex-grow-1" +
                   " ml-2 mt-3 w-100",{'is-invalid':errors.text})}
-              name="post-text" cols="120" rows="3" tabIndex="101"
+              name="text"  rows="3" tabIndex="101"
               placeholder="Write Your Comment Here" value={this.state.text} onChange={this.onChange}/>
             {errors.text &&
             (<div className="invalid-feedback" >{errors.text}</div>)

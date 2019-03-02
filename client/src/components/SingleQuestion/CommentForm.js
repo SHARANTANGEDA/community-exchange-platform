@@ -32,14 +32,15 @@ class CommentForm extends Component {
       text: this.state.text,
       firstName: user.firstName,
       lastName: user.lastName,
-      avatar: user.avatar
+      avatar: user.avatar,
+      userId: user._id
     };
 
     this.props.addComment(questionId, newComment);
     if(this.state.text==='') {
 
     }else {
-      this.props.history.push(`/viewQuestion/${questionId}`);
+      window.location.reload();
     }
     this.setState({ text: '' });
   }
@@ -52,7 +53,7 @@ class CommentForm extends Component {
     const { errors } = this.state;
 
     return (
-      <form>
+      <form onSubmit={this.onSubmit}>
         <div className="row">
           <div className="col-lg-12 form-group">
             <textarea
