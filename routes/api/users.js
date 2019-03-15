@@ -21,7 +21,7 @@ router.post('/register', (req, res) => {
   }
   User.findOne({ emailId: req.body.emailId }).then(user => {
     if (user) {
-      errors.email = 'Email already exists'
+      errors.emailId = 'Account already exists please use your password to login'
       return res.status(400).json(errors)
     } else {
       const avatar = gravatar.url(req.body.email, {

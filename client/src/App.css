@@ -4,6 +4,10 @@ img {
   width: 100%;
 }
 
+div {
+  white-space: pre-wrap;
+}
+
 .landing {
   position: relative;
   background: url('./img/showcase.jpg') no-repeat;

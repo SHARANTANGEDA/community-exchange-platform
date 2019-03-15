@@ -19,6 +19,10 @@ const QuestionSchema = new Schema({
     type: Date,
     default: Date.now
   },
+  userId: {
+    type: String,
+    required: true
+  },
   title: {
     type: String,
     required: true

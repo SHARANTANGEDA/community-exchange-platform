@@ -51,7 +51,8 @@ router.post('/ask',passport.authenticate('jwt',{session: false}),
     tags: req.body.tags,
     description: req.body.description,
     avatar: req.user.avatar,
-    user: req.user.id
+    userId: req.user._id,
+    user: req.user._id
   });
   newQuestion.save().then(question => res.json(question)).catch(err => res.json(errors));
   }
