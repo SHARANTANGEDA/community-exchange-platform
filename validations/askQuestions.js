@@ -13,7 +13,7 @@ module.exports = (data) => {
   if(Validator.isEmpty(data.description)) {
     errors.description = 'Description Field is Required';
   }
-  if(Validator.isEmpty(data.tags)) {
+  if(Validator.isEmpty(data.tags) || Validator.equals(data.tags,',')) {
     errors.tags = 'Adding tags will help other users to find and answer your Question';
   }
 

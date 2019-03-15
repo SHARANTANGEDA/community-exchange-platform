@@ -67,7 +67,7 @@ class UserProfile extends Component {
 
               <div className="panel panel-default">
                 <div className="panel-heading">
-                  <h4 className="panel-title">Latest questions</h4>
+                  <h4 className="panel-title">Asked Questions</h4>
                 </div>
                 <div className="comments">
                   <div className="card card-body mb-3">

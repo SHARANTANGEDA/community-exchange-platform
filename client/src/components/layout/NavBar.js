@@ -14,12 +14,16 @@ class Navbar extends Component {
     console.log({isAuthenticated: isAuthenticated,User:user});
     const authLinkO = (
       <Link className="navbar-brand" to="/dashboard">
-        GhotDen
+        <img className="img-rounded" style={{maxWidth: '25%'}}
+             src={require('../../img/logoNew.png')} alt="GhotDen"
+             title=""/>
       </Link>
     );
     const guestLinkO = (
       <Link className="navbar-brand" to="/">
-        GhotDen
+        <img className="img-rounded" style={{maxWidth: '25%'}}
+             src={require('../../img/logoNew.png')} alt="GhotDen"
+             title=""/>
       </Link>
     );
 

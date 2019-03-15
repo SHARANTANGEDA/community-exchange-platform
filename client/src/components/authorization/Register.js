@@ -98,9 +98,19 @@ class Register extends Component {
                          name="departmentName" value={this.state.departmentName} onChange={this.changeHandler}>
                       <option>Choose Department</option>
                       <option>Computer Science Engineering</option>
+                      <option>Electrical and Communications Engineering</option>
                       <option>Electrical and Electronics Engineering</option>
+                      <option>Electronics and Instrumentation Engineering</option>
                       <option>Mechanical Engineering</option>
+                      <option>Chemical Engineering</option>
                       <option>Civil Engineering</option>
+                      <option>Manufacturing Engineering</option>
+                      <option>Msc.Biological Sciences</option>
+                      <option>Msc.Chemistry</option>
+                      <option>Msc.Economics</option>
+                      <option>Msc.Mathematics</option>
+                      <option>Msc.Physics</option>
+                      <option>B-Pharmacy</option>
                     </select>
                     {errors.departmentName && (
                       <div className="invalid-feedback">{errors.departmentName}</div>

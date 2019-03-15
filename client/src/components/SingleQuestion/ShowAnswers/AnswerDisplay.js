@@ -20,7 +20,7 @@ class AnswerDisplay extends Component {
           </div>
           <div className="col-md-10 flex-grow-1 d-flex">
             <div className="col-md-12 h-25 d-flex flex-grow-1" style={{minHeight: "50%"}}>
-              <p className="d-flex flex-grow-1 h-50 border border-secondary rounded" >{answer.text}</p>
+              <p className="d-flex flex-grow-1 h-50 " >{answer.text}</p>
             </div>
           </div>
         </div>
@@ -32,7 +32,7 @@ class AnswerDisplay extends Component {
           <div className="col-md-12">
             <div className="user-action-time d-flex justify-content-end align-items-center"> answered <span
               title="2010-04-21 14:28:45Z"
-              className="relativeTime m-1 d-inline-flex flex-grow-0">{answer.time}</span>
+              className="relativeTime m-1 d-inline-flex flex-grow-0">{new Date(answer.time).toLocaleString()}</span>
             </div>
             <div className="user-details d-flex justify-content-end">
               <Link to={`/publicProfile/${answer.userId}`}

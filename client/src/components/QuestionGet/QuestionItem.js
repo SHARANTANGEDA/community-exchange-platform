@@ -7,8 +7,9 @@ import TagFeed from './Tags/TagFeed'
 class QuestionItem extends Component {
   render () {
     const {question} = this.props;
-    console.log({QuestionId: question})
+    console.log({GetQuestion:question})
     const name=question.firstName+' '+question.lastName;
+
     return (
       <div className="card card-body mb-3">
         <div className="row">
@@ -24,10 +25,10 @@ class QuestionItem extends Component {
               </div>
             </div>
             <div className="user-action-time d-flex justify-content-end align-items-center"> asked at
-              <span title="2010-04-21 14:28:45Z" className="relativetime m-1" >{question.time}</span>
+              <span title="2010-04-21 14:28:45Z" className="relativetime m-1" >{new Date(question.time).toLocaleString()}</span>
             </div>
             <div className="user-details d-flex justify-content-end">
-              <Link to="" style={{	textShadow: "0px 0px 1px #0000FF",fontSize: "24"}}>{name}</Link>
+              <Link to={`/publicProfile/${question.userId}`} style={{	textShadow: "0px 0px 1px #0000FF",fontSize: "24"}}>{name}</Link>
             </div>
           </div>
 

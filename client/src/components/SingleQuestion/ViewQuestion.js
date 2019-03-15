@@ -56,7 +56,7 @@ class ViewQuestion extends Component {
                        src={question.avatar}/></div>
                 <div className="col-md-10 flex-grow-1 d-flex">
                   <div className="col-md-12 h-25 d-flex flex-grow-1" style={{minHeight: "50%"}}>
-                    <p className="d-flex flex-grow-1 h-50 border border-secondary rounded">
+                    <p className="d-flex flex-grow-1 h-50 rounded">
                       {question.description}</p>
                   </div>
                 </div>
@@ -74,10 +74,10 @@ class ViewQuestion extends Component {
                 <div className="col-md-12">
                   <div className="user-action-time d-flex justify-content-end align-items-center"> asked <span
                     title=""
-                    className="relativeTime m-1 d-inline-flex flex-grow-0">{question.time}</span>
+                    className="relativeTime m-1 d-inline-flex flex-grow-0">{new Date(question.time).toLocaleString()}</span>
                   </div>
                   <div className="user-details d-flex justify-content-end">
-                    <Link to={`/publicProfile/${question.user._id}`}
+                    <Link to={`/publicProfile/${question.userId}`}
                           style={{	textShadow: "0px 0px 1px #0000ff",fontSize: "24"}}
                           className="d-inline-flex flex-grow-1 align-items-end justify-content-end">{name}</Link>
                   </div>

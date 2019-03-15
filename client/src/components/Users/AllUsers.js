@@ -37,10 +37,10 @@ class AllUsers extends Component {
     }
 
     return (
-      <div className='/allProfiles'>
+      <div className='/allProfiles' style={{width:'100%'}}>
       <div id="content" className="snippet-hidden" style={{position: "relative"}}>
         <h1 style={{position: "relative"}}>All Users:</h1>
-        <div className="container" style={{position: "relative", width: "90%",minWidth: "81%", height: "86%"}}>
+        <div className="container" style={{position: "relative", width: "90%",minWidth: "81%", height: "86%",border:'2px'}}>
           {allUserContent}
       </div>
       </div>

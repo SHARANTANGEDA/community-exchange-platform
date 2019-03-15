@@ -27,10 +27,10 @@ class Dashboard extends Component {
       }
 
     return (
-      <div className='dashboard'>
-        <div id="content" className="snippet-hidden ">
-          <div className="inner-content">
-            <div id="mainbar">
+      <div className='dashboard' style={{width:'100%'}}>
+        <div id="content" className="snippet-hidden " >
+          <div className="inner-content" >
+            <div id="mainbar" >
               <div className="grid">
                 <div className="row">
                   <div className="col-md-8">

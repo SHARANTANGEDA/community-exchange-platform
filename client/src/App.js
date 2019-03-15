@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
-import { setCurrentUser} from './actions/authActions';
+import { logoutUser, setCurrentUser } from './actions/authActions'
 
 import PrivateRoute from './components/common/PrivateRoute';
 
@@ -26,16 +26,15 @@ import ViewQuestion from './components/SingleQuestion/ViewQuestion'
 
 //Check for token
 if(localStorage.jwtToken) {
-  setAuthToken(localStorage.jwtToken);
+  setAuthToken(localStorage.jwtToken)
   const decoded = jwt_decode(localStorage.jwtToken)
-  store.dispatch(setCurrentUser(decoded));
-  store.dispatch(setCurrentUser(decoded));
-  const currentTime = Date.now() / 1000;
+  store.dispatch(setCurrentUser(decoded))
+  const currentTime = Date.now() / 1000
   if (decoded.exp < currentTime) {
-    //store.dispatch(logoutUser());
-    // TODO Clear current profile
+    store.dispatch(logoutUser())
+    //  Clear current profile
     //store.dispatch(clearCurrentProfile());
-    window.location.href = '/login';
+    window.location.href = '/login'
   }
 }
 

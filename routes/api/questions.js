@@ -44,16 +44,21 @@ router.post('/ask',passport.authenticate('jwt',{session: false}),
   if(!isValid) {
     return res.status(400).json(errors);
   }
+  let toStoreTag = req.body.tags.trim();
+  if(toStoreTag.endsWith(',')) {
+    toStoreTag = toStoreTag.substr(0,toStoreTag.length-1);
+  }
   const newQuestion = new Question({
     title: req.body.title,
     firstName: req.user.firstName,
     lastName: req.user.lastName,
-    tags: req.body.tags,
+    tags: toStoreTag,
     description: req.body.description,
     avatar: req.user.avatar,
     userId: req.user._id,
     user: req.user._id
   });
+
   newQuestion.save().then(question => res.json(question)).catch(err => res.json(errors));
   }
 );

@@ -26,7 +26,7 @@ class AllQuestions extends Component {
     }
 
     return (
-      <div className='allQuestions'>
+      <div className='allQuestions' style={{width:'100%'}}>
       <div id="content" className="snippet-hidden">
         <div className="inner-content">
           <div>

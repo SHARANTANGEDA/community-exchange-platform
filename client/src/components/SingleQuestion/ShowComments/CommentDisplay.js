@@ -17,7 +17,7 @@ class CommentDisplay extends Component {
            className="comment-user owner">{name}</Link>
         <span className="comment-date" dir="ltr">
           <span title="2019-02-25 12:56:03Z"
-                className="relativeTime-clean">{comment.time}</span></span>
+                className="relativeTime-clean">{new Date(comment.time).toLocaleString()}</span></span>
       </div>
     )
   }
