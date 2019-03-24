@@ -4,46 +4,72 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import Spinner from '../common/Spinner';
-import { changeGithubUsername, getMyAccount } from '../../actions/profileActions'
-import TabPaneSwitch from './TabPaneSwitch'
+import { updateProfile, getMyAccount } from '../../actions/profileActions'
+import TabPaneSwitch from './TabPaneSwitch';
+import InputGroup from '../common/InputGroup'
+import TextFieldGroup from '../common/TextFieldGroup'
+const isEmpty = require('./is-empty');
 
 class MyAccount extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      githubUsername: {},
+      displaySocialInputs: false,
+      githubUsername: '',
+      linkedIn: '',
+      codeForces: '',
       errors: {}
     };
 
+    this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-
-  componentWillReceiveProps (nextProps, nextContext) {
-    if(nextProps) {
-      this.setState({ githubUsername: nextProps.githubUsername })
-    }
-  }
   componentDidMount() {
     this.props.getMyAccount(this.props.match.params.id);
     console.log("Called DidMount in All Users");
+  }
+  componentWillReceiveProps(nextProps,nextContext) {
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
+    }
+
+    if (nextProps.profile.profile) {
+      const profile = nextProps.profile.profile;
+
+
+      // If profile field doesnt exist, make empty string
+      profile.githubUsername = !isEmpty(profile.githubUsername) ? profile.githubUsername : '';
+      profile.linkedIn = !isEmpty(profile.linkedIn) ? profile.linkedIn : '';
+      profile.codeForces = !isEmpty(profile.codeForces) ? profile.codeForces : '';
+
+      // Set component fields state
+      this.setState({
+        githubUsername: profile.githubUsername,
+        linkedIn: profile.linkedIn,
+        codeForces: profile.codeForces
+      });
+    }
   }
 
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
-  clickReset(e) {
-    this.setState({githubUsername: this.props.profile.githubUsername})
-  }
-
   onSubmit(e) {
     e.preventDefault();
-    const githubHandle = {
-      githubUsername: this.state.githubUsername
+
+    const profileData = {
+      githubUsername: this.state.githubUsername,
+      linkedIn: this.state.linkedIn,
+      codeForces: this.state.codeForces
     };
-    this.props.changeGithubUsername(githubHandle);
+    console.log({profileData})
+    this.props.updateProfile(profileData, this.props.history);
+    console.log("Profile Logged")
+
   }
   render() {
+    const { errors, displaySocialInputs } = this.state;
     const { profile, loading } = this.props.profile;
     let profileContent;
 
@@ -51,12 +77,12 @@ class MyAccount extends Component {
       profileContent = <Spinner />;
     } else {
       profileContent = (
-        <div>
+        <div >
           <div className="col-sm-9">
             <TabPaneSwitch/>
             <div className="row">
               <div className="col-sm-10"><h2>My Account</h2></div>
-              <div className="col-sm-2"><Link to="/" className="pull-right"/></div>
+              <div className="col-sm-2"><Link to="/changePassword" className="pull-right"/></div>
             </div>
 
             <div className="tab-content">
@@ -64,7 +90,7 @@ class MyAccount extends Component {
                   <form className="form" onSubmit={this.onSubmit} method="post" id="registrationForm">
                     <div className="form-group">
 
-                      <div className="col-xs-6">
+                      <div className="col-xs-6" style={{border: '2px', borderStyle: 'groove',borderColor: 'blue',borderRadius:'5px', padding: '5px'}} >
                         <label htmlFor="first_name"><h6>First name</h6></label>
                         <input type="text" className="form-control" name="firstName"
                                title="enter your first name if any" value={profile.firstName} readOnly/>
@@ -72,7 +98,7 @@ class MyAccount extends Component {
                     </div>
                     <div className="form-group">
 
-                      <div className="col-xs-6">
+                      <div className="col-xs-6" style={{border: '2px', borderStyle: 'groove',borderColor: 'blue',borderRadius:'5px', padding: '5px'}}>
                         <label htmlFor="last_name"><h6>Last name</h6></label>
                         <input type="text" className="form-control" name="lastName"
                                title="enter your last name if any." value={profile.lastName} readOnly/>
@@ -81,32 +107,41 @@ class MyAccount extends Component {
 
                     <div className="form-group">
 
-                      <div className="col-xs-6">
+                      <div className="col-xs-6" style={{border: '2px', borderStyle: 'groove',borderColor: 'blue',borderRadius:'5px', padding: '5px'}}>
                         <label htmlFor="email"><h6>Email</h6></label>
                         <input type="email" className="form-control" name="emailId"
                                title="enter your email." value={profile.email} readOnly/>
                       </div>
                     </div>
-                    <div className="form-group">
-
-                      <div className="col-xs-6">
-                        <label htmlFor="email"><h6>GitHub Account</h6></label>
-                        <input type="text" name="gitname"
-                               onChange={this.onChange.bind(this)}
-                               className="form-control" autoFocus placeholder="enter github Handle"
-                               defaultValue={this.props.profile.githubUsername}
-                        value={this.state.githubUsername}/>
-                      </div>
+                      <TextFieldGroup
+                        placeholder="Code Forces Handle"
+                        name="codeForces"
+                        value={this.state.codeForces}
+                        onChange={this.onChange}
+                        error={errors.codeForces}
+                        info="If you want the latest rank to be displayed"
+                      />
+                      <TextFieldGroup
+                        placeholder="Github Username"
+                        name="githubUsername"
+                        value={this.state.githubUsername}
+                        onChange={this.onChange}
+                        error={errors.githubUsername}
+                        info="If you want your latest repos and a Github link, include your username"
+                      />
+                    <div className={"form-group"}>
+                      <InputGroup
+                        placeholder="LinkedIn Profile URL"
+                        name="linkedIn"
+                        icon="fab fa-linkedin"
+                        value={this.state.linkedIn}
+                        onChange={this.onChange}
+                        error={errors.linkedIn}
+                      />
                     </div>
                     <div className="form-group">
                       <div className="col-xs-12">
-                        <button className="btn btn-primary w-30 my-1" type="submit">
-                          <i className="glyphicon glyphicon-ok-sign"/> Save
-                        </button>
-                        <button className="btn btn-primary w-30 my-1" type="reset"
-                                onClick={this.clickReset.bind(this)}>
-                          <i className="glyphicon glyphicon-repeat"/> Reset
-                        </button>
+                        <button className="btn btn-primary w-30 my-1" type="submit">Save</button>
                       </div>
                     </div>
                   </form>
@@ -118,8 +153,8 @@ class MyAccount extends Component {
     }
 
     return (
-        <div className="container bootstrap snippet myAccount">
-          <div className="row">
+        <div className="container bootstrap snippet myAccount" style={{maxWidth: '100%'}}>
+          <div className="row" style={{maxWidth: '100%'}}>
           </div>
           {profileContent}
         </div>
@@ -129,7 +164,7 @@ class MyAccount extends Component {
 
 MyAccount.propTypes = {
   getMyAccount: PropTypes.func.isRequired,
-  changeGithubUsername: PropTypes.func.isRequired,
+  updateProfile: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired
 };
 
@@ -137,4 +172,4 @@ const mapStateToProps = state => ({
   profile: state.profile
 });
 
-export default connect(mapStateToProps, { getMyAccount,changeGithubUsername })(MyAccount);
+export default connect(mapStateToProps, { getMyAccount,updateProfile })(MyAccount);

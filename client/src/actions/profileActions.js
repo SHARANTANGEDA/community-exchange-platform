@@ -72,10 +72,30 @@ export const getAllProfiles = () => dispatch => {
 };
 
 // Add education
-export const changeGithubUsername = (data, history) => dispatch => {
+export const updateProfile = (data, history) => dispatch => {
+  console.log("Update Profile is running")
   axios
-    .post('/api/users/myAccount/gitUsername', data)
-    .then(res => history.push('/myAccount'))
+    .post('/api/users/myAccount/change', data)
+    .then(res => {
+      console.log({res})
+      history.push('/myAccount')
+    })
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
+
+export const changePassword = (data, history) => dispatch => {
+  console.log("Change Password is running")
+  axios
+    .post('/api/users/changePassword', data)
+    .then(res => {
+      console.log({change:res})
+      history.push('/myAccount')
+    })
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
@@ -92,8 +112,8 @@ export const setProfileLoading = () => {
 };
 
 // Clear profile
-export const clearCurrentProfile = () => {
-  return {
-    type: CLEAR_CURRENT_PROFILE
-  };
-};
+// export const clearCurrentProfile = () => {
+//   return {
+//     type: CLEAR_CURRENT_PROFILE
+//   };
+// };

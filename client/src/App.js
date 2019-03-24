@@ -22,6 +22,7 @@ import AllUsers from './components/Users/AllUsers'
 import UserProfile from './components/Users/UserProfile'
 import MyAccount from './components/MyAccount/MyAccount'
 import ViewQuestion from './components/SingleQuestion/ViewQuestion'
+import ChangePassword from './components/MyAccount/ChangePassword'
 
 
 //Check for token
@@ -68,6 +69,9 @@ class App extends Component {
             </Switch>
             <Switch>
               <PrivateRoute exact path='/myAccount' component={MyAccount}/>
+            </Switch>
+            <Switch>
+              <PrivateRoute exact path='/changePassword' component={ChangePassword}/>
             </Switch>
             <Switch>
               <PrivateRoute exact path='/viewQuestion/:id' component={ViewQuestion}/>

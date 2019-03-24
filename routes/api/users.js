@@ -9,6 +9,7 @@ const passport = require('passport')
 const validateRegisterInput = require('../../validations/register')
 const validateLoginInput = require('../../validations/login')
 const validatePassword = require('../../validations/password')
+const validateProfileInput = require('../../validations/profile')
 const User = require('../../models/User')
 const Question = require('../../models/Question')
 
@@ -154,7 +155,7 @@ router.get('/myAccount', passport.authenticate('jwt', { session: false }),
               }).then(answers => {
                 if (!answers) {
                 } else {
-                  activity.answers = answers;
+                    activity.answers = answers;
                   res.json({
                     firstName: req.user.firstName,
                     lastName: req.user.lastName,
@@ -162,6 +163,8 @@ router.get('/myAccount', passport.authenticate('jwt', { session: false }),
                     departmentName: req.user.departmentName,
                     githubUsername: req.user.githubUsername,
                     avatar: req.user.avatar,
+                    linkedIn: req.user.linkedIn,
+                    codeForces: req.user.codeForces,
                     questionsAsked: activity.questions,
                     questionsAnswered: activity.answers,
                     questionsCommented: activity.comments
@@ -185,7 +188,7 @@ router.get('/myAccount', passport.authenticate('jwt', { session: false }),
   })
 
 //Change Password
-router.post('/myAccount/change', passport.authenticate('jwt', { session: false }),
+router.post('/changePassword', passport.authenticate('jwt', { session: false }),
   (req, res) => {
     const { errors, isValid } = validatePassword(req.body)
     if (!isValid) {
@@ -199,7 +202,7 @@ router.post('/myAccount/change', passport.authenticate('jwt', { session: false }
           bcrypt.hash(newPassword, salt, (err, hash) => {
             if (err) throw err
             newPassword = hash
-            User.findByIdAndUpdate(req.user._id, { password: newPassword }, (err, res) => {
+            User.findOneAndUpdate({_id: req.user._id}, { password: newPassword }, (err, res) => {
               if (err) throw err
             }).then(user => {
               res.json({ success: 'password is changed successfully' })
@@ -215,20 +218,33 @@ router.post('/myAccount/change', passport.authenticate('jwt', { session: false }
     })
   })
 
-//Change github handle
-router.post('/myAccount/gitUsername', passport.authenticate('jwt', { session: false }),
+//Update Profile CodeForces, Github, linkedIn
+router.post('/myAccount/change', passport.authenticate('jwt', { session: false }),
   (req, res) => {
-    if (req.body.githubUsername !== req.user.githubUsername) {
-      User.findByIdAndUpdate(req.user._id, { githubUsername: req.body.githubUsername }, (err, res) => {
-        if (err) throw err
-      }).then(user => {
-        res.json({ githubUsername: user.githubUsername })
-      }).catch(err => {
-        return res.status(404).json({ failed: 'userName failed to Update', err })
-      })
-    } else {
-      return res.json({ failed: 'userName is stored already enter other name to change' })
+    const { errors, isValid } = validateProfileInput(req.body);
+    console.log({body: req.body})
+    if (!isValid) {
+      return res.status(400).json(errors);
     }
-  })
-
+    const profileFields = {};
+    if (req.body.githubUsername) {
+      profileFields.githubUsername = req.body.githubUsername;
+    }
+    // TODO Skills
+    // if (typeof req.body.skills !== 'undefined') {
+    //   profileFields.skills = req.body.skills.split(',');
+    // }
+    if (req.body.codeForces) {
+      profileFields.codeForces = req.body.codeForces;
+    }
+    if (req.body.linkedIn) profileFields.linkedIn = req.body.linkedIn;
+      User.findOneAndUpdate(
+        { _id: req.user._id },
+        { $set: profileFields },
+        {new: true}
+      ).then(user => {
+          res.json(user)
+      });
+  }
+);
 module.exports = router

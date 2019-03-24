@@ -5,19 +5,26 @@ import { Link } from 'react-router-dom'
 class TabPaneSwitch extends Component {
   render () {
     return (
-      <div>
-        <ul className="nav nav-tabs">
-          <li className="active">
-            <Link to="/myAccount" className="btn btn-primary"
-                                       style={{margin: "10px"}}>MyAccount</Link>
-          </li>
-          <li>
-            <Link data-toggle="tab" to="/changePassword" className="btn btn-primary"
-                    style={{margin: "10px"}}> ResetPassword</Link>
-          </li>
-        </ul>
+      <div className="card card-nav-tabs card-plain">
+        <div className="card-header card-header-danger" style={{background: 'blue'}}>
+          <div className="nav-tabs-navigation" >
+            <div className="nav-tabs-wrapper">
+              <ul className="nav nav-tabs" data-tabs="tabs">
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/myAccount">My Account</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/changePassword">Change Password</Link>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    )
+        //{ colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" --}
+
+          )
   }
 }
 

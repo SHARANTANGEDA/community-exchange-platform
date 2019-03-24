@@ -40,7 +40,7 @@ class Navbar extends Component {
     const authLinksII = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link" to={`/publicProfile/${user.id}`}>
+          <Link className="nav-link" to={`/myAccount`}>
             My Account
           </Link>
         </li>

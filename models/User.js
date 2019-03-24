@@ -28,6 +28,13 @@ const UserSchema = new Schema({
   githubUsername: {
     type: String
   },
+  linkedIn: {
+    type: String
+  },
+  codeForces: {
+    type: String
+  },
+
  // isVerified: {
  //  type: Boolean,
    // default: false
