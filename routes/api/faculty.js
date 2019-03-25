@@ -6,11 +6,11 @@ const gravatar = require('gravatar')
 const bcrypt = require('bcryptjs')
 const passport = require('passport')
 
-const validateRegisterInput = require('../../validations/register/registerStudent')
+const validateRegisterInput = require('../../validations/register/registerFaculty')
 const validateLoginInput = require('../../validations/login')
 const validatePassword = require('../../validations/password')
 const validateProfileInput = require('../../validations/profile')
-const User = require('../../models/User')
+const Faculty = require('../../models/Faculty')
 const Question = require('../../models/Question')
 
 //@desc Register
@@ -20,7 +20,7 @@ router.post('/register', (req, res) => {
   if (!isValid) {
     return res.status(400).json(errors)
   }
-  User.findOne({ emailId: req.body.emailId }).then(user => {
+  Faculty.findOne({ emailId: req.body.emailId }).then(user => {
     if (user) {
       errors.emailId = 'Account already exists please use your password to login'
       return res.status(400).json(errors)
@@ -31,7 +31,7 @@ router.post('/register', (req, res) => {
         d: 'mm' // Default
       })
 
-      const newUser = new User({
+      const newFaculty = new Faculty({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         emailId: req.body.emailId,
@@ -41,10 +41,10 @@ router.post('/register', (req, res) => {
       })
 
       bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(newUser.password, salt, (err, hash) => {
+        bcrypt.hash(newFaculty.password, salt, (err, hash) => {
           if (err) throw err
-          newUser.password = hash
-          newUser
+          newFaculty.password = hash
+          newFaculty
             .save()
             .then(user => {
               const payload = { id: user.id, avatar: user.avatar }
@@ -93,7 +93,7 @@ router.post('/login', (req, res) => {
   const emailId = req.body.emailId
   const password = req.body.password
 
-  User.findOne({ emailId }).then(user => {
+  Faculty.findOne({ emailId }).then(user => {
 
     if (!user) {
       errors.emailId = 'User not Found'
@@ -128,7 +128,7 @@ router.post('/login', (req, res) => {
 router.get('/myAccount', passport.authenticate('jwt', { session: false }),
   (req, res) => {
     let activity = {};
-    const userId=req.user._id;
+    const userId=req.faculty._id;
     Question.find({ user: userId }, { 'title': 1, 'tags': 1, 'description': 1, 'time': 1, '_id': 0 })
       .then(questions => {
         if (!questions) {
@@ -155,16 +155,15 @@ router.get('/myAccount', passport.authenticate('jwt', { session: false }),
               }).then(answers => {
                 if (!answers) {
                 } else {
-                    activity.answers = answers;
+                  activity.answers = answers;
                   res.json({
-                    firstName: req.user.firstName,
-                    lastName: req.user.lastName,
-                    email: req.user.emailId,
-                    departmentName: req.user.departmentName,
-                    githubUsername: req.user.githubUsername,
-                    avatar: req.user.avatar,
-                    linkedIn: req.user.linkedIn,
-                    codeForces: req.user.codeForces,
+                    firstName: req.faculty.firstName,
+                    lastName: req.faculty.lastName,
+                    email: req.faculty.emailId,
+                    departmentName: req.faculty.departmentName,
+                    website: req.faculty.website,
+                    avatar: req.faculty.avatar,
+                    linkedIn: req.faculty.linkedIn,
                     questionsAsked: activity.questions,
                     questionsAnswered: activity.answers,
                     questionsCommented: activity.comments
@@ -196,13 +195,13 @@ router.post('/changePassword', passport.authenticate('jwt', { session: false }),
     }
     const password = req.body.password
     let newPassword = req.body.newPassword
-    bcrypt.compare(password, req.user.password).then(isMatch => {
+    bcrypt.compare(password, req.faculty.password).then(isMatch => {
       if (isMatch) {
         bcrypt.genSalt(10, (err, salt) => {
           bcrypt.hash(newPassword, salt, (err, hash) => {
             if (err) throw err
             newPassword = hash
-            User.findOneAndUpdate({_id: req.user._id}, { password: newPassword }, (err, res) => {
+            Faculty.findOneAndUpdate({_id: req.user._id}, { password: newPassword }, (err, res) => {
               if (err) throw err
             }).then(user => {
               res.json({ success: 'password is changed successfully' })
@@ -227,24 +226,24 @@ router.post('/myAccount/change', passport.authenticate('jwt', { session: false }
       return res.status(400).json(errors);
     }
     const profileFields = {};
-    if (req.body.githubUsername) {
-      profileFields.githubUsername = req.body.githubUsername;
+    if (req.body.website) {
+      profileFields.website = req.body.website;
     }
     // TODO Skills
     // if (typeof req.body.skills !== 'undefined') {
     //   profileFields.skills = req.body.skills.split(',');
     // }
-    if (req.body.codeForces) {
-      profileFields.codeForces = req.body.codeForces;
-    }
+    // if (req.body.codeForces) {
+    //   profileFields.codeForces = req.body.codeForces;
+    // }
     if (req.body.linkedIn) profileFields.linkedIn = req.body.linkedIn;
-      User.findOneAndUpdate(
-        { _id: req.user._id },
-        { $set: profileFields },
-        {new: true}
-      ).then(user => {
-          res.json(user)
-      });
+    Faculty.findOneAndUpdate(
+      { _id: req.faculty._id },
+      { $set: profileFields },
+      {new: true}
+    ).then(user => {
+      res.json(user)
+    });
   }
 );
 module.exports = router

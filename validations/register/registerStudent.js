@@ -1,7 +1,7 @@
 const Validator = require('validator');
-const isEmpty = require('./is-empty');
-const isCollegeEmail = require('./is-college-email');
-
+const isEmpty = require('../is-empty');
+const isCollegeEmail = require('../emailValidation/is-college-email');
+const isStudentEmail = require('../emailValidation/is-student-email');
 module.exports = (data) => {
   let errors = {};
 
@@ -29,6 +29,9 @@ module.exports = (data) => {
   }
   if(!isCollegeEmail(data.emailId)) {
     errors.emailId = 'Email does not belongs to the organization';
+  }
+  if(!isStudentEmail(data.emailId)) {
+    errors.emailId = 'Please use student email, If you are not student login from your section'
   }
   if (Validator.isEmpty(data.password)) {
     errors.password = 'Password field is required';

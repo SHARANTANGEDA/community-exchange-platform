@@ -24,11 +24,28 @@ class Landing extends Component {
                   Ask us Anything
                 </p>
                 <hr />
-                <Link to="/register" className="btn btn-lg btn-info mr-2">
-                  Sign Up
+                {/*<Link to="/register" className="btn btn-lg btn-info mr-2">*/}
+                  {/*Sign Up*/}
+                {/*</Link>*/}
+                {/*<Link to="/login" className="btn btn-lg btn-light">*/}
+                  {/*Login*/}
+                {/*</Link>*/}
+                <Link to="/login" className="btn btn-lg btn-info mr-2">
+                  <img src={require("../../img/student.png")} alt=""/>
+                    <h6 style={{fontStyle: 'inherit', fontWeight: 'bold'}}>Student</h6>
                 </Link>
-                <Link to="/login" className="btn btn-lg btn-light">
-                  Login
+                <Link to="/login" className="btn btn-lg btn-info mr-2">
+                  <img src={require("../../img/professor.png")} alt=""/>
+                    <h6 style={{fontStyle: 'inherit', fontWeight: 'bold'}}>Faculty</h6>
+                </Link>
+                <Link to="/login" className="btn btn-lg btn-info mr-2">
+                  <img src={require("../../img/hod.png")} alt=""/>
+                    <h6 style={{fontStyle: 'inherit', fontWeight: 'bold'}}>HOD</h6>
+                </Link>
+                <hr/>
+                <Link to="/login" className="btn btn-lg btn-info mr-2">
+                  <img src={require("../../img/admin.png")} alt=""/>
+                    <h6 style={{fontStyle: 'inherit', fontWeight: 'bold'}}>Admin</h6>
                 </Link>
               </div>
             </div>
