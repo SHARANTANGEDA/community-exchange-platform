@@ -8,7 +8,9 @@ const questions = require('./routes/api/questions');
 const answers = require('./routes/api/answers');
 const comments = require('./routes/api/comments')
 const publicProfile = require('./routes/api/publicProfile');
-
+const admin = require('./routes/api/admin');
+const faculty = require('./routes/api/faculty');
+const hod = require('./routes/api/hod');
 const path = require('path');
 
 //@MongoDB Atlas Connection
@@ -30,6 +32,10 @@ app.use('/api/questions',questions);
 app.use('/api/answers',answers);
 app.use('/api/comments',comments)
 app.use('/api/publicProfile',publicProfile);
+app.use('/api/admin',admin);
+app.use('/api/faculty',faculty);
+app.use('/api/hod',hod);
+
 
 //Server static assets if in production
 if(process.env.NODE_ENV === 'production') {
