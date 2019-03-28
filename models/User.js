@@ -34,7 +34,25 @@ const UserSchema = new Schema({
   codeForces: {
     type: String
   },
-
+  website: {//hod and faculty
+    type: String
+  },
+  blog: {//Faculty
+    type: String
+  },
+  role: {
+    type: String,
+    required: true
+  },
+  isTA: {//TODO Student
+    type: Boolean
+  },
+  courses: {//TODO Faculty
+    type: [String]
+  },
+  assigned: {//TODO Faculty
+    type: Boolean
+  },
  // isVerified: {
  //  type: Boolean,
    // default: false

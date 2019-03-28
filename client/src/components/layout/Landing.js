@@ -42,11 +42,6 @@ class Landing extends Component {
                   <img src={require("../../img/hod.png")} alt=""/>
                     <h6 style={{fontStyle: 'inherit', fontWeight: 'bold'}}>HOD</h6>
                 </Link>
-                <hr/>
-                <Link to="/login" className="btn btn-lg btn-info mr-2">
-                  <img src={require("../../img/admin.png")} alt=""/>
-                    <h6 style={{fontStyle: 'inherit', fontWeight: 'bold'}}>Admin</h6>
-                </Link>
               </div>
             </div>
           </div>

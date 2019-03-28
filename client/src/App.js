@@ -23,6 +23,7 @@ import UserProfile from './components/Users/UserProfile'
 import MyAccount from './components/MyAccount/MyAccount'
 import ViewQuestion from './components/SingleQuestion/ViewQuestion'
 import ChangePassword from './components/MyAccount/ChangePassword'
+import AdminLogin from './components/authorization/AdminLogin'
 
 
 //Check for token
@@ -50,6 +51,7 @@ class App extends Component {
         <div className="container">
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/adminLogin" component={AdminLogin}/>
           <div className="wrapper">
           <Sidebar/>
           <Switch>

@@ -7,11 +7,11 @@ const bcrypt = require('bcryptjs')
 const passport = require('passport')
 
 const validateRegisterInput = require('../../validations/register/registerStudent')
-const validateLoginInput = require('../../validations/login')
+const validateLoginInput = require('../../validations/login/login')
 const validatePassword = require('../../validations/password')
 const validateProfileInput = require('../../validations/profile')
-const User = require('../../models/User')
-const Question = require('../../models/Question')
+const User = require('../../models/User');
+const Question = require('../../models/Question');
 
 //@desc Register
 router.post('/register', (req, res) => {
@@ -25,7 +25,7 @@ router.post('/register', (req, res) => {
       errors.emailId = 'Account already exists please use your password to login'
       return res.status(400).json(errors)
     } else {
-      const avatar = gravatar.url(req.body.email, {
+      const avatar = gravatar.url(req.body.emailId, {
         s: '200', // Size
         r: 'pg', // Rating
         d: 'mm' // Default
@@ -37,7 +37,9 @@ router.post('/register', (req, res) => {
         emailId: req.body.emailId,
         avatar,
         password: req.body.password,
-        departmentName: req.body.departmentName
+        departmentName: req.body.departmentName,
+        isTA: false,
+        role: 'student'
       })
 
       bcrypt.genSalt(10, (err, salt) => {
@@ -47,7 +49,7 @@ router.post('/register', (req, res) => {
           newUser
             .save()
             .then(user => {
-              const payload = { id: user.id, avatar: user.avatar }
+              const payload = { id: user.id, avatar: user.avatar ,role: user.role}
               //TODO change secret key and signIn options
               jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
                 (err, token) => {
@@ -62,7 +64,6 @@ router.post('/register', (req, res) => {
         })
       })
       //TODO uncomment below lines to implement mail verification
-
       // const verifyToken = new VerifyToken({
       //     _userId: user._id,
       //     token:crypto.randomBytes(16).toString('hex')
@@ -107,7 +108,7 @@ router.post('/login', (req, res) => {
         // if(!user.isVerified) {
         //   return res.status(401).json({type: not-Verified, msg: 'Your account is not verified'});
         // }
-        const payload = { id: user.id, avatar: user.avatar }
+        const payload = { id: user.id, avatar: user.avatar, role: user.role }
         //TODO change secret key and signIn options
         jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
           (err, token) => {
@@ -125,7 +126,7 @@ router.post('/login', (req, res) => {
 })
 
 //Logged In Session currentUser
-router.get('/myAccount', passport.authenticate('jwt', { session: false }),
+router.get('/myAccount', passport.authenticate('student', { session: false }),
   (req, res) => {
     let activity = {};
     const userId=req.user._id;
@@ -188,7 +189,7 @@ router.get('/myAccount', passport.authenticate('jwt', { session: false }),
   })
 
 //Change Password
-router.post('/changePassword', passport.authenticate('jwt', { session: false }),
+router.post('/changePassword', passport.authenticate('student', { session: false }),
   (req, res) => {
     const { errors, isValid } = validatePassword(req.body)
     if (!isValid) {
@@ -219,7 +220,7 @@ router.post('/changePassword', passport.authenticate('jwt', { session: false }),
   })
 
 //Update Profile CodeForces, Github, linkedIn
-router.post('/myAccount/change', passport.authenticate('jwt', { session: false }),
+router.post('/myAccount/change', passport.authenticate('student', { session: false }),
   (req, res) => {
     const { errors, isValid } = validateProfileInput(req.body);
     console.log({body: req.body})

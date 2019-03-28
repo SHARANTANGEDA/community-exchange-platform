@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs')
 const passport = require('passport')
 
 const validateRegisterInput = require('../../validations/register/registerFaculty')
-const validateLoginInput = require('../../validations/login')
+const validateLoginInput = require('../../validations/login/login')
 const validatePassword = require('../../validations/password')
 const validateProfileInput = require('../../validations/profile')
 const Faculty = require('../../models/Faculty')
@@ -20,8 +20,8 @@ router.post('/register', (req, res) => {
   if (!isValid) {
     return res.status(400).json(errors)
   }
-  Faculty.findOne({ emailId: req.body.emailId }).then(user => {
-    if (user) {
+  Faculty.findOne({ emailId: req.body.emailId }).then(faculty => {
+    if (faculty) {
       errors.emailId = 'Account already exists please use your password to login'
       return res.status(400).json(errors)
     } else {
@@ -46,13 +46,13 @@ router.post('/register', (req, res) => {
           newFaculty.password = hash
           newFaculty
             .save()
-            .then(user => {
-              const payload = { id: user.id, avatar: user.avatar }
+            .then(faculty => {
+              const payload = { id: faculty.id, avatar: faculty.avatar }
               //TODO change secret key and signIn options
               jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
                 (err, token) => {
                   res.json({
-                    user,
+                    faculty,
                     success: true,
                     token: 'Bearer ' + token
                   })
@@ -93,17 +93,16 @@ router.post('/login', (req, res) => {
   const emailId = req.body.emailId
   const password = req.body.password
 
-  Faculty.findOne({ emailId }).then(user => {
+  Faculty.findOne({ emailId }).then(faculty => {
 
-    if (!user) {
+    if (!faculty) {
       errors.emailId = 'User not Found'
       return res.status(400).json(errors)
     }
 
-    bcrypt.compare(password, user.password).then(isMatch => {
+    bcrypt.compare(password, faculty.password).then(isMatch => {
       if (isMatch) {
         //TODO unComment below lines to implement mail verification
-
         // if(!user.isVerified) {
         //   return res.status(401).json({type: not-Verified, msg: 'Your account is not verified'});
         // }
@@ -201,9 +200,9 @@ router.post('/changePassword', passport.authenticate('jwt', { session: false }),
           bcrypt.hash(newPassword, salt, (err, hash) => {
             if (err) throw err
             newPassword = hash
-            Faculty.findOneAndUpdate({_id: req.user._id}, { password: newPassword }, (err, res) => {
+            Faculty.findOneAndUpdate({_id: req.faculty._id}, { password: newPassword }, (err, res) => {
               if (err) throw err
-            }).then(user => {
+            }).then(faculty => {
               res.json({ success: 'password is changed successfully' })
             }).catch(err => {
               return res.status(404).json({ failed: 'Your password is not updated', err })
@@ -241,8 +240,8 @@ router.post('/myAccount/change', passport.authenticate('jwt', { session: false }
       { _id: req.faculty._id },
       { $set: profileFields },
       {new: true}
-    ).then(user => {
-      res.json(user)
+    ).then(faculty => {
+      res.json(faculty)
     });
   }
 );

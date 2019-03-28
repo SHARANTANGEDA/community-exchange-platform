@@ -7,47 +7,46 @@ const bcrypt = require('bcryptjs')
 const passport = require('passport')
 
 const validateRegisterInput = require('../../validations/register/registerHOD')
-const validateLoginInput = require('../../validations/login')
+const validateLoginInput = require('../../validations/login/hodLogin')
 const validatePassword = require('../../validations/password')
-const validateProfileInput = require('../../validations/profile')
-const Hod = require('../../models/Hod')
-const Question = require('../../models/Question')
+const User = require('../../models/User');
 
-//@desc Register
+//@UNIT TESTING DONE, REGISTER WORKING
 router.post('/register', (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body)
 
   if (!isValid) {
     return res.status(400).json(errors)
   }
-  Hod.findOne({ emailId: req.body.emailId }).then(user => {
+  User.findOne({ emailId: req.body.emailId }).then(user => {
     if (user) {
       errors.emailId = 'Account already exists please use your password to login'
       return res.status(400).json(errors)
     } else {
-      const avatar = gravatar.url(req.body.email, {
+      const avatar = gravatar.url(req.body.emailId, {
         s: '200', // Size
         r: 'pg', // Rating
         d: 'mm' // Default
       })
 
-      const newHod = new Hod({
+      const newUser = new User({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         emailId: req.body.emailId,
         avatar,
         password: req.body.password,
-        departmentName: req.body.departmentName
+        departmentName: req.body.departmentName,
+        role: 'hod'
       })
 
       bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(newHod.password, salt, (err, hash) => {
+        bcrypt.hash(newUser.password, salt, (err, hash) => {
           if (err) throw err
-          newHod.password = hash
-          newHod
+          newUser.password = hash
+          newUser
             .save()
             .then(user => {
-              const payload = { id: user.id, avatar: user.avatar }
+              const payload = { id: user.id ,role: user.role,avatar: user.avatar}
               //TODO change secret key and signIn options
               jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
                 (err, token) => {
@@ -62,7 +61,6 @@ router.post('/register', (req, res) => {
         })
       })
       //TODO uncomment below lines to implement mail verification
-
       // const verifyToken = new VerifyToken({
       //     _userId: user._id,
       //     token:crypto.randomBytes(16).toString('hex')
@@ -81,7 +79,7 @@ router.post('/register', (req, res) => {
   })
 })
 
-//@desc Login
+//@UNIT TESTING DONE, LOGIN WORKING
 router.post('/login', (req, res) => {
   const { errors, isValid } = validateLoginInput(req.body)
 
@@ -93,7 +91,7 @@ router.post('/login', (req, res) => {
   const emailId = req.body.emailId
   const password = req.body.password
 
-  Hod.findOne({ emailId }).then(user => {
+  User.findOne({ emailId }).then(user => {
 
     if (!user) {
       errors.emailId = 'User not Found'
@@ -107,7 +105,7 @@ router.post('/login', (req, res) => {
         // if(!user.isVerified) {
         //   return res.status(401).json({type: not-Verified, msg: 'Your account is not verified'});
         // }
-        const payload = { id: user.id, avatar: user.avatar }
+        const payload = { id: user.id}
         //TODO change secret key and signIn options
         jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
           (err, token) => {
@@ -124,70 +122,9 @@ router.post('/login', (req, res) => {
   })
 })
 
-//Logged In Session currentUser
-router.get('/myAccount', passport.authenticate('jwt', { session: false }),
-  (req, res) => {
-    let activity = {};
-    const userId=req.hod._id;
-    Question.find({ user: userId }, { 'title': 1, 'tags': 1, 'description': 1, 'time': 1, '_id': 0 })
-      .then(questions => {
-        if (!questions) {
-        } else {
-          activity.questions = questions;
-          Question.find({ 'comments.user': userId }, {
-            'title': 1,
-            'tags': 1,
-            'comments.text': 1,
-            'comments.time': 1,
-            'time': 1,
-            '_id': 0
-          }).then(comments => {
-            if (!comments) {
-            } else {
-              activity.comments = comments;
-              Question.find({ 'answer.user': userId }, {
-                'title': 1,
-                'tags': 1,
-                'time': 1,
-                '_id': 0,
-                'answer.text': 1,
-                'answer.time': 1
-              }).then(answers => {
-                if (!answers) {
-                } else {
-                  activity.answers = answers;
-                  res.json({
-                    firstName: req.hod.firstName,
-                    lastName: req.hod.lastName,
-                    email: req.hod.emailId,
-                    departmentName: req.hod.departmentName,
-                    website: req.hod.website,
-                    avatar: req.hod.avatar,
-                    linkedIn: req.hod.linkedIn,
-                    questionsAsked: activity.questions,
-                    questionsAnswered: activity.answers,
-                    questionsCommented: activity.comments
-                  })
-                }
-              }).catch(err => {
-                return res.status(404).json({ err })
-              })
-            }
-          }).catch(err => {
-            return res.status(404).json({ err })
-          })
-        }
-      }).catch(err => {
-      return res.status(404).json({ err })
-    })
-
-
-
-
-  })
 
 //Change Password
-router.post('/changePassword', passport.authenticate('jwt', { session: false }),
+router.post('/changePassword', passport.authenticate('hod',{session: false}),
   (req, res) => {
     const { errors, isValid } = validatePassword(req.body)
     if (!isValid) {
@@ -201,7 +138,7 @@ router.post('/changePassword', passport.authenticate('jwt', { session: false }),
           bcrypt.hash(newPassword, salt, (err, hash) => {
             if (err) throw err
             newPassword = hash
-            Hod.findOneAndUpdate({_id: req.hod._id}, { password: newPassword }, (err, res) => {
+            User.findOneAndUpdate({_id: req.user._id}, { password: newPassword }, (err, res) => {
               if (err) throw err
             }).then(user => {
               res.json({ success: 'password is changed successfully' })
@@ -217,33 +154,9 @@ router.post('/changePassword', passport.authenticate('jwt', { session: false }),
     })
   })
 
-//Update Profile CodeForces, Github, linkedIn
-router.post('/myAccount/change', passport.authenticate('jwt', { session: false }),
-  (req, res) => {
-    const { errors, isValid } = validateProfileInput(req.body);
-    console.log({body: req.body})
-    if (!isValid) {
-      return res.status(400).json(errors);
-    }
-    const profileFields = {};
-    if (req.body.website) {
-      profileFields.website = req.body.website;
-    }
-    // TODO Skills
-    // if (typeof req.body.skills !== 'undefined') {
-    //   profileFields.skills = req.body.skills.split(',');
-    // }
-    // if (req.body.codeForces) {
-    //   profileFields.codeForces = req.body.codeForces;
-    // }
-    if (req.body.linkedIn) profileFields.linkedIn = req.body.linkedIn;
-    Hod.findOneAndUpdate(
-      { _id: req.hod._id },
-      { $set: profileFields },
-      {new: true}
-    ).then(user => {
-      res.json(user)
-    });
-  }
-);
+router.get('/test',passport.authenticate('hod',{session: false}),(req,res) => {
+  res.json({
+    msg: 'On hod private route'
+  });
+} )
 module.exports = router
