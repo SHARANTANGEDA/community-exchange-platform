@@ -45,13 +45,15 @@ const UserSchema = new Schema({
     required: true
   },
   isTA: {//TODO Student
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   courses: {//TODO Faculty
     type: [String]
   },
   assigned: {//TODO Faculty
-    type: Boolean
+    type: Boolean,
+    default: false
   },
  // isVerified: {
  //  type: Boolean,

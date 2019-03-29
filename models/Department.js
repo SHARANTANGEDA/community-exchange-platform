@@ -13,27 +13,8 @@ const DepartmentSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  courses: [
-    {
-      courseCode: {
-        type: String
-      },
-      courseName: {
-        type: String
-      },
-      facultyId: {
-        type: [String]
-      },
-      status: {
-        type: Boolean,
-        required: true,
-        default: false
-      },
-      time: {
-        type: Date,
-        default: Date.now
-      }
-    }
-  ]
+  coursesId: {
+    type: [String]
+  }
 })
 module.exports = Department = mongoose.model('department', DepartmentSchema)
