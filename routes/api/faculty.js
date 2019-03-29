@@ -10,7 +10,6 @@ const validateRegisterInput = require('../../validations/register/registerFacult
 const validateLoginInput = require('../../validations/login/login')
 const validatePassword = require('../../validations/password')
 const validateProfileInput = require('../../validations/profile')
-const Faculty = require('../../models/Faculty')
 const Question = require('../../models/Question')
 
 //@desc Register
