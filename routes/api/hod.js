@@ -153,10 +153,4 @@ router.post('/changePassword', passport.authenticate('hod',{session: false}),
       }
     })
   })
-
-router.get('/test',passport.authenticate('hod',{session: false}),(req,res) => {
-  res.json({
-    msg: 'On hod private route'
-  });
-} )
 module.exports = router

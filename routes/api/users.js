@@ -10,6 +10,7 @@ const validateRegisterInput = require('../../validations/register/registerStuden
 const validateLoginInput = require('../../validations/login/login')
 const validatePassword = require('../../validations/password')
 const validateProfileInput = require('../../validations/profile')
+const validateApplication = require('../../validations/taApplication')
 const User = require('../../models/User');
 const Question = require('../../models/Question');
 
@@ -248,4 +249,16 @@ router.post('/myAccount/change', passport.authenticate('student', { session: fal
       });
   }
 );
+
+//Apply For TA position
+router.post('/applyForTA',passport.authenticate('student',{session:false}),
+  (req,res) => {
+    const { errors, isValid } = validateApplication(req.body);
+    if (!isValid) {
+      return res.status(400).json(errors);
+    }
+    User.findByIdAndUpdate(req.user._id,{applyTA: true,taCourse: req.body.taCourse}).then(user => {
+      res.json({success: 'Successfully applied for TA'})
+    }).catch(err => res.status(401).json('There was error in submitting the application'))
+  })
 module.exports = router

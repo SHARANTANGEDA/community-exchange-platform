@@ -31,6 +31,9 @@ const QuestionSchema = new Schema({
     type: [String],
     required: true
   },
+  course: {
+    type: String
+  },
   description: {
     type: String,
     required: true

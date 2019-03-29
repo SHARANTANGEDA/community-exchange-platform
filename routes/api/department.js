@@ -9,7 +9,7 @@ const Department = require('../../models/Department')
 const User = require('../../models/User')
 const Course = require('../../models/Course')
 
-const validateQuestionInput = require('../../validations/askQuestions')
+const validateCourseInput = require('../../validations/course')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
@@ -76,8 +76,55 @@ router.post('/course/:id/assignFaculty', passport.authenticate('hod', { session:
     Course.findByIdAndUpdate(req.params.id, { $set: courseFields },{new: true}).then(course => {
       res.json(course)
     }).catch(err => res.status(404).json({ courseNotFound: 'No Course Found' }))
-  }
+  });
 
-)
-module.exports = router
+
+//@Add Course
+router.post('/addCourse',passport.authenticate('hod',{session: false}),
+  (req,res) => {
+    const { errors, isValid } = validateCourseInput(req.body);
+    if (!isValid) {
+      return res.status(404).json(errors);
+    }
+    Course.find({ courseCode: req.body.courseCode }).then(course => {
+      if (course) {
+        errors.courseCode = 'Course Code Already exists please use different one'
+        return res.status(400).json(errors)
+      } else {
+        let toStoreFaculty = req.body.facultyId.trim();
+        if (toStoreFaculty.endsWith(',')) {
+          toStoreFaculty = toStoreFaculty.substr(0, toStoreFaculty.length - 1);
+        }
+        if (toStoreFaculty.startsWith(',')) {
+          toStoreFaculty = toStoreFaculty.substr(1, toStoreFaculty.length);
+        }
+        toStoreFaculty = toStoreFaculty.toArray();
+        let status;
+        status = req.body.facultyId.length !== 0;
+        const newCourse = new Course({
+          courseCode: req.body.courseCode,
+          courseName: req.body.courseName,
+          facultyId: toStoreFaculty,
+          bio: req.body.bio,
+          status: status,
+        });
+
+        newCourse.save().then(course => res.json(course)).catch(err => res.json(errors));
+      }
+    })
+});
+
+//@unAssigned Faculty
+router.get('/unAssignedFaculty',passport.authenticate('hod',{session: false}),
+  (req,res) => {
+    User.find({role: 'faculty', assigned: false}).then(faculty => {
+      if(faculty) {
+        res.json(faculty);
+      }else {
+        res.json({noUnAssignedFaculty: 'All faculty are assigned at least one of the courses'})
+      }
+    }).catch(err => res.status(404).json({notFound: 'faculty not found'}))
+});
+
+module.exports = router;
 

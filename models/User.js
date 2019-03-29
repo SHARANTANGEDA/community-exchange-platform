@@ -48,10 +48,17 @@ const UserSchema = new Schema({
     type: Boolean,
     default: false
   },
-  courses: {//TODO Faculty
+  applyTA: {
+    type: Boolean,
+    default:false
+  },
+  taCourse: {//TODO Student
+    type: String
+  },
+  courses: {// Faculty
     type: [String]
   },
-  assigned: {//TODO Faculty
+  assigned: {//Faculty
     type: Boolean,
     default: false
   },
