@@ -47,6 +47,12 @@ router.post('/ask',passport.authenticate('jwt',{session: false}),
   if(toStoreTag.endsWith(',')) {
     toStoreTag = toStoreTag.substr(0,toStoreTag.length-1);
   }
+  if(toStoreTag.startsWith(',')) {
+    toStoreTag = toStoreTag.substr(1,toStoreTag.length);
+  }
+  if(toStoreTag.length===0) {
+    errors.tags = 'Please Enter tags Entered commas only'
+  }
   const newQuestion = new Question({
     title: req.body.title,
     firstName: req.user.firstName,
