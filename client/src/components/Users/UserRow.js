@@ -10,7 +10,8 @@ class UserRow extends Component {
       <UserItem user={user} key={user._id}/>
     )));
     return (
-      <div className="row d-flex flex-grow-1" style={{height: "20%", width: "100%",minWidth: "100%"}}>
+      // style={{height: "20%", width: "100%",minWidth: "100%"}}   d-flex flex-grow-1
+      <div className="row" >
         {showUsers}
       </div>
     )

@@ -12,7 +12,7 @@ const validateQuestionInput = require('../../validations/askQuestions')
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 //@get Questions for display
-router.get('/',passport.authenticate('jwt',{session: false}),(req,res) => {
+router.get('/',passport.authenticate('student',{session: false}),(req,res) => {
   Question.find()
     .sort({time: -1})
     .then(questions => res.json(questions))
@@ -20,7 +20,7 @@ router.get('/',passport.authenticate('jwt',{session: false}),(req,res) => {
 });
 
 //@Get 10 Questions for display
-router.get('/home',passport.authenticate('jwt',{session: false}),(req,res) => {
+router.get('/home',passport.authenticate('student',{session: false}),(req,res) => {
   Question.find()
     .sort({time: -1})
     .limit(10)
@@ -28,7 +28,7 @@ router.get('/home',passport.authenticate('jwt',{session: false}),(req,res) => {
     .catch(err => res.status(404).json({noPostsFound: 'No posts found'}));
 });
 //@get Question by Id
-router.get('/:id',passport.authenticate('jwt',{session: false}),(req,res) => {
+router.get('/:id',passport.authenticate('student',{session: false}),(req,res) => {
   Question.findById(req.params.id)
     .then(question => res.json(question))
     .catch(err => {
@@ -37,7 +37,7 @@ router.get('/:id',passport.authenticate('jwt',{session: false}),(req,res) => {
 });
 
 //@ Create Question
-router.post('/ask',passport.authenticate('jwt',{session: false}),
+router.post('/ask',passport.authenticate('student',{session: false}),
   (req,res) => {
   const {errors , isValid} =validateQuestionInput(req.body);
   if(!isValid) {
@@ -68,9 +68,12 @@ router.post('/ask',passport.authenticate('jwt',{session: false}),
   }
 );
 
+
+
+
 //@Delete Question by Id path:api/question/:id
 router.delete(
-  '/:id',passport.authenticate('jwt',{session: false}),
+  '/:id',passport.authenticate('student',{session: false}),
     (req,res) => {
     User.findOne({user: req.user.id}).then(user => {
       Question.findById(req.params.id)

@@ -335,4 +335,17 @@ router.get('deleteTA/:id',passport.authenticate('faculty',{session: false}),
     res.json({success: 'Successfully deleted TA'})
   }).catch(err => res.status(401).json({error: 'There was error in removing TA'}))
 })
+
+router.get('/home',passport.authenticate('faculty', {session: false}),(req,res) => {
+  User.findById(req.user._id).then(faculty => {
+    let display=[];
+      faculty.courses.forEach(course => {
+        Question.find({course: course}).sort({time: -1}).limit(5).then(questions => {
+          display.push({course,questions});
+        }).catch(err => res.status(401).json({error: 'There was error in Fetching Questions'}))
+      })
+    res.json(display);
+    }
+  ).catch(err => res.status(401).json({error: 'There was error in fetching details please try later'}))
+})
 module.exports = router

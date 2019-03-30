@@ -14,7 +14,7 @@ module.exports = passport => {
       User.findById(jwt_payload.id)
         .then(user => {
           if(user) {
-            if(user.role==='faculty') {
+            if(user.role==='student') {
               return done(null,user);
             } else {
               return done(null,false);

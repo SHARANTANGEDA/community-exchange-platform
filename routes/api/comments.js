@@ -10,7 +10,7 @@ const User = require('../../models/User');
 const validateCommentInput = require('../../validations/addComments');
 
 //@Comment On Question
-router.post('/question/:id',passport.authenticate('jwt',{session: false}),
+router.post('/question/:id',passport.authenticate('student',{session: false}),
   (req,res) => {
   const {errors, isValid} = validateCommentInput(req.body);
   if(!isValid) {
@@ -32,7 +32,7 @@ router.post('/question/:id',passport.authenticate('jwt',{session: false}),
 });
 
 //@comments on Answers
-router.post('/answer/:id/:answerId',passport.authenticate('jwt',{session: false}),
+router.post('/answer/:id/:answerId',passport.authenticate('student',{session: false}),
   (req,res) => {
   const {errors,isValid} = validateCommentInput(req.body);
     if(!isValid) {

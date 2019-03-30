@@ -12,7 +12,7 @@ const validateAnswerInput = require('../../validations/answerQuestion');
 
 //@Answer Question
 router.post(
-  '/answer/:id',passport.authenticate('jwt',{session: false}),
+  '/answer/:id',passport.authenticate('student',{session: false}),
   (req,res) => {
     const {errors, isValid} = validateAnswerInput(req.body);
     if(!isValid) {
@@ -38,7 +38,7 @@ router.post(
 //@delete Answer
 router.delete(
   '/:id/:answer_id',
-  passport.authenticate('jwt', { session: false }),
+  passport.authenticate('student', { session: false }),
   (req, res) => {
     Question.findById(req.params.id)
       .then(question => {

@@ -47,13 +47,13 @@ class App extends Component {
       <Router>
       <div className="App">
         <NavBar/>
+        <div className="wrapper">
+        <Sidebar/>
         <Route exact path="/" component={Landing}/>
         <div className="container">
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/adminLogin" component={AdminLogin}/>
-          <div className="wrapper">
-          <Sidebar/>
           <Switch>
             <PrivateRoute exact path='/dashboard' component={Dashboard}/>
           </Switch>

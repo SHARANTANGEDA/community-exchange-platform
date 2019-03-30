@@ -9,8 +9,8 @@ class Sidebar extends Component {
     let showContent;
     if(isAuthenticated) {
       showContent=(
-        <nav id="sidebar">
-        <ul className="list-unstyled components">
+        <nav id="sidebar" className='sidebar-nav-fixed affix' style={{height: '100%'}}>
+        <ul className="list-unstyled components"  style={{height: '100%'}}>
           <li className="active">
           </li>
           <li>
@@ -50,7 +50,7 @@ class Sidebar extends Component {
       )
     }
     return (
-      <div>
+      <div className='' style={{minHeight: '100%'}}>
         {showContent}
       </div>
     );

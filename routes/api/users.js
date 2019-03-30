@@ -29,7 +29,7 @@ router.post('/register', (req, res) => {
       const avatar = gravatar.url(req.body.emailId, {
         s: '200', // Size
         r: 'pg', // Rating
-        d: 'mm' // Default
+        d: 'retro' // Default
       })
 
       const newUser = new User({
@@ -249,6 +249,7 @@ router.post('/myAccount/change', passport.authenticate('student', { session: fal
       });
   }
 );
+
 
 //Apply For TA position
 router.post('/applyForTA',passport.authenticate('student',{session:false}),

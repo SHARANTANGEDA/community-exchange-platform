@@ -13,22 +13,23 @@ class Navbar extends Component {
     const {isAuthenticated,user} = this.props.auth;
     console.log({isAuthenticated: isAuthenticated,User:user});
     const authLinkO = (
-      <Link className="navbar-brand" to="/dashboard">
-        <img className="img-rounded" style={{maxWidth: '25%'}}
-             src={require('../../img/logoNew.png')} alt="GhotDen"
-             title=""/>
+      <Link className="navbar-brand" to="/dashboard" style={{fontFamily: "'Lobster', cursive",fontSize: '26px'}}>
+        <img  style={{maxWidth: '20%',maxHeight: '25%'}}
+              src={require('../../img/logoIcon.png')} alt="GhotDen"
+              title=""/>GhotDen
       </Link>
+
     );
     const guestLinkO = (
       <Link className="navbar-brand" to="/">
-        <img className="img-rounded" style={{maxWidth: '25%'}}
+        <img  style={{maxWidth: '25%'}}
              src={require('../../img/logoNew.png')} alt="GhotDen"
              title=""/>
       </Link>
     );
 
     const authLinksI = (
-    <div className="input-group md-form form-sm form-2 pl-0" style={{maxWidth: '750px'}}>
+    <div className="input-group md-form form-sm form-2 pl-0" style={{width: '500px',maxWidth: '700px'}}>
       <input className="form-control my-0 py-1 lime-border" type="text" placeholder="Search" aria-label="Search"/>
       <div className="input-group-append">
         <span className="input-group-text cyan lighten-2" id="basic-text1">
@@ -38,7 +39,7 @@ class Navbar extends Component {
     </div>
     );
     const authLinksII = (
-      <ul className="navbar-nav ml-auto">
+      <ul className="navbar-nav ml-auto" style={{minWidth: '300px'}}>
         <li className="nav-item">
           <Link className="nav-link" to={`/myAccount`}>
             My Account
@@ -65,7 +66,7 @@ class Navbar extends Component {
     );
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+      <nav className="navbar navbar-expand-sm navbar-dark  mb-4" style={{background: 'black'}}>
         <div className="container">
           {isAuthenticated ? authLinkO : guestLinkO}
           <button
