@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-
 import Spinner from '../common/Spinner';
 import { updateProfile, getMyAccount } from '../../actions/profileActions'
-import TabPaneSwitch from './TabPaneSwitch';
 import InputGroup from '../common/InputGroup'
 import TextFieldGroup from '../common/TextFieldGroup'
 const isEmpty = require('./is-empty');

@@ -1,5 +1,5 @@
 const isAdminEmail = value => {
-  return (value === 'archeus') || (value === 'godView');
+  return false;
 }
 
 module.exports = isAdminEmail;

@@ -31,9 +31,9 @@ module.exports = (data) => {
   if(!isCollegeEmail(data.emailId)) {
     errors.emailId = 'Email does not belongs to the organization';
   }
-  if(!isHODEmail(data.emailId)) {
-    errors.emailId = 'Please use valid hod email Address, If you are not a hod then login from your section '
-  }
+  // if(!isHODEmail(data.emailId)) {
+  //   errors.emailId = 'Please use valid hod email Address, If you are not a hod then login from your section '
+  // }
   if (Validator.isEmpty(data.password)) {
     errors.password = 'Password field is required';
   }

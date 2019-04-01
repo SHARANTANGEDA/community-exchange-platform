@@ -17,3 +17,5 @@ export const ADD_ANSWER='ADD_ANSWER';
 export const GET_HOME='GET_HOME';
 export const GET_HOME_NO_FACULTY='GET_HOME_NO_FACULTY';
 export const LOADING='LOADING';
+export const GET_NO_COURSE ='GET_NO_COURSE';
+export const GET_COURSES = 'GET_COURSES';

@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs')
 const passport = require('passport')
 
 const validateRegisterInput = require('../../validations/register/registerFaculty')
-const validateLoginInput = require('../../validations/login/login')
+const validateLoginInput = require('../../validations/login/facultyLogin')
 const validatePassword = require('../../validations/password')
 const validateProfileInput = require('../../validations/profile')
 const Question = require('../../models/Question')
@@ -107,7 +107,7 @@ router.post('/login', (req, res) => {
         // if(!user.isVerified) {
         //   return res.status(401).json({type: not-Verified, msg: 'Your account is not verified'});
         // }
-        const payload = { id: user.id, avatar: user.avatar }
+        const payload = { id: user.id,role: user.role}
         //TODO change secret key and signIn options
         jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
           (err, token) => {

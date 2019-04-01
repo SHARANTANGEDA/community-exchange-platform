@@ -1,13 +1,14 @@
 const Validator = require('validator');
 const isEmpty = require('../is-empty');
 const isCollegeEmail = require('../emailValidation/is-college-email');
+const isStudentEmail = require('../emailValidation/is-student-email');
 
 module.exports = (data) => {
   let errors = {};
   data.emailId = !isEmpty(data.emailId) ? data.emailId : '';
   data.password = !isEmpty(data.password) ? data.password : '';
 
-  if (!Validator.isEmail(data.emailId) || !isCollegeEmail(data.emailId)) {
+  if (!Validator.isEmail(data.emailId) || !isCollegeEmail(data.emailId) || !isStudentEmail(data.emailId)) {
     errors.emailId = 'Email is invalid';
   }
 

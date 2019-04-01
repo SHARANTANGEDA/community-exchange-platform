@@ -34,11 +34,11 @@ class Landing extends Component {
                   <img src={require("../../img/student.png")} alt=""/>
                     <h6 style={{fontStyle: 'inherit', fontWeight: 'bold'}}>Student</h6>
                 </Link>
-                <Link to="/login" className="btn btn-lg btn-info mr-2">
+                <Link to="/facultyLogin" className="btn btn-lg btn-info mr-2">
                   <img src={require("../../img/professor.png")} alt=""/>
                     <h6 style={{fontStyle: 'inherit', fontWeight: 'bold'}}>Faculty</h6>
                 </Link>
-                <Link to="/login" className="btn btn-lg btn-info mr-2">
+                <Link to="/hodLogin" className="btn btn-lg btn-info mr-2">
                   <img src={require("../../img/hod.png")} alt=""/>
                     <h6 style={{fontStyle: 'inherit', fontWeight: 'bold'}}>HOD</h6>
                 </Link>

@@ -13,7 +13,7 @@ import NavBar from './components/layout/NavBar';
 import Landing from './components/layout/Landing';
 import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
 import Register from './components/authorization/Register';
-import Login from './components/authorization/Login';
+import Login from './components/authorization/login/Login';
 import Dashboard from './components/QuestionGet/Dashboard';
 import AskQuestions from './components/AskQuestion/AskQuestions';
 import Sidebar from'./components/layout/Sidebar';
@@ -23,8 +23,11 @@ import UserProfile from './components/Users/UserProfile'
 import MyAccount from './components/MyAccount/MyAccount'
 import ViewQuestion from './components/SingleQuestion/ViewQuestion'
 import ChangePassword from './components/MyAccount/ChangePassword'
-import AdminLogin from './components/authorization/AdminLogin'
+import AdminLogin from './components/authorization/login/AdminLogin'
+import FacultyLogin from './components/authorization/login/FacultyLogin'
 import HODDashboard from './components/hod/HODDashboard'
+import HodLogin from './components/authorization/login/HodLogin'
+import AllCourses from './components/hod/AllCourses'
 
 
 //Check for token
@@ -55,6 +58,8 @@ class App extends Component {
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/adminLogin" component={AdminLogin}/>
+          <Route exact path='/hodLogin' component={HodLogin}/>
+          <Route exact path="/facultyLogin" component={FacultyLogin}/>
           <Switch>
             <PrivateRoute exact path='/dashboard' component={Dashboard}/>
           </Switch>
@@ -81,6 +86,9 @@ class App extends Component {
             </Switch>
           <Switch>
             <PrivateRoute exact path='/hodDashboard' component={HODDashboard}/>
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path='/allCourses' component={AllCourses}/>
           </Switch>
           </div>
         </div>

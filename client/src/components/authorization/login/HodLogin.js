@@ -1,9 +1,9 @@
 import React,{Component} from 'react';
 import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
-import TextFieldGroup from '../common/TextFieldGroup';
+import TextFieldGroup from '../../common/TextFieldGroup';
 import {Link} from 'react-router-dom';
-import { hodLogin } from '../../actions/authActions'
+import { hodLogin } from '../../../actions/authActions'
 
 class Login extends Component{
   constructor () {
@@ -28,7 +28,7 @@ class Login extends Component{
 
   componentWillReceiveProps (nextProps, nextContext) {
     if(nextProps.auth.isAuthenticated) {
-      this.props.history.push('/dashboard');
+      this.props.history.push('/hodDashboard');
     }
     if(nextProps) {
       this.setState({errors: nextProps.errors})
@@ -46,7 +46,7 @@ class Login extends Component{
   render () {
     const {errors} = this.state;
     return(
-      <div className="login">
+      <div className="hodLogin">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">

@@ -10,15 +10,15 @@ class FacultyData extends Component {
     const name = faculty.firstName + ' ' + faculty.lastName
     return (
       <tr className="odd">
-        <td><span style={{ fontFamily: 'Arial', fontSize: '10pt' }}>{name}</span></td>
+        <td><span style={{ fontFamily: 'Arial', fontSize: '12pt' }}>{name}</span></td>
         <td>
-          <Link to="" style={{ fontFamily: 'Arial', fontSize: '10pt' }}>{faculty.emailId}</Link>
+          <Link to="" style={{ fontFamily: 'Arial', fontSize: '12pt' }}>{faculty.emailId}</Link>
         </td>
         <td>
                     <span style={{ fontSize: '13.3333330154419px' }}>
-                      <Link className="primary-link btn"
+                      <Link className=" btn btn-primary"
                             to="" target="_blank">
-                        <span style={{ color: '#333399' }}>View Profile</span>
+                        View Profile
                       </Link>
                     </span>
         </td>

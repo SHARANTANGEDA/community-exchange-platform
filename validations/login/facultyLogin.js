@@ -1,6 +1,7 @@
 const Validator = require('validator');
 const isEmpty = require('../is-empty');
 const isFacultyEmail = require('../emailValidation/is-faculty-email');
+const isCollegeEmail = require('../emailValidation/is-college-email')
 
 module.exports = (data) => {
   let errors = {};
@@ -12,6 +13,9 @@ module.exports = (data) => {
   }
   if(!isFacultyEmail(data.emailId)) {
     errors.emailId = 'Not HOD email Address, If not HOD please login from your section'
+  }
+  if(!isCollegeEmail(data.emailId)) {
+    errors.emailId='Please use organization email Address'
   }
 
   if (Validator.isEmpty(data.password)) {

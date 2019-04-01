@@ -1,10 +1,8 @@
 const isStudentEmail = value => {
   let domain = '@hyderabad.bits-pilani.ac.in';
-  let id = value.substr(0,value.length-domain.length);
+  let id = value.substr(1,value.length-domain.length);
   let pat=/\d+/
-  let check = pat.test(id)
-
-  return check;
+  return pat.test(id);
 }
 
 module.exports = isStudentEmail;

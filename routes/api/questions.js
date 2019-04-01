@@ -57,6 +57,9 @@ router.post('/ask',passport.authenticate('student',{session: false}),
   toStoreTag.forEach(tag => {
     const pat = /^[a-zA-Z]+$/;
     tag=tag.trim();
+    if(tag.isEmpty()) {
+      errors.tags='tags cannot be empty';
+    }
     if(!pat.test(tag)) {
       errors.tags = 'tags cannot contain special characters'
     }

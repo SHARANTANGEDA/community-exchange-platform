@@ -13,6 +13,7 @@ const validateProfileInput = require('../../validations/profile')
 const validateApplication = require('../../validations/taApplication')
 const User = require('../../models/User');
 const Question = require('../../models/Question');
+const Department = require('../../models/Department')
 
 //@desc Register
 router.post('/register', (req, res) => {
@@ -109,7 +110,7 @@ router.post('/login', (req, res) => {
         // if(!user.isVerified) {
         //   return res.status(401).json({type: not-Verified, msg: 'Your account is not verified'});
         // }
-        const payload = { id: user.id, avatar: user.avatar, role: user.role }
+        const payload = { id: user.id,role: user.role}
         //TODO change secret key and signIn options
         jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
           (err, token) => {
@@ -262,4 +263,6 @@ router.post('/applyForTA',passport.authenticate('student',{session:false}),
       res.json({success: 'Successfully applied for TA'})
     }).catch(err => res.status(401).json('There was error in submitting the application'))
   })
+
+
 module.exports = router

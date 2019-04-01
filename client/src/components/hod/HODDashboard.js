@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes  from 'prop-types'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 import Spinner from '../common/Spinner'
 import { getHodHome } from '../../actions/hodActions'
 import FacultyFeed from './FacultyFeed'
@@ -22,9 +21,8 @@ class HODDashboard extends Component {
         dashboardContent = (
           <div className="col-md-12">
             <div className="desc">
-              <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}
-                  className="rounded border bg-dark text-light p-1 pl-3 pr-5">Department of Computer Science
-                Engineering</h1>
+              <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontFamily: "'Lobster'"}}
+                  className="rounded border bg-dark text-light text-center p-1 pl-3 pr-5">Department of {home.department.departmentName}</h1>
               <h3 className='text-center'>{home.noFaculty}</h3>
             </div>
           </div>
@@ -33,9 +31,8 @@ class HODDashboard extends Component {
         dashboardContent = (
           <div className="col-md-12">
             <div className="desc">
-              <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}
-                  className="rounded border bg-dark text-light p-1 pl-3 pr-5">Department of +{home.department.departmentName}</h1>
-              <h3>&nbsp;Faculty</h3>
+              <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontFamily: "'Lobster'"}}
+                  className="rounded border bg-dark text-light p-1 pl-3 pr-5 text-center">Department of {home.department.departmentName}</h1>
 
               <table  className="tableGrid rounded border"
                      style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',width : '100%'}} border="0">

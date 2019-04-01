@@ -1,34 +1,34 @@
 import {
-  LOADING,GET_HOME, GET_HOME_NO_FACULTY
+  LOADING, GET_HOME, GET_HOME_NO_FACULTY, GET_COURSES, GET_NO_COURSE
 } from '../actions/types'
 
 const initialState = {
   loading: true,
-  faculty: false,
-  home: null
+  error: false,
+  courses: null
 };
 
 export default function(state = initialState, action) {
-  console.log({'hodReducer':action.payload});
+  console.log({'Course Reducer':action.payload});
   switch (action.type) {
     case LOADING:
-      console.log("In HOD Reducer loading")
+      console.log("In Course Reducer loading")
       return {
         ...state,
         loading: true
       }
-    case GET_HOME:
+    case GET_COURSES:
       return {
         ...state,
-        home: action.payload,
+        courses: action.payload,
         loading: false,
-        faculty: true
+        error: false
       };
-    case GET_HOME_NO_FACULTY:
+    case GET_NO_COURSE:
       return {
         ...state,
-        home: action.payload,
-        faculty: false,
+        courses: action.payload,
+        error: true,
         loading: false
       }
     default:

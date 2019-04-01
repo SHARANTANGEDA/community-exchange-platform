@@ -24,10 +24,21 @@ router.get('/home', passport.authenticate('hod', { session: false }), (req, res)
 })
 router.get('/allCourses', passport.authenticate('hod', { session: false }), (req, res) => {
   Department.findOne({ hod: req.user._id }).then(department => {
-    let courses = department.courses
-    res.json(courses)
+    let courses = department.coursesId
+    if(courses.length===0) {
+      console.log(department)
+      res.json({NoCourse: 'No courses found' ,department})
+    }else {
+      let courseDetails = [];
+      courses.forEach(courseId => {
+        Course.find({courseCode: courseId}).then(course => {
+          courseDetails.push(course);
+        })
+      })
+      res.json({allCourses:courseDetails,department})
+    }
   }).catch(err => {
-    res.status(404).json({ NoCourse: 'No courses found' })
+    res.status(404).json({ Error: 'Error on our side please bear with us' })
   })
 })
 
@@ -125,6 +136,13 @@ router.get('/unAssignedFaculty',passport.authenticate('hod',{session: false}),
       }
     }).catch(err => res.status(404).json({notFound: 'faculty not found'}))
 });
+router.post('/addDep',(req,res) => {
 
+  let newDepartment = new Department({
+    hod: req.body.hod,
+    departmentName: req.body.departmentName
+  });
+  newDepartment.save().then(department => res.json(department)).catch(err => res.json(err));
+})
 module.exports = router;
 

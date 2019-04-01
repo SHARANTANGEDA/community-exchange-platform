@@ -6,6 +6,7 @@ const bcrypt = require('bcryptjs')
 
 const validateLoginInput = require('../../validations/login/adminLogin')
 const Admin = require('../../models/Admin')
+const Department = require('../../models/Department')
 
 
 //@desc Login
@@ -51,6 +52,7 @@ router.post('/login', (req, res) => {
     })
   })
 })
+
 
 
 
