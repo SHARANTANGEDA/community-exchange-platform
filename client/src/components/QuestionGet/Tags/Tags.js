@@ -9,7 +9,7 @@ class Tags extends Component {
     const {tag,auth} = this.props;
     console.log({SingleTag: tag,auth: auth})
     return (
-      <Link className="btn btn-info mx-3 d-inline-flex flex-grow-1" to={`/publicProfile/${auth._id}`}>{tag}</Link>
+      <Link className="btn btn-info mx-3 d-inline-flex flex-grow-1" to=''>{tag}</Link>
     )
   }
 }

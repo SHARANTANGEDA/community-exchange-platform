@@ -68,16 +68,14 @@ class ChangePassword extends Component {
     const { profile, loading } = this.props.profile;
     let profileContent;
 
-    if (profile === null || loading) {
-      profileContent = <Spinner />;
-    } else {
+    // if (profile === null || loading) {
+    //   profileContent = <Spinner />;
+    // } else {
       profileContent = (
         <div >
           <div className="col-sm-9">
-            <TabPaneSwitch/>
             <div className="row">
-              <div className="col-sm-10"><h2>Change Password</h2></div>
-              <div className="col-sm-2"><Link to="/" className="pull-right"/></div>
+              <div className="col-sm-10" style={{fontFamily: "Lobster",color: 'black',fontSize:'48px'}}><h1>Change Password</h1></div>
             </div>
 
             <div className="tab-content">
@@ -124,7 +122,7 @@ class ChangePassword extends Component {
           </div>
         </div>
       );
-    }
+    // }
 
     return (
       <div className="container bootstrap snippet changePassword" style={{maxWidth: '100%'}}>

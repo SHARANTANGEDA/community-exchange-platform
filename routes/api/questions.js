@@ -51,8 +51,16 @@ router.post('/ask',passport.authenticate('student',{session: false}),
     toStoreTag = toStoreTag.substr(1,toStoreTag.length);
   }
   if(toStoreTag.length===0) {
-    errors.tags = 'Please Enter tags Entered commas only'
+    errors.tags = 'Please enter tags in proper format'
   }
+  toStoreTag=toStoreTag.split(',');
+  toStoreTag.forEach(tag => {
+    const pat = /^[a-zA-Z]+$/;
+    tag=tag.trim();
+    if(!pat.test(tag)) {
+      errors.tags = 'tags cannot contain special characters'
+    }
+  })
   const newQuestion = new Question({
     title: req.body.title,
     firstName: req.user.firstName,
@@ -65,8 +73,7 @@ router.post('/ask',passport.authenticate('student',{session: false}),
   });
 
   newQuestion.save().then(question => res.json(question)).catch(err => res.json(errors));
-  }
-);
+  });
 
 
 

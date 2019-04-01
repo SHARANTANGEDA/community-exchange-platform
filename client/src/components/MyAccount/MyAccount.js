@@ -79,10 +79,8 @@ class MyAccount extends Component {
       profileContent = (
         <div >
           <div className="col-sm-9">
-            <TabPaneSwitch/>
             <div className="row">
-              <div className="col-sm-10"><h2>My Account</h2></div>
-              <div className="col-sm-2"><Link to="/changePassword" className="pull-right"/></div>
+              <div className="col-sm-10" style={{fontFamily: "Lobster",color: 'black',fontSize:'48px'}}><h1>My Account</h1></div>
             </div>
 
             <div className="tab-content">

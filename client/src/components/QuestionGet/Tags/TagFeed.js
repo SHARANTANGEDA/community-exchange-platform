@@ -6,8 +6,7 @@ class TagFeed extends Component {
   render() {
     const  {tags}  = this.props;
     console.log({'Tags':tags});
-    let tagsArray= tags[0].split(",");
-    return tagsArray.map(tag => (
+    return tags.map(tag => (
       <Tags tag={tag} key={tag}/>
     ));
   }

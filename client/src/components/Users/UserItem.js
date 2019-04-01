@@ -17,8 +17,9 @@ class UserItem extends Component {
     //   </div>
     // )
     return (
+      //onTouchStart="this.classList.toggle('hover');
       <div className="col-xs-12 col-sm-6 col-md-4">
-        <div className="image-flip" onTouchStart="this.classList.toggle('hover');">
+        <div className="image-flip" >
           <div className="mainflip">
             <div className="frontside">
               <div className="card" >
@@ -32,7 +33,7 @@ class UserItem extends Component {
                     <p  style={{border: '2px outset black',borderRadius: '5px',color: 'gold',margin: '4px',padding: '2px',fontWeight: 'bold',fontSize: '14px'}}>
                       <i className="fa fa-certificate"/>{'Reputation'}</p>
                     <button className="btn btn-primary btn-sm">
-                      <Link to={`/publicProfile/${user._id}`}>View Profile</Link>
+                      <Link to={`/publicProfile/${user._id}`} style={{color: 'white'}}>View Profile</Link>
                     </button>
                   </div>
                 </div>

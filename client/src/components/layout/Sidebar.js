@@ -14,33 +14,33 @@ class Sidebar extends Component {
           <li className="active">
           </li>
           <li>
-            <Link to="/dashboard">
+            <Link to="/dashboard" style={{textDecoration: 'none',color: 'black'}}>
               <i className="fas fa-home"/>
               Home
             </Link>
-            <Link to="/allQuestions">
+            <Link to="/allQuestions" style={{textDecoration: 'none',color: 'black'}}>
               <i className="fas fa-question"/>
               All Questions
             </Link>
-            <Link to="/allProfiles">
+            <Link to="/allProfiles" style={{textDecoration: 'none',color: 'black'}}>
               <i className="fas fa-question"/>
               All Users
             </Link>
-            <Link to="" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">
+            <Link to="" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle" style={{textDecoration: 'none',color: 'black'}}>
               <i className="fas fa-copy"/>
               Tags
             </Link>
             <ul className="collapse list-unstyled" id="pageSubmenu">
               <li>
-                <Link to="">Course Tags</Link>
+                <Link to="" style={{textDecoration: 'none',color: 'black'}}>Course Tags</Link>
               </li>
               <li>
-                <Link to="">Subject Tags</Link>
+                <Link to="" style={{textDecoration: 'none',color: 'black'}}>Subject Tags</Link>
               </li>
             </ul>
           </li>
           <li>
-            <Link to="">
+            <Link to="" style={{textDecoration: 'none',color: 'black'}}>
               <i className="fas fa-paper-plane"/>
               Contact Us
             </Link>

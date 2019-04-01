@@ -32,11 +32,9 @@ class Dashboard extends Component {
           <div className="inner-content" >
             <div id="mainbar" >
               <div className="grid">
-                <div className="row">
-                  <div className="col-md-8">
-                    <h1 className="grid--cell fl1 fs-headline1"> Top Questions: </h1>
-                  </div>
-                  <div className="col-md-4"><Link className="btn btn-primary btn-lg w-75" to="/askQuestion">Ask
+                <div className="row d-flex justify-content-between">
+                    <h1 className="grid--cell fl1 fs-headline1 text-center" style={{fontFamily: "Lobster",color: 'black',fontSize:'48px'}}> Top Questions </h1>
+                  <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '250px'}} to="/askQuestion">Ask
                     Question<br/></Link>
                   </div>
                 </div>

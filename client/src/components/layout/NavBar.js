@@ -21,10 +21,10 @@ class Navbar extends Component {
 
     );
     const guestLinkO = (
-      <Link className="navbar-brand" to="/">
-        <img  style={{maxWidth: '25%'}}
-             src={require('../../img/logoNew.png')} alt="GhotDen"
-             title=""/>
+      <Link className="navbar-brand" to="/dashboard" style={{fontFamily: "'Lobster', cursive",fontSize: '26px'}}>
+        <img  style={{maxWidth: '20%',maxHeight: '25%'}}
+              src={require('../../img/logoIcon.png')} alt="GhotDen"
+              title=""/>GhotDen
       </Link>
     );
 
@@ -40,12 +40,18 @@ class Navbar extends Component {
     );
     const authLinksII = (
       <ul className="navbar-nav ml-auto" style={{minWidth: '300px'}}>
-        <li className="nav-item">
-          <Link className="nav-link" to={`/myAccount`}>
+        <li className="nav-item dropdown" >
+          <Link className="nav-link dropdown-toggle" to="" id="navbarDropdown" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false" style={{minWidth: '150px'}}>
             My Account
           </Link>
+          <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <Link className="dropdown-item" to="/myAccount">Edit Profile</Link>
+            <Link className="dropdown-item" to="/changePassword">Change Password</Link>
+          </div>
         </li>
-        <li className="nav-item">
+
+        <li className="nav-item pull-right">
           <Link className="nav-link" to="/login" onClick={this.onLogoutClick.bind(this)}>
             <img className="rounded-circle" style={{width: '25px',marginRight:'5px'}}
                  src={user.avatar} alt={user.firstName}

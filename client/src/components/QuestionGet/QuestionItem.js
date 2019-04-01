@@ -9,12 +9,11 @@ class QuestionItem extends Component {
     const {question} = this.props;
     console.log({GetQuestion:question})
     const name=question.firstName+' '+question.lastName;
-
     return (
       <div className="card card-body mb-3">
         <div className="row">
           <div className="col-md-12">
-            <Link className="lead" style={{color: '#0000EE',fontSize: '18'}} to={`/viewQuestion/${question._id}`} >
+            <Link className="lead link-primary" style={{color: '#0000EE',fontSize: '18'}} to={`/viewQuestion/${question._id}`} >
               {question.title}
             </Link>
           </div>
@@ -24,11 +23,11 @@ class QuestionItem extends Component {
                 <TagFeed tags={question.tags}/>
               </div>
             </div>
-            <div className="user-action-time d-flex justify-content-end align-items-center"> asked at
-              <span title="2010-04-21 14:28:45Z" className="relativetime m-1" >{new Date(question.time).toLocaleString()}</span>
-            </div>
             <div className="user-details d-flex justify-content-end">
-              <Link to={`/publicProfile/${question.userId}`} style={{	textShadow: "0px 0px 1px #0000FF",fontSize: "24"}}>{name}</Link>
+              <Link to={`/publicProfile/${question.userId}`} className="card-link" style={{	textShadow: "0px 0px 1px",fontSize: "24"}}>{name}</Link>
+            </div>
+            <div className="user-action-time d-flex justify-content-end align-items-center blockquote-footer"> asked at
+              <span title="2010-04-21 14:28:45Z" className="relativetime m-1 " >{new Date(question.time).toLocaleString()}</span>
             </div>
           </div>
 
