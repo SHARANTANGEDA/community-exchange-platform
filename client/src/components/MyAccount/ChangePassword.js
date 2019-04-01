@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
-import Spinner from '../common/Spinner';
 import { changePassword } from '../../actions/profileActions'
-import TabPaneSwitch from './TabPaneSwitch';
-import TextFieldGroup from '../common/TextFieldGroup'
+
 import classnames from 'classnames'
-const isEmpty = require('./is-empty');
 
 class ChangePassword extends Component {
   constructor(props) {

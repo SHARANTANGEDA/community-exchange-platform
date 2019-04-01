@@ -21,7 +21,7 @@ class Navbar extends Component {
 
     );
     const guestLinkO = (
-      <Link className="navbar-brand" to="/dashboard" style={{fontFamily: "'Lobster', cursive",fontSize: '26px'}}>
+      <Link className="navbar-brand" to="/" style={{fontFamily: "'Lobster', cursive",fontSize: '26px'}}>
         <img  style={{maxWidth: '20%',maxHeight: '25%'}}
               src={require('../../img/logoIcon.png')} alt="GhotDen"
               title=""/>GhotDen

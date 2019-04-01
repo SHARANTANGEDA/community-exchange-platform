@@ -24,6 +24,7 @@ import MyAccount from './components/MyAccount/MyAccount'
 import ViewQuestion from './components/SingleQuestion/ViewQuestion'
 import ChangePassword from './components/MyAccount/ChangePassword'
 import AdminLogin from './components/authorization/AdminLogin'
+import HODDashboard from './components/hod/HODDashboard'
 
 
 //Check for token
@@ -78,7 +79,9 @@ class App extends Component {
             <Switch>
               <PrivateRoute exact path='/viewQuestion/:id' component={ViewQuestion}/>
             </Switch>
-
+          <Switch>
+            <PrivateRoute exact path='/hodDashboard' component={HODDashboard}/>
+          </Switch>
           </div>
         </div>
         <Footer/>

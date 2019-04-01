@@ -14,3 +14,6 @@ export const GET_QUESTION='GET_QUESTION';
 export const GET_COMMENT='GET_COMMENT';
 export const GET_ANSWER='GET_ANSWER';
 export const ADD_ANSWER='ADD_ANSWER';
+export const GET_HOME='GET_HOME';
+export const GET_HOME_NO_FACULTY='GET_HOME_NO_FACULTY';
+export const LOADING='LOADING';
