@@ -21,3 +21,4 @@ export const GET_NO_COURSE ='GET_NO_COURSE';
 export const GET_COURSES = 'GET_COURSES';
 export const GET_FACULTY_HOME='GET_FACULTY_HOME';
 export const GET_FACULTY_ERRORS='GET_FACULTY_ERRORS';
+export const APPLY_TA='APPLY_TA';

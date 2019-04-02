@@ -84,7 +84,7 @@ class Dashboard extends Component {
                   <div className="grid">
                     <div className="row d-flex justify-content-between">
                       <h1 className="grid--cell fl1 fs-headline1 text-center" style={{fontFamily: "Lobster",color: 'black',fontSize:'48px'}}> Top Questions </h1>
-                      <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '250px',margin:'5px'}} to="/askQuestion">Apply For TA</Link>
+                      <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '250px',margin:'5px'}} to="/applyTA">Apply For TA</Link>
                       <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '250px',margin:'5px'}} to="/askQuestion">Ask
                         Question</Link>
                       </div>

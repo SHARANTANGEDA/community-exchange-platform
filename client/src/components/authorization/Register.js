@@ -116,7 +116,7 @@ class Register extends Component {
                       <div className="invalid-feedback">{errors.departmentName}</div>
                     )}
                   </div>
-                  <span className="focus-input100"></span>
+                  <span className="focus-input100"/>
                 </div>
                 <input type="submit" className="btn btn-info btn-block mt-4"/>
               </form>

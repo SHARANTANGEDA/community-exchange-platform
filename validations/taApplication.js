@@ -3,9 +3,10 @@ const isEmpty = require('./is-empty');
 
 module.exports = (data) => {
   let errors = {};
-  data.taCourse = !isEmpty(data.taCourse) ? data.taCourse : '';
-  if(Validator.isEmpty(data.taCourse)) {
-    errors.taCourse = 'course Code is Required';
+  data.courseCode = !isEmpty(data.courseCode) ? data.courseCode : 'Choose Course';
+
+  if(Validator.equals(data.courseCode,'Choose Course')) {
+    errors.courseCode = 'Please select the Course'
   }
   return{errors,
     isValid: isEmpty(errors)

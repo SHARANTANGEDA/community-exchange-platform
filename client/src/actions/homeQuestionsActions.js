@@ -7,8 +7,9 @@ import {
   QUESTION_LOADING,
   HOME_QUESTIONS,
   ALL_QUESTIONS,
-  GET_QUESTION, GET_COMMENT, ADD_ANSWER
+  GET_QUESTION, GET_COMMENT, ADD_ANSWER, GET_COURSES, GET_NO_COURSE, APPLY_TA
 } from './types'
+import { setLoading } from './hodActions'
 
 // Add Post
 export const askQuestion = questionData => dispatch => {
@@ -26,6 +27,49 @@ export const askQuestion = questionData => dispatch => {
         type: GET_ERRORS,
         payload: err.response.data
       })
+    );
+};
+
+
+// Add Post
+export const applyTA = courseCode => dispatch => {
+  dispatch(clearErrors());
+  axios
+    .post('/api/users/applyForTA', courseCode)
+    .then(res =>
+      dispatch({
+        type: APPLY_TA,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
+
+//Get Questions for home
+export const getCourseCodes = () => dispatch => {
+  dispatch(setLoading());
+  axios
+    .get('/api/users/getAllCourses')
+    .then(res => {
+        dispatch({
+          type: GET_COURSES,
+          payload: res.data
+        })
+      }
+    )
+    .catch(err => {
+        console.log("ERROR in Getting Courses")
+        dispatch({
+          type: GET_NO_COURSE,
+          payload: null
+        })
+      }
+
     );
 };
 

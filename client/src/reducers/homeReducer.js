@@ -1,6 +1,6 @@
 import {
   QUESTION_LOADING,
-  HOME_QUESTIONS, ASK_QUESTION, ALL_QUESTIONS, GET_QUESTION, GET_COMMENT,  ADD_ANSWER
+  HOME_QUESTIONS, ASK_QUESTION, ALL_QUESTIONS, GET_QUESTION, GET_COMMENT, ADD_ANSWER, APPLY_TA
 } from '../actions/types'
 
 const initialState = {
@@ -8,7 +8,8 @@ const initialState = {
   questions: [],
   loading: true,
   comment:null,
-  answer: null
+  answer: null,
+  courseCode: null
 };
 
 export default function(state = initialState, action) {
@@ -57,6 +58,12 @@ export default function(state = initialState, action) {
         ...state,
         questions: [action.payload, ...state.questions]
       };
+    case APPLY_TA:
+      console.log("In application reducer")
+      return {
+        ...state,
+        courseCode: action.payload
+      }
     default:
       return state;
 

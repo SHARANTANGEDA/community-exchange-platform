@@ -259,10 +259,22 @@ router.post('/applyForTA',passport.authenticate('student',{session:false}),
     if (!isValid) {
       return res.status(400).json(errors);
     }
-    User.findByIdAndUpdate(req.user._id,{applyTA: true,taCourse: req.body.taCourse}).then(user => {
-      res.json({success: 'Successfully applied for TA'})
-    }).catch(err => res.status(401).json('There was error in submitting the application'))
+    User.findByIdAndUpdate(req.user._id,{applyTA: true,taCourse: req.body.courseCode}).then(user => {
+      console.log(user);
+      res.json(user)
+    }).catch(err => res.status(400).json('There was error in submitting the application'))
   })
-
+router.get('/getAllCourses',passport.authenticate('student',{session: false}),(req,res) => {
+  let courses=[];
+  Department.find().then(departments => {
+    departments.forEach(department => {
+      department.coursesId.forEach(cid => {
+        courses.push(cid);
+      })
+    })
+    res.json({allCourses: courses})
+  }).catch(err => res.status(404).json({NoDepFound: 'no department found'})
+  )
+})
 
 module.exports = router
