@@ -2,25 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92c3f002-70e8-4ff8-9b74-7304e267b2f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/hod/ViewCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/actions/facultyActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/FacultyCourse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/FacultyHomeFeed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/reducers/facultyReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/hodActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/hodActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/QuestionGet/Dashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Users/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/UserProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/login/HodLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/login/HodLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/AllCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/AllCourses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/HODDashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/login/FacultyLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/login/FacultyLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/courseReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/courseReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/passport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/department.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/department.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Course.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/answers.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/answers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/comments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/faculty.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/faculty.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/hod.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/hod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/publicProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/publicProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/questions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validations/emailValidation/is-hod-email.js" beforeDir="false" afterPath="$PROJECT_DIR$/validations/emailValidation/is-hod-email.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,66 +32,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/department.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/hod/AllCourses.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="25" column="144" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="25" selection-end-column="144" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/components/hod/ViewCourse.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/Users/UserRow.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-653">
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Course.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="82">
-              <caret line="10" column="11" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="11" />
+              <caret line="87" column="162" selection-start-line="87" selection-start-column="162" selection-end-line="87" selection-end-column="162" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/actions/hodActions.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/layout/Sidebar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="2505">
+              <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,11 +59,83 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/api/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3780">
-              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+            <state relative-caret-position="280">
+              <caret line="112" column="94" selection-start-line="112" selection-start-column="94" selection-end-line="112" selection-end-column="94" />
               <folding>
                 <element signature="e#3980#4005#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/User.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="50" column="9" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/reducers/askQuestionReducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-525">
+              <folding>
+                <element signature="e#0#71#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-105">
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/AllQuestions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2275">
+              <caret line="65" column="57" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4830">
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="458">
+              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api/comments.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-350">
+              <caret line="35" column="16" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -146,19 +176,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/components/MyAccount/tabs.css" />
-        <option value="$PROJECT_DIR$/client/src/components/MyAccount/TabPaneSwitch.js" />
-        <option value="$PROJECT_DIR$/client/src/components/layout/Footer.js" />
-        <option value="$PROJECT_DIR$/client/src/components/Users/UserItem.js" />
-        <option value="$PROJECT_DIR$/client/src/components/hod/Dashboard.js" />
-        <option value="$PROJECT_DIR$/client/src/components/hod/FacultyFeed.js" />
-        <option value="$PROJECT_DIR$/client/src/components/MyAccount/ChangePassword.js" />
         <option value="$PROJECT_DIR$/client/src/components/layout/NavBar.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/HodLogin.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/login/facultyLogin.js" />
         <option value="$PROJECT_DIR$/client/src/components/layout/Landing.js" />
         <option value="$PROJECT_DIR$/client/src/components/MyAccount/MyAccount.js" />
-        <option value="$PROJECT_DIR$/client/src/components/authorization/login/FacultyLogin.js" />
         <option value="$PROJECT_DIR$/validations/emailValidation/is-student-email.js" />
         <option value="$PROJECT_DIR$/validations/login/login.js" />
         <option value="$PROJECT_DIR$/validations/login/hodLogin.js" />
@@ -169,13 +191,8 @@
         <option value="$PROJECT_DIR$/validations/register/registerHOD.js" />
         <option value="$PROJECT_DIR$/routes/api/admin.js" />
         <option value="$PROJECT_DIR$/validations/emailValidation/is-faculty-email.js" />
-        <option value="$PROJECT_DIR$/validations/emailValidation/is-hod-email.js" />
-        <option value="$PROJECT_DIR$/client/src/reducers/hodReducer.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/FacultyData.js" />
-        <option value="$PROJECT_DIR$/routes/api/questions.js" />
         <option value="$PROJECT_DIR$/client/src/actions/authActions.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/types.js" />
-        <option value="$PROJECT_DIR$/client/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/AllCoursee.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/Courses/CourseData.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/HODDashboard.js" />
@@ -183,20 +200,33 @@
         <option value="$PROJECT_DIR$/client/src/App.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/courseReducer.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/Courses/CourseFeed.js" />
-        <option value="$PROJECT_DIR$/routes/api/faculty.js" />
-        <option value="$PROJECT_DIR$/routes/api/users.js" />
-        <option value="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/login/HodLogin.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/AllCourses.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/Courses/ViewCourse.js" />
         <option value="$PROJECT_DIR$/routes/api/department.js" />
         <option value="$PROJECT_DIR$/client/src/components/Users/UserProfile.js" />
-        <option value="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" />
         <option value="$PROJECT_DIR$/client/src/actions/hodActions.js" />
-        <option value="$PROJECT_DIR$/routes/api/hod.js" />
         <option value="$PROJECT_DIR$/config/passport.js" />
         <option value="$PROJECT_DIR$/routes/api/publicProfile.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/ViewCourse.js" />
+        <option value="$PROJECT_DIR$/validations/emailValidation/is-hod-email.js" />
+        <option value="$PROJECT_DIR$/routes/api/hod.js" />
+        <option value="$PROJECT_DIR$/client/src/reducers/hodReducer.js" />
+        <option value="$PROJECT_DIR$/client/src/reducers/index.js" />
+        <option value="$PROJECT_DIR$/models/Course.js" />
+        <option value="$PROJECT_DIR$/client/src/components/commonDashboard/FacultyCourse.js" />
+        <option value="$PROJECT_DIR$/client/src/components/commonDashboard/FacultyHomeFeed.js" />
+        <option value="$PROJECT_DIR$/client/src/actions/types.js" />
+        <option value="$PROJECT_DIR$/client/src/components/authorization/login/FacultyLogin.js" />
+        <option value="$PROJECT_DIR$/client/src/actions/facultyActions.js" />
+        <option value="$PROJECT_DIR$/routes/api/faculty.js" />
+        <option value="$PROJECT_DIR$/client/src/reducers/facultyReducer.js" />
+        <option value="$PROJECT_DIR$/routes/api/answers.js" />
+        <option value="$PROJECT_DIR$/routes/api/comments.js" />
+        <option value="$PROJECT_DIR$/routes/api/questions.js" />
+        <option value="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" />
+        <option value="$PROJECT_DIR$/routes/api/users.js" />
+        <option value="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" />
       </list>
     </option>
   </component>
@@ -252,6 +282,23 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="authorization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="authorization" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
@@ -336,23 +383,6 @@
               <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
-              <item name="validations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
-              <item name="validations" type="462c0819:PsiDirectoryNode" />
-              <item name="emailValidation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
-              <item name="validations" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -498,14 +528,8 @@
       <workItem from="1554093479876" duration="5798000" />
       <workItem from="1554119777364" duration="15298000" />
       <workItem from="1554170987447" duration="6061000" />
-      <workItem from="1554189424219" duration="968000" />
-    </task>
-    <task id="LOCAL-00005" summary="#Adds functionality to view profile of other users&#10;#fixes minor bugs in previous commits&#10;#Updates ReadMe&#10;#Adds githubUsername field for User Model">
-      <created>1550837889288</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1550837889288</updated>
+      <workItem from="1554189424219" duration="4111000" />
+      <workItem from="1554201242427" duration="6092000" />
     </task>
     <task id="LOCAL-00006" summary="#adds View my activity for a user&#10;#fixes minor async related bugs&#10;ALL BACK-END PART EXCEPT SEARCH ALGORITHM IS IMPLEMENTED">
       <created>1550839398259</created>
@@ -843,11 +867,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554145032486</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="#Adds all courses page&#10;#Adds view course page&#10;#Made dashboard common">
+      <created>1554190593146</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1554190593146</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="439247000" />
+    <option name="totallyTimeSpent" value="448482000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -860,7 +891,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="32" width="1853" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4976526" visible="true" weight="0.19198665" />
       <window_info id="Structure" order="1" sideWeight="0.5023474" side_tool="true" weight="0.163606" />
@@ -868,7 +898,7 @@
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.18305084" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49749583" visible="true" weight="0.19096045" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49749583" visible="true" weight="0.042937852" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -924,7 +954,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#adds engine to package.json" />
     <MESSAGE value="#updates heroku script in package.json" />
     <MESSAGE value="#added npm as dependency to check on heroku" />
     <MESSAGE value="#added engines in package.json to check on heroku" />
@@ -949,145 +978,14 @@
     <MESSAGE value="#Fixed minor bugs&#10;#Improved some UI Components&#10;#Added few extra fonts" />
     <MESSAGE value="#Add Front-end for HOD Home&#10;#Added reducer&#10;#Fixed minor bug&#10;#TODO: Sanitize DepartmentName Inputs" />
     <MESSAGE value="#Adds HOD homepage&#10;#Adds multiple routes&#10;#fixes minor bugs&#10;#Adds sidebar for faculty and hod&#10;#Adds all hods to database&#10;#TODO: All courses page bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Adds HOD homepage&#10;#Adds multiple routes&#10;#fixes minor bugs&#10;#Adds sidebar for faculty and hod&#10;#Adds all hods to database&#10;#TODO: All courses page bugs" />
+    <MESSAGE value="#Adds all courses page&#10;#Adds view course page&#10;#Made dashboard common" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Adds all courses page&#10;#Adds view course page&#10;#Made dashboard common" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/validations/register/registerFaculty.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-735" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validations/register/registerStudent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-735" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validations/login/hodLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validations/login/adminLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validations/login/facultyLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validations/login/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="10" column="103" selection-start-line="10" selection-start-column="103" selection-end-line="10" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Admin.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-484">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validations/emailValidation/is-faculty-email.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Question.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validations/register/registerHOD.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="35" column="6" lean-forward="true" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validations/emailValidation/is-hod-email.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/layout/NavBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="23" column="103" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="103" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/authActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/authReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="50" column="56" lean-forward="true" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Department.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/hod/FacultyFeed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="12" column="1" lean-forward="true" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1139,25 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/homeReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/common/PrivateRoute.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -1168,46 +1047,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/hod/Courses/CourseData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1015">
-          <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/hodReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/hod/Courses/CourseFeed.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="109" column="58" lean-forward="true" selection-start-line="109" selection-end-line="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1229,16 +1074,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/layout/Sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3780">
-          <caret line="111" column="14" selection-start-line="111" selection-start-column="14" selection-end-line="111" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/passport.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1246,47 +1081,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/hod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3150">
-          <caret line="155" selection-start-line="155" selection-end-line="155" />
-          <folding>
-            <element signature="e#591#3147#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3780">
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-          <folding>
-            <element signature="e#3980#4005#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api/publicProfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="39" column="6" lean-forward="true" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/hodActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Course.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1310,15 +1108,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Users/UserRow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-653">
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/Users/AllUsers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1050">
@@ -1328,10 +1117,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/hod/AllCourses.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/hod/ViewCourse.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="25" column="144" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="25" selection-end-column="144" />
+        <state relative-caret-position="2205">
+          <caret line="63" column="3" lean-forward="true" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -1345,10 +1134,271 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/hod/ViewCourse.js">
+    <entry file="file://$PROJECT_DIR$/validations/emailValidation/is-hod-email.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+        <state relative-caret-position="140">
+          <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/hod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1750">
+          <caret line="107" column="73" selection-start-line="107" selection-start-column="73" selection-end-line="107" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/homeReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/hodReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/hod/AllCourses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="25" column="144" selection-start-line="24" selection-start-column="14" selection-end-line="25" selection-end-column="144" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Users/UserRow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/hodActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="19" selection-end-line="88" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/authActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1820">
+          <caret line="55" column="30" selection-end-line="99" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Course.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/hod/FacultyFeed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="19" lean-forward="true" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/FacultyHomeFeed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/errorReducer.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/login/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-735">
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/login/FacultyLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/FacultyCourse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/facultyActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/facultyReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-368">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/hod/Courses/CourseData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1015">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="362" selection-start-line="362" selection-end-line="362" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/answers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-417">
+          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/comments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-350">
+          <caret line="35" column="16" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/askQuestionReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-525">
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/AllQuestions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2275">
+          <caret line="65" column="57" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4830">
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/layout/Sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2505">
+          <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="50" column="9" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="112" column="94" selection-start-line="112" selection-start-column="94" selection-end-line="112" selection-end-column="94" />
+          <folding>
+            <element signature="e#3980#4005#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="87" column="162" selection-start-line="87" selection-start-column="162" selection-end-line="87" selection-end-column="162" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

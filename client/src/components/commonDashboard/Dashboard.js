@@ -7,6 +7,8 @@ import { getQuestionsHome } from '../../actions/homeQuestionsActions'
 import Spinner from '../common/Spinner'
 import { getHodHome } from '../../actions/hodActions'
 import FacultyFeed from '../hod/FacultyFeed'
+import { getFacultyHome } from '../../actions/facultyActions'
+import FacultyHomeFeed from './FacultyHomeFeed'
 
 class Dashboard extends Component {
 
@@ -15,47 +17,92 @@ class Dashboard extends Component {
       this.props.getQuestionsHome(this.props.match.params.id);
     } else if(this.props.auth.user.role==='hod'){
       this.props.getHodHome(this.props.match.params.id);
+    }else if(this.props.auth.user.role==='faculty') {
+      this.props.getFacultyHome(this.props.match.params.id);
     }
     console.log("Called");
   }
   render () {
     if(this.props.auth.user.role==='student') {
-      const { questions, loading} = this.props.home
-      let dashboardContent
-      if ((questions === null) || loading ) {
-        dashboardContent = <Spinner/>
-      } else {
-        dashboardContent = (
-          <div>
-            {/*<h1>Dashboard Loads</h1>*/}
-            <QuestionsFeed questions={questions}/>
-          </div>
-        )
-      }
+      if(this.props.auth.user.applied===true) {
+        const { questions, loading} = this.props.home
+        let dashboardContent
+        if ((questions === null) || loading ) {
+          dashboardContent = <Spinner/>
+        } else {
+          dashboardContent = (
+            <div>
+              {/*<h1>Dashboard Loads</h1>*/}
+              <QuestionsFeed questions={questions}/>
+            </div>
+          )
+        }
 
-      return (
-        <div className='dashboard' style={{width:'100%'}}>
-          <div id="content" className="snippet-hidden " >
-            <div className="inner-content" >
-              <div id="mainbar" >
-                <div className="grid">
-                  <div className="row d-flex justify-content-between">
-                    <h1 className="grid--cell fl1 fs-headline1 text-center" style={{fontFamily: "Lobster",color: 'black',fontSize:'48px'}}> Top Questions </h1>
-                    <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '250px'}} to="/askQuestion">Ask
-                      Question</Link>
+        return (
+          <div className='dashboard' style={{width:'100%'}}>
+            <div id="content" className="snippet-hidden " >
+              <div className="inner-content" >
+                <div id="mainbar" >
+                  <div className="grid">
+                    <p style={{color: 'white',background: 'green'}} className='btn w-100'>Your TA application is in progress</p>
+                    <div className="row d-flex justify-content-between">
+                      <h1 className="grid--cell fl1 fs-headline1 text-center" style={{fontFamily: "Lobster",color: 'black',fontSize:'48px'}}> Top Questions </h1>
+                      <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '250px'}} to="/askQuestion">Ask
+                        Question</Link>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="comments">
-              <div className="card card-body mb-3">
-                {dashboardContent}
+              <div className="comments">
+                <div className="card card-body mb-3">
+                  {dashboardContent}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      )
+        )
+      }else {
+        const { questions, loading} = this.props.home
+        let dashboardContent
+        if ((questions === null) || loading ) {
+          dashboardContent = <Spinner/>
+        } else {
+          dashboardContent = (
+            <div>
+              {/*<h1>Dashboard Loads</h1>*/}
+              <QuestionsFeed questions={questions}/>
+            </div>
+          )
+        }
+
+        return (
+          <div className='dashboard' style={{width:'100%'}}>
+            <div id="content" className="snippet-hidden " >
+              <div className="inner-content" >
+                <div id="mainbar" >
+                  <div className="grid">
+                    <div className="row d-flex justify-content-between">
+                      <h1 className="grid--cell fl1 fs-headline1 text-center" style={{fontFamily: "Lobster",color: 'black',fontSize:'48px'}}> Top Questions </h1>
+                      <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '250px',margin:'5px'}} to="/askQuestion">Apply For TA</Link>
+                      <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '250px',margin:'5px'}} to="/askQuestion">Ask
+                        Question</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="comments">
+                <div className="card card-body mb-3">
+                  {dashboardContent}
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        )
+      }
+
     }else if(this.props.auth.user.role==='hod') {
       const { home, loading,faculty} = this.props.hod
       let dashboardContent
@@ -103,7 +150,55 @@ class Dashboard extends Component {
 
       }
       return (
-        <div className="container hodDashboard">
+        <div className="container dashboard">
+          <div className="row">
+            {dashboardContent}
+          </div>
+        </div>
+      )
+    }else if(this.props.auth.user.role==='faculty') {
+      const { home, loading,error} = this.props.faculty
+      let dashboardContent
+      if ((home === null) || loading ) {
+        dashboardContent = <Spinner/>
+      } else {
+        console.log({error:error})
+        let newError=false
+        if(home.NotAssigned!==null) {
+          newError=true
+        }
+        if(error || newError) {
+          dashboardContent = (
+            <div className="col-md-12">
+              <div className="desc">
+                <div className="row d-flex justify-content-between">
+                <h1 className="grid--cell fl1 fs-headline1 text-center" style={{fontFamily: "Lobster",color: 'black',fontSize:'48px'}}>Recent Questions</h1>
+                <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '250px'}} to="/askQuestion">Ask
+                  Question</Link>
+                </div>
+              </div>
+                <QuestionsFeed questions={home.questions}/>
+              </div>
+            </div>
+          )
+        }else {
+          dashboardContent = (
+            <div className="col-md-12">
+              <div className="desc">
+                <div className="row d-flex justify-content-between">
+                  <h1 className="grid--cell fl1 fs-headline1 text-center" style={{fontFamily: "Lobster",color: 'black',fontSize:'48px'}}>Recent Questions</h1>
+                  <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '250px'}} to="/askQuestion">Ask Question</Link>
+                  </div>
+                </div>
+                <FacultyHomeFeed home={home}/>
+              </div>
+            </div>
+          )
+        }
+          
+        }
+      return (
+        <div className="container dashboard">
           <div className="row">
             {dashboardContent}
           </div>
@@ -117,14 +212,16 @@ class Dashboard extends Component {
 Dashboard.propTypes = {
   getQuestionsHome: PropTypes.func.isRequired,
   getHodHome: PropTypes.func.isRequired,
+  getFacultyHome: PropTypes.func.isRequired,
   home: PropTypes.object.isRequired,
-  hod: PropTypes.object.isRequired
+  hod: PropTypes.object.isRequired,
+  faculty: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
   home: state.home,
   auth: state.auth,
-  hod: state.hod
+  hod: state.hod,
+  faculty: state.faculty
 })
-
-export default connect(mapStateToProps, { getQuestionsHome,getHodHome })(Dashboard)
+export default connect(mapStateToProps, { getQuestionsHome,getHodHome,getFacultyHome })(Dashboard)

@@ -26,7 +26,7 @@ router.post('/register', (req, res) => {
       const avatar = gravatar.url(req.body.emailId, {
         s: '200', // Size
         r: 'pg', // Rating
-        d: 'mm' // Default
+        d: 'retro' // Default
       })
 
       const newUser = new User({
@@ -105,7 +105,7 @@ router.post('/login', (req, res) => {
         // if(!user.isVerified) {
         //   return res.status(401).json({type: not-Verified, msg: 'Your account is not verified'});
         // }
-        const payload = { id: user.id,role: user.role}
+        const payload = { id: user.id,role: user.role,avatar: user.avatar}
         //TODO change secret key and signIn options
         jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
           (err, token) => {
@@ -122,6 +122,17 @@ router.post('/login', (req, res) => {
   })
 })
 
+router.post('/updateAvatar',passport.authenticate('hod',{session: false}),(req,res) => {
+
+  const avatar = gravatar.url(req.body.emailId, {
+    s: '200', // Size
+    r: 'pg', // Rating
+    d: 'retro' // Default
+  })
+  User.findOneAndUpdate({emailId: req.body.emailId,role: 'hod'},{avatar: avatar}).then(user => {
+    res.json(user);
+  })
+})
 
 //Change Password
 router.post('/changePassword', passport.authenticate('hod',{session: false}),

@@ -338,14 +338,29 @@ router.get('deleteTA/:id',passport.authenticate('faculty',{session: false}),
 
 router.get('/home',passport.authenticate('faculty', {session: false}),(req,res) => {
   User.findById(req.user._id).then(faculty => {
-    let display=[];
+      let display=[];
+      if(faculty.courses.length===0) {
+        throw 'err';
+      }
       faculty.courses.forEach(course => {
         Question.find({course: course}).sort({time: -1}).limit(5).then(questions => {
           display.push({course,questions});
-        }).catch(err => res.status(401).json({error: 'There was error in Fetching Questions'}))
+        }).catch(err => {
+          Question.find()
+            .sort({time: -1})
+            .limit(10)
+            .then(questions => {
+              res.json({NotAssigned: 'You are not assigned any course yet',questions})
+            }).catch(err => res.status(404).json({noPostsFound: 'No posts found'}))
+        })
       })
-    res.json(display);
-    }
-  ).catch(err => res.status(401).json({error: 'There was error in fetching details please try later'}))
+      res.json({data:display});
+    }).catch(err => {
+      Question.find()
+    .sort({time: -1})
+    .limit(10)
+    .then(questions => {
+      res.json({NotAssigned: 'You are not assigned any course yet',questions})
+    }).catch(err => res.status(404).json({noPostsFound: 'No posts found'}));})
 })
 module.exports = router

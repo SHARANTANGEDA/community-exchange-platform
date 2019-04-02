@@ -28,7 +28,7 @@ class FacultyLogin extends Component{
 
   componentWillReceiveProps (nextProps, nextContext) {
     if(nextProps.auth.isAuthenticated) {
-      this.props.history.push('/facultyDashboard');
+      this.props.history.push('/dashboard');
     }
     if(nextProps) {
       this.setState({errors: nextProps.errors})

@@ -69,6 +69,10 @@ class Sidebar extends Component {
               <i className="fas fa-question"/>
               All Users
             </Link>
+            <Link to="/allProfiles" style={{textDecoration: 'none',color: 'black'}}>
+              <i className="fas fa-question"/>
+              TA Applications
+            </Link>
             <Link to="" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle" style={{textDecoration: 'none',color: 'black'}}>
               <i className="fas fa-copy"/>
               Tags

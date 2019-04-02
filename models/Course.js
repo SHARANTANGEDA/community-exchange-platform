@@ -11,6 +11,9 @@ const CourseSchema = new Schema({
   facultyId: {
     type: [String]
   },
+  departmentName: {
+    type: String
+  },
   status: {
     type: Boolean,
     required: true,

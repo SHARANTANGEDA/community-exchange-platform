@@ -28,7 +28,7 @@ router.get('/home',passport.authenticate('student',{session: false}),(req,res) =
     .catch(err => res.status(404).json({noPostsFound: 'No posts found'}));
 });
 //@get Question by Id
-router.get('/:id',passport.authenticate('student',{session: false}),(req,res) => {
+router.get('/:id',passport.authenticate('all',{session: false}),(req,res) => {
   Question.findById(req.params.id)
     .then(question => res.json(question))
     .catch(err => {
@@ -37,7 +37,7 @@ router.get('/:id',passport.authenticate('student',{session: false}),(req,res) =>
 });
 
 //@ Create Question
-router.post('/ask',passport.authenticate('student',{session: false}),
+router.post('/ask',passport.authenticate('all',{session: false}),
   (req,res) => {
   const {errors , isValid} =validateQuestionInput(req.body);
   if(!isValid) {
