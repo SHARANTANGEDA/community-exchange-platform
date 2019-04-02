@@ -104,6 +104,12 @@ class Sidebar extends Component {
             </Link>
           </li>
           <li>
+            <Link to="/allProfiles" style={{textDecoration: 'none',color: 'black'}}>
+              <i className="fas fa-question"/>
+              All Users
+            </Link>
+          </li>
+          <li>
             <Link to="" style={{textDecoration: 'none',color: 'black'}}>
               UnAssigned Faculty
             </Link>

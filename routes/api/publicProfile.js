@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 
 /*@all profiles*/
-router.get('/', passport.authenticate('student', { session: false }), (req, res) => {
+router.get('/', passport.authenticate('all', { session: false }), (req, res) => {
   User.find({}, {
     'firstName': 1, 'lastName': 1, 'emailId': 1, 'avatar': 1, 'departmentName': 1, 'githubUsername': 1, 'role': 1
   })

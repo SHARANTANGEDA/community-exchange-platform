@@ -4,7 +4,6 @@ import {
 
 const initialState = {
   loading: true,
-  error: false,
   courses: null
 };
 
@@ -18,17 +17,17 @@ export default function(state = initialState, action) {
         loading: true
       }
     case GET_COURSES:
+      console.log("In Course loading")
       return {
         ...state,
         courses: action.payload,
-        loading: false,
-        error: false
+        loading: false
       };
     case GET_NO_COURSE:
+      console.log("In NO Course loading")
       return {
         ...state,
         courses: action.payload,
-        error: true,
         loading: false
       }
     default:

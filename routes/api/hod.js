@@ -154,4 +154,5 @@ router.post('/changePassword', passport.authenticate('hod',{session: false}),
     })
   })
 
+
 module.exports = router

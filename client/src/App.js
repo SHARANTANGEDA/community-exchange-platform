@@ -14,7 +14,7 @@ import Landing from './components/layout/Landing';
 import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
 import Register from './components/authorization/Register';
 import Login from './components/authorization/login/Login';
-import Dashboard from './components/QuestionGet/Dashboard';
+import Dashboard from './components/commonDashboard/Dashboard';
 import AskQuestions from './components/AskQuestion/AskQuestions';
 import Sidebar from'./components/layout/Sidebar';
 import AllQuestions from './components/QuestionGet/AllQuestions'
@@ -25,7 +25,6 @@ import ViewQuestion from './components/SingleQuestion/ViewQuestion'
 import ChangePassword from './components/MyAccount/ChangePassword'
 import AdminLogin from './components/authorization/login/AdminLogin'
 import FacultyLogin from './components/authorization/login/FacultyLogin'
-import HODDashboard from './components/hod/HODDashboard'
 import HodLogin from './components/authorization/login/HodLogin'
 import AllCourses from './components/hod/AllCourses'
 
@@ -84,9 +83,6 @@ class App extends Component {
             <Switch>
               <PrivateRoute exact path='/viewQuestion/:id' component={ViewQuestion}/>
             </Switch>
-          <Switch>
-            <PrivateRoute exact path='/hodDashboard' component={HODDashboard}/>
-          </Switch>
           <Switch>
             <PrivateRoute exact path='/allCourses' component={AllCourses}/>
           </Switch>

@@ -25,18 +25,13 @@ router.get('/home', passport.authenticate('hod', { session: false }), (req, res)
 router.get('/allCourses', passport.authenticate('hod', { session: false }), (req, res) => {
   Department.findOne({ hod: req.user._id }).then(department => {
     let courses = department.coursesId
-    if(courses.length===0) {
-      console.log(department)
-      res.json({NoCourse: 'No courses found' ,department})
-    }else {
       let courseDetails = [];
       courses.forEach(courseId => {
         Course.find({courseCode: courseId}).then(course => {
           courseDetails.push(course);
-        })
+        }).catch(err => { res.json({NoCourse: 'No courses found' ,department})})
       })
       res.json({allCourses:courseDetails,department})
-    }
   }).catch(err => {
     res.status(404).json({ Error: 'Error on our side please bear with us' })
   })
@@ -46,11 +41,14 @@ router.get('/allCourses', passport.authenticate('hod', { session: false }), (req
 router.get('/course/:id', passport.authenticate('hod', { session: false })
   , (req, res) => {
     Course.findById(req.params.id).then(course => {
-      if (course.status === false) {
-        res.json({ course, faculty: 'Not Assigned anyone here' })
-      } else {
-        res.json(course)
-      }
+      let facultyIds = course.facultyId;
+      let getProfs = [];
+      facultyIds.forEach(fid => {
+        User.findById(fid).then(fac => {
+          getProfs.push(fac);
+        })
+      })
+      res.json({course,faculty:getProfs})
     }).catch(err => {
       res.status(404).json({ noCourseFound: 'No Course found with that ID' })
     })
