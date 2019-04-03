@@ -33,7 +33,7 @@ router.get('/', passport.authenticate('all', { session: false }), (req, res) => 
 })
 
 //@ profile by emailId
-router.get('/emailId/:id', (req, res) => {
+router.get('/emailId/:id',passport.authenticate('all', { session: false }), (req, res) => {
   const errors = {}
     User.findOne({ emailId: req.params.id }, {
       'firstName': 1, 'lastName': 1, 'emailId': 1, 'avatar': 1, 'departmentName': 1, 'githubUsername': 1,
@@ -57,7 +57,7 @@ router.get('/emailId/:id', (req, res) => {
 });
 
 //@ profile by userId
-router.get('/:id', (req, res) => {
+router.get('/:id',passport.authenticate('all', { session: false }), (req, res) => {
   const errors = {};
   User.findById(req.params.id, {
     'firstName': 1, 'lastName': 1, 'emailId': 1, 'avatar': 1, 'departmentName': 1, 'githubUsername': 1,
