@@ -217,35 +217,35 @@ router.post('/changePassword', passport.authenticate('faculty', { session: false
     })
   })
 
-//Update Profile
-router.post('/myAccount/change', passport.authenticate('faculty', { session: false }),
-  (req, res) => {
-    const { errors, isValid } = validateProfileInput(req.body);
-    console.log({body: req.body})
-    if (!isValid) {
-      return res.status(400).json(errors);
-    }
-    const profileFields = {};
-    if (req.body.website) {
-      profileFields.website = req.body.website;
-    }
-    // TODO Skills
-    // if (typeof req.body.skills !== 'undefined') {
-    //   profileFields.skills = req.body.skills.split(',');
-    // }
-    // if (req.body.codeForces) {
-    //   profileFields.codeForces = req.body.codeForces;
-    // }
-    if (req.body.linkedIn) profileFields.linkedIn = req.body.linkedIn;
-    User.findOneAndUpdate(
-      { _id: req.user._id },
-      { $set: profileFields },
-      {new: true}
-    ).then(user => {
-      res.json(user)
-    });
-  }
-);
+// //Update Profile
+// router.post('/myAccount/change', passport.authenticate('faculty', { session: false }),
+//   (req, res) => {
+//     const { errors, isValid } = validateProfileInput(req.body);
+//     console.log({body: req.body})
+//     if (!isValid) {
+//       return res.status(400).json(errors);
+//     }
+//     const profileFields = {};
+//     if (req.body.website) {
+//       profileFields.website = req.body.website;
+//     }
+//     // TODO Skills
+//     // if (typeof req.body.skills !== 'undefined') {
+//     //   profileFields.skills = req.body.skills.split(',');
+//     // }
+//     // if (req.body.codeForces) {
+//     //   profileFields.codeForces = req.body.codeForces;
+//     // }
+//     if (req.body.linkedIn) profileFields.linkedIn = req.body.linkedIn;
+//     User.findOneAndUpdate(
+//       { _id: req.user._id },
+//       { $set: profileFields },
+//       {new: true}
+//     ).then(user => {
+//       res.json(user)
+//     });
+//   }
+// );
 
 router.get('/myCourses',passport.authenticate('faculty',{session: false}),(req,res) => {
 

@@ -20,7 +20,7 @@ router.get('/home', passport.authenticate('hod', { session: false }), (req, res)
       User.find({ departmentName: department.departmentName, role: 'faculty' }).then(faculty => {
         res.json({ department, faculty })
       }).catch(err => res.json({ noFaculty: 'There are no faculty in this department', department }))
-    }).catch(err => res.status(404).json({ noPostsFound: 'No posts found' }))
+    }).catch(err => res.status(404).json({ noPostsFound: 'No Department found' }))
 })
 router.get('/allCourses', passport.authenticate('hod', { session: false }), (req, res) => {
   Department.findOne({ hod: req.user._id }).then(department => {

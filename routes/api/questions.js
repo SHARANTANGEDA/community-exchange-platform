@@ -12,7 +12,7 @@ const validateQuestionInput = require('../../validations/askQuestions')
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 //@get Questions for display
-router.get('/',passport.authenticate('student',{session: false}),(req,res) => {
+router.get('/',passport.authenticate('all',{session: false}),(req,res) => {
   Question.find()
     .sort({time: -1})
     .then(questions => res.json(questions))
@@ -40,30 +40,32 @@ router.get('/:id',passport.authenticate('all',{session: false}),(req,res) => {
 router.post('/ask',passport.authenticate('all',{session: false}),
   (req,res) => {
   const {errors , isValid} =validateQuestionInput(req.body);
+    let toStoreTag = req.body.tags;
+    toStoreTag = toStoreTag[0];
+    if(toStoreTag.endsWith(',')) {
+      toStoreTag = toStoreTag.substr(0,toStoreTag.length-1);
+    }
+    if(toStoreTag.startsWith(',')) {
+      toStoreTag = toStoreTag.substr(1,toStoreTag.length);
+    }
+    if(toStoreTag.length===0) {
+      errors.tags = 'Please enter tags in proper format'
+    }
+    toStoreTag=toStoreTag.split(',');
+    toStoreTag.forEach(tag => {
+      const pat = /^[a-zA-Z]+$/;
+      tag=tag.trim();
+      if(tag.isEmpty()) {
+        errors.tags='tags cannot be empty';
+      }
+      if(!pat.test(tag)) {
+        errors.tags = 'tags cannot contain special characters'
+      }
+    })
   if(!isValid) {
     return res.status(400).json(errors);
   }
-  let toStoreTag = req.body.tags.trim();
-  if(toStoreTag.endsWith(',')) {
-    toStoreTag = toStoreTag.substr(0,toStoreTag.length-1);
-  }
-  if(toStoreTag.startsWith(',')) {
-    toStoreTag = toStoreTag.substr(1,toStoreTag.length);
-  }
-  if(toStoreTag.length===0) {
-    errors.tags = 'Please enter tags in proper format'
-  }
-  toStoreTag=toStoreTag.split(',');
-  toStoreTag.forEach(tag => {
-    const pat = /^[a-zA-Z]+$/;
-    tag=tag.trim();
-    if(tag.isEmpty()) {
-      errors.tags='tags cannot be empty';
-    }
-    if(!pat.test(tag)) {
-      errors.tags = 'tags cannot contain special characters'
-    }
-  })
+
   const newQuestion = new Question({
     title: req.body.title,
     firstName: req.user.firstName,

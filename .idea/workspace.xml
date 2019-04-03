@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92c3f002-70e8-4ff8-9b74-7304e267b2f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/ApplyTA.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/GetCourses.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/faculty/TAApplications.js" afterDir="false" />
+    <list default="true" id="92c3f002-70e8-4ff8-9b74-7304e267b2f4" name="Default Changelist" comment="#Changed My Account auth to all.&#10;#TODO:To change again in sprint-3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/layout/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/homeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/homeReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/department.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/department.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/faculty.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/faculty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/questions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validations/taApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/validations/taApplication.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,34 +20,102 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/hod/AllCourses.js">
+        <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="88" />
+            <state relative-caret-position="566">
+              <caret line="235" column="21" selection-start-line="235" selection-start-column="21" selection-end-line="235" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/faculty/TAApplications.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2310">
+              <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="47" column="36" lean-forward="true" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/authorization/login/HodLogin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2521">
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
+        <entry file="file://$PROJECT_DIR$/client/src/actions/hodActions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="362" selection-start-line="362" selection-end-line="362" />
+            <state relative-caret-position="-1680">
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/components/faculty/TAApplications.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+            <state relative-caret-position="209">
+              <caret line="88" column="19" lean-forward="true" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api/hod.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5297" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api/comments.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-327">
+              <caret line="35" column="16" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="548">
+              <caret line="230" column="5" lean-forward="true" selection-start-line="230" selection-start-column="5" selection-end-line="230" selection-end-column="5" />
+              <folding>
+                <element signature="e#3980#4005#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api/department.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="22" column="71" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -110,7 +170,6 @@
         <option value="$PROJECT_DIR$/client/src/components/authorization/login/HodLogin.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/AllCourses.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/Courses/ViewCourse.js" />
-        <option value="$PROJECT_DIR$/routes/api/department.js" />
         <option value="$PROJECT_DIR$/client/src/components/Users/UserProfile.js" />
         <option value="$PROJECT_DIR$/client/src/actions/hodActions.js" />
         <option value="$PROJECT_DIR$/config/passport.js" />
@@ -124,11 +183,9 @@
         <option value="$PROJECT_DIR$/client/src/components/commonDashboard/FacultyHomeFeed.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/login/FacultyLogin.js" />
         <option value="$PROJECT_DIR$/client/src/actions/facultyActions.js" />
-        <option value="$PROJECT_DIR$/routes/api/faculty.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/facultyReducer.js" />
         <option value="$PROJECT_DIR$/routes/api/answers.js" />
         <option value="$PROJECT_DIR$/routes/api/comments.js" />
-        <option value="$PROJECT_DIR$/routes/api/questions.js" />
         <option value="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" />
         <option value="$PROJECT_DIR$/client/src/components/Users/UserItem.js" />
         <option value="$PROJECT_DIR$/client/src/components/layout/NavBar.js" />
@@ -145,9 +202,12 @@
         <option value="$PROJECT_DIR$/validations/taApplication.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/Register.js" />
         <option value="$PROJECT_DIR$/client/src/components/commonDashboard/GetCourses.js" />
-        <option value="$PROJECT_DIR$/routes/api/users.js" />
         <option value="$PROJECT_DIR$/client/src/components/commonDashboard/ApplyTA.js" />
         <option value="$PROJECT_DIR$/client/src/components/faculty/TAApplications.js" />
+        <option value="$PROJECT_DIR$/routes/api/department.js" />
+        <option value="$PROJECT_DIR$/routes/api/faculty.js" />
+        <option value="$PROJECT_DIR$/routes/api/users.js" />
+        <option value="$PROJECT_DIR$/routes/api/questions.js" />
       </list>
     </option>
   </component>
@@ -195,6 +255,13 @@
               <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -212,6 +279,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="authorization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="authorization" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="commonDashboard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
@@ -428,14 +512,8 @@
       <workItem from="1554119777364" duration="15298000" />
       <workItem from="1554170987447" duration="6061000" />
       <workItem from="1554189424219" duration="4111000" />
-      <workItem from="1554201242427" duration="19195000" />
-    </task>
-    <task id="LOCAL-00009" summary="#Adds React components to register from GUI&#10;and identifies errors">
-      <created>1550946454772</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1550946454772</updated>
+      <workItem from="1554201242427" duration="19266000" />
+      <workItem from="1554306340304" duration="631000" />
     </task>
     <task id="LOCAL-00010" summary="#Add SignUp and Login Through GUI">
       <created>1551005329702</created>
@@ -773,11 +851,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554207454115</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="#adds TA application page">
+      <created>1554220490816</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1554220490816</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="461585000" />
+    <option name="totallyTimeSpent" value="462287000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -798,7 +883,7 @@
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.18305084" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49749583" weight="0.3039548" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49749583" weight="0.29717514" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -830,7 +915,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#added npm as dependency to check on heroku" />
     <MESSAGE value="#added engines in package.json to check on heroku" />
     <MESSAGE value="#adds procfile" />
     <MESSAGE value="#minor changes" />
@@ -855,33 +939,10 @@
     <MESSAGE value="#Adds HOD homepage&#10;#Adds multiple routes&#10;#fixes minor bugs&#10;#Adds sidebar for faculty and hod&#10;#Adds all hods to database&#10;#TODO: All courses page bugs" />
     <MESSAGE value="#Adds all courses page&#10;#Adds view course page&#10;#Made dashboard common" />
     <MESSAGE value="#Adds Faculty homepage&#10;#adds ta homepage button" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Adds Faculty homepage&#10;#adds ta homepage button" />
+    <MESSAGE value="#adds TA application page" />
+    <option name="LAST_COMMIT_MESSAGE" value="#adds TA application page" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/actions/hodActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="19" selection-end-line="88" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Course.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/FacultyHomeFeed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/authorization/login/Login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-735">
@@ -932,13 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-417">
           <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/comments.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
-          <caret line="35" column="16" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1009,13 +1063,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/modalActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/modalActions.js" />
     <entry file="file://$PROJECT_DIR$/client/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1028,20 +1076,8 @@
     <entry file="file://$PROJECT_DIR$/client/src/reducers/errorReducer.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/modalReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Users/ApplyForTA.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/modalReducer.js" />
+    <entry file="file://$PROJECT_DIR$/client/src/components/Users/ApplyForTA.js" />
     <entry file="file://$PROJECT_DIR$/client/src/components/layout/NavBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1081,16 +1117,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="88" column="19" lean-forward="true" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1191,13 +1217,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/AskQuestion/AskQuestions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -1214,16 +1233,6 @@
           <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="262" column="24" selection-start-line="262" selection-start-column="24" selection-end-line="262" selection-end-column="24" />
-          <folding>
-            <element signature="e#3980#4005#0" />
           </folding>
         </state>
       </provider>
@@ -1248,11 +1257,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/department.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1995" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/GetCourses.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
@@ -1273,20 +1277,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="362" selection-start-line="362" selection-end-line="362" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/faculty/TAApplications.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
+        <state relative-caret-position="2310">
           <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/login/HodLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2521">
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/hodActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1680">
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="88" column="19" lean-forward="true" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/department.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="22" column="71" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="235" column="21" selection-start-line="235" selection-start-column="21" selection-end-line="235" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/hod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5297" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/comments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-327">
+          <caret line="35" column="16" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="230" column="5" lean-forward="true" selection-start-line="230" selection-start-column="5" selection-end-line="230" selection-end-column="5" />
+          <folding>
+            <element signature="e#3980#4005#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="47" column="36" lean-forward="true" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
         </state>
       </provider>
     </entry>

@@ -222,7 +222,7 @@ router.post('/changePassword', passport.authenticate('student', { session: false
   })
 
 //Update Profile CodeForces, Github, linkedIn
-router.post('/myAccount/change', passport.authenticate('student', { session: false }),
+router.post('/myAccount/change', passport.authenticate('all', { session: false }),
   (req, res) => {
     const { errors, isValid } = validateProfileInput(req.body);
     console.log({body: req.body})
