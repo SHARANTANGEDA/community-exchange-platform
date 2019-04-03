@@ -54,16 +54,16 @@ router.post('/ask',passport.authenticate('all',{session: false}),
     errors.tags = 'Please enter tags in proper format'
   }
   toStoreTag=toStoreTag.split(',');
-  // toStoreTag.forEach(tag => {
-  //   const pat = /^[a-zA-Z]+$/;
-  //   tag=tag.trim();
-  //   if(tag.isEmpty()) {
-  //     errors.tags='tags cannot be empty';
-  //   }
-  //   if(!pat.test(tag)) {
-  //     errors.tags = 'tags cannot contain special characters'
-  //   }
-  // })
+  toStoreTag.forEach(tag => {
+    const pat = /^[a-zA-Z]+$/;
+    tag=tag.trim();
+    if(tag.isEmpty()) {
+      errors.tags='tags cannot be empty';
+    }
+    if(!pat.test(tag)) {
+      errors.tags = 'tags cannot contain special characters'
+    }
+  })
   const newQuestion = new Question({
     title: req.body.title,
     firstName: req.user.firstName,
