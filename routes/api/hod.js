@@ -122,17 +122,6 @@ router.post('/login', (req, res) => {
   })
 })
 
-router.post('/updateAvatar',passport.authenticate('hod',{session: false}),(req,res) => {
-
-  const avatar = gravatar.url(req.body.emailId, {
-    s: '200', // Size
-    r: 'pg', // Rating
-    d: 'retro' // Default
-  })
-  User.findOneAndUpdate({emailId: req.body.emailId,role: 'hod'},{avatar: avatar}).then(user => {
-    res.json(user);
-  })
-})
 
 //Change Password
 router.post('/changePassword', passport.authenticate('hod',{session: false}),
