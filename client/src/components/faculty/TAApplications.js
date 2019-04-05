@@ -2,29 +2,29 @@ import React, { Component } from 'react'
 import PropTypes  from 'prop-types'
 import { connect } from 'react-redux'
 import Spinner from '../common/Spinner'
-import { getAllCourses } from '../../actions/hodActions'
-import CourseFeed from './Courses/CourseFeed'
 import { Link } from 'react-router-dom'
+import { getTAApplications } from '../../actions/facultyActions'
+import TAFeed from './displayApplications/TAFeed'
 
 class TAApplications extends Component {
 
   componentDidMount () {
-    this.props.getAllCourses(this.props.match.params.id);
+    this.props.getTAApplications(this.props.match.params.id);
     console.log("Called");
   }
   render () {
-    const { courses, loading} = this.props.courses
+    const { taApplications, loading} = this.props.faculty
     let allCoursesContent
-    if ((courses === null) || loading ) {
+    if ((taApplications === null) || loading ) {
       allCoursesContent = <Spinner/>
     } else {
-      if(courses.allCourses.length===0) {
+      if(taApplications.applications.display.length===0) {
         allCoursesContent = (
           <div className="col-md-12">
             <div className="desc">
               <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontFamily: "'Lobster'"}}
-                  className="rounded border bg-dark text-light text-center p-1 pl-3 pr-5">Department of {courses.department.departmentName}</h1>
-              <h3 className='text-center'>No courses Added yet</h3>
+                  className="rounded border bg-dark text-light text-center p-1 pl-3 pr-5">Teacher Assistant Applications</h1>
+              <h3 className='text-center'>No applications received yet</h3>
               <div className="pull-right justify-content-end" style={{minWidth: '250px'}}>
                 <Link className="btn btn-primary btn-lg w-100" style={{minWidth: '250px'}} to="/askQuestion">
                   Add Course</Link>
@@ -37,7 +37,7 @@ class TAApplications extends Component {
           <div className="col-md-12">
             <div className="desc">
               <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontFamily: "'Lobster'"}}
-                  className="rounded border bg-dark text-light p-1 pl-3 pr-5 text-center">Department of {courses.department.departmentName}</h1>
+                  className="rounded border bg-dark text-light text-center p-1 pl-3 pr-5">Teacher Assistant Applications</h1>
               <div className="pull-right justify-content-end" style={{minWidth: '250px'}}>
                 <Link className="btn btn-primary btn-lg pull-right" style={{minWidth: '250px'}} to="/askQuestion">
                   Add Course</Link>
@@ -59,7 +59,7 @@ class TAApplications extends Component {
                     <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Reject</strong>
                   </td>
                 </tr>
-                <CourseFeed courses = {courses}/>
+                <TAFeed applications={taApplications.applications}/>
                 </tbody>
               </table>
             </div>
@@ -70,7 +70,7 @@ class TAApplications extends Component {
     }
 
     return (
-      <div className="container ">
+      <div className="container acceptTA">
         <div className="row">
           {allCoursesContent}
         </div>
@@ -80,12 +80,12 @@ class TAApplications extends Component {
 }
 
 TAApplications.propTypes = {
-  getAllCourses: PropTypes.func.isRequired,
-  courses: PropTypes.object.isRequired
+  getTAApplications: PropTypes.func.isRequired,
+  faculty: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
-  courses: state.courses,
+  faculty: state.faculty,
 })
 
-export default connect(mapStateToProps, { getAllCourses })(TAApplications)
+export default connect(mapStateToProps, { getTAApplications })(TAApplications)

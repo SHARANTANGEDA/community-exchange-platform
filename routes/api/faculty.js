@@ -282,7 +282,7 @@ router.get('/applications',passport.authenticate('faculty', {session: false}),
           display.push({courseCode: courseId,students: student});
         }).catch(err => res.status(404).json({notFound: 'No Applicants Found'}))
       })
-      res.json(display);
+      res.json({applications:display});
     }
   })
 })
