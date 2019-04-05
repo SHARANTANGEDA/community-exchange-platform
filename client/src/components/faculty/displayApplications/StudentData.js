@@ -2,8 +2,20 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
+import { acceptTA, rejectTA } from '../../../actions/facultyActions'
 
 class StudentData extends Component {
+  constructor () {
+    super()
+    this.onAccept = this.onAccept.bind(this)
+    this.onReject = this.onReject.bind(this)
+  }
+  onAccept(e) {
+    this.props.acceptTA(this.props.student._id)
+  }
+  onReject(e) {
+    this.props.rejectTA(this.props.student._id)
+  }
   render () {
     const { student } = this.props
     console.log({ GetStudent:student })
@@ -16,18 +28,18 @@ class StudentData extends Component {
         </td>
         <td>
                     <span style={{ fontSize: '13.3333330154419px', background: 'green',style: 'white'}}>
-                      <Link className=" btn btn-primary"
-                            to="" target="_blank" style={{background: 'red'}}>
+                      <button className=" btn btn-primary"
+                            onClick={this.onAccept} style={{background: 'green'}}>
                         Accept
-                      </Link>
+                      </button>
                     </span>
         </td>
         <td>
                     <span style={{ fontSize: '13.3333330154419px', background: 'red',style: 'white'}}>
-                      <Link className=" btn btn-primary"
-                            to="" target="_blank" style={{background: 'red',style: 'white'}}>
-                        Accept
-                      </Link>
+                      <button className=" btn btn-primary"
+                              onClick={this.onReject} style={{background: 'red',style: 'white'}}>
+                        Reject
+                      </button>
                     </span>
         </td>
       </tr>
@@ -41,9 +53,12 @@ StudentData.defaultProps = {
 
 StudentData.propTypes = {
   student: PropTypes.object.isRequired,
+  acceptTA: PropTypes.func.isRequired,
+  rejectTA: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
 }
 const mapStateToProps = state => ({
-  auth: state.auth
+  auth: state.auth,
+  faculty:state.faculty
 })
-export default connect(mapStateToProps)(StudentData)
+export default connect(mapStateToProps,{acceptTA,rejectTA})(StudentData)

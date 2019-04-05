@@ -9,6 +9,21 @@ opts.jwtFromRequest = extractJWT.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = keys.secretOrKey;
 
 module.exports = passport => {
+  passport.use('admin',
+    new JWTStrategy(opts, (jwt_payload, done) => {
+      User.findById(jwt_payload.id)
+        .then(user => {
+          if(user) {
+            if(user.role==='admin') {
+              return done(null,user);
+            } else {
+              return done(null,false);
+            }          }
+          return done(null,false);
+        })
+        .catch(err=>console.log(err));
+    })
+  );
   passport.use('all',
     new JWTStrategy(opts, (jwt_payload, done) => {
       User.findById(jwt_payload.id)

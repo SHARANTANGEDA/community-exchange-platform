@@ -5,7 +5,7 @@ import {
   GET_FACULTY_HOME,
   GET_FACULTY_ERRORS,
   GET_ERRORS_IN_APPLICATIONS,
-  GET_TA_APPLICATIONS
+  GET_TA_APPLICATIONS, ACCEPT_TA_APPLICATION, REJECT_TA_APPLICATION
 } from '../actions/types'
 
 const initialState = {
@@ -31,6 +31,16 @@ export default function(state = initialState, action) {
         error:false,
         loading: false
       };
+    case ACCEPT_TA_APPLICATION:
+      return {
+        ...state,
+        loading: false
+      }
+    case REJECT_TA_APPLICATION:
+      return {
+        ...state,
+        loading: false
+      }
     case GET_TA_APPLICATIONS:
       return {
         ...state,
