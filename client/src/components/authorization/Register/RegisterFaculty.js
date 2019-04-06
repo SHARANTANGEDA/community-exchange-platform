@@ -3,10 +3,11 @@ import { Link, withRouter } from 'react-router-dom'
 import { PropTypes } from 'prop-types';
 import classnames from 'classnames'
 import {connect} from 'react-redux';
-import {registerUser} from '../../actions/authActions'
-import TextFieldGroup from '../common/TextFieldGroup';
+import { getDepartments, registerFaculty, registerUser } from '../../../actions/authActions'
+import TextFieldGroup from '../../common/TextFieldGroup';
+import DepartmentFeed from './DepartmentFeed'
 
-class Register extends Component {
+class RegisterFaculty extends Component {
   constructor () {
     super()
     this.state = {
@@ -27,6 +28,8 @@ class Register extends Component {
   }
 
   componentDidMount () {
+    this.props.getDepartments(this.props.match.params.id);
+
     if(this.props.auth.isAuthenticated) {
       this.props.history.push('/dashboard');
     }
@@ -48,13 +51,21 @@ class Register extends Component {
       repassword: this.state.repassword,
       departmentName: this.state.departmentName
     }
-    this.props.registerUser(newUser,this.props.history);
+    this.props.registerFaculty(newUser,this.props.history);
 
   }
 
   render () {
     const { errors } = this.state
-
+    const {hod} = this.props;
+    let showDepartments;
+    if(hod.home===null || hod.loading) {
+      showDepartments=null;
+    }else {
+      showDepartments = (
+        <DepartmentFeed departments ={hod.home}/>
+      )
+    }
     return (
       <div className="register">
         <div className="container">
@@ -66,26 +77,26 @@ class Register extends Component {
                 <div className="row">
                   <div className="col-md-6">
                     <TextFieldGroup placeholder="First Name" error={errors.firstName}
-                      type="text" onChange={this.changeHandler} value={this.state.firstName} name="firstName"
+                                    type="text" onChange={this.changeHandler} value={this.state.firstName} name="firstName"
                     />
                   </div>
                   <div className="col-md-6">
-                      <TextFieldGroup placeholder="Last Name" error={errors.lastName}
-                                      type="text" onChange={this.changeHandler} value={this.state.lastName} name="lastName"
-                      />
+                    <TextFieldGroup placeholder="Last Name" error={errors.lastName}
+                                    type="text" onChange={this.changeHandler} value={this.state.lastName} name="lastName"
+                    />
 
                   </div>
                 </div>
-                  <div className="form-group mb-0 mt-0">
-                    <div className="row">
-                      <div className="col-md-9 pt-0 mb-0">
-                        <TextFieldGroup placeholder="Email Address" error={errors.emailId} info="Please use BITS Email for Registration"
-                                        type="email" onChange={this.changeHandler} value={this.state.emailId} name="emailId"
-                        />
-                      </div>
-                      <div className="col-md-3"><Link className="btn btn-primary w-50 my-1" to="#">Verify</Link></div>
+                <div className="form-group mb-0 mt-0">
+                  <div className="row">
+                    <div className="col-md-9 pt-0 mb-0">
+                      <TextFieldGroup placeholder="Email Address" error={errors.emailId} info="Please use BITS Email for Registration"
+                                      type="email" onChange={this.changeHandler} value={this.state.emailId} name="emailId"
+                      />
                     </div>
+                    <div className="col-md-3"><Link className="btn btn-primary w-50 my-1" to="#">Verify</Link></div>
                   </div>
+                </div>
                 <TextFieldGroup placeholder="Password" error={errors.password}
                                 type="password" onChange={this.changeHandler} value={this.state.password} name="password"
                 />
@@ -95,22 +106,9 @@ class Register extends Component {
                 <div className="wrap-input100 input100-select form-group">
                   <div>
                     <select className={classnames("selection-2 form-control form-control-lg",{'is-invalid': errors.departmentName})}
-                         name="departmentName" value={this.state.departmentName} onChange={this.changeHandler}>
+                            name="departmentName" value={this.state.departmentName} onChange={this.changeHandler}>
                       <option>Choose Department</option>
-                      <option>Computer Science Engineering</option>
-                      <option>Electrical and Communications Engineering</option>
-                      <option>Electrical and Electronics Engineering</option>
-                      <option>Electronics and Instrumentation Engineering</option>
-                      <option>Mechanical Engineering</option>
-                      <option>Chemical Engineering</option>
-                      <option>Civil Engineering</option>
-                      <option>Manufacturing Engineering</option>
-                      <option>Msc.Biological Sciences</option>
-                      <option>Msc.Chemistry</option>
-                      <option>Msc.Economics</option>
-                      <option>Msc.Mathematics</option>
-                      <option>Msc.Physics</option>
-                      <option>B-Pharmacy</option>
+                      {showDepartments}
                     </select>
                     {errors.departmentName && (
                       <div className="invalid-feedback">{errors.departmentName}</div>
@@ -128,15 +126,18 @@ class Register extends Component {
   }
 }
 
-Register.propTypes = {
-  registerUser: PropTypes.func.isRequired,
+RegisterFaculty.propTypes = {
+  registerFaculty: PropTypes.func.isRequired,
+  getDepartments: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
+  hod: PropTypes.object.isRequired
 }
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
+  hod: state.hod
 })
 
-export default connect(mapStateToProps,{registerUser})(withRouter(Register));
+export default connect(mapStateToProps,{registerFaculty,getDepartments})(withRouter(RegisterFaculty));

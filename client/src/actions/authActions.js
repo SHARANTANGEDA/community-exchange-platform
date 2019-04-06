@@ -1,12 +1,50 @@
-import { GET_ERRORS, SET_CURRENT_USER } from './types';
+import {
+  GET_ALL_DEPARTMENTS,
+  GET_ERRORS,
+  GET_ERRORS_IN_APPLICATIONS,
+  GET_TA_APPLICATIONS,
+  SET_CURRENT_USER
+} from './types'
 import axios from 'axios'
 import setAuthToken from '../utils/setAuthToken'
 import jwt_decode from 'jwt-decode';
+import { setLoading } from './facultyActions'
 
+
+export const getDepartments = () => dispatch => {
+  console.log("Started Loading Ta applications page")
+  dispatch(setLoading());
+  console.log("In all applications actions")
+
+  axios
+    .get(`/api/department/allDepartments`)
+    .then(res =>
+      dispatch({
+        type: GET_ALL_DEPARTMENTS,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS_IN_APPLICATIONS,
+        payload: err.data
+      })
+    );
+}
 //Register User
 export const registerUser = (userData,history) => dispatch => {
   axios.post('/api/users/register', userData)
     .then(res => history.push('/login'))//TODO Write for jwt token here
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      }))
+};
+//Register User
+export const registerFaculty = (userData,history) => dispatch => {
+  axios.post('/api/faculty/register', userData)
+    .then(res => history.push('/facultyLogin'))//TODO Write for jwt token here
     .catch(err =>
       dispatch({
         type: GET_ERRORS,

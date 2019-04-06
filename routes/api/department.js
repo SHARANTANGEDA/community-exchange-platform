@@ -11,6 +11,12 @@ const validateCourseInput = require('../../validations/course')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+router.get('/allDepartments',(req, res) => {
+  Department.find().then(department => {
+    res.json(department)
+  }).catch(err => res.status(404).json({NoDepFound: 'no Department found'}))
+})
+
 //TODO set hod home page
 router.get('/home', passport.authenticate('hod', { session: false }), (req, res) => {
   Department.findOne({ hod: req.user._id })

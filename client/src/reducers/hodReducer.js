@@ -1,5 +1,5 @@
 import {
-  LOADING,GET_HOME, GET_HOME_NO_FACULTY
+  LOADING, GET_HOME, GET_HOME_NO_FACULTY, GET_ALL_DEPARTMENTS
 } from '../actions/types'
 
 const initialState = {
@@ -23,6 +23,12 @@ export default function(state = initialState, action) {
         home: action.payload,
         loading: false,
         faculty: true
+      };
+    case GET_ALL_DEPARTMENTS:
+      return {
+        ...state,
+        home: action.payload,
+        loading: false,
       };
     case GET_HOME_NO_FACULTY:
       return {

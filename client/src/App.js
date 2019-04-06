@@ -12,7 +12,7 @@ import Footer from './components/layout/Footer';
 import NavBar from './components/layout/NavBar';
 import Landing from './components/layout/Landing';
 import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
-import Register from './components/authorization/Register';
+import Register from './components/authorization/Register/Register';
 import Login from './components/authorization/login/Login';
 import Dashboard from './components/commonDashboard/Dashboard';
 import AskQuestions from './components/AskQuestion/AskQuestions';
