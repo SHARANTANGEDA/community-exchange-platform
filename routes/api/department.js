@@ -91,13 +91,11 @@ router.post('/assignFaculty', passport.authenticate('hod', { session: false }),
   (req, res) => {
     let courseFields = {}
     let facultyFields = {}
-    let courseStatus, facultyStatus, coursesArray,facultyArray,array=[];
-
+    let courseStatus, facultyStatus, coursesArray,facultyArray;
     User.findById(req.body.facultyId).then(faculty => {
       facultyStatus = faculty.status
       coursesArray = faculty.courses
     }).catch(err => {res.status(404).json({ facultyNotFound: 'faculty not found' })})
-
     Department.findOne({hod: req.user._id}).then(department => {
       department.courses.forEach(course => {
         if(course.courseCode===req.body.id) {
@@ -113,12 +111,10 @@ router.post('/assignFaculty', passport.authenticate('hod', { session: false }),
             courseFields.status = true;
             course.facultyId = facultyArray;
             course.status = true;
-
           }).catch(err => {res.status(404).json({ facultyNotFound: 'faculty not found' })})
+          department.save().then(department => {res.json(department)})
         }
       })
-      array=department.courses;
-      console.log({arrayCourses: array})
     }).catch(err => res.status(404).json({ courseNotFound: 'No Course Found' }))
     // Course.findById(req.params.id).then(course => {
     //   facultyArray = course.facultyId;
@@ -135,11 +131,6 @@ router.post('/assignFaculty', passport.authenticate('hod', { session: false }),
     //     courseFields.status = true;
     //   }).catch(err => {res.status(404).json({ facultyNotFound: 'faculty not found' })})
     // }).catch(err => res.status(404).json({ courseNotFound: 'No Course Found' }))
-
-    Department.findOneAndUpdate({hod:req.user._id},{$set: array},{new: true}).then(
-      department => {
-        res.json(department)
-      })
     // ).catch(err => res.status(404).json({ courseNotFound: 'No Course Found' }))
     // Department.findByIdAndUpdate(req.params.id, { $set: courseFields },{new: true}).then(course => {
     //   res.json(course)

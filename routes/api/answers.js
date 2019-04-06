@@ -10,6 +10,74 @@ const User = require('../../models/User');
 const validateAnswerInput = require('../../validations/answerQuestion');
 
 
+//Down Vote an answer
+router.post('downVote/:id/:answerId',passport.authenticate('all',{session: false}),(req, res) => {
+  User.findOne({ user: req.user.id }).then(user => {
+    Question.findById(req.params.id)
+      .then(question => {
+        const index = question.answer
+          .map(item => item._id.toString())
+          .indexOf(req.params.answerId);
+        if (question.answer[index].vote.downVote.filter(downVote => downVote.user.toString() === req.user.id)
+          .length > 0) {
+          return res
+            .status(400)
+            .json({ alreadyLiked: 'Already down-voted this answer' });
+        }
+        // Add user id to likes array
+        question.answer[index].vote.downVote.unshift({ user: req.user.id });
+        User.findByIdAndUpdate(question.answer[index].user,{ $inc: {reputation:-2}},{new: true})
+          .then(user => {
+            question.save().then(question => {res.json(question)});
+          })
+      })
+      .catch(err => res.status(404).json({ postNotFound: 'No Question found' }));
+  });
+});
+
+// UpVote an answer
+router.post('upVote/:id/:answerId',passport.authenticate('all',{session: false}),(req, res) => {
+  User.findOne({ user: req.user.id }).then(user => {
+    Question.findById(req.params.id)
+      .then(question => {
+        const index = question.answer
+          .map(item => item._id.toString())
+          .indexOf(req.params.answerId);
+        if (question.answer[index].vote.upVote.filter(upVote => upVote.user.toString() === req.user.id)
+          .length > 0) {
+          return res
+            .status(400)
+            .json({ alreadyLiked: 'Already up-voted this answer' });
+        }
+        // Add user id to likes array
+        question.answer[index].vote.upVote.unshift({ user: req.user.id });
+        User.findByIdAndUpdate(question.answer[index].user,{ $inc: {reputation:2}},{new: true})
+          .then(user => {
+            question.save().then(question => {res.json(question)});
+          })
+      })
+      .catch(err => res.status(404).json({ postNotFound: 'No Question found' }));
+  });
+});
+
+//Mark Answer as helpful
+router.post('/markAsHelpful/:id/:answerId',
+  passport.authenticate('all',{session:false}),(req,res) => {
+  let index=-1;
+  Question.findById(req.params.id).then(question => {
+    index = question.answer
+      .map(item => item._id.toString())
+      .indexOf(req.params.answerId);
+    if(question.answer[index].markAsHelpful) {
+      return res
+        .status(400)
+        .json({ alreadyDone: 'Already marked as helpful' })
+    } else {
+      question.answer[index].markAsHelpful=true;
+      question.save().then(question => res.json(question));
+    }
+  })
+})
 //@Answer Question
 router.post(
   '/answer/:id',passport.authenticate('all',{session: false}),
