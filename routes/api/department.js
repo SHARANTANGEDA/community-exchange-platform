@@ -161,7 +161,7 @@ router.post('/addCourse',passport.authenticate('hod',{session: false}),
         department.courses.unshift(newCourse);
         department.save().then(department => res.json(department)).catch(err => res.json(errors));
       }
-    })
+    }).catch(err => res.status(404).json({notFound: 'department not found'}))
     // Course.find({ courseCode: req.body.courseCode }).then(course => {
     //   if (course) {
     //     errors.courseCode = 'Course Code Already exists'
