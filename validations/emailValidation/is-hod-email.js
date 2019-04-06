@@ -10,7 +10,8 @@ const isHodEmail = value => {
     'hod.ecofin@hyderabad.bits-pilani.ac.in',
   'eee.office@hyderabad.bits-pilani.ac.in',
     'hod.maths@hyderabad.bits-pilani.ac.in',
-    'hod.humanities@hyderabad.bits-pilani.ac.in']
+    'hod.humanities@hyderabad.bits-pilani.ac.in',
+  'hod.test@hyderabad.bits-pilani.ac.in']
 
   let num = hodList.indexOf(value);
   return num !== -1;
