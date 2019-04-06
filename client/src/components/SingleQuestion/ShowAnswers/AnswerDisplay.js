@@ -31,7 +31,7 @@ class AnswerDisplay extends Component {
               <button onClick={this.onUpVote}>
                 <i className="fas fa-chevron-up fa-2x" style={{ color: 'green' }}/>
               </button>
-              <h1 className="display-5">{rate}</h1>
+              <h1 className="display-5">{}</h1>
               <button onClick={this.onDownVote}>
                 <i className="fas fa-chevron-down fa-2x" style={{ color: 'red' }}/>
               </button>
