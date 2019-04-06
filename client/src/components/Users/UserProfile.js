@@ -43,6 +43,10 @@ class UserProfile extends Component {
           <th><strong>GitHub</strong></th>
           <td>{profile.user.githubUsername}</td>
         </tr>
+        <tr>
+          <th><strong>Reputations</strong></th>
+          <td>{profile.user.reputation}</td>
+        </tr>
         </tbody>
         </table>
       )
