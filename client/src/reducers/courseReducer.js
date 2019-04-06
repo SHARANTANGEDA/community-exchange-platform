@@ -1,10 +1,11 @@
 import {
-  LOADING, GET_HOME, GET_HOME_NO_FACULTY, GET_COURSES, GET_NO_COURSE
+  LOADING, GET_HOME, GET_HOME_NO_FACULTY, GET_COURSES, GET_NO_COURSE, ADD_COURSE
 } from '../actions/types'
 
 const initialState = {
   loading: true,
-  courses: null
+  courses: null,
+  course: null
 };
 
 export default function(state = initialState, action) {
@@ -16,6 +17,13 @@ export default function(state = initialState, action) {
         ...state,
         loading: true
       }
+    case ADD_COURSE:
+      console.log("In add course")
+      return {
+        ...state,
+        course: [action.payload, ...state.course]
+      };
+
     case GET_COURSES:
       console.log("In Course loading")
       return {

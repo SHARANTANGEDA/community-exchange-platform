@@ -12,7 +12,7 @@ const validatePassword = require('../../validations/password')
 const validateProfileInput = require('../../validations/profile')
 const Question = require('../../models/Question')
 const User = require('../../models/User')
-const Course = require('../../models/Course')
+const Department = require('../../models/Department')
 
 //@desc Register
 router.post('/register', (req, res) => {
@@ -252,21 +252,18 @@ router.get('/myCourses',passport.authenticate('faculty',{session: false}),(req,r
     let courses=[];
     User.findById(req.user._id).then(faculty => {
       if(!faculty.assigned) {
-        res.json({notAssigned:'You have not been assigned any course Yet'});
-      }else {
+        res.json({ notAssigned: 'You have not been assigned any course Yet' });
+      } else {
         faculty.courses.forEach(courseCode => {
-         Course.findOne({courseCode: courseCode}).then(course => {
-          let showCourse = {
-            courseCode: course.courseCode,
-            courseName: course.courseName,
-            bio: course.bio
-          }
-          courses.push(showCourse);
-         }).catch(err => res.json({dataInconsistent: 'The data is In Consistent please try again' +
-             ' or contact us'}))
+          Department.findOne({departmentName: faculty.departmentName}).then(department => {
+            let myCourse = department.courses.filter(course => {course.courseCode===courseCode});
+            courses.push(myCourse)
+          }).catch(err => res.json({dataInconsistent: 'The data is In Consistent please try again' +
+              ' or contact us'}))
         })
         res.json(courses);
       }
+
     });
 })
 

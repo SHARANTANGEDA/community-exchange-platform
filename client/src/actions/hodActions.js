@@ -6,7 +6,7 @@ import {
   GET_HOME_NO_FACULTY,
   LOADING,
   GET_COURSES,
-  GET_NO_COURSE
+  GET_NO_COURSE, ADD_COURSE, GET_ERRORS
 } from './types'
 
 export const getCourse = id => dispatch => {
@@ -69,6 +69,24 @@ export const getHodHome = () => dispatch => {
       dispatch({
         type: GET_HOME_NO_FACULTY,
         payload: err.data
+      })
+    );
+};
+// Add Course
+export const addCourse = courseData => dispatch => {
+  dispatch(clearErrors());
+  axios
+    .post('/api/department/addCourse', courseData)
+    .then(res =>
+      dispatch({
+        type: ADD_COURSE,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
       })
     );
 };

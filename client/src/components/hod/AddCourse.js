@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
 import TextFieldGroup from '../common/TextFieldGroup'
+import { addCourse } from '../../actions/hodActions'
 
 class AddCourse extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       title: '',
       description: '',
@@ -28,7 +29,7 @@ class AddCourse extends Component {
 
   onSubmit (e) {
     e.preventDefault()
-    const { user } = this.props.auth
+    const { user } = this.props
     const newCourse = {
       courseCode: this.state.courseCode,
       courseName: this.state.courseName,
@@ -54,10 +55,10 @@ class AddCourse extends Component {
   }
 
   render () {
-    const { errors } = this.state
-    console.log('In Ask Question')
+    const { errors } = this.state;
+    console.log('In Add Course')
     return (
-      <div className='askQuestion'>
+      <div className='addCourse'>
         <div id="content" className="snippet-hidden">
           <div className="ask-mainbar box-border">
             <form className="post-form" onSubmit={this.onSubmit}>
@@ -132,12 +133,14 @@ class AddCourse extends Component {
 AddCourse.propTypes = {
   addCourse: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
+  courses: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
+  courses: state.courses
 })
 
 export default connect(mapStateToProps, { addCourse })(AddCourse)

@@ -7,8 +7,6 @@ const bodyParser = require('body-parser')
 //Mongo Model
 const Department = require('../../models/Department')
 const User = require('../../models/User')
-const Course = require('../../models/Course')
-
 const validateCourseInput = require('../../validations/course')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
