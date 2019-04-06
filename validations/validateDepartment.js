@@ -1,7 +1,7 @@
 const Validator = require('validator');
 const isEmpty = require('./is-empty');
 const isCollegeEmail = require('./emailValidation/is-college-email');
-const isHODEmail = require('../emailValidation/is-hod-email');
+const isHODEmail = require('./emailValidation/is-hod-email');
 
 module.exports = (data) => {
   let errors = {};
