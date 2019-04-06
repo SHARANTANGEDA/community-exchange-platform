@@ -28,6 +28,8 @@ import FacultyLogin from './components/authorization/login/FacultyLogin'
 import HodLogin from './components/authorization/login/HodLogin'
 import AllCourses from './components/hod/AllCourses'
 import ApplyTA from './components/commonDashboard/ApplyTA'
+import AddCourse from './components/hod/AddCourse'
+import RegisterFaculty from './components/authorization/Register/RegisterFaculty'
 
 
 //Check for token
@@ -56,6 +58,7 @@ class App extends Component {
         <Sidebar/>
         <div className="container">
           <Route exact path="/register" component={Register} />
+          <Route exact path="/registerFaculty" component={RegisterFaculty} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/adminLogin" component={AdminLogin}/>
           <Route exact path='/hodLogin' component={HodLogin}/>
@@ -89,6 +92,9 @@ class App extends Component {
           </Switch>
           <Switch>
             <PrivateRoute exact path='/applyTA' component={ApplyTA}/>
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path='/addCourse' component={AddCourse}/>
           </Switch>
           </div>
         </div>

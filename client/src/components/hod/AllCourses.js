@@ -39,7 +39,7 @@ class AllCourses extends Component {
               <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontFamily: "'Lobster'"}}
                   className="rounded border bg-dark text-light p-1 pl-3 pr-5 text-center">Department of {courses.department.departmentName}</h1>
               <div className="pull-right justify-content-end" style={{minWidth: '250px'}}>
-                <Link className="btn btn-primary btn-lg pull-right" style={{minWidth: '250px'}} to="/askQuestion">
+                <Link className="btn btn-primary btn-lg pull-right" style={{minWidth: '250px'}} to="/addCourse">
                   Add Course</Link>
               </div>
               <table  className="tableGrid rounded border"

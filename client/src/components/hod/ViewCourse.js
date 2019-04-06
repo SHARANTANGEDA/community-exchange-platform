@@ -46,7 +46,9 @@ class ViewCourse extends Component {
                   <h2 className="ml-2">Faculty Assigned</h2>
                 </div>
                 <div className="col-md-4 align-items-center justify-content-center">
-                  <Link  to="" className="btn btn-primary btn-lg w-50 ml-5 d-inline-flex flex-grow-1 text-center justify-content-center">Add Faculty</Link>
+                  <Link  to={`/assignFaculty/${courses.course.courseCode}`}
+                         className="btn btn-primary btn-lg w-50 ml-5 d-inline-flex flex-grow-1 text-center justify-content-center">
+                    Add Faculty</Link>
                 </div>
               </div>
               <UserRow users={courses.faculty}/>

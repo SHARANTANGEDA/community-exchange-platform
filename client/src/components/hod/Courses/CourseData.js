@@ -12,7 +12,7 @@ class CourseData extends Component {
       showStatus = (
       <span style={{ fontSize: '13.3333330154419px' }}>
                       <Link className=" btn btn-primary"
-                            to="" target="_blank">
+                            to={`/viewCourse/${course.courseCode}`} target="_blank">
                         View Course
                       </Link>
                     </span>
@@ -21,7 +21,7 @@ class CourseData extends Component {
       showStatus= (
         <span style={{ fontSize: '13.3333330154419px' }}>
                       <Link className=" btn btn-primary"
-                            to="" target="_blank">
+                            to={`/assignFaculty/${course.courseCode}`} target="_blank">
                         Assign Now
                       </Link>
                     </span>

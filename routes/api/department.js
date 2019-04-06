@@ -47,7 +47,7 @@ router.get('/course/:id', passport.authenticate('hod', { session: false })
     Department.findOne({hod:req.user._id}).then(department => {
       let getProfs = [];
       department.courses.forEach(course => {
-        if(course._id === req.params.id) {
+        if(course.courseCode === req.params.id) {
           let fIds = course.facultyId
           fIds.forEach(fid => {
             User.findById(fid).then(fac => {
@@ -72,29 +72,41 @@ router.get('/course/:id', passport.authenticate('hod', { session: false })
     //   })
     // })
 
-//Assign Faculty by their emailAddress
-router.post('/course/:id/assignFaculty', passport.authenticate('hod', { session: false }),
+//Assign faculty by course ID
+router.get('/faculty/:id', passport.authenticate('hod', { session: false }),
+  (req, res) => {
+  Department.findOne({hod: req.user._id}).then(department => {
+    User.find({ departmentName: department.departmentName, role: 'faculty' }).then(faculty => {
+      let notCourseFaculty=[];
+      faculty.forEach(fac => {
+      })
+      res.json({ department, faculty,courseId: req.params.id })
+    }).catch(err => res.json({ noFaculty: 'There are no faculty in this department', department
+      ,courseId: req.params.id}))
+  }).catch(err => res.status(404).json({ noPostsFound: 'No Department found' }))
+})
+
+//Assign Faculty by courseId and facultyId
+router.post('/assignFaculty', passport.authenticate('hod', { session: false }),
   (req, res) => {
     let courseFields = {}
     let facultyFields = {}
     let courseStatus, facultyStatus, coursesArray,facultyArray,array=[];
 
-    User.findOne({ emailId: req.body.emailId, role: 'faculty' }).then(faculty => {
+    User.findById(req.body.facultyId).then(faculty => {
       facultyStatus = faculty.status
       coursesArray = faculty.courses
     }).catch(err => {res.status(404).json({ facultyNotFound: 'faculty not found' })})
 
-    Department.findById(req.user._id).then(department => {
+    Department.findOne({hod: req.user._id}).then(department => {
       department.courses.forEach(course => {
-        if(course._id===req.params.id) {
+        if(course.courseCode===req.body.id) {
           facultyArray = course.facultyId;
           courseStatus = course.status
           coursesArray.push(course.courseCode)
           facultyFields.courses = coursesArray
           facultyFields.assigned = true
-          User.findOneAndUpdate(
-            { emailId: req.body.emailId, role: 'faculty' }
-            , { $set: facultyFields },
+          User.findByIdAndUpdate(req.body.facultyId, { $set: facultyFields },
             { new: true }).then(faculty => {
             facultyArray.push(faculty._id);
             courseFields.facultyId = facultyArray;
@@ -106,6 +118,7 @@ router.post('/course/:id/assignFaculty', passport.authenticate('hod', { session:
         }
       })
       array=department.courses;
+      console.log({arrayCourses: array})
     }).catch(err => res.status(404).json({ courseNotFound: 'No Course Found' }))
     // Course.findById(req.params.id).then(course => {
     //   facultyArray = course.facultyId;

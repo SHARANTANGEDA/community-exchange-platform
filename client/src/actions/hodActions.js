@@ -6,7 +6,7 @@ import {
   GET_HOME_NO_FACULTY,
   LOADING,
   GET_COURSES,
-  GET_NO_COURSE, ADD_COURSE, GET_ERRORS
+  GET_NO_COURSE, ADD_COURSE, GET_ERRORS, ASSIGN_FACULTY
 } from './types'
 
 export const getCourse = id => dispatch => {
@@ -72,6 +72,27 @@ export const getHodHome = () => dispatch => {
       })
     );
 };
+//Get faculty for home
+export const assignByCourseId = (id) => dispatch => {
+  console.log("Started Loading HOD assign Courses")
+  dispatch(setLoading());
+  console.log("In HOD assign Courses actions")
+
+  axios
+    .get(`/api/department/faculty/${id}`)
+    .then(res =>
+      dispatch({
+        type: GET_HOME,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_HOME_NO_FACULTY,
+        payload: err.data
+      })
+    );
+};
 // Add Course
 export const addCourse = courseData => dispatch => {
   dispatch(clearErrors());
@@ -83,6 +104,19 @@ export const addCourse = courseData => dispatch => {
         payload: res.data
       })
     )
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
+
+// Assign Faculty
+export const assignFaculty = (assignData,history) => dispatch => {
+  axios
+    .post(`/api/department/assignFaculty`,assignData)
+    .then(res => history.push(`/assignFaculty/${assignData.id}`))
     .catch(err =>
       dispatch({
         type: GET_ERRORS,

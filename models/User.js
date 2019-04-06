@@ -55,7 +55,7 @@ const UserSchema = new Schema({
   taCourse: {//TODO Student
     type: String
   },
-  courses: {// Faculty
+  courses: {// Course Code
     type: [String]
   },
   assigned: {//Faculty
