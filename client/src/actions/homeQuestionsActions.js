@@ -30,7 +30,35 @@ export const askQuestion = questionData => dispatch => {
     );
 };
 
+export const upVoteAnswer = (id,answerId) => dispatch => {
+  dispatch(clearErrors());
+  axios
+    .post(`/api/answers/upVote/${id}/${answerId}`)
+    .then(res =>
+      console.log(res)
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
 
+export const downVoteAnswer = (id,answerId) => dispatch => {
+  dispatch(clearErrors());
+  axios
+    .post(`/api/answers/downVote/${id}/${answerId}`)
+    .then(res =>
+      console.log(res)
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
 
 export const upVoteQuestion = (id) => dispatch => {
   dispatch(clearErrors());

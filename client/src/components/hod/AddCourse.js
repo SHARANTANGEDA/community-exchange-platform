@@ -36,11 +36,7 @@ class AddCourse extends Component {
       bio: this.state.bio
     }
     this.props.addCourse(newCourse,this.props.history)
-    if (this.state.title === '' || this.state.description === '' || this.state.tags === '') {
 
-    } else {
-      this.props.history.push('/dashboard')
-    }
   }
 
   onChange (e) {

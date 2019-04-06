@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
 import CommentFeed from '../ShowComments/CommentFeed'
 import AnswerCommentForm from './AnswerCommentForm'
-import { downVoteQuestion, upVoteQuestion } from '../../../actions/homeQuestionsActions'
+import { downVoteAnswer, downVoteQuestion, upVoteAnswer, upVoteQuestion } from '../../../actions/homeQuestionsActions'
 
 class AnswerDisplay extends Component {
   constructor () {
@@ -13,15 +13,17 @@ class AnswerDisplay extends Component {
     this.onDownVote = this.onDownVote.bind(this)
   }
   onUpVote(e) {
-    this.props.upVoteQuestion(this.props.question._id)
+    this.props.upVoteAnswer(this.props.questionId,this.props.answer._id)
   }
   onDownVote(e) {
-    this.props.downVoteQuestion(this.props.question._id)
+    this.props.downVoteAnswer(this.props.questionId,this.props.answer._id)
   }
   render () {
     const { answer, auth, questionId } = this.props
     console.log({ SingleAnswer: answer, auth: auth })
     let name = answer.firstName + ' ' + answer.lastName
+    const rate = (answer.vote.upVote.length) - (answer.vote.downVote.length)
+
     return (
       <div className="card-body">
         <div className='row'>
@@ -31,7 +33,7 @@ class AnswerDisplay extends Component {
               <button onClick={this.onUpVote}>
                 <i className="fas fa-chevron-up fa-2x" style={{ color: 'green' }}/>
               </button>
-              <h1 className="display-5">{}</h1>
+              <h1 className="display-5">{rate}</h1>
               <button onClick={this.onDownVote}>
                 <i className="fas fa-chevron-down fa-2x" style={{ color: 'red' }}/>
               </button>
@@ -89,4 +91,4 @@ AnswerDisplay.propTypes = {
 const mapStateToProps = state => ({
   auth: state.auth
 })
-export default connect(mapStateToProps,{})(AnswerDisplay)
+export default connect(mapStateToProps,{upVoteAnswer,downVoteAnswer})(AnswerDisplay)

@@ -94,15 +94,17 @@ export const assignByCourseId = (id) => dispatch => {
     );
 };
 // Add Course
-export const addCourse = courseData => dispatch => {
+export const addCourse = (courseData,history) => dispatch => {
   dispatch(clearErrors());
   axios
     .post('/api/department/addCourse', courseData)
-    .then(res =>
-      dispatch({
-        type: ADD_COURSE,
-        payload: res.data
-      })
+    .then(res => {
+      history.push('/dashboard')
+        dispatch({
+          type: ADD_COURSE,
+          payload: res.data
+        })
+    }
     )
     .catch(err =>
       dispatch({

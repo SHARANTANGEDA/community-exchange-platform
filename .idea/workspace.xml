@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="92c3f002-70e8-4ff8-9b74-7304e267b2f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/hodActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/hodActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/AllCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/AllCourses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/hod/AddCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/AddCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/department.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/department.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,22 +21,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js">
+        <entry file="file://$PROJECT_DIR$/routes/api/answers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/Users/UserItem.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="26" column="114" lean-forward="true" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="114" />
+            <state relative-caret-position="1936">
+              <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -43,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="356">
-              <caret line="156" selection-start-line="156" selection-end-line="157" selection-end-column="44" />
+              <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-end-line="37" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -54,32 +44,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="23">
+              <caret line="27" column="33" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/components/hod/AllCourses.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="28" column="107" selection-start-line="28" selection-start-column="107" selection-end-line="28" selection-end-column="107" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validations/validateDepartment.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -87,12 +56,81 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="18" column="3" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="18" selection-end-column="3" />
+            <state relative-caret-position="525">
+              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeQuestionsFeed.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api/department.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="631">
+              <caret line="161" column="64" selection-start-line="161" selection-start-column="64" selection-end-line="161" selection-end-column="64" />
+              <folding>
+                <element signature="e#466#612#0" />
+                <element signature="e#1214#1742#0" />
+                <element signature="e#1868#2406#0" />
+                <element signature="e#2409#2459#0" />
+                <element signature="e#3456#5736#0" />
+                <element signature="e#6611#6679#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/components/hod/AddCourse.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4470">
+              <caret line="141" column="45" lean-forward="true" selection-start-line="141" selection-start-column="45" selection-end-line="141" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/actions/hodActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="101" column="30" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="125" column="3" lean-forward="true" selection-start-line="125" selection-start-column="3" selection-end-line="125" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/Department.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-105" />
           </provider>
         </entry>
       </file>
@@ -142,16 +180,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/models/Department.js" />
         <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/AnswerForm.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/courseReducer.js" />
-        <option value="$PROJECT_DIR$/client/src/components/hod/AddCourse.js" />
         <option value="$PROJECT_DIR$/client/src/components/QuestionGet/AllQuestions.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/Register/RegisterHOD.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/Register/Register.js" />
         <option value="$PROJECT_DIR$/client/src/actions/authActions.js" />
         <option value="$PROJECT_DIR$/client/src/components/common/PrivateRoute.js" />
-        <option value="$PROJECT_DIR$/client/src/components/authorization/Register/RegisterFaculty.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/AssignFaculty.js" />
         <option value="$PROJECT_DIR$/client/src/actions/types.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/hodReducer.js" />
@@ -159,7 +194,6 @@
         <option value="$PROJECT_DIR$/client/src/components/hod/assignFaculty/Feed.js" />
         <option value="$PROJECT_DIR$/routes/api/faculty.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/assignFaculty/Data.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/hodActions.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/Courses/CourseData.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/ViewCourse.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/assignFaculty/AssignFaculty.js" />
@@ -171,11 +205,9 @@
         <option value="$PROJECT_DIR$/models/Question.js" />
         <option value="$PROJECT_DIR$/routes/api/questions.js" />
         <option value="$PROJECT_DIR$/routes/api/answers.js" />
-        <option value="$PROJECT_DIR$/routes/api/department.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/Register/DepartmentFeed.js" />
         <option value="$PROJECT_DIR$/models/Admin.js" />
         <option value="$PROJECT_DIR$/validations/emailValidation/is-admin-email.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js" />
         <option value="$PROJECT_DIR$/models/User.js" />
         <option value="$PROJECT_DIR$/routes/api/publicProfile.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/login/AdminLogin.js" />
@@ -191,8 +223,14 @@
         <option value="$PROJECT_DIR$/client/src/components/Users/UserItem.js" />
         <option value="$PROJECT_DIR$/validations/validateDepartment.js" />
         <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js" />
-        <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/AllCourses.js" />
+        <option value="$PROJECT_DIR$/client/src/components/authorization/login/FacultyLogin.js" />
+        <option value="$PROJECT_DIR$/client/src/components/authorization/Register/RegisterFaculty.js" />
+        <option value="$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js" />
+        <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js" />
+        <option value="$PROJECT_DIR$/routes/api/department.js" />
+        <option value="$PROJECT_DIR$/client/src/components/hod/AddCourse.js" />
+        <option value="$PROJECT_DIR$/client/src/actions/hodActions.js" />
       </list>
     </option>
   </component>
@@ -263,7 +301,24 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="AskQuestion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="authorization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="authorization" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
@@ -280,24 +335,15 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="hod" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="SingleQuestion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="SingleQuestion" type="462c0819:PsiDirectoryNode" />
-              <item name="ShowAnswers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
@@ -494,21 +540,7 @@
       <workItem from="1554482885820" duration="5394000" />
       <workItem from="1554516286493" duration="29688000" />
       <workItem from="1554567716526" duration="592000" />
-      <workItem from="1554570208400" duration="3480000" />
-    </task>
-    <task id="LOCAL-00028" summary="#updates heroku script in package.json">
-      <created>1551475521247</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1551475521247</updated>
-    </task>
-    <task id="LOCAL-00029" summary="#added npm as dependency to check on heroku">
-      <created>1551476017241</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1551476017241</updated>
+      <workItem from="1554570208400" duration="4404000" />
     </task>
     <task id="LOCAL-00030" summary="#added engines in package.json to check on heroku">
       <created>1551476189397</created>
@@ -839,11 +871,25 @@
       <option name="project" value="LOCAL" />
       <updated>1554573267913</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="#Fixed small path bug in all courses">
+      <created>1554573730726</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1554573730726</updated>
+    </task>
+    <task id="LOCAL-00078" summary="#Fixed small path bug in all courses">
+      <created>1554573884996</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1554573884996</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="516552000" />
+    <option name="totallyTimeSpent" value="517476000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -920,7 +966,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#Added TA add, apply, delete functions&#10;#Added Course add functions&#10;#Added Assign Faculty functions&#10;#Updated models to accommodate new changes&#10;#fixed minor bugs&#10;#Completes backend of HOD,faculty,student" />
     <MESSAGE value="#Fixed Tags Bug in Ask Question" />
     <MESSAGE value="#Fixed gravatar bug and updated all user's avatars&#10;#Improved UI of all users&#10;#Improved Sidebar UI&#10;#Changed Logo&#10;#Changed few colors&#10;#Added few new fonts" />
     <MESSAGE value="#Fixed minor bugs&#10;#Improved some UI Components&#10;#Added few extra fonts" />
@@ -945,49 +990,10 @@
     <MESSAGE value="#Added test hod email" />
     <MESSAGE value="#Fixed bugs in Add Department" />
     <MESSAGE value="#Fixed bugs in Add Department validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Fixed bugs in Add Department validation" />
+    <MESSAGE value="#Fixed small path bug in all courses" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Fixed small path bug in all courses" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/components/hod/assignFaculty/Data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="54" column="12" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/facultyActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="769">
-          <caret line="44" column="28" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/hod/AddCourse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2331">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/faculty/displayApplications/StudentData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="14" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeFeed.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1037,32 +1043,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeQuestionsFeed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/faculty/displayApplications/ShowStudents.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="21" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/hodActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="114" column="17" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1091,13 +1077,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/answers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3048">
@@ -1115,13 +1094,6 @@
             <element signature="e#11149#11715#0" />
             <element signature="e#11811#12045#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1143,16 +1115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
           <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2450">
-          <caret line="102" column="16" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1238,19 +1200,6 @@
         <state relative-caret-position="-4912" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/department.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2059">
-          <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
-          <folding>
-            <element signature="e#466#612#0" />
-            <element signature="e#1214#1742#0" />
-            <element signature="e#1868#2406#0" />
-            <element signature="e#2409#2459#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api/admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
@@ -1322,16 +1271,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/Users/UserItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
@@ -1363,20 +1302,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/hod/AllCourses.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="156" selection-start-line="156" selection-end-line="157" selection-end-column="44" />
+        <state relative-caret-position="224">
+          <caret line="28" column="107" selection-start-line="28" selection-start-column="107" selection-end-line="28" selection-end-column="107" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/login/FacultyLogin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="18" column="3" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="18" selection-end-column="3" />
+        <state relative-caret-position="525">
+          <caret line="63" column="65" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/Register/RegisterFaculty.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1924">
+          <caret line="102" column="16" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="706">
+          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/answers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1936">
+          <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-end-line="37" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -1385,18 +1371,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+        <state relative-caret-position="23">
+          <caret line="27" column="33" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/hod/AllCourses.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="28" column="107" selection-start-line="28" selection-start-column="107" selection-end-line="28" selection-end-column="107" />
+        <state relative-caret-position="525">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeQuestionsFeed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Department.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="125" column="3" lean-forward="true" selection-start-line="125" selection-start-column="3" selection-end-line="125" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/department.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="161" column="64" selection-start-line="161" selection-start-column="64" selection-end-line="161" selection-end-column="64" />
+          <folding>
+            <element signature="e#466#612#0" />
+            <element signature="e#1214#1742#0" />
+            <element signature="e#1868#2406#0" />
+            <element signature="e#2409#2459#0" />
+            <element signature="e#3456#5736#0" />
+            <element signature="e#6611#6679#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/hodActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="101" column="30" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/hod/AddCourse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4470">
+          <caret line="141" column="45" lean-forward="true" selection-start-line="141" selection-start-column="45" selection-end-line="141" selection-end-column="45" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
