@@ -143,7 +143,7 @@ router.post('/addCourse',passport.authenticate('hod',{session: false}),
   (req,res) => {
     const { errors, isValid } = validateCourseInput(req.body);
     if (!isValid) {
-      return res.status(404).json(errors);
+      return res.status(400).json(errors);
     }
     Department.findById(req.user._id).then(department => {
       let existCourse=department.courses.filter(course => course.courseCode === req.body.courseCode).length
