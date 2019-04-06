@@ -1,5 +1,5 @@
 const isAdminEmail = value => {
-  return false;
+  return (value==='archeus@hyderabad.bits-pilani.ac.in') || (value==='darthCoffee@hyderabad.bits-pilani.ac.in') || (value==='baswath@hyderabad.bits-pilani.ac.in');
 }
 
 module.exports = isAdminEmail;

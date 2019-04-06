@@ -6,7 +6,6 @@ const bodyParser = require('body-parser')
 
 const Question = require('../../models/Question')
 const User = require('../../models/User')
-//const Profile = require('../../models/Profile');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -14,7 +13,7 @@ app.use(bodyParser.json());
 
 /*@all profiles*/
 router.get('/', passport.authenticate('all', { session: false }), (req, res) => {
-  User.find({}, {
+  User.find({$or:[{'role':'faculty'},{'role': 'student' },{'role': 'hod'}]}, {
     'firstName': 1, 'lastName': 1, 'emailId': 1, 'avatar': 1, 'departmentName': 1, 'githubUsername': 1, 'role': 1
   })
     .then(users => {
@@ -22,12 +21,6 @@ router.get('/', passport.authenticate('all', { session: false }), (req, res) => 
         errors.noprofile = 'There are no profiles'
         return res.status(404).json(errors)
       }
-      // const display = {
-      //   full_name: user.firstName + ' ' + user.lastName,
-      //   department: user.departmentName,
-      //   avatar: user.avatar,
-      //   emailId: user.emailId,
-      // }
       res.json(users)
     }).catch(err => res.status(404).json(err))
 })
@@ -61,7 +54,7 @@ router.get('/:id',passport.authenticate('all', { session: false }), (req, res) =
   const errors = {};
   User.findById(req.params.id, {
     'firstName': 1, 'lastName': 1, 'emailId': 1, 'avatar': 1, 'departmentName': 1, 'githubUsername': 1,
-    '_id': 0
+    '_id': 0,'role': 1
   })
     .then(user => {
       if (!user) {

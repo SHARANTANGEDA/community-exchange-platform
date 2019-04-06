@@ -31,21 +31,7 @@ export const askQuestion = questionData => dispatch => {
 };
 
 
-// Add Post
-export const upVoteQuestion = (id) => dispatch => {
-  dispatch(clearErrors());
-  axios
-    .post(`/api/questions/upVote/${id}`)
-    .then(res =>
-      console.log(res)
-    )
-    .catch(err =>
-      dispatch({
-        type: GET_ERRORS,
-        payload: err.response.data
-      })
-    );
-};
+
 export const upVoteQuestion = (id) => dispatch => {
   dispatch(clearErrors());
   axios

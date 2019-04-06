@@ -10,6 +10,53 @@ const validateDepartmentInput=require('../../validations/validateDepartment')
 const User = require('../../models/User')
 const Department = require('../../models/Department')
 
+//@desc Register
+router.post('/register', (req, res) => {
+
+  User.findOne({ emailId: req.body.emailId }).then(user => {
+    if (user) {
+      errors.emailId = 'Account already exists please use your password to login'
+      return res.status(400).json(errors)
+    } else {
+      const avatar = gravatar.url(req.body.emailId, {
+        s: '200', // Size
+        r: 'pg', // Rating
+        d: 'retro' // Default
+      })
+      const newUser = new User({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        emailId: req.body.emailId,
+        avatar,
+        password: req.body.password,
+        isTA: false,
+        role: 'admin'
+      })
+      bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(newUser.password, salt, (err, hash) => {
+          if (err) throw err
+          newUser.password = hash
+          newUser
+            .save()
+            .then(user => {
+              const payload = { id: user.id, avatar: user.avatar ,role: user.role}
+              //TODO change secret key and signIn options
+              jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
+                (err, token) => {
+                  res.json({
+                    user,
+                    success: true,
+                    token: 'Bearer ' + token
+                  })
+                })
+            })
+            .catch(err => console.log(err))
+        })
+      })
+    }
+  })
+})
+
 //admin Login
 router.post('/login', (req, res) => {
   const { errors, isValid } = validateLoginInput(req.body)

@@ -18,6 +18,10 @@ const AdminSchema = new Schema({
     type: String,
     required: true
   },
+  avatar: {
+    type: String,
+    required: true
+  },
   time: {
     type: Date,
     default: Date.now

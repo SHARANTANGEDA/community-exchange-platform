@@ -22,8 +22,7 @@ const UserSchema = new Schema({
     type: String
   },
   departmentName: {
-    type: String,
-    required: true
+    type: String
   },
   githubUsername: {
     type: String
