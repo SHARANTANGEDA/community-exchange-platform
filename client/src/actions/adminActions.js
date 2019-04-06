@@ -5,7 +5,7 @@ import {
 } from './types'
 
 //Add Department
-export const addDepartment = (userData) => dispatch => {
+export const addDepartment = (userData,history) => dispatch => {
   axios.post('/api/admin/addDepartment', userData)
     .then(res => {
       history.push('/addDepartment')
