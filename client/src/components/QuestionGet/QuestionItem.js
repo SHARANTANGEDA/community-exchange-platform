@@ -15,7 +15,7 @@ class QuestionItem extends Component {
 
   }
   onDownVote(e) {
-
+    this.props.downVoteQuestion()
   }
   render () {
     const {question} = this.props;

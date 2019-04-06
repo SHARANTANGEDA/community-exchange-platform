@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import TextFieldGroup from '../common/TextFieldGroup';
 import { addDepartment } from '../../actions/adminActions'
 
-class Register extends Component {
+class AddDepartment extends Component {
   constructor () {
     super()
     this.state = {
@@ -15,8 +15,8 @@ class Register extends Component {
       emailId: '',
       password: '',
       repassword: '',
-      departmentName: 'Choose Department',
-      errors: {},
+      departmentName: '',
+      errors: {}
     }
     this.changeHandler = this.changeHandler.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
@@ -27,9 +27,7 @@ class Register extends Component {
   }
 
   componentDidMount () {
-    if(this.props.admin.msg.success) {
 
-    }
   }
 
   componentWillReceiveProps (nextProps, nextContext) {
@@ -54,18 +52,14 @@ class Register extends Component {
 
   render () {
     const { errors } = this.state
-    let showSuccess = (
-      <p style={{color: 'white',background: 'green'}} className='btn w-100'>Department Successfully Added</p>
-    );
     return (
       <div className="addDepartment">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              {this.props.admin.msg.success ? showSuccess: null}
               <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontFamily: "'Lobster'"}}
                   className="rounded border bg-dark text-light text-center p-1 pl-3 pr-5">Add a new Department</h1>
-              <form noValidate onSubmit={this.onSubmit}>
+              <form  onSubmit={this.onSubmit}>
                 <div className="row">
                   <div className="col-md-6">
                     <TextFieldGroup placeholder="First Name" error={errors.firstName}
@@ -101,17 +95,15 @@ class Register extends Component {
   }
 }
 
-Register.propTypes = {
+AddDepartment.propTypes = {
   addDepartment: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  admin: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 }
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
-  admin: state.admin,
   errors: state.errors
 })
 
-export default connect(mapStateToProps,{addDepartment})(withRouter(Register));
+export default connect(mapStateToProps,{addDepartment})(AddDepartment);

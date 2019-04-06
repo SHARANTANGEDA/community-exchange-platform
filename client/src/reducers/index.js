@@ -6,7 +6,6 @@ import profileReducer from './profileReducer';
 import hodReducer from './hodReducer';
 import courseReducer from './courseReducer';
 import facultyReducer from './facultyReducer';
-import adminReducer from './adminReducer';
 export default combineReducers({
   auth: authReducer,
   errors: errorReducer,
@@ -15,5 +14,4 @@ export default combineReducers({
   hod: hodReducer,
   courses: courseReducer,
   faculty: facultyReducer,
-  admin: adminReducer
 })

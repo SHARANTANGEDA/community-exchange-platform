@@ -134,7 +134,7 @@ router.post('/addDepartment',passport.authenticate('admin',{session: false}),
               hod:user._id,
               departmentName: req.body.departmentName
             })
-            newDepartment.save().then(department => res.json({success: 'Department successfully created'}))
+            newDepartment.save().then(department => res.json(department))
           })
           .catch(err => console.log(err))
       })

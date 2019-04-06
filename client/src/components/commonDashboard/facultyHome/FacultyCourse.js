@@ -12,9 +12,9 @@ class FacultyCourse extends Component {
       <div>
         <Link to="#questionSub1" data-toggle="collapse" aria-expanded="false"
               className="dropdown-toggle d-flex justify-content-start align-items-start flex-grow-1 pl-1 w-100 my-3"
-              style="font-size: 24pt;">{course.courseCode}</Link>
+              style={{fontSize: '24pt'}}>{course.courseCode}</Link>
 
-        <ul className="collapse list-unstyled" id="questionSub1" style="">
+        <ul className="collapse list-unstyled" id="questionSub1" >
           <FacultyHomeQuestionsFeed questions={questions}/>
         </ul>
       </div>
