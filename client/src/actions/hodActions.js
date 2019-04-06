@@ -100,10 +100,6 @@ export const addCourse = (courseData,history) => dispatch => {
     .post('/api/department/addCourse', courseData)
     .then(res => {
       history.push('/dashboard')
-        dispatch({
-          type: ADD_COURSE,
-          payload: res.data
-        })
     }
     )
     .catch(err =>
