@@ -31,7 +31,7 @@ class UserItem extends Component {
                   <div className="row  justify-content-between border-top" style={{marginTop:'10px',marginBottom: '1px'}} >
                     <p  style={{border: '2px outset black',borderRadius: '5px',color: 'blue',margin: '4px',padding: '2px',fontFamily: "'Germania One', cursive"}}>{user.role}</p>
                     <p  style={{border: '2px outset black',borderRadius: '5px',color: 'gold',margin: '4px',padding: '2px',fontWeight: 'bold',fontSize: '14px'}}>
-                      <i className="fa fa-certificate"/>{'Reputation'}</p>
+                      <i className="fa fa-certificate"/>{user.reputation}</p>
                     <button className="btn btn-primary btn-sm">
                       <Link to={`/publicProfile/${user._id}`} style={{color: 'white'}}>View Profile</Link>
                     </button>

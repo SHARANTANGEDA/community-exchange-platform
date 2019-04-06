@@ -13,5 +13,5 @@ export default combineReducers({
   profile: profileReducer,
   hod: hodReducer,
   courses: courseReducer,
-  faculty: facultyReducer,
+  faculty: facultyReducer
 })

@@ -16,6 +16,9 @@ module.exports = (data) => {
   if(Validator.isEmpty(data.lastName)) {
     errors.lastName = 'lastName field is required';
   }
+  if(Validator.isEmpty(data.departmentName)) {
+    errors.departmentName = 'departmentName field is required';
+  }
   if (Validator.isEmpty(data.emailId)) {
     errors.emailId = 'Email field is required';
   }
@@ -38,8 +41,8 @@ module.exports = (data) => {
     errors.repassword = 'Confirm Password field is required';
   }
 
-  if(!Validator.isEmpty(data.departmentName)) {
-    errors.departmentName = 'Please add a department name'
+  if(Validator.isEmpty(data.departmentName)) {
+    errors.departmentName = 'departmentName field is required';
   }
   if (!Validator.equals(data.password, data.repassword)) {
     errors.repassword = 'Passwords must match';

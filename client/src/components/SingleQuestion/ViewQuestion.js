@@ -41,56 +41,55 @@ class ViewQuestion extends Component {
         <div id="mainbar">
           <div className="card">
             <div className="card-body">
-              <div className="row mb-3">
-                <div className="col-md-8">
-                  <h4 className="grid--cell fl1 fs-headline1 mt-2 d-inline-flex flex-grow-1">
-                    {question.title}</h4>
+              <div className='row'>
+                <div className="row mb-3">
+                  <div className="col-md-8">
+                    <h4 className="grid--cell fl1 fs-headline1 mt-2 d-inline-flex flex-grow-1">
+                      {question.title}</h4>
+                  </div>
+                  <div className="col-md-4 d-flex justify-content-center align-items-center"><Link
+                    className="btn btn-primary w-70 my-1" to="/askQuestion">Ask Question</Link></div>
                 </div>
-                <div className="col-md-4 d-flex justify-content-center align-items-center"><Link
-                  className="btn btn-primary w-70 my-1" to="/askQuestion">Ask Question</Link></div>
-              </div>
-              <div className="row">
-                <div className="col-md-2">
-                  <img className="img-fluid d-block"
-                       alt='https://static.pingendo.com/img-placeholder-1.svg'
-                       src={question.avatar}/></div>
-                <div className="col-md-10 flex-grow-1 d-flex">
-                  <div className="col-md-12 h-25 d-flex flex-grow-1" style={{minHeight: "50%"}}>
-                    <p className="d-flex flex-grow-1 h-50 rounded">
-                      {question.description}</p>
+                <div className="row">
+                  <div className="col-md-2">
+                    <img className="img-fluid d-block"
+                         alt='http://pinegrow.com/placeholders/img19.jpg'
+                         src={question.avatar}/></div>
+                  <div className="col-md-10 flex-grow-1 d-flex">
+                    <div className="col-md-12 h-25 d-flex flex-grow-1" style={{minHeight: "50%"}}>
+                      <p className="d-flex flex-grow-1 h-50 rounded">
+                        {question.description}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-12 my-2">
+                    <TagFeed tags={question.tags}/>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-12">
+                    <div className="user-action-time d-flex justify-content-end align-items-center"> asked <span
+                      title=""
+                      className="relativeTime m-1 d-inline-flex flex-grow-0">{new Date(question.time).toLocaleString()}</span>
+                    </div>
+                    <div className="user-details d-flex justify-content-end">
+                      <Link to={`/publicProfile/${question.userId}`}
+                            style={{	textShadow: "0px 0px 1px #0000ff",fontSize: "24"}}
+                            className="d-inline-flex flex-grow-1 align-items-end justify-content-end">{name}</Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="d-flex flex-grow-1 col-md-12">
+                  <div className="comment-text js-comment-text-and-form w-75">
+                    <div className="comment-body js-comment-edit-hide">
+                      {question.comments ? (<CommentFeed comments={question.comments}/>) : null}
+                      <CommentForm questionId={question._id}/>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-md-12">
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-12 my-2">
-                  <TagFeed tags={question.tags}/>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-12">
-                  <div className="user-action-time d-flex justify-content-end align-items-center"> asked <span
-                    title=""
-                    className="relativeTime m-1 d-inline-flex flex-grow-0">{new Date(question.time).toLocaleString()}</span>
-                  </div>
-                  <div className="user-details d-flex justify-content-end">
-                    <Link to={`/publicProfile/${question.userId}`}
-                          style={{	textShadow: "0px 0px 1px #0000ff",fontSize: "24"}}
-                          className="d-inline-flex flex-grow-1 align-items-end justify-content-end">{name}</Link>
-                  </div>
-                </div>
-              </div>
-              <div className="d-flex flex-grow-1 col-md-12">
-                <div className="comment-text js-comment-text-and-form w-75">
-                  <div className="comment-body js-comment-edit-hide">
-                    {question.comments ? (<CommentFeed comments={question.comments}/>) : null}
-                    <CommentForm questionId={question._id}/>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
           <div className="col-md-12 my-2">

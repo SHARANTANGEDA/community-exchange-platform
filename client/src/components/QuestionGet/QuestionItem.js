@@ -12,10 +12,10 @@ class QuestionItem extends Component {
     this.onDownVote = this.onDownVote.bind(this)
   }
   onUpVote(e) {
-
+    this.props.upVoteQuestion(this.props.question._id)
   }
   onDownVote(e) {
-    this.props.downVoteQuestion()
+    this.props.downVoteQuestion(this.props.question._id)
   }
   render () {
     const {question} = this.props;
