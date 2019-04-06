@@ -86,7 +86,6 @@ router.post('/ask',passport.authenticate('all',{session: false}),
   (req,res) => {
   const {errors , isValid} =validateQuestionInput(req.body);
     let toStoreTag = req.body.tags;
-    toStoreTag = toStoreTag[0];
     if(toStoreTag.endsWith(',')) {
       toStoreTag = toStoreTag.substr(0,toStoreTag.length-1);
     }

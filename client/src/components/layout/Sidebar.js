@@ -69,7 +69,7 @@ class Sidebar extends Component {
               <i className="fas fa-question"/>
               All Users
             </Link>
-            <Link to="/allProfiles" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="/acceptTA" style={{textDecoration: 'none',color: 'black'}}>
               <i className="fas fa-question"/>
               TA Applications
             </Link>
