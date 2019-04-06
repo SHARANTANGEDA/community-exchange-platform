@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Spinner from '../common/Spinner'
-import { getQuestionById } from '../../actions/homeQuestionsActions'
+import { downVoteQuestion, getQuestionById, upVoteQuestion } from '../../actions/homeQuestionsActions'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import CommentFeed from './ShowComments/CommentFeed'
@@ -11,14 +11,19 @@ import { connect } from 'react-redux'
 import TagFeed from '../QuestionGet/Tags/TagFeed'
 
 class ViewQuestion extends Component {
+  constructor () {
+    super()
+    this.onUpVote = this.onUpVote.bind(this)
+    this.onDownVote = this.onDownVote.bind(this)
+  }
   componentDidMount () {
     this.props.getQuestionById(this.props.match.params.id)
   }
   onUpVote(e) {
-    this.props.upVoteQuestion(this.props.question._id)
+    this.props.upVoteQuestion(this.props.home.question._id)
   }
   onDownVote(e) {
-    this.props.downVoteQuestion(this.props.question._id)
+    this.props.downVoteQuestion(this.props.home.question._id)
   }
   render () {
     const { question, loading } = this.props.home
@@ -148,11 +153,13 @@ class ViewQuestion extends Component {
 
 ViewQuestion.propTypes = {
   getQuestionById: PropTypes.func.isRequired,
-  home: PropTypes.object.isRequired
+  home: PropTypes.object.isRequired,
+  upVoteQuestion:PropTypes.func.isRequired,
+  downVoteQuestion:PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
   home: state.home
 })
 
-export default connect(mapStateToProps, { getQuestionById })(ViewQuestion)
+export default connect(mapStateToProps, { getQuestionById,upVoteQuestion,downVoteQuestion })(ViewQuestion)

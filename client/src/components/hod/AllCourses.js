@@ -26,7 +26,7 @@ class AllCourses extends Component {
                   className="rounded border bg-dark text-light text-center p-1 pl-3 pr-5">Department of {courses.department.departmentName}</h1>
               <h3 className='text-center'>No courses Added yet</h3>
                 <div className="pull-right justify-content-end" style={{minWidth: '250px'}}>
-                  <Link className="btn btn-primary btn-lg w-100" style={{minWidth: '250px'}} to="/askQuestion">
+                  <Link className="btn btn-primary btn-lg w-100" style={{minWidth: '250px'}} to="/addCourse">
                     Add Course</Link>
               </div>
             </div>
