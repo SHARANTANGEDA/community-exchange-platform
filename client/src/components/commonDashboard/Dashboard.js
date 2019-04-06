@@ -8,7 +8,7 @@ import Spinner from '../common/Spinner'
 import { getHodHome } from '../../actions/hodActions'
 import FacultyFeed from '../hod/FacultyFeed'
 import { getFacultyHome } from '../../actions/facultyActions'
-import FacultyHomeFeed from './FacultyHomeFeed'
+import FacultyHomeFeed from './facultyHome/FacultyHomeFeed'
 
 class Dashboard extends Component {
 
@@ -127,7 +127,7 @@ class Dashboard extends Component {
                     className="rounded border bg-dark text-light p-1 pl-3 pr-5 text-center">Department of {home.department.departmentName}</h1>
 
                 <table  className="tableGrid rounded border"
-                        style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',width : '100%'}} border="0">
+                        style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',width : '100%'}} >
                   <tbody>
                   <tr>
                     <td>
