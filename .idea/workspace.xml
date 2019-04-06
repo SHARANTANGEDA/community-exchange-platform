@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92c3f002-70e8-4ff8-9b74-7304e267b2f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/models/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/answers.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/answers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/department.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/department.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/questions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/Register/DepartmentFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/Register/DepartmentFeed.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,37 +18,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/api/department.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+            <state relative-caret-position="455">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <element signature="e#466#612#0" />
-                <element signature="e#1214#1742#0" />
-                <element signature="e#1868#2406#0" />
-                <element signature="e#2409#2459#0" />
-                <element signature="e#4779#4829#0" />
-                <element signature="e#6770#6838#0" />
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/User.js">
+        <entry file="file://$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+            <state relative-caret-position="811">
+              <caret line="62" column="29" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Question.js">
+        <entry file="file://$PROJECT_DIR$/client/src/actions/authActions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="121" column="9" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
+            <state relative-caret-position="420">
+              <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -57,38 +54,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
+            <state relative-caret-position="35">
               <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/answers.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/authorization/Register/Register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
+            <state relative-caret-position="665">
+              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/components/authorization/Register/DepartmentFeed.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3048">
-              <caret line="358" column="24" lean-forward="true" selection-start-line="358" selection-start-column="24" selection-end-line="358" selection-end-column="24" />
+            <state relative-caret-position="35">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
               <folding>
-                <element signature="e#746#3310#0" />
-                <element signature="e#3363#4499#0" />
-                <element signature="e#4629#6488#0" />
-                <element signature="e#6610#7591#0" />
-                <element signature="e#7594#7613#0" />
-                <element signature="e#9404#9962#0" />
-                <element signature="e#10093#10348#0" />
-                <element signature="e#10479#10737#0" />
-                <element signature="e#10863#11061#0" />
-                <element signature="e#11149#11715#0" />
-                <element signature="e#11811#12045#0" />
+                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#371#425#0" />
               </folding>
             </state>
           </provider>
@@ -140,8 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/components/faculty/AcceptTA.js" />
-        <option value="$PROJECT_DIR$/client/src/components/hod/Courses/ShowQuestions.js" />
         <option value="$PROJECT_DIR$/client/src/components/faculty/displayApplications/TAFeed.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/Courses/ShowStudents.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/facultyReducer.js" />
@@ -160,7 +149,6 @@
         <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/AnswerForm.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/courseReducer.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/AddCourse.js" />
-        <option value="$PROJECT_DIR$/client/src/components/authorization/Register/DepartmentFeed.js" />
         <option value="$PROJECT_DIR$/client/src/components/QuestionGet/AllQuestions.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/Register/RegisterHOD.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/Register/Register.js" />
@@ -191,6 +179,9 @@
         <option value="$PROJECT_DIR$/routes/api/questions.js" />
         <option value="$PROJECT_DIR$/routes/api/answers.js" />
         <option value="$PROJECT_DIR$/routes/api/department.js" />
+        <option value="$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js" />
+        <option value="$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js" />
+        <option value="$PROJECT_DIR$/client/src/components/authorization/Register/DepartmentFeed.js" />
       </list>
     </option>
   </component>
@@ -238,7 +229,39 @@
               <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="authorization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="authorization" type="462c0819:PsiDirectoryNode" />
+              <item name="Register" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="QuestionGet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
@@ -409,14 +432,7 @@
       <workItem from="1554467810616" duration="1522000" />
       <workItem from="1554471182774" duration="5126000" />
       <workItem from="1554482885820" duration="5394000" />
-      <workItem from="1554516286493" duration="23523000" />
-    </task>
-    <task id="LOCAL-00019" summary="#fixed minor bugs">
-      <created>1551467923707</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1551467923707</updated>
+      <workItem from="1554516286493" duration="27465000" />
     </task>
     <task id="LOCAL-00020" summary="#fixed minor bugs">
       <created>1551468237105</created>
@@ -754,11 +770,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554534783800</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="#Added backend for upVote, downVote, markAsHelpful&#10;#Added UI for upVote and downVote&#10;#Fixed small bug in assign Faculty backend">
+      <created>1554559311502</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1554559311502</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="506315000" />
+    <option name="totallyTimeSpent" value="510257000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -835,7 +858,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#fixed All bugs in View Question,Answer Question and comment question&#10;#Disabled redux dev tools&#10;#Adds Logo&#10;#Sprint-1 FINAL-PUSH" />
     <MESSAGE value="#Fixes Tags Bug Updates few Things&#10;#Adds Few other course disciplines to the list" />
     <MESSAGE value="#Added Update Account Details Option&#10;#Added Change Password Option" />
     <MESSAGE value="#Updated Landing Page&#10;#Added Faculty,Admin,HOD,Student Database Schema and Backend" />
@@ -860,19 +882,10 @@
     <MESSAGE value="#Added registration for faculty&#10;#Changed target routes of few buttons" />
     <MESSAGE value="#Added Assign TA option&#10;#Except faculty home all pages are done" />
     <MESSAGE value="#Updated faculty dashboard&#10;#Almost everything regarding sprint-2 is done" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Updated faculty dashboard&#10;#Almost everything regarding sprint-2 is done" />
+    <MESSAGE value="#Added backend for upVote, downVote, markAsHelpful&#10;#Added UI for upVote and downVote&#10;#Fixed small bug in assign Faculty backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Added backend for upVote, downVote, markAsHelpful&#10;#Added UI for upVote and downVote&#10;#Fixed small bug in assign Faculty backend" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="31" selection-start-line="13" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/AskQuestion/AskQuestions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1120">
@@ -956,17 +969,6 @@
           <caret line="14" column="5" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="5" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/Register/DepartmentFeed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#371#425#0" />
           </folding>
         </state>
       </provider>
@@ -1079,23 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/Register/Register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="52" column="5" lean-forward="true" selection-start-line="45" selection-start-column="3" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/authActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="52" column="2" lean-forward="true" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/hod/assignFaculty/Feed.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1160,15 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="14" column="3" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="14" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1202">
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -1281,13 +1257,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/global-types/node_modules/@types/express-serve-static-core/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -1295,10 +1264,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/department.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+          <folding>
+            <element signature="e#466#612#0" />
+            <element signature="e#1214#1742#0" />
+            <element signature="e#1868#2406#0" />
+            <element signature="e#2409#2459#0" />
+            <element signature="e#4779#4829#0" />
+            <element signature="e#6770#6838#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/Question.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
           <caret line="121" column="9" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/answers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1322,31 +1320,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/answers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
+        <state relative-caret-position="35">
           <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/department.js">
+    <entry file="file://$PROJECT_DIR$/client/src/actions/authActions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+        <state relative-caret-position="420">
+          <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="811">
+          <caret line="62" column="29" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="29" />
           <folding>
-            <element signature="e#466#612#0" />
-            <element signature="e#1214#1742#0" />
-            <element signature="e#1868#2406#0" />
-            <element signature="e#2409#2459#0" />
-            <element signature="e#4779#4829#0" />
-            <element signature="e#6770#6838#0" />
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/Register/Register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/Register/DepartmentFeed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#371#425#0" />
           </folding>
         </state>
       </provider>

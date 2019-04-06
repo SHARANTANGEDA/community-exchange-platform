@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {PropTypes} from 'prop-types';
-import CourseData from './CourseData'
 
 class DepartmentFeed extends Component {
   render() {
