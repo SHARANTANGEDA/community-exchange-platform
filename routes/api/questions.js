@@ -16,14 +16,14 @@ router.post('downVote/:id',passport.authenticate('all',{session: false}),(req, r
   User.findOne({ user: req.user.id }).then(user => {
     Question.findById(req.params.id)
       .then(question => {
-        if (question.vote.downVote.filter(downVote => downVote.user.toString() === req.user.id)
+        if (question.downVote.filter(downVote => downVote.user.toString() === req.user.id)
             .length > 0) {
           return res
             .status(400)
             .json({ alreadyLiked: 'Already down-voted this post' });
         }
         // Add user id to likes array
-        question.vote.downVote.unshift({ user: req.user.id });
+        question.downVote.unshift({ user: req.user.id });
         User.findByIdAndUpdate(question.user,{ $inc: {reputation:-1}},{new: true})
           .then(user => {
             question.save().then(question => {res.json(question)});
@@ -38,14 +38,14 @@ router.post('upVote/:id',passport.authenticate('all',{session: false}),(req, res
   User.findOne({ user: req.user.id }).then(user => {
     Question.findById(req.params.id)
       .then(question => {
-        if (question.vote.upVote.filter(upVote => upVote.user.toString() === req.user.id)
+        if (question.upVote.filter(upVote => upVote.user.toString() === req.user.id)
           .length > 0) {
           return res
             .status(400)
             .json({ alreadyLiked: 'Already up-voted this post' });
         }
         // Add user id to likes array
-        question.vote.upVote.unshift({ user: req.user.id });
+        question.upVote.unshift({ user: req.user.id });
         User.findByIdAndUpdate(question.user,{ $inc: {reputation:1}},{new: true})
           .then(user => {
             question.save().then(question => {res.json(question)});
@@ -100,7 +100,7 @@ router.post('/ask',passport.authenticate('all',{session: false}),
     toStoreTag.forEach(tag => {
       const pat = /^[a-zA-Z]+$/;
       tag=tag.trim();
-      if(tag.isEmpty()) {
+      if(tag.length===0) {
         errors.tags='tags cannot be empty';
       }
       if(!pat.test(tag)) {

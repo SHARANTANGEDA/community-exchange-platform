@@ -22,7 +22,7 @@ class AnswerDisplay extends Component {
     const { answer, auth, questionId } = this.props
     console.log({ SingleAnswer: answer, auth: auth })
     let name = answer.firstName + ' ' + answer.lastName
-    const rate = (answer.vote.upVote.length) - (answer.vote.downVote.length)
+    const rate = (answer.upVote.length) - (answer.downVote.length)
 
     return (
       <div className="card-body">

@@ -21,7 +21,8 @@ class QuestionItem extends Component {
     const {question} = this.props;
     console.log({GetQuestion:question})
     const name=question.firstName+' '+question.lastName;
-    const rate = (question.vote.upVote.length) - (question.vote.downVote.length)
+
+    const rate = (question.upVote.length) - (question.downVote.length)
     return (
       <div className="card card-body mb-3">
         <div className="row">

@@ -38,19 +38,21 @@ const QuestionSchema = new Schema({
     type: String,
     required: true
   },
+  upVote: [{
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: 'users'
+    }
+  }],
+  downVote: [{
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: 'users'
+    }
+  }],
   vote: [{
-    upVote: [{
-      user: {
-        type: Schema.Types.ObjectId,
-        ref: 'users'
-      }
-    }],
-    downVote: [{
-      user: {
-        type: Schema.Types.ObjectId,
-        ref: 'users'
-      }
-    }]
+
+
   }],
 
   //TODO Add image functionality
@@ -106,19 +108,17 @@ const QuestionSchema = new Schema({
         type: String,
         required: true
       },
-      vote: [{
-        upVote: [{
-          user: {
-            type: Schema.Types.ObjectId,
-            ref: 'users'
-          }
-        }],
-        downVote: [{
-          user: {
-            type: Schema.Types.ObjectId,
-            ref: 'users'
-          }
-        }]
+      upVote: [{
+        user: {
+          type: Schema.Types.ObjectId,
+          ref: 'users'
+        }
+      }],
+      downVote: [{
+        user: {
+          type: Schema.Types.ObjectId,
+          ref: 'users'
+        }
       }],
       markAsHelpful: {
         type: Boolean,

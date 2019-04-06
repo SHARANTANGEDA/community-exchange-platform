@@ -18,14 +18,14 @@ router.post('downVote/:id/:answerId',passport.authenticate('all',{session: false
         const index = question.answer
           .map(item => item._id.toString())
           .indexOf(req.params.answerId);
-        if (question.answer[index].vote.downVote.filter(downVote => downVote.user.toString() === req.user.id)
+        if (question.answer[index].downVote.filter(downVote => downVote.user.toString() === req.user.id)
           .length > 0) {
           return res
             .status(400)
             .json({ alreadyLiked: 'Already down-voted this answer' });
         }
         // Add user id to likes array
-        question.answer[index].vote.downVote.unshift({ user: req.user.id });
+        question.answer[index].downVote.unshift({ user: req.user.id });
         User.findByIdAndUpdate(question.answer[index].user,{ $inc: {reputation:-2}},{new: true})
           .then(user => {
             question.save().then(question => {res.json(question)});
@@ -43,14 +43,14 @@ router.post('upVote/:id/:answerId',passport.authenticate('all',{session: false})
         const index = question.answer
           .map(item => item._id.toString())
           .indexOf(req.params.answerId);
-        if (question.answer[index].vote.upVote.filter(upVote => upVote.user.toString() === req.user.id)
+        if (question.answer[index].upVote.filter(upVote => upVote.user.toString() === req.user.id)
           .length > 0) {
           return res
             .status(400)
             .json({ alreadyLiked: 'Already up-voted this answer' });
         }
         // Add user id to likes array
-        question.answer[index].vote.upVote.unshift({ user: req.user.id });
+        question.answer[index].upVote.unshift({ user: req.user.id });
         User.findByIdAndUpdate(question.answer[index].user,{ $inc: {reputation:2}},{new: true})
           .then(user => {
             question.save().then(question => {res.json(question)});

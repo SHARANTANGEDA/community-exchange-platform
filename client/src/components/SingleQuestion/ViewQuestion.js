@@ -34,7 +34,7 @@ class ViewQuestion extends Component {
       questionContent = <Spinner/>
     } else {
       let name = question.firstName + ' ' + question.lastName
-      const rate = (question.vote.upVote.length) - (question.vote.downVote.length)
+      const rate = (question.upVote.length) - (question.downVote.length)
       console.log({ INViewQues: name })
       let ansNoDisplay
       if (question.answer === null) {
