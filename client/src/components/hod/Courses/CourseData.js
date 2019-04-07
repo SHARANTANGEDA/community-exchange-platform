@@ -44,7 +44,7 @@ CourseData.defaultProps = {
 }
 
 CourseData.propTypes = {
-  faculty: PropTypes.object.isRequired,
+  course: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired
 }
 const mapStateToProps = state => ({

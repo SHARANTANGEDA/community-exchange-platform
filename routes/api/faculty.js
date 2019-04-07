@@ -285,7 +285,7 @@ router.get('/applications',passport.authenticate('faculty', {session: false}),
 })
 
 //ACCEPT TA APPLICATION
-router.get('/applications/:id/accept',passport.authenticate('faculty',{session: false}),
+router.post('/applications/accept/:id',passport.authenticate('faculty',{session: false}),
   (req,res) => {
     User.findByIdAndUpdate(req.params.id,{applyTA: false, isTA: true},{new: true})
       .then(user => {
@@ -294,7 +294,7 @@ router.get('/applications/:id/accept',passport.authenticate('faculty',{session: 
 })
 
 //REJECT TA APPLICATION
-router.get('/applications/:id/reject',passport.authenticate('faculty',{session: false}),
+router.post('/applications/reject/:id',passport.authenticate('faculty',{session: false}),
   (req,res) => {
     User.findByIdAndUpdate(req.params.id,{applyTA: false, taCourse:[]},{new: true})
       .then(user => {

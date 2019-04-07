@@ -132,6 +132,7 @@ router.post('/addDepartment',passport.authenticate('admin',{session: false}),
           .then(user => {
             const newDepartment = new Department({
               hod:user._id,
+              hodEmail: req.body.emailId,
               departmentName: req.body.departmentName
             })
             newDepartment.save().then(department => res.json(department))

@@ -1,19 +1,20 @@
 import axios from 'axios';
 
 import {
-  CLEAR_ERRORS, LOADING, GET_ERRORS
+  CLEAR_ERRORS, LOADING, GET_ERRORS, HOME_QUESTIONS
 } from './types'
 
 //Add Department
 export const addDepartment = (userData,history) => dispatch => {
   axios.post('/api/admin/addDepartment', userData)
-    .then(res => {history.push('/addDepartment')})
+    .then(res => {history.push('/allDepartments')})
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
         payload: err.response.data
       }))
 };
+
 export const setLoading = () => {
   return {
     type: LOADING

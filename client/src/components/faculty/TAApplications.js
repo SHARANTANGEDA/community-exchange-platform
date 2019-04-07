@@ -70,7 +70,7 @@ class TAApplications extends Component {
     }
 
     return (
-      <div className="container acceptTA">
+      <div className="container taApplications">
         <div className="row">
           {allCoursesContent}
         </div>

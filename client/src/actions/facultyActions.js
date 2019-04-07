@@ -3,7 +3,12 @@ import axios from 'axios';
 import {
   CLEAR_ERRORS,
   LOADING,
-  GET_FACULTY_HOME, GET_FACULTY_ERRORS, GET_ERRORS_IN_APPLICATIONS, GET_TA_APPLICATIONS, ACCEPT_TA_APPLICATION,
+  GET_FACULTY_HOME,
+  GET_FACULTY_ERRORS,
+  GET_ERRORS_IN_APPLICATIONS,
+  GET_TA_APPLICATIONS,
+  ACCEPT_TA_APPLICATION,
+  GET_ERRORS,
 } from './types'
 
 export const getFacultyHome = () => dispatch => {
@@ -49,41 +54,34 @@ export const getTAApplications = () => dispatch => {
 }
 export const acceptTA = (id) => dispatch => {
   console.log("Started accepting TA")
-  dispatch(setLoading());
   console.log("accepting TA action")
 
   axios
-    .get(`/api/faculty/applications/${id}/accept`)
+    .post(`/api/faculty/applications/accept/${id}`)
     .then(res =>
-      dispatch({
-        type: ACCEPT_TA_APPLICATION,
-        payload: res.data
-      })
+      console.log(res)
+
     )
     .catch(err =>
       dispatch({
-        type: GET_ERRORS_IN_APPLICATIONS,
-        payload: err.data
+        type: GET_ERRORS,
+        payload: err.response.data
       })
     );
 }
 export const rejectTA = (id) => dispatch => {
   console.log("Started rejecting TA")
-  dispatch(setLoading());
   console.log("rejecting TA action")
 
   axios
-    .get(`/api/faculty/applications/${id}/reject`)
+    .get(`/api/faculty/applications/reject/${id}`)
     .then(res =>
-      dispatch({
-        type: ACCEPT_TA_APPLICATION,
-        payload: res.data
-      })
+      console.log(res)
     )
     .catch(err =>
       dispatch({
-        type: GET_ERRORS_IN_APPLICATIONS,
-        payload: err.data
+        type: GET_ERRORS,
+        payload: err.response.data
       })
     );
 }

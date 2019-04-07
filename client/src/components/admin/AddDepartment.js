@@ -46,6 +46,7 @@ class AddDepartment extends Component {
       repassword: this.state.repassword,
       departmentName: this.state.departmentName
     }
+
     this.props.addDepartment(newUser,this.props.history);
 
   }

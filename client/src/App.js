@@ -31,6 +31,8 @@ import ApplyTA from './components/commonDashboard/ApplyTA'
 import AddCourse from './components/hod/AddCourse'
 import RegisterFaculty from './components/authorization/Register/RegisterFaculty'
 import AddDepartment from './components/admin/AddDepartment'
+import TAApplications from './components/faculty/TAApplications'
+import AllDepartments from './components/admin/AllDepartments'
 
 
 //Check for token
@@ -99,6 +101,12 @@ class App extends Component {
           </Switch>
           <Switch>
             <PrivateRoute exact path='/addDepartment' component={AddDepartment}/>
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path='/taApplications' component={TAApplications}/>
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path='/allDepartments' component={AllDepartments}/>
           </Switch>
           </div>
         </div>

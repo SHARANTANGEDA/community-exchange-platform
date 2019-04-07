@@ -6,6 +6,9 @@ const DepartmentSchema = new Schema({
     type: String,
     required: true
   },
+  hodEmail: {
+    type: String
+  },
   departmentName: {
     type: String
   },
