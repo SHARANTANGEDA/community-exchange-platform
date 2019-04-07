@@ -17,7 +17,7 @@ class FacultyData extends Component {
         <td>
                     <span style={{ fontSize: '13.3333330154419px' }}>
                       <Link className=" btn btn-primary"
-                            to="" target="_blank">
+                            to={`/publicProfile/${faculty._id}`} target="_blank">
                         View Profile
                       </Link>
                     </span>

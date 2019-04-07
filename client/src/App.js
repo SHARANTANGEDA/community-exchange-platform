@@ -33,6 +33,7 @@ import RegisterFaculty from './components/authorization/Register/RegisterFaculty
 import AddDepartment from './components/admin/AddDepartment'
 import TAApplications from './components/faculty/TAApplications'
 import AllDepartments from './components/admin/AllDepartments'
+import UnAssignedFaculty from './components/hod/UnAssignedFaculty'
 
 
 //Check for token
@@ -107,6 +108,9 @@ class App extends Component {
           </Switch>
           <Switch>
             <PrivateRoute exact path='/allDepartments' component={AllDepartments}/>
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path='/unAssignedFaculty' component={UnAssignedFaculty}/>
           </Switch>
           </div>
         </div>

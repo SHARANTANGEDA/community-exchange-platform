@@ -128,7 +128,7 @@ router.post('/login', (req, res) => {
 })
 
 //Logged In Session currentUser
-router.get('/myAccount', passport.authenticate('student', { session: false }),
+router.get('/myAccount', passport.authenticate('all', { session: false }),
   (req, res) => {
     let activity = {};
     const userId=req.user._id;
@@ -191,7 +191,7 @@ router.get('/myAccount', passport.authenticate('student', { session: false }),
   })
 
 //Change Password
-router.post('/changePassword', passport.authenticate('student', { session: false }),
+router.post('/changePassword', passport.authenticate('all', { session: false }),
   (req, res) => {
     const { errors, isValid } = validatePassword(req.body)
     if (!isValid) {

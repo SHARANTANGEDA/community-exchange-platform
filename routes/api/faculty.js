@@ -124,98 +124,98 @@ router.post('/login', (req, res) => {
   })
 })
 
-//Logged In Session currentUser
-router.get('/myAccount', passport.authenticate('faculty', { session: false }),
-  (req, res) => {
-    let activity = {};
-    const userId=req.user._id;
-    Question.find({ user: userId }, { 'title': 1, 'tags': 1, 'description': 1, 'time': 1, '_id': 0 })
-      .then(questions => {
-        if (!questions) {
-        } else {
-          activity.questions = questions;
-          Question.find({ 'comments.user': userId }, {
-            'title': 1,
-            'tags': 1,
-            'comments.text': 1,
-            'comments.time': 1,
-            'time': 1,
-            '_id': 0
-          }).then(comments => {
-            if (!comments) {
-            } else {
-              activity.comments = comments;
-              Question.find({ 'answer.user': userId }, {
-                'title': 1,
-                'tags': 1,
-                'time': 1,
-                '_id': 0,
-                'answer.text': 1,
-                'answer.time': 1
-              }).then(answers => {
-                if (!answers) {
-                } else {
-                  activity.answers = answers;
-                  res.json({
-                    firstName: req.user.firstName,
-                    lastName: req.user.lastName,
-                    email: req.user.emailId,
-                    departmentName: req.user.departmentName,
-                    website: req.user.website,
-                    avatar: req.user.avatar,
-                    linkedIn: req.user.linkedIn,
-                    questionsAsked: activity.questions,
-                    questionsAnswered: activity.answers,
-                    questionsCommented: activity.comments
-                  })
-                }
-              }).catch(err => {
-                return res.status(404).json({ err })
-              })
-            }
-          }).catch(err => {
-            return res.status(404).json({ err })
-          })
-        }
-      }).catch(err => {
-      return res.status(404).json({ err })
-    })
-
-
-
-
-  })
-
-//Change Password
-router.post('/changePassword', passport.authenticate('faculty', { session: false }),
-  (req, res) => {
-    const { errors, isValid } = validatePassword(req.body)
-    if (!isValid) {
-      res.status(404).json(errors)
-    }
-    const password = req.body.password
-    let newPassword = req.body.newPassword
-    bcrypt.compare(password, req.user.password).then(isMatch => {
-      if (isMatch) {
-        bcrypt.genSalt(10, (err, salt) => {
-          bcrypt.hash(newPassword, salt, (err, hash) => {
-            if (err) throw err
-            newPassword = hash
-            User.findOneAndUpdate({_id: req.user._id}, { password: newPassword }, (err, res) => {
-              if (err) throw err
-            }).then(user => {
-              res.json({ success: 'password is changed successfully' })
-            }).catch(err => {
-              return res.status(404).json({ failed: 'Your password is not updated', err })
-            })
-          })
-        })
-      } else {
-        errors.password = 'Incorrect Password'
-        return res.status(400).json(errors.password)
-      }
-    })
-  })
+// //Logged In Session currentUser
+// router.get('/myAccount', passport.authenticate('faculty', { session: false }),
+//   (req, res) => {
+//     let activity = {};
+//     const userId=req.user._id;
+//     Question.find({ user: userId }, { 'title': 1, 'tags': 1, 'description': 1, 'time': 1, '_id': 0 })
+//       .then(questions => {
+//         if (!questions) {
+//         } else {
+//           activity.questions = questions;
+//           Question.find({ 'comments.user': userId }, {
+//             'title': 1,
+//             'tags': 1,
+//             'comments.text': 1,
+//             'comments.time': 1,
+//             'time': 1,
+//             '_id': 0
+//           }).then(comments => {
+//             if (!comments) {
+//             } else {
+//               activity.comments = comments;
+//               Question.find({ 'answer.user': userId }, {
+//                 'title': 1,
+//                 'tags': 1,
+//                 'time': 1,
+//                 '_id': 0,
+//                 'answer.text': 1,
+//                 'answer.time': 1
+//               }).then(answers => {
+//                 if (!answers) {
+//                 } else {
+//                   activity.answers = answers;
+//                   res.json({
+//                     firstName: req.user.firstName,
+//                     lastName: req.user.lastName,
+//                     email: req.user.emailId,
+//                     departmentName: req.user.departmentName,
+//                     website: req.user.website,
+//                     avatar: req.user.avatar,
+//                     linkedIn: req.user.linkedIn,
+//                     questionsAsked: activity.questions,
+//                     questionsAnswered: activity.answers,
+//                     questionsCommented: activity.comments
+//                   })
+//                 }
+//               }).catch(err => {
+//                 return res.status(404).json({ err })
+//               })
+//             }
+//           }).catch(err => {
+//             return res.status(404).json({ err })
+//           })
+//         }
+//       }).catch(err => {
+//       return res.status(404).json({ err })
+//     })
+//
+//
+//
+//
+//   })
+//
+// //Change Password
+// router.post('/changePassword', passport.authenticate('faculty', { session: false }),
+//   (req, res) => {
+//     const { errors, isValid } = validatePassword(req.body)
+//     if (!isValid) {
+//       res.status(404).json(errors)
+//     }
+//     const password = req.body.password
+//     let newPassword = req.body.newPassword
+//     bcrypt.compare(password, req.user.password).then(isMatch => {
+//       if (isMatch) {
+//         bcrypt.genSalt(10, (err, salt) => {
+//           bcrypt.hash(newPassword, salt, (err, hash) => {
+//             if (err) throw err
+//             newPassword = hash
+//             User.findOneAndUpdate({_id: req.user._id}, { password: newPassword }, (err, res) => {
+//               if (err) throw err
+//             }).then(user => {
+//               res.json({ success: 'password is changed successfully' })
+//             }).catch(err => {
+//               return res.status(404).json({ failed: 'Your password is not updated', err })
+//             })
+//           })
+//         })
+//       } else {
+//         errors.password = 'Incorrect Password'
+//         return res.status(400).json(errors.password)
+//       }
+//     })
+//   })
 
 // //Update Profile
 // router.post('/myAccount/change', passport.authenticate('faculty', { session: false }),

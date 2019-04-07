@@ -72,6 +72,26 @@ export const getHodHome = () => dispatch => {
       })
     );
 };
+export const getUnAssignedFaculty = () => dispatch => {
+  console.log("Started Loading HOD home")
+  dispatch(setLoading());
+  console.log("In HOD home actions")
+
+  axios
+    .get(`/api/department/unAssignedFaculty`)
+    .then(res =>
+      dispatch({
+        type: GET_HOME,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_HOME_NO_FACULTY,
+        payload: err.data
+      })
+    );
+};
 //Get faculty for home
 export const assignByCourseId = (id) => dispatch => {
   console.log("Started Loading HOD assign Courses")

@@ -122,37 +122,37 @@ router.post('/login', (req, res) => {
   })
 })
 
-
-//Change Password
-router.post('/changePassword', passport.authenticate('hod',{session: false}),
-  (req, res) => {
-    const { errors, isValid } = validatePassword(req.body)
-    if (!isValid) {
-      res.status(404).json(errors)
-    }
-    const password = req.body.password
-    let newPassword = req.body.newPassword
-    bcrypt.compare(password, req.hod.password).then(isMatch => {
-      if (isMatch) {
-        bcrypt.genSalt(10, (err, salt) => {
-          bcrypt.hash(newPassword, salt, (err, hash) => {
-            if (err) throw err
-            newPassword = hash
-            User.findOneAndUpdate({_id: req.user._id}, { password: newPassword }, (err, res) => {
-              if (err) throw err
-            }).then(user => {
-              res.json({ success: 'password is changed successfully' })
-            }).catch(err => {
-              return res.status(404).json({ failed: 'Your password is not updated', err })
-            })
-          })
-        })
-      } else {
-        errors.password = 'Incorrect Password'
-        return res.status(400).json(errors.password)
-      }
-    })
-  })
-
+//
+// //Change Password
+// router.post('/changePassword', passport.authenticate('hod',{session: false}),
+//   (req, res) => {
+//     const { errors, isValid } = validatePassword(req.body)
+//     if (!isValid) {
+//       res.status(404).json(errors)
+//     }
+//     const password = req.body.password
+//     let newPassword = req.body.newPassword
+//     bcrypt.compare(password, req.hod.password).then(isMatch => {
+//       if (isMatch) {
+//         bcrypt.genSalt(10, (err, salt) => {
+//           bcrypt.hash(newPassword, salt, (err, hash) => {
+//             if (err) throw err
+//             newPassword = hash
+//             User.findOneAndUpdate({_id: req.user._id}, { password: newPassword }, (err, res) => {
+//               if (err) throw err
+//             }).then(user => {
+//               res.json({ success: 'password is changed successfully' })
+//             }).catch(err => {
+//               return res.status(404).json({ failed: 'Your password is not updated', err })
+//             })
+//           })
+//         })
+//       } else {
+//         errors.password = 'Incorrect Password'
+//         return res.status(400).json(errors.password)
+//       }
+//     })
+//   })
+//
 
 module.exports = router

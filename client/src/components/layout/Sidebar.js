@@ -114,7 +114,7 @@ class Sidebar extends Component {
             </Link>
           </li>
           <li>
-            <Link to="" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="/unAssignedFaculty" style={{textDecoration: 'none',color: 'black'}}>
               UnAssigned Faculty
             </Link>
           </li>

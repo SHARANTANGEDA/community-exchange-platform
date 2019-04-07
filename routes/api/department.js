@@ -145,13 +145,13 @@ router.post('/addCourse',passport.authenticate('hod',{session: false}),
     if (!isValid) {
       return res.status(400).json(errors);
     }
-    Department.findById(req.user._id).then(department => {
+    console.log(req.user._id)
+    Department.findOne({hod:req.user._id}).then(department => {
       let existCourse=department.courses.filter(course => course.courseCode === req.body.courseCode).length
       if(existCourse>0) {
         errors.courseCode = 'Course Code Already exists'
         return res.status(400).json(errors)
       } else {
-
         const newCourse ={
           courseCode: req.body.courseCode,
           courseName: req.body.courseName,
@@ -161,7 +161,8 @@ router.post('/addCourse',passport.authenticate('hod',{session: false}),
         department.courses.unshift(newCourse);
         department.save().then(department => res.json(department)).catch(err => res.json(errors));
       }
-    }).catch(err => res.status(404).json({notFound: 'department not found'}))
+    }).catch(err => res.status(404).json({notFound: 'department not found'})
+    )
     // Course.find({ courseCode: req.body.courseCode }).then(course => {
     //   if (course) {
     //     errors.courseCode = 'Course Code Already exists'
