@@ -23,9 +23,9 @@ class Data extends Component {
     this.props.assignFaculty(assignData,this.props.history)
   }
   componentDidMount() {
-    if (this.props.match.params.id) {
-
-    }
+    // if (this.props.match.params.id) {
+    //
+    // }
   }
   render () {
     const { faculty,courseId } = this.props

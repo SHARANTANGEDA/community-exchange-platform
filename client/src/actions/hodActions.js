@@ -97,7 +97,7 @@ export const assignByCourseId = (id) => dispatch => {
   console.log("Started Loading HOD assign Courses")
   dispatch(setLoading());
   console.log("In HOD assign Courses actions")
-
+  console.log({id:id})
   axios
     .get(`/api/department/faculty/${id}`)
     .then(res =>

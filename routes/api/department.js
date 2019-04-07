@@ -80,6 +80,7 @@ router.get('/faculty/:id', passport.authenticate('hod', { session: false }),
       let notCourseFaculty=[];
       faculty.forEach(fac => {
       })
+      console.log(department,faculty)
       res.json({ department, faculty,courseId: req.params.id })
     }).catch(err => res.json({ noFaculty: 'There are no faculty in this department', department
       ,courseId: req.params.id}))

@@ -8,17 +8,18 @@ import Feed from './Feed'
 
 class AssignFaculty extends Component {
 
-  componentDidMount () {
-    this.props.assignByCourseId(this.props.match.params.id);
-    console.log("Called");
+  componentDidMount() {
+    if (this.props.match.params.id) {
+      this.props.assignByCourseId(this.props.match.params.id);
+    }
   }
-
   render () {
     const { home, loading,faculty} = this.props.hod
     let dashboardContent
     if ((home === null) || loading ) {
       dashboardContent = <Spinner/>
     } else {
+      console.log({home:home})
       if(!faculty) {
         dashboardContent = (
           <div className="col-md-12">
@@ -78,12 +79,10 @@ class AssignFaculty extends Component {
 
 AssignFaculty.propTypes = {
   assignByCourseId: PropTypes.func.isRequired,
-  faculty: PropTypes.object.isRequired,
   hod: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
-  faculty: state.faculty,
   hod: state.hod
 })
 
