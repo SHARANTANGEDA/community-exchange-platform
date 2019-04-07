@@ -55,7 +55,11 @@ export default function(state = initialState, action) {
         loading: false
       }
     case GET_ERRORS_IN_APPLICATIONS:
-      return  action.payload
+      return {
+        ...state,
+        taApplications: action.payload,
+        loading: false
+      }
     default:
       return state;
 

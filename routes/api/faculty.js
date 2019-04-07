@@ -270,18 +270,23 @@ router.get('/myCourses',passport.authenticate('faculty',{session: false}),(req,r
 router.get('/applications',passport.authenticate('faculty', {session: false}),
   (req,res)  => {
   User.findById(req.user._id).then(faculty => {
+    console.log('In faculty')
+
     if(!faculty.assigned) {
-      res.status(401).json({notAssigned: 'You should be assigned to a course to receive TA application'})
+      console.log('In not assigned')
+      res.json({faculty,notAssigned: 'You should be assigned to a course to receive TA application'})
     }else {
       let display=[];
       faculty.courses.forEach(courseId => {
         User.find({applyTA: true,taCourse: courseId,role: 'student'}).then(student => {
           display.push({courseCode: courseId,students: student});
-        }).catch(err => res.status(404).json({notFound: 'No Applicants Found'}))
+        }).catch(err => res.json({faculty,notFound: 'No Applicants Found'}))
       })
       res.json({applications:display});
     }
-  })
+  }).catch(err => {
+    console.log('In error')
+    res.status(404).json({facultyNotFound: 'faculty not found'})})
 })
 
 //ACCEPT TA APPLICATION

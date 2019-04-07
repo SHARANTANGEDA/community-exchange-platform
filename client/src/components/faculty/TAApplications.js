@@ -18,7 +18,7 @@ class TAApplications extends Component {
     if ((taApplications === null) || loading ) {
       allCoursesContent = <Spinner/>
     } else {
-      if(taApplications.applications.display.length===0) {
+      if(taApplications.faculty) {
         allCoursesContent = (
           <div className="col-md-12">
             <div className="desc">
@@ -30,41 +30,57 @@ class TAApplications extends Component {
                   Add Course</Link>
               </div>
             </div>
-          </div>
-        )
-      }else {
-        allCoursesContent = (
-          <div className="col-md-12">
-            <div className="desc">
-              <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontFamily: "'Lobster'"}}
-                  className="rounded border bg-dark text-light text-center p-1 pl-3 pr-5">Teacher Assistant Applications</h1>
-              <div className="pull-right justify-content-end" style={{minWidth: '250px'}}>
-                <Link className="btn btn-primary btn-lg pull-right" style={{minWidth: '250px'}} to="/askQuestion">
-                  Add Course</Link>
+          </div>)
+      } else{
+        console.log({'application': taApplications.applications.display})
+        if(taApplications.applications.display.length===0) {
+          allCoursesContent = (
+            <div className="col-md-12">
+              <div className="desc">
+                <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontFamily: "'Lobster'"}}
+                    className="rounded border bg-dark text-light text-center p-1 pl-3 pr-5">Teacher Assistant Applications</h1>
+                <h3 className='text-center'>No applications received yet</h3>
+                <div className="pull-right justify-content-end" style={{minWidth: '250px'}}>
+                  <Link className="btn btn-primary btn-lg w-100" style={{minWidth: '250px'}} to="/askQuestion">
+                    Add Course</Link>
+                </div>
               </div>
-              <table  className="tableGrid rounded border"
-                      style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',width : '100%'}} border="0">
-                <tbody>
-                <tr>
-                  <td>
-                    <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Applicant Name</strong>
-                  </td>
-                  <td>
-                    <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Applicant EmailId</strong>
-                  </td>
-                  <td>
-                    <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Accept</strong>
-                  </td>
-                  <td>
-                    <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Reject</strong>
-                  </td>
-                </tr>
-                <TAFeed applications={taApplications.applications}/>
-                </tbody>
-              </table>
             </div>
-          </div>
-        )
+          )
+        }else {
+          allCoursesContent = (
+            <div className="col-md-12">
+              <div className="desc">
+                <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontFamily: "'Lobster'"}}
+                    className="rounded border bg-dark text-light text-center p-1 pl-3 pr-5">Teacher Assistant Applications</h1>
+                <div className="pull-right justify-content-end" style={{minWidth: '250px'}}>
+                  <Link className="btn btn-primary btn-lg pull-right" style={{minWidth: '250px'}} to="/askQuestion">
+                    Add Course</Link>
+                </div>
+                <table  className="tableGrid rounded border"
+                        style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',width : '100%'}} border="0">
+                  <tbody>
+                  <tr>
+                    <td>
+                      <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Applicant Name</strong>
+                    </td>
+                    <td>
+                      <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Applicant EmailId</strong>
+                    </td>
+                    <td>
+                      <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Accept</strong>
+                    </td>
+                    <td>
+                      <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Reject</strong>
+                    </td>
+                  </tr>
+                  <TAFeed applications={taApplications.applications}/>
+                  </tbody>
+                </table>
+              </div>
+            </div>)
+      }
+
       }
 
     }
