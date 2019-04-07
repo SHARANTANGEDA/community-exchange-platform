@@ -195,11 +195,13 @@ router.post('/addCourse',passport.authenticate('hod',{session: false}),
 router.get('/unAssignedFaculty',passport.authenticate('hod',{session: false}),
   (req,res) => {
     User.find({role: 'faculty', assigned: false}).then(faculty => {
-      if(faculty) {
-        res.json(faculty);
-      }else {
-        res.json({noUnAssignedFaculty: 'All faculty are assigned at least one of the courses'})
-      }
+      Department.findOne({hod: req.user._id}).then(department => {
+        if(faculty) {
+          res.json({department,faculty});
+        }else {
+          res.json({noUnAssignedFaculty: 'All faculty are assigned at least one of the courses',department})
+        }
+      }).catch(err => res.status(404).json({ noPostsFound: 'No Department found' }))
     }).catch(err => res.status(404).json({notFound: 'faculty not found'}))
 });
 

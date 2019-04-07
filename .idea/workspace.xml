@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92c3f002-70e8-4ff8-9b74-7304e267b2f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/hod/UnAssignedFaculty.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/hodActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/hodActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/FacultyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/FacultyData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/hod/AllCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/AllCourses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/hod/UnAssignedFaculty.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/UnAssignedFaculty.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/department.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/department.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/faculty.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/faculty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/hod.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/hod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validations/login/facultyLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/validations/login/facultyLogin.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,54 +31,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="193" column="57" selection-start-line="193" selection-start-column="57" selection-end-line="193" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/hod.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="156" selection-start-line="124" selection-end-line="156" />
-              <folding>
-                <element signature="e#591#3150#0" />
-                <element signature="e#3225#4362#0" />
-                <element signature="e#4365#4367#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/hod/FacultyData.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="112" column="86" selection-start-line="112" selection-start-column="86" selection-end-line="112" selection-end-column="86" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/hod/UnAssignedFaculty.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="62" column="49" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="49" />
+            <state relative-caret-position="-35">
+              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/api/department.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="778">
+              <caret line="89" column="27" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+              <folding>
+                <element signature="e#1214#1742#0" />
+                <element signature="e#1868#2406#0" />
+                <element signature="e#2409#2459#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/hod/assignFaculty/AssignFaculty.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="548">
+              <caret line="89" column="50" lean-forward="true" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -94,26 +69,61 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/hod/AllCourses.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="126" selection-start-line="126" selection-end-line="126" />
+            <state relative-caret-position="688">
+              <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
               <folding>
-                <element signature="e#746#3310#0" />
-                <element signature="e#3363#4499#0" />
-                <element signature="e#4502#4536#0" />
-                <element signature="e#7594#7613#0" />
-                <element signature="e#9404#9962#0" />
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/validations/login/facultyLogin.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/hod/Courses/CourseFeed.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
+            <state relative-caret-position="315">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/hod/Courses/CourseData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/actions/hodActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="101" column="38" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/faculty/TAApplications.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,18 +133,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="70">
               <caret line="2" column="32" selection-start-line="2" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/reducers/hodReducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#112#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -186,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/components/hod/assignFaculty/AssignFaculty.js" />
         <option value="$PROJECT_DIR$/client/src/components/commonDashboard/FacultyCourse.js" />
         <option value="$PROJECT_DIR$/client/src/components/faculty/displayApplications/ShowStudents.js" />
         <option value="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/QuestionsFeed.js" />
@@ -203,7 +200,6 @@
         <option value="$PROJECT_DIR$/client/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/client/src/components/Users/UserItem.js" />
         <option value="$PROJECT_DIR$/validations/validateDepartment.js" />
-        <option value="$PROJECT_DIR$/client/src/components/hod/AllCourses.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/login/FacultyLogin.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/Register/RegisterFaculty.js" />
         <option value="$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js" />
@@ -215,7 +211,6 @@
         <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js" />
         <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js" />
         <option value="$PROJECT_DIR$/routes/api/questions.js" />
-        <option value="$PROJECT_DIR$/client/src/components/faculty/TAApplications.js" />
         <option value="$PROJECT_DIR$/client/src/actions/facultyActions.js" />
         <option value="$PROJECT_DIR$/client/src/components/admin/AddDepartment.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/adminReducer.js" />
@@ -226,17 +221,20 @@
         <option value="$PROJECT_DIR$/client/src/actions/adminActions.js" />
         <option value="$PROJECT_DIR$/client/src/components/admin/AllDepartments.js" />
         <option value="$PROJECT_DIR$/client/src/components/admin/DepartmentFeed.js" />
-        <option value="$PROJECT_DIR$/routes/api/department.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/FacultyData.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/UnAAssignedFaculty.js" />
         <option value="$PROJECT_DIR$/client/src/actions/hodActions.js" />
-        <option value="$PROJECT_DIR$/client/src/components/hod/UnAssignedFaculty.js" />
         <option value="$PROJECT_DIR$/client/src/App.js" />
         <option value="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" />
         <option value="$PROJECT_DIR$/routes/api/users.js" />
         <option value="$PROJECT_DIR$/routes/api/hod.js" />
-        <option value="$PROJECT_DIR$/routes/api/faculty.js" />
         <option value="$PROJECT_DIR$/validations/login/facultyLogin.js" />
+        <option value="$PROJECT_DIR$/client/src/reducers/facultyReducer.js" />
+        <option value="$PROJECT_DIR$/routes/api/faculty.js" />
+        <option value="$PROJECT_DIR$/client/src/components/faculty/TAApplications.js" />
+        <option value="$PROJECT_DIR$/client/src/components/hod/UnAssignedFaculty.js" />
+        <option value="$PROJECT_DIR$/routes/api/department.js" />
+        <option value="$PROJECT_DIR$/client/src/components/hod/AllCourses.js" />
       </list>
     </option>
   </component>
@@ -261,6 +259,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -340,6 +339,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="hod" type="462c0819:PsiDirectoryNode" />
+              <item name="assignFaculty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="hod" type="462c0819:PsiDirectoryNode" />
               <item name="Courses" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -402,7 +410,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -554,21 +561,8 @@
       <workItem from="1554516286493" duration="29688000" />
       <workItem from="1554567716526" duration="592000" />
       <workItem from="1554570208400" duration="8219000" />
-      <workItem from="1554607714172" duration="3511000" />
-    </task>
-    <task id="LOCAL-00038" summary="#fixed All bugs in View Question,Answer Question and comment question&#10;#Disabled redux dev tools&#10;#Sprint-1 FINAL-PUSH">
-      <created>1551541572840</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1551541572840</updated>
-    </task>
-    <task id="LOCAL-00039" summary="#fixed All bugs in View Question,Answer Question and comment question&#10;#Disabled redux dev tools&#10;#Adds Logo&#10;#Sprint-1 FINAL-PUSH">
-      <created>1552684131725</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1552684131725</updated>
+      <workItem from="1554607714172" duration="4824000" />
+      <workItem from="1554642233241" duration="1583000" />
     </task>
     <task id="LOCAL-00040" summary="#Fixes Tags Bug Updates few Things&#10;#Adds Few other course disciplines to the list">
       <created>1552686488704</created>
@@ -899,11 +893,25 @@
       <option name="project" value="LOCAL" />
       <updated>1554609696752</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="#Fixed all bugs except TA application page">
+      <created>1554611287048</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1554611287048</updated>
+    </task>
+    <task id="LOCAL-00088" summary="#Fixed ta applications page">
+      <created>1554612526177</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1554612526177</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="524802000" />
+    <option name="totallyTimeSpent" value="527698000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -924,7 +932,7 @@
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.40338984" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49749583" visible="true" weight="0.26553673" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49749583" weight="0.20903955" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -980,8 +988,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#Adds all courses page&#10;#Adds view course page&#10;#Made dashboard common" />
-    <MESSAGE value="#Adds Faculty homepage&#10;#adds ta homepage button" />
     <MESSAGE value="#adds TA application page" />
     <MESSAGE value="#Changed My Account auth to all.&#10;#TODO:To change again in sprint-3.&#10;#Fixed Tags bug" />
     <MESSAGE value="#Added authentication to user accounts" />
@@ -1005,29 +1011,11 @@
     <MESSAGE value="#Completed reputation" />
     <MESSAGE value="#Fixed bug and updated model in get questions" />
     <MESSAGE value="#Fixed add department bug and added all departments page for admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Fixed add department bug and added all departments page for admin" />
+    <MESSAGE value="#Fixed all bugs except TA application page" />
+    <MESSAGE value="#Fixed ta applications page" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Fixed ta applications page" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeQuestionsFeed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Users/UserProfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/faculty/displayApplications/TAData.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-105">
@@ -1078,20 +1066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/facultyActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/facultyReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1225">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="910">
@@ -1106,16 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/faculty/TAApplications.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3150">
-          <caret line="90" column="48" lean-forward="true" selection-start-line="90" selection-start-column="48" selection-end-line="90" selection-end-column="48" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -1152,16 +1116,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/adminReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/adminReducer.js" />
     <entry file="file://$PROJECT_DIR$/client/src/reducers/courseReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1207,16 +1162,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/hod/Courses/CourseData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1540">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -1231,15 +1176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/hod/Courses/CourseFeed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1333,16 +1269,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/hod/AllCourses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="28" column="107" selection-end-line="88" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -1350,37 +1276,6 @@
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/department.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="194" column="30" selection-start-line="194" selection-start-column="13" selection-end-line="194" selection-end-column="30" />
-          <folding>
-            <element signature="e#1214#1742#0" />
-            <element signature="e#1868#2406#0" />
-            <element signature="e#2409#2459#0" />
-            <element signature="e#3456#5736#0" />
-            <element signature="e#6699#6767#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/hodActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="83" column="16" lean-forward="true" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1411,10 +1306,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/hod/UnAssignedFaculty.js">
+    <entry file="file://$PROJECT_DIR$/validations/taApplication.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="62" column="49" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="49" />
+        <state relative-caret-position="6755">
+          <caret line="193" column="57" selection-start-line="193" selection-start-column="57" selection-end-line="193" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/hod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="156" selection-start-line="124" selection-end-line="156" />
+          <folding>
+            <element signature="e#591#3150#0" />
+            <element signature="e#3225#4362#0" />
+            <element signature="e#4365#4367#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/facultyActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/facultyReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1855">
+          <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3045">
+          <caret line="282" column="42" selection-start-line="282" selection-start-column="42" selection-end-line="282" selection-end-column="42" />
+          <folding>
+            <element signature="e#746#3310#0" />
+            <element signature="e#3363#4499#0" />
+            <element signature="e#4502#4536#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validations/login/facultyLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validations/login/hodLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="2" column="32" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/faculty/TAApplications.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -1431,50 +1395,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/hod/UnAssignedFaculty.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="193" column="57" selection-start-line="193" selection-start-column="57" selection-end-line="193" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/hod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="156" selection-start-line="124" selection-end-line="156" />
+        <state relative-caret-position="-35">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding>
-            <element signature="e#591#3150#0" />
-            <element signature="e#3225#4362#0" />
-            <element signature="e#4365#4367#0" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/hod/AllCourses.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        <state relative-caret-position="688">
+          <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
           <folding>
-            <element signature="e#746#3310#0" />
-            <element signature="e#3363#4499#0" />
-            <element signature="e#4502#4536#0" />
-            <element signature="e#7594#7613#0" />
-            <element signature="e#9404#9962#0" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validations/login/hodLogin.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/hod/Courses/CourseFeed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="2" column="32" selection-start-line="2" selection-end-line="3" />
+        <state relative-caret-position="315">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validations/login/facultyLogin.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/hod/Courses/CourseData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
+        <state relative-caret-position="419">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/hod/assignFaculty/AssignFaculty.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="89" column="50" lean-forward="true" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/hodActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="101" column="38" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/department.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="778">
+          <caret line="89" column="27" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+          <folding>
+            <element signature="e#1214#1742#0" />
+            <element signature="e#1868#2406#0" />
+            <element signature="e#2409#2459#0" />
+          </folding>
         </state>
       </provider>
     </entry>

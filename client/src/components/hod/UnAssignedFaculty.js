@@ -3,8 +3,6 @@ import PropTypes  from 'prop-types'
 import { connect } from 'react-redux'
 import Spinner from '../common/Spinner'
 import { getAllCourses, getUnAssignedFaculty } from '../../actions/hodActions'
-import CourseFeed from './Courses/CourseFeed'
-import { Link } from 'react-router-dom'
 import FacultyFeed from './FacultyFeed'
 
 class AllCourses extends Component {

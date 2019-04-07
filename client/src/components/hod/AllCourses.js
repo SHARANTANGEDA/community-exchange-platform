@@ -53,7 +53,7 @@ class AllCourses extends Component {
                     <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Course ID</strong>
                   </td>
                   <td>
-                    <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Faculty Status</strong>
+                    <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Course Status</strong>
                   </td>
                 </tr>
                 <CourseFeed courses = {courses}/>
