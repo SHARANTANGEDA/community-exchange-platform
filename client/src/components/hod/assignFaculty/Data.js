@@ -56,7 +56,7 @@ class Data extends Component {
           <span style={{ fontSize: '13.3333330154419px' ,background: 'green',color: 'white'}}>
             <i className="fa fa-plus" aria-hidden="true"/>
             <button className=" btn btn-primary"
-                    onClick={this.onAssign} target="_blank" style={{background: 'green',color: 'white'}}>Add</button>
+                    onClick={this.onAssign} style={{background: 'green',color: 'white'}}>Add</button>
           </span>
         </td>
       </tr>
