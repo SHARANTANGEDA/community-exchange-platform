@@ -6,7 +6,6 @@ import { changePassword } from '../../actions/profileActions'
 
 import classnames from 'classnames'
 import { applyTA, getCourseCodes } from '../../actions/homeQuestionsActions'
-import Spinner from '../common/Spinner'
 import GetCourses from './GetCourses'
 
 class ApplyTA extends Component {

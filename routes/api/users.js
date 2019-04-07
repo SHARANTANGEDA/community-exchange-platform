@@ -268,8 +268,8 @@ router.get('/getAllCourses',passport.authenticate('student',{session: false}),(r
   let courses=[];
   Department.find().then(departments => {
     departments.forEach(department => {
-      department.coursesId.forEach(cid => {
-        courses.push(cid);
+      department.courses.forEach(course => {
+        courses.push(course.courseCode);
       })
     })
     res.json({allCourses: courses})

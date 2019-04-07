@@ -39,8 +39,5 @@ const DepartmentSchema = new Schema({
       default: Date.now
     }
   }],
-  coursesId: {
-    type: [String]
-  }
 })
 module.exports = Department = mongoose.model('department', DepartmentSchema)

@@ -345,24 +345,30 @@ router.get('/home',passport.authenticate('faculty', {session: false}),(req,res) 
         throw 'err';
       }
       faculty.courses.forEach(course => {
+        console.log({course:course})
         Question.find({course: course}).sort({time: -1}).limit(5).then(questions => {
-          display.push({course,questions});
+          console.log({Question: questions})
+          if(questions.length===0) {
+            display.push({course,questions,none: true});
+          }else {
+            display.push({course,questions,none: false});
+          }
         }).catch(err => {
           Question.find()
             .sort({time: -1})
             .limit(10)
             .then(questions => {
-              res.json({NotAssigned: 'You are not assigned any course yet',questions})
+              res.json({questions})
             }).catch(err => res.status(404).json({noPostsFound: 'No posts found'}))
         })
       })
-      res.json({data:display});
+      res.json({data:display,NotAssigned:false});
     }).catch(err => {
       Question.find()
     .sort({time: -1})
     .limit(10)
     .then(questions => {
-      res.json({NotAssigned: 'You are not assigned any course yet',questions})
+      res.json({NotAssigned: true,questions})
     }).catch(err => res.status(404).json({noPostsFound: 'No posts found'}));})
 })
 module.exports = router

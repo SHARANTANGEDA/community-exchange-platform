@@ -118,7 +118,8 @@ router.post('/ask',passport.authenticate('all',{session: false}),
     description: req.body.description,
     avatar: req.user.avatar,
     userId: req.user._id,
-    user: req.user._id
+    user: req.user._id,
+    course:req.body.course
   });
 
   newQuestion.save().then(question => res.json(question)).catch(err => res.json(errors));

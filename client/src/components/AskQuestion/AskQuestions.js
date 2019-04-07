@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { askQuestion } from '../../actions/homeQuestionsActions'
+import { askQuestion, getCourseCodes } from '../../actions/homeQuestionsActions'
 import classnames from 'classnames';
+import GetCourses from '../commonDashboard/GetCourses'
 
 class AskQuestions extends Component {
   constructor () {
@@ -11,6 +12,7 @@ class AskQuestions extends Component {
       title: '',
       description: '',
       tags: '',
+      course: 'Choose Course',
       errors: {}
 
     }
@@ -19,6 +21,11 @@ class AskQuestions extends Component {
     this.onSubmit = this.onSubmit.bind(this)
   }
 
+  componentDidMount() {
+    this.props.getCourseCodes(this.props.match.params.id);
+    console.log("Called DidMount in All CourseCodes");
+
+  }
   componentWillReceiveProps (nextProps, nextContext) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors })
@@ -36,7 +43,8 @@ class AskQuestions extends Component {
       tags: this.state.tags,
       firstName: user.firstName,
       lastName: user.lastName,
-      avatar: user.avatar
+      avatar: user.avatar,
+      course:this.state.course
     }
     this.props.askQuestion(newQuestion);
     if(this.state.title==='' || this.state.description==='' || this.state.tags==='') {
@@ -53,11 +61,26 @@ class AskQuestions extends Component {
     this.setState({ title: '' })
     this.setState({ description: '' })
     this.setState({ tags: '' })
+    this.setState({ course: 'Choose Course' })
+
   }
 
 
   render () {
     const { errors } = this.state;
+    const { courses, loading } = this.props.courses;
+    const {home} = this.props;
+    let content;
+
+    if (courses === null || loading) {
+      content = null;
+    } else {
+      let codes=courses.allCourses;
+      console.log({codes:codes})
+      content = (
+        <GetCourses codes={codes}/>
+      )
+    }
     console.log("In Ask Question")
     return (
       <div className='askQuestion'>
@@ -108,6 +131,18 @@ class AskQuestions extends Component {
                 </div>
               </div>
             </div>
+            <div className="wrap-input100 input100-select form-group">
+              <select className={classnames("selection-2 form-control form-control-lg",{'is-invalid': errors.course})}
+                      name="course" value={this.state.course} onChange={this.onChange}>
+
+                <option>Choose Course</option>
+                {content}
+              </select>
+              {errors.course && (
+                <div className="invalid-feedback">{errors.course}</div>
+              )}
+            </div>
+            <span className="focus-input100"/>
             <div className="ps-relative">
                 <label htmlFor="tagNames" className="s-label mb4 d-block">
                   <h4>Tags</h4>
@@ -140,12 +175,18 @@ class AskQuestions extends Component {
 AskQuestions.propTypes = {
   askQuestion: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  getCourseCodes: PropTypes.func.isRequired,
+  errors: PropTypes.object.isRequired,
+  courses: PropTypes.object.isRequired,
+  home: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
+  courses: state.courses,
+  home: state.home,
+
 })
 
-export default connect(mapStateToProps, { askQuestion })(AskQuestions)
+export default connect(mapStateToProps, { getCourseCodes,askQuestion })(AskQuestions)

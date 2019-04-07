@@ -6,6 +6,7 @@ module.exports = (data) => {
   data.title = !isEmpty(data.title) ? data.title : '';
   data.tags = !isEmpty(data.tags) ? data.tags : '';
   data.description = !isEmpty(data.description) ? data.description : '';
+  data.course = !isEmpty(data.course) ? data.course : 'Choose Course';
   //TODO Add validation for Image
   if(Validator.isEmpty(data.title)) {
     errors.title = 'Title Field is Required';

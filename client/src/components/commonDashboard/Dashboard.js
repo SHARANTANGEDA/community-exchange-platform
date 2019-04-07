@@ -162,11 +162,13 @@ class Dashboard extends Component {
       if ((home === null) || loading ) {
         dashboardContent = <Spinner/>
       } else {
-        console.log({error:error})
         let newError=false
-        if(home.NotAssigned!==null) {
+        if(home.NotAssigned) {
           newError=true
         }
+        console.log({error:error,newError: true})
+
+        console.log({home:home})
         if(error || newError) {
           dashboardContent = (
             <div className="col-md-12">
