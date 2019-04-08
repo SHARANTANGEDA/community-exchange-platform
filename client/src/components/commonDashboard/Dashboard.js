@@ -158,6 +158,7 @@ class Dashboard extends Component {
       )
     }else if(this.props.auth.user.role==='faculty') {
       const { home, loading,error} = this.props.faculty
+      console.log({home: home})
       let dashboardContent
       if ((home === null) || loading ) {
         dashboardContent = <Spinner/>

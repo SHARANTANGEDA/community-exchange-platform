@@ -28,6 +28,7 @@ class UserProfile extends Component {
       profileContentII = null;
     } else {
       let fullName = profile.user.firstName + ' ' + profile.user.lastName;
+      console.log({repu: profile.user.reputation})
       profileContentI = (
         <table className="table profile__table">
         <tbody>

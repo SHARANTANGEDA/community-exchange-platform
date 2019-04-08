@@ -49,7 +49,7 @@ router.post('/register', (req, res) => {
           newFaculty
             .save()
             .then(user => {
-              const payload = { id: user.id, avatar: user.avatar }
+              const payload = { id: user.id, avatar: user.avatar ,assigned:user.assigned}
               //TODO change secret key and signIn options
               jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
                 (err, token) => {
@@ -107,7 +107,7 @@ router.post('/login', (req, res) => {
         // if(!user.isVerified) {
         //   return res.status(401).json({type: not-Verified, msg: 'Your account is not verified'});
         // }
-        const payload = { id: user.id,role: user.role,avatar: user.avatar}
+        const payload = { id: user.id,role: user.role,avatar: user.avatar,assigned:user.assigned}
         //TODO change secret key and signIn options
         jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
           (err, token) => {
@@ -124,128 +124,6 @@ router.post('/login', (req, res) => {
   })
 })
 
-// //Logged In Session currentUser
-// router.get('/myAccount', passport.authenticate('faculty', { session: false }),
-//   (req, res) => {
-//     let activity = {};
-//     const userId=req.user._id;
-//     Question.find({ user: userId }, { 'title': 1, 'tags': 1, 'description': 1, 'time': 1, '_id': 0 })
-//       .then(questions => {
-//         if (!questions) {
-//         } else {
-//           activity.questions = questions;
-//           Question.find({ 'comments.user': userId }, {
-//             'title': 1,
-//             'tags': 1,
-//             'comments.text': 1,
-//             'comments.time': 1,
-//             'time': 1,
-//             '_id': 0
-//           }).then(comments => {
-//             if (!comments) {
-//             } else {
-//               activity.comments = comments;
-//               Question.find({ 'answer.user': userId }, {
-//                 'title': 1,
-//                 'tags': 1,
-//                 'time': 1,
-//                 '_id': 0,
-//                 'answer.text': 1,
-//                 'answer.time': 1
-//               }).then(answers => {
-//                 if (!answers) {
-//                 } else {
-//                   activity.answers = answers;
-//                   res.json({
-//                     firstName: req.user.firstName,
-//                     lastName: req.user.lastName,
-//                     email: req.user.emailId,
-//                     departmentName: req.user.departmentName,
-//                     website: req.user.website,
-//                     avatar: req.user.avatar,
-//                     linkedIn: req.user.linkedIn,
-//                     questionsAsked: activity.questions,
-//                     questionsAnswered: activity.answers,
-//                     questionsCommented: activity.comments
-//                   })
-//                 }
-//               }).catch(err => {
-//                 return res.status(404).json({ err })
-//               })
-//             }
-//           }).catch(err => {
-//             return res.status(404).json({ err })
-//           })
-//         }
-//       }).catch(err => {
-//       return res.status(404).json({ err })
-//     })
-//
-//
-//
-//
-//   })
-//
-// //Change Password
-// router.post('/changePassword', passport.authenticate('faculty', { session: false }),
-//   (req, res) => {
-//     const { errors, isValid } = validatePassword(req.body)
-//     if (!isValid) {
-//       res.status(404).json(errors)
-//     }
-//     const password = req.body.password
-//     let newPassword = req.body.newPassword
-//     bcrypt.compare(password, req.user.password).then(isMatch => {
-//       if (isMatch) {
-//         bcrypt.genSalt(10, (err, salt) => {
-//           bcrypt.hash(newPassword, salt, (err, hash) => {
-//             if (err) throw err
-//             newPassword = hash
-//             User.findOneAndUpdate({_id: req.user._id}, { password: newPassword }, (err, res) => {
-//               if (err) throw err
-//             }).then(user => {
-//               res.json({ success: 'password is changed successfully' })
-//             }).catch(err => {
-//               return res.status(404).json({ failed: 'Your password is not updated', err })
-//             })
-//           })
-//         })
-//       } else {
-//         errors.password = 'Incorrect Password'
-//         return res.status(400).json(errors.password)
-//       }
-//     })
-//   })
-
-// //Update Profile
-// router.post('/myAccount/change', passport.authenticate('faculty', { session: false }),
-//   (req, res) => {
-//     const { errors, isValid } = validateProfileInput(req.body);
-//     console.log({body: req.body})
-//     if (!isValid) {
-//       return res.status(400).json(errors);
-//     }
-//     const profileFields = {};
-//     if (req.body.website) {
-//       profileFields.website = req.body.website;
-//     }
-//     // TODO Skills
-//     // if (typeof req.body.skills !== 'undefined') {
-//     //   profileFields.skills = req.body.skills.split(',');
-//     // }
-//     // if (req.body.codeForces) {
-//     //   profileFields.codeForces = req.body.codeForces;
-//     // }
-//     if (req.body.linkedIn) profileFields.linkedIn = req.body.linkedIn;
-//     User.findOneAndUpdate(
-//       { _id: req.user._id },
-//       { $set: profileFields },
-//       {new: true}
-//     ).then(user => {
-//       res.json(user)
-//     });
-//   }
-// );
 
 router.get('/myCourses',passport.authenticate('faculty',{session: false}),(req,res) => {
 
@@ -270,20 +148,22 @@ router.get('/myCourses',passport.authenticate('faculty',{session: false}),(req,r
 router.get('/applications',passport.authenticate('faculty', {session: false}),
   (req,res)  => {
   User.findById(req.user._id).then(faculty => {
-    console.log('In faculty')
-
     if(!faculty.assigned) {
       console.log('In not assigned')
       res.json({faculty,notAssigned: 'You should be assigned to a course to receive TA application'})
-    }else {
+    }
+  })
+  User.findById(req.user._id).then(async faculty => {
+    console.log('In faculty')
       let display=[];
       faculty.courses.forEach(courseId => {
-        User.find({applyTA: true,taCourse: courseId,role: 'student'}).then(student => {
-          display.push({courseCode: courseId,students: student});
-        }).catch(err => res.json({faculty,notFound: 'No Applicants Found'}))
-      })
-      res.json({applications:display});
-    }
+        display.push(new Promise((resolve, reject) => {
+          User.find({applyTA: true,taCourse: courseId,role: 'student'}).then(student => {
+            resolve({courseCode: courseId,students: student})
+          })
+        }).catch(err => reject({faculty,notFound: 'No Applicants Found'}))
+  )})
+      res.json({applications:await Promise.all(display)});
   }).catch(err => {
     console.log('In error')
     res.status(404).json({facultyNotFound: 'faculty not found'})})
@@ -301,7 +181,7 @@ router.post('/applications/accept/:id',passport.authenticate('faculty',{session:
 //REJECT TA APPLICATION
 router.post('/applications/reject/:id',passport.authenticate('faculty',{session: false}),
   (req,res) => {
-    User.findByIdAndUpdate(req.params.id,{applyTA: false, taCourse:[]},{new: true})
+    User.findByIdAndUpdate(req.params.id,{applyTA: false, taCourse:null},{new: true})
       .then(user => {
         res.json({success: 'Rejected TA application'})
       }).catch(err => res.status(401).json({error: 'Error Rejecting try again in sometime'}))
@@ -310,10 +190,7 @@ router.post('/applications/reject/:id',passport.authenticate('faculty',{session:
 //GET COURSE QUESTIONS
 router.get('/courseQuestions/:id',passport.authenticate('faculty',{session: false}),
   (req,res) => {
-    Question.find({course: req.params.id}).then(questions => {
-      res.json(questions)
-    }).catch(err => res.status(404).json(
-      {noFound: 'No question is found based on this course'}));
+
 })
 router.get('/getTAs',passport.authenticate('faculty',{session: false},
   (req,res) => {
@@ -339,36 +216,45 @@ router.get('deleteTA/:id',passport.authenticate('faculty',{session: false}),
 })
 
 router.get('/home',passport.authenticate('faculty', {session: false}),(req,res) => {
-  User.findById(req.user._id).then(faculty => {
-      let display=[];
-      if(faculty.courses.length===0) {
-        throw 'err';
-      }
-      faculty.courses.forEach(course => {
-        console.log({course:course})
-        Question.find({course: course}).sort({time: -1}).limit(5).then(questions => {
-          console.log({Question: questions})
-          if(questions.length===0) {
-            display.push({course,questions,none: true});
-          }else {
-            display.push({course,questions,none: false});
-          }
-        }).catch(err => {
-          Question.find()
-            .sort({time: -1})
-            .limit(10)
-            .then(questions => {
-              res.json({questions})
-            }).catch(err => res.status(404).json({noPostsFound: 'No posts found'}))
-        })
+  let defQuestions=[];
+  if(!req.user.assigned) {
+    Question.find().sort({time: -1})
+      .limit(10).then(questions => {
+         res.json({NotAssigned: true, questions})
       })
-      res.json({data:display,NotAssigned:false});
-    }).catch(err => {
-      Question.find()
-    .sort({time: -1})
-    .limit(10)
-    .then(questions => {
-      res.json({NotAssigned: true,questions})
-    }).catch(err => res.status(404).json({noPostsFound: 'No posts found'}));})
+  } else {
+
+    Question.find()
+      .sort({ time: -1 })
+      .limit(10)
+      .then(questions => {
+        defQuestions = questions;
+      }).catch(err => res.status(404).json({ noPostsFound: 'No posts found' }))
+    User.findById(req.user._id).then(async faculty => {
+      let display = [];
+
+      faculty.courses.map(course => {
+        display.push(new Promise((resolve, reject) => {
+          Question.find({ course: course }).sort({ time: -1 }).limit(5).then(questions => {
+            if (questions.length === 0) {
+              resolve({ course, questions, none: true })
+            } else {
+              resolve({ course, questions, none: true })
+            }
+          }).catch(err => {
+            reject(Question.find().then(questions => {
+                res.json(questions)
+              }).catch(err => res.status(404).json(
+              { noFound: 'No question is found based on this course' }))
+            )
+          })
+        }))
+      })
+
+      res.json({ data: await Promise.all(display), NotAssigned: false });
+
+    }).catch(err => res.status(404).json(
+      { noFound: 'No question is found based on this course' }));
+  }
 })
 module.exports = router

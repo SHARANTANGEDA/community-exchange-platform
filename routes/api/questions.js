@@ -12,7 +12,7 @@ const validateQuestionInput = require('../../validations/askQuestions')
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-router.post('downVote/:id',passport.authenticate('all',{session: false}),(req, res) => {
+router.post('/downVote/:id',passport.authenticate('all',{session: false}),(req, res) => {
   User.findOne({ user: req.user.id }).then(user => {
     Question.findById(req.params.id)
       .then(question => {
@@ -34,7 +34,7 @@ router.post('downVote/:id',passport.authenticate('all',{session: false}),(req, r
 });
 
 // UpVote a question
-router.post('upVote/:id',passport.authenticate('all',{session: false}),(req, res) => {
+router.post('/upVote/:id',passport.authenticate('all',{session: false}),(req, res) => {
   User.findOne({ user: req.user.id }).then(user => {
     Question.findById(req.params.id)
       .then(question => {

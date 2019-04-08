@@ -16,33 +16,33 @@ class Sidebar extends Component {
           <li className="active">
           </li>
           <li>
-            <Link to="/dashboard" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="/dashboard" style={{textDecoration: 'none'}}>
               <i className="fas fa-home"/>
               Home
             </Link>
-            <Link to="/allQuestions" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="/allQuestions" style={{textDecoration: 'none'}}>
               <i className="fas fa-question"/>
               All Questions
             </Link>
-            <Link to="/allProfiles" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="/allProfiles" style={{textDecoration: 'none'}}>
               <i className="fas fa-question"/>
               All Users
             </Link>
-            <Link to="" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle" style={{textDecoration: 'none',color: 'black'}}>
-              <i className="fas fa-copy"/>
-              Tags
-            </Link>
-            <ul className="collapse list-unstyled" id="pageSubmenu">
-              <li>
-                <Link to="" style={{textDecoration: 'none',color: 'black'}}>Course Tags</Link>
-              </li>
-              <li>
-                <Link to="" style={{textDecoration: 'none',color: 'black'}}>Subject Tags</Link>
-              </li>
-            </ul>
+            {/*<Link to="" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle" style={{textDecoration: 'none',color: 'black'}}>*/}
+            {/*  <i className="fas fa-copy"/>*/}
+            {/*  Tags*/}
+            {/*</Link>*/}
+            {/*<ul className="collapse list-unstyled" id="pageSubmenu">*/}
+            {/*  <li>*/}
+            {/*    <Link to="" style={{textDecoration: 'none',color: 'black'}}>Course Tags</Link>*/}
+            {/*  </li>*/}
+            {/*  <li>*/}
+            {/*    <Link to="" style={{textDecoration: 'none',color: 'black'}}>Subject Tags</Link>*/}
+            {/*  </li>*/}
+            {/*</ul>*/}
           </li>
           <li>
-            <Link to="" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="" style={{textDecoration: 'none'}}>
               <i className="fas fa-paper-plane"/>
               Contact Us
             </Link>
@@ -57,37 +57,37 @@ class Sidebar extends Component {
           <li className="active">
           </li>
           <li>
-            <Link to="/dashboard" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="/dashboard" style={{textDecoration: 'none'}}>
               <i className="fas fa-home"/>
               Home
             </Link>
-            <Link to="/allQuestions" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="/allQuestions" style={{textDecoration: 'none'}}>
               <i className="fas fa-question"/>
               All Questions
             </Link>
-            <Link to="/allProfiles" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="/allProfiles" style={{textDecoration: 'none'}}>
               <i className="fas fa-question"/>
               All Users
             </Link>
-            <Link to="/taApplications" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="/taApplications" style={{textDecoration: 'none'}}>
               <i className="fas fa-question"/>
               TA Applications
             </Link>
-            <Link to="" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle" style={{textDecoration: 'none',color: 'black'}}>
-              <i className="fas fa-copy"/>
-              Tags
-            </Link>
-            <ul className="collapse list-unstyled" id="pageSubmenu">
-              <li>
-                <Link to="" style={{textDecoration: 'none',color: 'black'}}>Course Tags</Link>
-              </li>
-              <li>
-                <Link to="" style={{textDecoration: 'none',color: 'black'}}>Subject Tags</Link>
-              </li>
-            </ul>
+            {/*<Link to="" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle" style={{textDecoration: 'none',color: 'black'}}>*/}
+            {/*  <i className="fas fa-copy"/>*/}
+            {/*  Tags*/}
+            {/*</Link>*/}
+            {/*<ul className="collapse list-unstyled" id="pageSubmenu">*/}
+            {/*  <li>*/}
+            {/*    <Link to="" style={{textDecoration: 'none',color: 'black'}}>Course Tags</Link>*/}
+            {/*  </li>*/}
+            {/*  <li>*/}
+            {/*    <Link to="" style={{textDecoration: 'none',color: 'black'}}>Subject Tags</Link>*/}
+            {/*  </li>*/}
+            {/*</ul>*/}
           </li>
           <li>
-            <Link to="" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="" style={{textDecoration: 'none'}}>
               <i className="fas fa-paper-plane"/>
               Contact Us
             </Link>
@@ -102,29 +102,29 @@ class Sidebar extends Component {
           <li className="active">
           </li>
           <li>
-            <Link to="/hodDashboard" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="/dashboard" style={{textDecoration: 'none'}}>
               <i className="fas fa-home"/>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/allProfiles" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="/allProfiles" style={{textDecoration: 'none'}}>
               <i className="fas fa-question"/>
               All Users
             </Link>
           </li>
           <li>
-            <Link to="/unAssignedFaculty" style={{textDecoration: 'none',color: 'black'}}>
+            <Link to="/unAssignedFaculty" style={{textDecoration: 'none'}}>
               UnAssigned Faculty
             </Link>
           </li>
           <li>
-          <Link to="/allCourses" style={{textDecoration: 'none',color: 'black'}}>
+          <Link to="/allCourses" style={{textDecoration: 'none'}}>
               All Courses
             </Link>
           </li>
           <li>
-          <Link to="" style={{textDecoration: 'none',color: 'black'}}>
+          <Link to="" style={{textDecoration: 'none'}}>
               <i className="fas fa-paper-plane"/>
               Contact Us
             </Link>

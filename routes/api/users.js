@@ -43,7 +43,6 @@ router.post('/register', (req, res) => {
         isTA: false,
         role: 'student'
       })
-
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
           if (err) throw err
@@ -264,7 +263,7 @@ router.post('/applyForTA',passport.authenticate('student',{session:false}),
       res.json(user)
     }).catch(err => res.status(400).json('There was error in submitting the application'))
   })
-router.get('/getAllCourses',passport.authenticate('student',{session: false}),(req,res) => {
+router.get('/getAllCourses',passport.authenticate('all',{session: false}),(req,res) => {
   let courses=[];
   Department.find().then(departments => {
     departments.forEach(department => {

@@ -15,7 +15,7 @@ export const getCourse = id => dispatch => {
   console.log("In all courses actions")
 
   axios
-    .get(`/api/department/course/:id`)
+    .get(`/api/department/course/${id}`)
     .then(res =>
       dispatch({
         type: GET_COURSES,
@@ -132,14 +132,20 @@ export const addCourse = (courseData,history) => dispatch => {
 
 // Assign Faculty
 export const assignFaculty = (assignData,history) => dispatch => {
+  dispatch(clearErrors());
   axios
     .post(`/api/department/assignFaculty`,assignData)
-    .then(res => history.push(`/assignFaculty/${assignData.id}`))
-    .catch(err =>
-      dispatch({
-        type: GET_ERRORS,
-        payload: err.response.data
-      })
+    .then(res => {
+      console.log({Action: res})
+      window.location.reload()
+    })
+    .catch(err => {
+        window.location.reload()
+        dispatch({
+          type: GET_ERRORS,
+          payload: err.response.data
+        })
+    }
     );
 };
 

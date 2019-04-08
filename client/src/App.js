@@ -35,6 +35,7 @@ import TAApplications from './components/faculty/TAApplications'
 import AllDepartments from './components/admin/AllDepartments'
 import UnAssignedFaculty from './components/hod/UnAssignedFaculty'
 import AssignFaculty from './components/hod/assignFaculty/AssignFaculty'
+import ViewCourse from './components/hod/ViewCourse'
 
 //Check for token
 if(localStorage.jwtToken) {
@@ -114,6 +115,9 @@ class App extends Component {
           </Switch>
           <Switch>
             <PrivateRoute exact path='/assignFaculty/:id' component={AssignFaculty}/>
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path='/viewCourse/:id' component={ViewCourse}/>
           </Switch>
           </div>
         </div>

@@ -14,7 +14,8 @@ app.use(bodyParser.json());
 /*@all profiles*/
 router.get('/', passport.authenticate('all', { session: false }), (req, res) => {
   User.find({$or:[{'role':'faculty'},{'role': 'student' },{'role': 'hod'}]}, {
-    'firstName': 1, 'lastName': 1, 'emailId': 1, 'avatar': 1, 'departmentName': 1, 'githubUsername': 1, 'role': 1
+    'firstName': 1, 'lastName': 1, 'emailId': 1, 'avatar': 1, 'departmentName': 1, 'githubUsername': 1, 'role': 1,
+    'reputation': 1
   })
     .then(users => {
       if (!users) {
@@ -54,7 +55,7 @@ router.get('/:id',passport.authenticate('all', { session: false }), (req, res) =
   const errors = {};
   User.findById(req.params.id, {
     'firstName': 1, 'lastName': 1, 'emailId': 1, 'avatar': 1, 'departmentName': 1, 'githubUsername': 1,
-    '_id': 0,'role': 1
+    '_id': 0,'role': 1,'reputation': 1
   })
     .then(user => {
       if (!user) {

@@ -6,14 +6,14 @@ class TAFeed extends Component {
   render() {
     const  {applications}  = this.props;
     console.log({'TAFeed':applications});
-    return applications.display.map(course => (
-      <TAData course={course} key={course._id}/>
+    return applications.map(course => (
+      <TAData course={course} key={course.courseCode}/>
     ));
   }
 }
 
 TAFeed.propTypes = {
-  applications: PropTypes.object.isRequired
+  applications: PropTypes.array.isRequired
 };
 
 export default TAFeed;

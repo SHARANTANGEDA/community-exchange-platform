@@ -28,7 +28,7 @@ class TAApplications extends Component {
             </div>
           </div>)
       } else{
-        console.log({'application': taApplications.applications})
+        console.log( taApplications.applications)
         if(taApplications.applications.length===0) {
           allCoursesContent = (
             <div className="col-md-12">
@@ -48,26 +48,7 @@ class TAApplications extends Component {
               <div className="desc">
                 <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontFamily: "'Lobster'"}}
                     className="rounded border bg-dark text-light text-center p-1 pl-3 pr-5">Teacher Assistant Applications</h1>
-                <table  className="tableGrid rounded border"
-                        style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',width : '100%'}} border="0">
-                  <tbody>
-                  <tr>
-                    <td>
-                      <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Applicant Name</strong>
-                    </td>
-                    <td>
-                      <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Applicant EmailId</strong>
-                    </td>
-                    <td>
-                      <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Accept</strong>
-                    </td>
-                    <td>
-                      <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>Reject</strong>
-                    </td>
-                  </tr>
-                  <TAFeed applications={taApplications.applications}/>
-                  </tbody>
-                </table>
+                <TAFeed applications={taApplications.applications}/>
               </div>
             </div>)
       }

@@ -7,9 +7,7 @@ class ShowStudents extends Component {
     const  {students}  = this.props;
     console.log({'StudentFeed':students});
     return students.map(student => (
-      <li>
-        <StudentData student={student}/>
-      </li>
+        <StudentData student={student} key={student._id}/>
     ));
   }
 }

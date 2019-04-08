@@ -11,7 +11,7 @@ const validateAnswerInput = require('../../validations/answerQuestion');
 
 
 //Down Vote an answer
-router.post('downVote/:id/:answerId',passport.authenticate('all',{session: false}),(req, res) => {
+router.post('/downVote/:id/:answerId',passport.authenticate('all',{session: false}),(req, res) => {
   User.findOne({ user: req.user.id }).then(user => {
     Question.findById(req.params.id)
       .then(question => {
@@ -36,7 +36,7 @@ router.post('downVote/:id/:answerId',passport.authenticate('all',{session: false
 });
 
 // UpVote an answer
-router.post('upVote/:id/:answerId',passport.authenticate('all',{session: false}),(req, res) => {
+router.post('/upVote/:id/:answerId',passport.authenticate('all',{session: false}),(req, res) => {
   User.findOne({ user: req.user.id }).then(user => {
     Question.findById(req.params.id)
       .then(question => {

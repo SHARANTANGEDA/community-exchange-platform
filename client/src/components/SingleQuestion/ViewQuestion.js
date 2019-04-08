@@ -56,11 +56,11 @@ class ViewQuestion extends Component {
                 <div className="col-md-1">
                   <div className="row text-center">
             <span>
-              <button onClick={this.onUpVote}>
+              <button onClick={this.onUpVote} style={{border: 'none',background: 'white',minWidth:'40px'}}>
                 <i className="fas fa-chevron-up fa-2x" style={{ color: 'green' }}/>
               </button>
               <h1 className="display-5">{rate}</h1>
-              <button onClick={this.onDownVote}>
+              <button onClick={this.onDownVote} style={{border: 'none',background: 'white',minWidth:'40px'}}>
                 <i className="fas fa-chevron-down fa-2x" style={{ color: 'red' }}/>
               </button>
             </span>
@@ -108,12 +108,8 @@ class ViewQuestion extends Component {
                     </div>
                   </div>
                   <div className="d-flex flex-grow-1 col-md-12">
-                    <div className="comment-text js-comment-text-and-form w-75">
-                      <div className="comment-body js-comment-edit-hide">
                         {question.comments ? (<CommentFeed comments={question.comments}/>) : null}
                         <CommentForm questionId={question._id}/>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>

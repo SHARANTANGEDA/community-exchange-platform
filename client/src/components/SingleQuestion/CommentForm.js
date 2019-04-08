@@ -66,7 +66,7 @@ class CommentForm extends Component {
             (<div className="invalid-feedback" >{errors.text}</div>)
             }
           </div>
-          <div className="col-md-2 justify-content-center d-inline-flex align-items-center">
+          <div className="col-md-12">
             <button className="btn btn-primary w-70 my-2 px-4" type="submit">Post</button></div>
         </div>
       </form>

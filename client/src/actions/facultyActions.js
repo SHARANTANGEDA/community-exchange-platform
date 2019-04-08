@@ -59,8 +59,7 @@ export const acceptTA = (id) => dispatch => {
   axios
     .post(`/api/faculty/applications/accept/${id}`)
     .then(res =>
-      console.log(res)
-
+      window.location.reload()
     )
     .catch(err =>
       dispatch({
@@ -74,9 +73,9 @@ export const rejectTA = (id) => dispatch => {
   console.log("rejecting TA action")
 
   axios
-    .get(`/api/faculty/applications/reject/${id}`)
+    .post(`/api/faculty/applications/reject/${id}`)
     .then(res =>
-      console.log(res)
+        window.location.reload()
     )
     .catch(err =>
       dispatch({

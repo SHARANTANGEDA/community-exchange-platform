@@ -8,6 +8,7 @@ class UserItem extends Component {
   render () {
     const {user} = this.props;
     const name = user.firstName+' '+user.lastName;
+    console.log({reputation:user})
     // return (
     //   <div className="col-md-4" style={{margin: '10px'}}>
     //     <img className="rounded-circle" src={user.avatar} alt='http://pinegrow.com/placeholders/img19.jpg' style={{height: "20%", width: "35%"}}/>
@@ -25,14 +26,17 @@ class UserItem extends Component {
               <div className="card" >
                 <div className="card-body text-center">
                   <p><img className=" img-fluid" src={user.avatar} alt='http://pinegrow.com/placeholders/img19.jpg'/></p>
-                  <h4 className="card-title" style={{fontSize: '18px'}}>{name}</h4>
+                  <div className='row d-flex justify-content-between'>
+                    <h4 className="card-title" style={{fontSize: '18px'}}>{name}</h4>
+                    <p  className='btn btn-primary btn-sm' style={{color: 'white',fontFamily: "'Germania One'"}}>{user.role}</p>
+                  </div>
                   <p className="card-text" style={{fontSize: '14px'}}>{user.departmentName}</p>
+
                   <p className="card-text" style={{fontSize: '14px'}}>{user.emailId}</p>
-                  <div className="row  justify-content-between border-top" style={{marginTop:'10px',marginBottom: '1px'}} >
-                    <p  style={{border: '2px outset black',borderRadius: '5px',color: 'blue',margin: '4px',padding: '2px',fontFamily: "'Germania One', cursive"}}>{user.role}</p>
-                    <p  style={{border: '2px outset black',borderRadius: '5px',color: 'gold',margin: '4px',padding: '2px',fontWeight: 'bold',fontSize: '14px'}}>
-                      <i className="fa fa-certificate"/>{user.reputation}</p>
-                    <button className="btn btn-primary btn-sm">
+                  <div className="row  justify-content-between " style={{marginTop:'2px'}} >
+                    <h1  className='display-5' style={{border: 'none',color: 'gold'}}>
+                      <i className="fa fa-certificate fa-1x"/>{user.reputation}</h1>
+                    <button className="btn btn-primary" style={{height: '50%'}}>
                       <Link to={`/publicProfile/${user._id}`} style={{color: 'white'}}>View Profile</Link>
                     </button>
                   </div>

@@ -61,14 +61,15 @@ const UserSchema = new Schema({
     type: Boolean,
     default: false
   },
+  reputation: {
+    type: Number,
+    default: 0,
+    required: true
+  },
  // isVerified: {
  //  type: Boolean,
    // default: false
  // },
-  reputation: {
-    type: Number,
-    default: 0
-  },
   time: {
     type: Date,
     default: Date.now

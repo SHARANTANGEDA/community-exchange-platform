@@ -35,7 +35,7 @@ export const upVoteAnswer = (id,answerId) => dispatch => {
   axios
     .post(`/api/answers/upVote/${id}/${answerId}`)
     .then(res =>
-      console.log(res)
+      window.location.reload()
     )
     .catch(err =>
       dispatch({
@@ -50,7 +50,7 @@ export const downVoteAnswer = (id,answerId) => dispatch => {
   axios
     .post(`/api/answers/downVote/${id}/${answerId}`)
     .then(res =>
-      console.log(res)
+      window.location.reload()
     )
     .catch(err =>
       dispatch({
@@ -65,7 +65,7 @@ export const upVoteQuestion = (id) => dispatch => {
   axios
     .post(`/api/questions/upVote/${id}`)
     .then(res =>
-      console.log(res)
+      window.location.reload()
     )
     .catch(err =>
       dispatch({
@@ -79,7 +79,7 @@ export const downVoteQuestion = (id) => dispatch => {
   axios
     .post(`/api/questions/downVote/${id}`)
     .then(res =>
-      console.log(res)
+      window.location.reload()
     )
     .catch(err =>
       dispatch({

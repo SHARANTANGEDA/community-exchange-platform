@@ -7,37 +7,42 @@ import { assignFaculty } from '../../../actions/hodActions'
 class Data extends Component {
   constructor () {
     super()
-    this.state = {
-      id: '',
-      facultyId: '',
-      errors: {}
-    }
+
     this.onAssign = this.onAssign.bind(this)
   }
   onAssign(e) {
-    this.setState({id:this.props.courseId,facultyId: this.props.faculty._id})
     const assignData = {
-      id: this.state.id,
-      facultyId: this.state.facultyId
+      id: this.props.courseId,
+      facultyId: this.props.faculty._id
     }
+    console.log({Data: assignData})
     this.props.assignFaculty(assignData,this.props.history)
   }
-  componentDidMount() {
-    // if (this.props.match.params.id) {
-    //
-    // }
-  }
+
   render () {
-    const { faculty,courseId } = this.props
+    const { faculty } = this.props
     console.log({ GetFaculty: faculty })
     const name = faculty.firstName + ' ' + faculty.lastName
-    let showStatus;
+    let showStatus,option;
     if(faculty.assigned) {
       showStatus= (
         <p  style={{border: '2px outset black',borderRadius: '5px',color: 'green',margin: '4px',padding: '2px',fontWeight: 'bold',fontSize: '14px'}}>
           assigned</p>
       )
+      option=(
+        <p  style={{border: '2px outset black',borderRadius: '5px',color: 'green',margin: '4px',padding: '2px',fontWeight: 'bold',fontSize: '14px'}}>
+          assigned</p>
+      )
     }else {
+      option=(
+        <td>
+          <span style={{ fontSize: '13.3333330154419px' ,background: 'green',color: 'white'}}>
+            <i className="fa fa-plus" aria-hidden="true"/>
+            <button className=" btn btn-primary"
+                    onClick={this.onAssign} style={{background: 'green',color: 'white'}}>Add</button>
+          </span>
+        </td>
+      )
       showStatus= (
         <p  style={{border: '2px outset black',borderRadius: '5px',color: 'red',margin: '4px',padding: '2px',fontWeight: 'bold',fontSize: '14px'}}>
           Not Assigned</p>
@@ -52,13 +57,7 @@ class Data extends Component {
         <td>
           {showStatus}
         </td>
-        <td>
-          <span style={{ fontSize: '13.3333330154419px' ,background: 'green',color: 'white'}}>
-            <i className="fa fa-plus" aria-hidden="true"/>
-            <button className=" btn btn-primary"
-                    onClick={this.onAssign} style={{background: 'green',color: 'white'}}>Add</button>
-          </span>
-        </td>
+        {option}
       </tr>
     )
   }

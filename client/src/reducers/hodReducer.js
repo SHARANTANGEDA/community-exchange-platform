@@ -21,8 +21,8 @@ export default function(state = initialState, action) {
       return {
         ...state,
         home: action.payload,
-        loading: false,
-        faculty: true
+        faculty: true,
+        loading: false
       };
     case GET_ALL_DEPARTMENTS:
       return {

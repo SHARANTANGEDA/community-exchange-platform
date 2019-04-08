@@ -85,8 +85,8 @@ class Navbar extends Component {
           </button>
 
           <div className="collapse navbar-collapse" id="mobile-nav">
-            {isAuthenticated ? authLinksI: guestLinks}
-            {isAuthenticated ? authLinksII : null}
+            {/*{isAuthenticated ? authLinksI: guestLinks}*/}
+            {isAuthenticated ? authLinksII : guestLinks}
           </div>
         </div>
       </nav>

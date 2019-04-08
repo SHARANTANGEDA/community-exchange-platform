@@ -19,8 +19,10 @@ router.get('/allDepartments',(req, res) => {
 
 //TODO set hod home page
 router.get('/home', passport.authenticate('hod', { session: false }), (req, res) => {
-  Department.findOne({ hod: req.user._id })
+  console.log(req.user._id,req.user.role)
+  Department.findOne({ hod: req.user._id})
     .then(department => {
+      console.log(department)
       User.find({ departmentName: department.departmentName, role: 'faculty' }).then(faculty => {
         res.json({ department, faculty })
       }).catch(err => res.json({ noFaculty: 'There are no faculty in this department', department }))
@@ -76,9 +78,12 @@ router.get('/course/:id', passport.authenticate('hod', { session: false })
 router.get('/faculty/:id', passport.authenticate('hod', { session: false }),
   (req, res) => {
   Department.findOne({hod: req.user._id}).then(department => {
-    User.find({ departmentName: department.departmentName, role: 'faculty' }).then(faculty => {
-      let notCourseFaculty=[];
-      faculty.forEach(fac => {
+    User.find({ departmentName: department.departmentName, role: 'faculty' }).then(fArr => {
+      let faculty=[];
+      fArr.forEach(fac => {
+        if(fac.courses.filter(course => (course === req.params.id)).length===0) {
+          faculty.push(fac);
+        }
       })
       res.json({ department, faculty,courseId: req.params.id })
     }).catch(err => res.json({ noFaculty: 'There are no faculty in this department', department
@@ -111,8 +116,13 @@ router.post('/assignFaculty', passport.authenticate('hod', { session: false }),
             courseFields.status = true;
             course.facultyId = facultyArray;
             course.status = true;
+            console.log(course)
           }).catch(err => {res.status(404).json({ facultyNotFound: 'faculty not found' })})
-          department.save().then(department => {res.json(department)})
+          department.save().then(department => {
+            User.find({ departmentName: department.departmentName, role: 'faculty' }).then(faculty => {
+              res.json({ department, faculty })
+            }).catch(err => res.json({ noFaculty: 'There are no faculty in this department', department }))
+          })
         }
       })
     }).catch(err => res.status(404).json({ courseNotFound: 'No Course Found' }))
@@ -194,16 +204,17 @@ router.post('/addCourse',passport.authenticate('hod',{session: false}),
 //@unAssigned Faculty
 router.get('/unAssignedFaculty',passport.authenticate('hod',{session: false}),
   (req,res) => {
-    User.find({role: 'faculty', assigned: false}).then(faculty => {
-      Department.findOne({hod: req.user._id}).then(department => {
+    Department.findOne({hod: req.user._id}).then(department => {
+      User.find({role: 'faculty', assigned: false,departmentName: department.departmentName}).then(faculty => {
         if(faculty) {
           res.json({department,faculty});
         }else {
           res.json({noUnAssignedFaculty: 'All faculty are assigned at least one of the courses',department})
         }
-      }).catch(err => res.status(404).json({ noPostsFound: 'No Department found' }))
     }).catch(err => res.status(404).json({notFound: 'faculty not found'}))
-});
+    }).catch(err => res.status(404).json({ noPostsFound: 'No Department found' }))
+
+  });
 
 module.exports = router;
 

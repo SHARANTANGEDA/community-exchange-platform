@@ -30,7 +30,8 @@ router.post('/register', (req, res) => {
         avatar,
         password: req.body.password,
         isTA: false,
-        role: 'admin'
+        role: 'admin',
+        reputation: 0
       })
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {

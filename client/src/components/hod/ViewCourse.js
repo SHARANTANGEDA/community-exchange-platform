@@ -40,7 +40,7 @@ class ViewCourse extends Component {
               </div>
 
               <p className="ml-4">
-                <span style="font-family: Arial; font-size: 12pt;">{courses.course.bio} </span></p>
+                <span style={{fontFamily: 'Arial',fontSize: '12pt'}}>{courses.course.bio} </span></p>
               <div className="row">
                 <div className="col-md-8">
                   <h2 className="ml-2">Faculty Assigned</h2>

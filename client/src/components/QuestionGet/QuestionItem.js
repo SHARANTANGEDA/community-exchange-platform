@@ -27,18 +27,27 @@ class QuestionItem extends Component {
       <div className="card card-body mb-3">
         <div className="row">
           <div className="col-md-1">
-            <div className="row text-center">
+            <div className="row">
             <span>
-              <button onClick={this.onUpVote}>
+              <button className='text-center' onClick={this.onUpVote} style={{border: 'none',background: 'white',minWidth:'40px'}}>
                 <i className="fas fa-chevron-up fa-2x" style={{color: 'green'}}/>
-              </button>
-              <h1 className="display-5">{rate}</h1>
-              <button onClick={this.onDownVote}>
-                <i className="fas fa-chevron-down fa-2x" style={{color: 'red'}}/>
               </button>
             </span>
             </div>
-            <div>
+              <div className="row">
+              <span>
+              <button  style={{border: 'none',background: 'white',minWidth:'40px'}}>
+              <h1 className="display-5">{rate}</h1>
+              </button>
+              </span>
+              </div>
+                <div className="row">
+              <span>
+              <button onClick={this.onDownVote} style={{border: 'none',background: 'white',minWidth:'40px'}}>
+                <i className="fas fa-chevron-down fa-2x" style={{color: 'red'}}/>
+              </button>
+            </span>
+                </div>
             </div>
           </div>
           <div className="col-md-11">
@@ -61,7 +70,6 @@ class QuestionItem extends Component {
           </div>
 
         </div>
-      </div>
     )
   }
 }

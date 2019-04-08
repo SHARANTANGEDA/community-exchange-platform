@@ -30,11 +30,11 @@ class AnswerDisplay extends Component {
           <div className="col-md-1">
             <div className="row text-center">
             <span>
-              <button onClick={this.onUpVote}>
+              <button onClick={this.onUpVote} style={{border: 'none',background: 'white',minWidth:'40px'}}>
                 <i className="fas fa-chevron-up fa-2x" style={{ color: 'green' }}/>
               </button>
               <h1 className="display-5">{rate}</h1>
-              <button onClick={this.onDownVote}>
+              <button onClick={this.onDownVote} style={{border: 'none',background: 'white',minWidth:'40px'}}>
                 <i className="fas fa-chevron-down fa-2x" style={{ color: 'red' }}/>
               </button>
             </span>
