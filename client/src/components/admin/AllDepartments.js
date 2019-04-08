@@ -18,7 +18,8 @@ class AllDepartments extends Component {
     if ((home === null) || loading ) {
       allCoursesContent = <Spinner/>
     } else {
-      if(home.departments.length===0) {
+      console.log({home: home})
+      if(home.length===0) {
         allCoursesContent = (
           <div className="col-md-12">
             <div className="desc">
@@ -56,7 +57,7 @@ class AllDepartments extends Component {
                     <strong style={{fontFamily: 'Arial', fontSize: '14pt'}}>created On</strong>
                   </td>
                 </tr>
-                <DepartmentFeed departments={home.department}/>
+                <DepartmentFeed departments={home}/>
                 </tbody>
               </table>
             </div>

@@ -63,12 +63,12 @@ class AddDepartment extends Component {
               <form  onSubmit={this.onSubmit}>
                 <div className="row">
                   <div className="col-md-6">
-                    <TextFieldGroup placeholder="First Name" error={errors.firstName}
+                    <TextFieldGroup placeholder="Hod First Name" error={errors.firstName}
                                     type="text" onChange={this.changeHandler} value={this.state.firstName} name="firstName"
                     />
                   </div>
                   <div className="col-md-6">
-                    <TextFieldGroup placeholder="Last Name" error={errors.lastName}
+                    <TextFieldGroup placeholder="Hod Last Name" error={errors.lastName}
                                     type="text" onChange={this.changeHandler} value={this.state.lastName} name="lastName"
                     />
                   </div>

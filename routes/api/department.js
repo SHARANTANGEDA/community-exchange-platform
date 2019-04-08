@@ -12,9 +12,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 router.get('/allDepartments',(req, res) => {
-  Department.find().then(department => {
-    res.json(department)
-  }).catch(err => res.status(404).json({NoDepFound: 'no Department found'}))
+  Department.find().then(departments => {
+    res.json(departments)
+  }).catch(err => res.json({NoDepFound: 'no Department found'}))
 })
 
 //TODO set hod home page
