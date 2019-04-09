@@ -42,7 +42,7 @@ class Sidebar extends Component {
             {/*</ul>*/}
           </li>
           <li>
-            <Link to="" style={{textDecoration: 'none'}}>
+            <Link to="/contactUs" style={{textDecoration: 'none'}}>
               <i className="fas fa-paper-plane"/>
               Contact Us
             </Link>
@@ -87,7 +87,7 @@ class Sidebar extends Component {
             {/*</ul>*/}
           </li>
           <li>
-            <Link to="" style={{textDecoration: 'none'}}>
+            <Link to="/contactUs" style={{textDecoration: 'none'}}>
               <i className="fas fa-paper-plane"/>
               Contact Us
             </Link>
@@ -124,7 +124,7 @@ class Sidebar extends Component {
             </Link>
           </li>
           <li>
-          <Link to="" style={{textDecoration: 'none'}}>
+          <Link to="/contactUs" style={{textDecoration: 'none'}}>
               <i className="fas fa-paper-plane"/>
               Contact Us
             </Link>

@@ -36,6 +36,7 @@ import AllDepartments from './components/admin/AllDepartments'
 import UnAssignedFaculty from './components/hod/UnAssignedFaculty'
 import AssignFaculty from './components/hod/assignFaculty/AssignFaculty'
 import ViewCourse from './components/hod/ViewCourse'
+import ContactUs from './components/common/ContactUs'
 
 //Check for token
 if(localStorage.jwtToken) {
@@ -118,6 +119,9 @@ class App extends Component {
           </Switch>
           <Switch>
             <PrivateRoute exact path='/viewCourse/:id' component={ViewCourse}/>
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path='/contactUs' component={ContactUs}/>
           </Switch>
           </div>
         </div>
