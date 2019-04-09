@@ -235,7 +235,7 @@ router.get('/home',passport.authenticate('faculty', {session: false}),(req,res) 
 
       faculty.courses.map(course => {
         display.push(new Promise((resolve, reject) => {
-          Question.find({ course: course }).sort({ time: -1 }).limit(5).then(questions => {
+          Question.find({ course: course.trim() }).sort({ time: -1 }).limit(5).then(questions => {
             if (questions.length === 0) {
               resolve({ course, questions, none: true })
             } else {
