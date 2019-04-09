@@ -134,7 +134,7 @@ router.get('/myCourses',passport.authenticate('faculty',{session: false}),(req,r
       } else {
         faculty.courses.forEach(courseCode => {
           Department.findOne({departmentName: faculty.departmentName}).then(department => {
-            let myCourse = department.courses.filter(course => {course.courseCode===courseCode});
+            let myCourse = department.courses.filter(course => {course.courseCode.trim()===courseCode.trim()});
             courses.push(myCourse)
           }).catch(err => res.json({dataInconsistent: 'The data is In Consistent please try again' +
               ' or contact us'}))
@@ -158,10 +158,10 @@ router.get('/applications',passport.authenticate('faculty', {session: false}),
       let display=[];
       faculty.courses.forEach(courseId => {
         display.push(new Promise((resolve, reject) => {
-          User.find({applyTA: true,taCourse: courseId,role: 'student'}).then(student => {
-            resolve({courseCode: courseId,students: student})
-          })
-        }).catch(err => reject({faculty,notFound: 'No Applicants Found'}))
+          User.find({ applyTA: true, taCourse: courseId.trim(), role: 'student' }).then(student => {
+            resolve({ courseCode: courseId, students: student })
+          }).catch(err => reject({ faculty, notFound: 'No Applicants Found' }))
+        })
   )})
       res.json({applications:await Promise.all(display)});
   }).catch(err => {

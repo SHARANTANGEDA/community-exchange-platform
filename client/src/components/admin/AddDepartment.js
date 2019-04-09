@@ -60,6 +60,8 @@ class AddDepartment extends Component {
             <div className="col-md-8 m-auto">
               <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontFamily: "'Lobster'"}}
                   className="rounded border bg-dark text-light text-center p-1 pl-3 pr-5">Add a new Department</h1>
+              <Link className="btn-primary btn" to='/addDepartment'>View Departments</Link>
+              <Link className="btn-primary btn" to='/addDepartment'>View Departments</Link>
               <form  onSubmit={this.onSubmit}>
                 <div className="row">
                   <div className="col-md-6">

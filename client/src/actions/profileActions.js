@@ -78,6 +78,7 @@ export const updateProfile = (data, history) => dispatch => {
     .post('/api/users/myAccount/change', data)
     .then(res => {
       console.log({res})
+      window.location.reload();
       history.push('/myAccount')
     })
     .catch(err =>

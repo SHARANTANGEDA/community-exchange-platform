@@ -23,28 +23,17 @@ class Data extends Component {
     const { faculty } = this.props
     console.log({ GetFaculty: faculty })
     const name = faculty.firstName + ' ' + faculty.lastName
-    let showStatus,option;
+    let showStatus;
     if(faculty.assigned) {
       showStatus= (
-        <p  style={{border: '2px outset black',borderRadius: '5px',color: 'green',margin: '4px',padding: '2px',fontWeight: 'bold',fontSize: '14px'}}>
+        <p  style={{border: 'none',borderRadius: '5px',color: 'green',margin: '4px',padding: '2px',fontWeight: 'bold',fontSize: '14px'}}>
           assigned</p>
       )
-      option=(
-        <p  style={{border: '2px outset black',borderRadius: '5px',color: 'green',margin: '4px',padding: '2px',fontWeight: 'bold',fontSize: '14px'}}>
-          assigned</p>
-      )
+
     }else {
-      option=(
-        <td>
-          <span style={{ fontSize: '13.3333330154419px' ,background: 'green',color: 'white'}}>
-            <i className="fa fa-plus" aria-hidden="true"/>
-            <button className=" btn btn-primary"
-                    onClick={this.onAssign} style={{background: 'green',color: 'white'}}>Add</button>
-          </span>
-        </td>
-      )
+
       showStatus= (
-        <p  style={{border: '2px outset black',borderRadius: '5px',color: 'red',margin: '4px',padding: '2px',fontWeight: 'bold',fontSize: '14px'}}>
+        <p  style={{border: 'none',borderRadius: '5px',color: 'red',margin: '4px',padding: '2px',fontWeight: 'bold',fontSize: '14px'}}>
           Not Assigned</p>
       )
     }
@@ -57,7 +46,14 @@ class Data extends Component {
         <td>
           {showStatus}
         </td>
-        {option}
+        <td>
+          <span style={{ fontSize: '13.3333330154419px' ,background: 'green',color: 'white'}}>
+
+            <button className="rounded btn btn-primary"
+                    onClick={this.onAssign} style={{background: 'green',color: 'white'}}>
+              Add<i className="fa fa-plus" aria-hidden="true"/></button>
+          </span>
+        </td>
       </tr>
     )
   }

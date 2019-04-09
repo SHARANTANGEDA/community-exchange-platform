@@ -34,10 +34,11 @@ class TAData extends Component {
 
     return (
       <div>
-        <button onClick={this.toggle}
-                className="rounded border bg-dark text-light dropdown-toggle d-flex justify-content-start align-items-start flex-grow-1 pl-1 w-100 my-3"
-                style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontSize: '25px'}}>{course.courseCode}
-        </button>
+           <button onClick={this.toggle}
+                   className="rounded border bg-dark text-light d-flex justify-content-between align-items-center flex-grow-1 pl-1 w-100 my-3"
+                   style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontSize: '25px'}}>
+          {course.courseCode}<i className="fas fa-angle-down"/></button>
+
         <Collapse isOpened={this.state.isOpen}>
         <table  className="tableGrid rounded border"
                 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',width : '100%'}} border="0">

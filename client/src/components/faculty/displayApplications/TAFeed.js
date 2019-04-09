@@ -7,7 +7,7 @@ class TAFeed extends Component {
     const  {applications}  = this.props;
     console.log({'TAFeed':applications});
     return applications.map(course => (
-      <TAData course={course} key={course.courseCode}/>
+      <TAData course={course} key={course.courseCode.trim()}/>
     ));
   }
 }

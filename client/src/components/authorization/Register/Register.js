@@ -87,16 +87,9 @@ class Register extends Component {
 
                   </div>
                 </div>
-                  <div className="form-group mb-0 mt-0">
-                    <div className="row">
-                      <div className="col-md-9 pt-0 mb-0">
-                        <TextFieldGroup placeholder="Email Address" error={errors.emailId} info="Please use BITS Email for Registration"
-                                        type="email" onChange={this.changeHandler} value={this.state.emailId} name="emailId"
-                        />
-                      </div>
-                      <div className="col-md-3"><Link className="btn btn-primary w-50 my-1" to="#">Verify</Link></div>
-                    </div>
-                  </div>
+                <TextFieldGroup placeholder="Email Address" error={errors.emailId} info="Please use BITS Email for Registration"
+                                type="email" onChange={this.changeHandler} value={this.state.emailId} name="emailId"
+                />
                 <TextFieldGroup placeholder="Password" error={errors.password}
                                 type="password" onChange={this.changeHandler} value={this.state.password} name="password"
                 />

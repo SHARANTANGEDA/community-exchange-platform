@@ -268,7 +268,7 @@ router.get('/getAllCourses',passport.authenticate('all',{session: false}),(req,r
   Department.find().then(departments => {
     departments.forEach(department => {
       department.courses.forEach(course => {
-        courses.push(course.courseCode);
+        courses.push(course.courseCode.trim());
       })
     })
     res.json({allCourses: courses})

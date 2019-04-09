@@ -140,6 +140,8 @@ export const assignFaculty = (assignData,history) => dispatch => {
       window.location.reload()
     })
     .catch(err => {
+        console.log({Action: err})
+
         window.location.reload()
         dispatch({
           type: GET_ERRORS,

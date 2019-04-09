@@ -21,13 +21,13 @@ class AdminLogin extends Component{
 
   componentDidMount () {
     if(this.props.auth.isAuthenticated) {
-      this.props.history.push('/addDepartment');
+      this.props.history.push('/allDepartments');
     }
   }
 
   componentWillReceiveProps (nextProps, nextContext) {
     if(nextProps.auth.isAuthenticated) {
-      this.props.history.push('/addDepartment');
+      this.props.history.push('/allDepartments');
     }
     if(nextProps) {
       this.setState({errors: nextProps.errors})

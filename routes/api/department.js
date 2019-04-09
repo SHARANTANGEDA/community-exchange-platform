@@ -81,7 +81,7 @@ router.get('/faculty/:id', passport.authenticate('hod', { session: false }),
     User.find({ departmentName: department.departmentName, role: 'faculty' }).then(fArr => {
       let faculty=[];
       fArr.forEach(fac => {
-        if(fac.courses.filter(course => (course === req.params.id)).length===0) {
+        if(fac.courses.filter(course => (course.trim() === req.params.id)).length===0) {
           faculty.push(fac);
         }
       })
@@ -97,13 +97,19 @@ router.post('/assignFaculty', passport.authenticate('hod', { session: false }),
     let courseFields = {}
     let facultyFields = {}
     let courseStatus, facultyStatus, coursesArray,facultyArray;
+    console.log('In assign Faculty')
     User.findById(req.body.facultyId).then(faculty => {
+      console.log('In found faculty')
       facultyStatus = faculty.status
       coursesArray = faculty.courses
     }).catch(err => {res.status(404).json({ facultyNotFound: 'faculty not found' })})
     Department.findOne({hod: req.user._id}).then(department => {
+      console.log('In department')
       department.courses.forEach(course => {
-        if(course.courseCode===req.body.id) {
+        console.log({courseCode: course.courseCode,id: req.body.id})
+        console.log(course.courseCode.trim()===req.body.id)
+        if(course.courseCode.trim()===req.body.id) {
+          console.log('In department')
           facultyArray = course.facultyId;
           courseStatus = course.status
           coursesArray.push(course.courseCode)
@@ -111,6 +117,7 @@ router.post('/assignFaculty', passport.authenticate('hod', { session: false }),
           facultyFields.assigned = true
           User.findByIdAndUpdate(req.body.facultyId, { $set: facultyFields },
             { new: true }).then(faculty => {
+              console.log(faculty)
             facultyArray.push(faculty._id);
             courseFields.facultyId = facultyArray;
             courseFields.status = true;

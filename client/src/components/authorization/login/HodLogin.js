@@ -61,7 +61,6 @@ class Login extends Component{
                 />
                 <input type="submit" className="btn btn-info btn-block mt-4"/>
               </form>
-              <p>Not Registered Yet? <Link  to={"/register"} className={"text-primary"}> Click Here </Link> to register</p>
             </div>
           </div>
         </div>
