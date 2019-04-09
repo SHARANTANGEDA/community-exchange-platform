@@ -9,6 +9,7 @@ import AnswerFeed from './ShowAnswers/AnswerFeed'
 import AnswerForm from './AnswerForm'
 import { connect } from 'react-redux'
 import TagFeed from '../QuestionGet/Tags/TagFeed'
+import AnswerCommentForm from './ShowAnswers/AnswerCommentForm'
 
 class ViewQuestion extends Component {
   constructor () {
@@ -108,8 +109,12 @@ class ViewQuestion extends Component {
                     </div>
                   </div>
                   <div className="d-flex flex-grow-1 col-md-12">
-                        {question.comments ? (<CommentFeed comments={question.comments}/>) : null}
-                        <CommentForm questionId={question._id}/>
+                    <div className="comment-text js-comment-text-and-form w-75">
+                      <div className="comment-body js-comment-edit-hide">
+\                          <CommentFeed comments={question.comments}/>
+                          <CommentForm questionId={question._id}/>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
