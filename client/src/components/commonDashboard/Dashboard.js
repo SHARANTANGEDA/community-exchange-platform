@@ -47,7 +47,7 @@ class Dashboard extends Component {
                     <p style={{color: 'white',background: 'green'}} className='btn w-100'>Your TA application is in progress</p>
                     <div className="row d-flex justify-content-between">
                       <h1 className="grid--cell fl1 fs-headline1 text-center" style={{fontFamily: "Lobster",color: 'black',fontSize:'48px'}}> Top Questions </h1>
-                      <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '250px'}} to="/askQuestion">Ask
+                      <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '150px'}} to="/askQuestion">Ask
                         Question</Link>
                       </div>
                     </div>

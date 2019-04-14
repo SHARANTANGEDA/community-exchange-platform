@@ -103,10 +103,6 @@ router.post('/login', (req, res) => {
 
     bcrypt.compare(password, user.password).then(isMatch => {
       if (isMatch) {
-        //TODO unComment below lines to implement mail verification
-        // if(!user.isVerified) {
-        //   return res.status(401).json({type: not-Verified, msg: 'Your account is not verified'});
-        // }
         const payload = { id: user.id,role: user.role,avatar: user.avatar,assigned:user.assigned}
         //TODO change secret key and signIn options
         jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },

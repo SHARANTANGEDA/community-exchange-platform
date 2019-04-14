@@ -12,6 +12,8 @@ const admin = require('./routes/api/admin');
 const faculty = require('./routes/api/faculty');
 const hod = require('./routes/api/hod');
 const department = require('./routes/api/department')
+const google = require('./routes/api/google')
+
 const path = require('path');
 
 //@MongoDB Atlas Connection
@@ -37,6 +39,7 @@ app.use('/api/admin',admin);
 app.use('/api/faculty',faculty);
 app.use('/api/hod',hod);
 app.use('/api/department',department)
+
 
 
 //Server static assets if in production

@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {loginUser} from '../../../actions/authActions';
 import TextFieldGroup from '../../common/TextFieldGroup';
 import {Link} from 'react-router-dom';
+import Google from '../Google'
 
 class Login extends Component{
   constructor () {
@@ -52,6 +53,7 @@ class Login extends Component{
               <div className="col-md-8 m-auto">
                 <h1 className="display-4 text-center">Log In</h1>
                 <p className="lead text-center">Sign in to your GhotDen account</p>
+                <Google/>
                 <form noValidate onSubmit={this.onSubmit}>
                   <TextFieldGroup placeholder="Email Address" error={errors.emailId}
                                   type="email" onChange={this.changeHandler} value={this.state.emailId} name="emailId"

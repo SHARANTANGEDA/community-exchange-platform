@@ -81,11 +81,13 @@ Link:focus {
 
 .navbar {
   padding: 15px 10px;
-  background: #fff;
-  border: none;
+  background: black;
   border-radius: 0;
-  margin-bottom: 40px;
+  margin-bottom: 0;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  border-bottom: white;
+  border-bottom-width: 2px;
+
 }
 
 .navbar-btn {
@@ -113,13 +115,15 @@ span {
 .wrapper {
   display: flex;
   align-items: stretch;
+
+
 }
 
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #fff;
-  color: #343a40;
+  background: white;
+  color: black;
   transition: all 0.3s;
 }
 
@@ -140,12 +144,14 @@ span {
 
 #sidebar ul li a {
   text-align: left;
+  color: black;
 }
 
 #sidebar.active ul li a {
   padding: 20px 10px;
   text-align: center;
   font-size: 0.85em;
+  color: white;
 }
 
 #sidebar.active ul li a i {
@@ -170,7 +176,7 @@ span {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #343a40;
+  background: black;
 }
 
 #sidebar .sidebar-header strong {
@@ -191,7 +197,7 @@ span {
 
 #sidebar ul li a:hover {
   color: #fff;
-  background: #343a40;
+  background: black;
 }
 
 #sidebar ul li a i {
@@ -201,7 +207,7 @@ span {
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
   color: #fff;
-  background: #343a40;
+  background: black;
 }
 
 a[data-toggle="collapse"] {
@@ -236,13 +242,13 @@ ul.CTAs a {
 
 a.download {
   background: #fff;
-  color: #343a40;
+  color: black;
 }
 
 a.article,
 a.article:hover {
   background: #fff !important;
-  color: #343a40 !important;
+  color: black !important;
 }
 
 /* ---------------------------------------------------
@@ -255,7 +261,10 @@ a.article:hover {
   min-height: 100vh;
   transition: all 0.3s;
 }
-
+#footer {
+  			/* Height of the footer */
+  background:black;
+}
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */

@@ -3,12 +3,26 @@ const extractJWT = require('passport-jwt/lib').ExtractJwt;
 const mongoose = require('mongoose');
 const User = mongoose.model('users');
 const keys = require('./keys');
+const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 
 const opts = {};
 opts.jwtFromRequest = extractJWT.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = keys.secretOrKey;
 
 module.exports = passport => {
+  passport.use(
+    new GoogleStrategy({
+    clientID: keys.GOOGLE_CLIENT_ID,
+    clientSecret: keys.GOOGLE_CLIENT_SECRET,
+    callbackURL: keys.GOOGLE_CALLBACK_URL //TODO CHANGE CALLBACK URL
+  },(accessToken, refreshToken, profile, done) => {
+    let user = {
+      emailId: profile.emails[0].value,
+      name: profile.displayName,
+      token: accessToken
+    };
+    done(null, user)
+    }))
   passport.use('admin',
     new JWTStrategy(opts, (jwt_payload, done) => {
       User.findById(jwt_payload.id)

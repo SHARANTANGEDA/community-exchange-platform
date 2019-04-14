@@ -72,7 +72,7 @@ class Navbar extends Component {
     );
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark  mb-4" style={{background: 'black'}}>
+      <nav className="navbar navbar-expand-sm navbar-dark">
         <div className="container">
           {isAuthenticated ? authLinkO : guestLinkO}
           <button

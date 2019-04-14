@@ -10,6 +10,7 @@ const validateRegisterInput = require('../../validations/register/registerStuden
 const validateLoginInput = require('../../validations/login/login')
 const validatePassword = require('../../validations/password')
 const validateProfileInput = require('../../validations/profile')
+const validateGoogleRegisterInput = require('../../validations/register/googleRegister')
 const validateApplication = require('../../validations/taApplication')
 const User = require('../../models/User');
 const Question = require('../../models/Question');
@@ -64,21 +65,6 @@ router.post('/register', (req, res) => {
             .catch(err => console.log(err))
         })
       })
-      //TODO uncomment below lines to implement mail verification
-      // const verifyToken = new VerifyToken({
-      //     _userId: user._id,
-      //     token:crypto.randomBytes(16).toString('hex')
-      //   });
-      // verifyToken.save().then(token => res.json(token))
-      //   .catch(err => console.log(err));
-      // // Send the email
-      // const transporter = nodemailer.createTransport({ service: 'Sendgrid', authorization: { user: process.env.SENDGRID_USERNAME, pass: process.env.SENDGRID_PASSWORD } });
-      // const mailOptions = { from: 'no-reply@yourwebapplication.com', to: user.email, subject: 'Account Verification' +
-      //     ' Token', text: 'Hello,\n\n' + 'Please verify your account by clicking the link: \nhttp:\/\/' + req.headers.host + '\/confirmation\/' + token.token + '.\n' };
-      // transporter.sendMail(mailOptions, err => {
-      //   if (err) { return res.status(500).send({ msg: err.message }); }
-      //   res.status(200).send('A verification email has been sent to ' + user.email + '.');
-      // });
     }
   })
 })
@@ -101,14 +87,8 @@ router.post('/login', (req, res) => {
       errors.emailId = 'User not Found'
       return res.status(400).json(errors)
     }
-
     bcrypt.compare(password, user.password).then(isMatch => {
       if (isMatch) {
-        //TODO unComment below lines to implement mail verification
-
-        // if(!user.isVerified) {
-        //   return res.status(401).json({type: not-Verified, msg: 'Your account is not verified'});
-        // }
         const payload = { id: user.id,role: user.role,avatar: user.avatar,applied:user.applyTA}
         //TODO change secret key and signIn options
         jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
@@ -276,4 +256,129 @@ router.get('/getAllCourses',passport.authenticate('all',{session: false}),(req,r
   )
 })
 
+router.get('/google', passport.authenticate('google',
+  { session: false, scope: ['profile', 'email'] })
+);
+
+router.get('/successGoogle', passport.authenticate('google', {session: false}),
+  (req, res) => {
+  User.findOne({emailId: req.user.emailId}).then(user => {
+    if(!user) {
+      res.redirect('/googleRegister');
+    } else {
+      if(user.role==='student') {
+        const payload = { id: user.id,role: user.role,avatar: user.avatar,applied:user.applyTA}
+        //TODO change secret key and signIn options
+        jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
+          (err, token) => {
+            res.json({
+              success: true,
+              token: 'Bearer ' + token
+            })
+          })
+      }else if(user.role==='hod') {
+        const payload = { id: user.id,role: user.role,avatar: user.avatar}
+        //TODO change secret key and signIn options
+        jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
+          (err, token) => {
+            res.json({
+              success: true,
+              token: 'Bearer ' + token
+            })
+          })
+      } else if(user.role === 'faculty') {
+        const payload = { id: user.id,role: user.role,avatar: user.avatar,assigned:user.assigned}
+        //TODO change secret key and signIn options
+        jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
+          (err, token) => {
+            res.json({
+              success: true,
+              token: 'Bearer ' + token
+            })
+          })
+      } else if(user.role === 'admin') {
+        const payload = { id: user.id, role: user.role, avatar: user.avatar }
+        //TODO change secret key and signIn options
+        jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
+          (err, token) => {
+            res.json({
+              success: true,
+              token: 'Bearer ' + token
+            })
+          })
+      }
+
+    }
+  })
+});
+router.get('/googleRegister',passport.authenticate('google',{session: false}),
+  (req,res) => {
+    const { errors, isValid,role} = validateGoogleRegisterInput(req.body,req.user.emailId)
+    if (!isValid) {
+      return res.status(400).json(errors)
+    }
+    const avatar = gravatar.url(req.user.emailId, {
+      s: '200', // Size
+      r: 'pg', // Rating
+      d: 'retro' // Default
+    })
+    let newUser = new User({
+      firstName: req.user.name,
+      lastName: req.body.lastName,
+      emailId: req.user.emailId,
+      avatar,
+      departmentName: req.body.departmentName,
+      role: role
+    })
+    if(role === 'student') {
+      newUser.isTA =false
+      newUser
+        .save()
+        .then(user => {
+          const payload = { id: user.id,role: user.role,avatar: user.avatar,applied:user.applyTA}
+          //TODO change secret key and signIn options
+          jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
+            (err, token) => {
+              res.json({
+                user,
+                success: true,
+                token: 'Bearer ' + token
+              })
+            })
+        })
+        .catch(err => console.log(err))
+    } else if(role === 'faculty') {
+      newUser
+        .save()
+        .then(user => {
+          const payload = { id: user.id,role: user.role,avatar: user.avatar,assigned:user.assigned}
+          //TODO change secret key and signIn options
+          jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
+            (err, token) => {
+              res.json({
+                user,
+                success: true,
+                token: 'Bearer ' + token
+              })
+            })
+        })
+        .catch(err => console.log(err))
+    } else if(role === 'hod') {
+      newUser
+        .save()
+        .then(user => {
+          const payload = { id: user.id,role: user.role,avatar: user.avatar}
+          //TODO change secret key and signIn options
+          jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
+            (err, token) => {
+              res.json({
+                user,
+                success: true,
+                token: 'Bearer ' + token
+              })
+            })
+        })
+        .catch(err => console.log(err))
+    }
+  })
 module.exports = router
