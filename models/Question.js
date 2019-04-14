@@ -38,6 +38,13 @@ const QuestionSchema = new Schema({
     type: String,
     required: true
   },
+
+  views: [{
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: 'users'
+    }
+  }],
   upVote: [{
     user: {
       type: Schema.Types.ObjectId,

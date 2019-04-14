@@ -27,7 +27,7 @@ class AllDepartments extends Component {
                   className="rounded border bg-dark text-light text-center p-1 pl-3 pr-5">All Departments</h1>
               <h3 className='text-center'>No Department Added yet</h3>
               <div className="pull-right justify-content-end" style={{minWidth: '250px'}}>
-                <Link className="btn btn-primary btn-lg w-100" style={{minWidth: '250px'}} to="/addCourse">
+                <Link className="btn btn-primary btn-lg w-100" style={{minWidth: '250px'}} to="/addDepartment">
                   Add Department</Link>
               </div>
             </div>
@@ -37,11 +37,16 @@ class AllDepartments extends Component {
         allCoursesContent = (
           <div className="col-md-12">
             <div className="desc">
-              <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontFamily: "'Lobster'"}}
-                  className="rounded border bg-dark text-light p-1 pl-3 pr-5 text-center">All Departments</h1>
-              <div className="pull-right justify-content-end" style={{minWidth: '250px'}}>
-                <Link className="btn btn-primary btn-lg pull-right" style={{minWidth: '250px'}} to="/addDepartment">
-                  Add Department</Link>
+
+              <div className='row text-center'>
+                <div className='col-md-9'>
+                  <h1 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontFamily: "'Lobster'"}}
+                      className="rounded border bg-dark text-light p-1 pl-3 pr-5 text-center">All Departments</h1>
+                </div>
+                <div className='col-md-1 align-center'>
+                  <Link className="btn btn-primary btn-lg pull-right" style={{minWidth: '250px'}} to="/addDepartment">
+                    Add Department</Link>
+                </div>
               </div>
               <table  className="tableGrid rounded border"
                       style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',width : '100%'}}>

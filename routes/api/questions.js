@@ -74,10 +74,15 @@ router.get('/home',passport.authenticate('student',{session: false}),(req,res) =
 //@get Question by Id
 router.get('/:id',passport.authenticate('all',{session: false}),(req,res) => {
   Question.findById(req.params.id)
-    .then(question => res.json(question))
-    .catch(err => {
-      res.status(404).json({noPostFound: 'No post found with that ID'});
-    });
+    .then(question => {
+      if (question.views.filter(views => views.user.toString() === req.user.id)
+        .length > 0) {
+        return res.json(question);
+      }
+      question.views.unshift({ user: req.user.id });
+      question.save().then(question => {res.json(question)});
+    })
+    .catch(err => res.status(404).json({ postNotFound: 'No Question found' }));
 });
 
 

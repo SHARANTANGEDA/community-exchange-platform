@@ -56,14 +56,16 @@ class AnswerDisplay extends Component {
             </div>
             <div className="row">
               <div className="col-md-12">
-                <div className="user-action-time d-flex justify-content-end align-items-center"> answered <span
-                  title="2010-04-21 14:28:45Z"
-                  className="relativeTime m-1 d-inline-flex flex-grow-0">{new Date(answer.time).toLocaleString()}</span>
-                </div>
                 <div className="user-details d-flex justify-content-end">
                   <Link to={`/publicProfile/${answer.userId}`}
                         style={{ textShadow: '0px 0px 1px #0000ff', fontSize: '24' }}
-                        className="d-inline-flex flex-grow-1 align-items-end justify-content-end">{name}</Link>
+                        className="d-inline-flex flex-grow-1 align-items-end justify-content-end">
+                    <img className="rounded-circle" style={{width: '25px',marginRight:'5px'}} alt=''
+                         src={answer.avatar}/>{name}</Link>
+                </div>
+                <div className="user-action-time d-flex justify-content-end align-items-center"> answered <span
+                  title="2010-04-21 14:28:45Z"
+                  className="relativeTime m-1 d-inline-flex flex-grow-0">at {new Date(answer.time).toLocaleString()}</span>
                 </div>
               </div>
             </div>

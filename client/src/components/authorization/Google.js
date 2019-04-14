@@ -1,11 +1,24 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './google.css';
+import { connect } from 'react-redux'
+import { googleLogin, loginUser } from '../../actions/authActions'
+import { PropTypes } from 'prop-types'
 
 class Google extends Component {
+  constructor () {
+    super();
+
+    this.onLoginClick = this.onLoginClick.bind(this);
+  }
+  onLoginClick(e) {
+    e.preventDefault();
+
+    this.props.googleLogin(this.props.history);
+  }
   render() {
     return(
-      <Link to="/auth/google" className="googleButton">
+      <button onClick={this.onLoginClick} className="googleButton">
         <div>
             <span className="svgIconGoogle t-popup-svg">
               <svg
@@ -36,11 +49,17 @@ class Google extends Component {
        </span>
           <span className="google button-label">Sign in with Google</span>
         </div>
-      </Link>
+      </button>
     )
   }
 }
 
+Google.propTypes = {
+  googleLogin:PropTypes.func.isRequired,
+  auth:PropTypes.object.isRequired
+}
+const mapStateToProps = state => ({
+  auth: state.auth
+})
 
-
-export default Google;
+export default connect(mapStateToProps,{googleLogin})(Google);

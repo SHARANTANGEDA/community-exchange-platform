@@ -26,7 +26,7 @@ class FacultyCourse extends Component {
                 className="rounded border bg-dark text-light d-flex justify-content-between align-items-center flex-grow-1 pl-1 w-100 my-3"
                 style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 100, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',fontSize: '25px'}}>
           {course}<i className="fas fa-angle-down"/></button>
-        <Collapse isOpened={this.state.isOpen}>
+        <Collapse isOpened={this.state.isOpen} style={{listStyleType: 'none'}}>
           <FacultyHomeQuestionsFeed questions={questions}/>
         </Collapse>
 

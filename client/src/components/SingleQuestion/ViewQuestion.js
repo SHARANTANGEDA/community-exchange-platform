@@ -95,23 +95,24 @@ class ViewQuestion extends Component {
                       <TagFeed tags={question.tags}/>
                     </div>
                   </div>
-                  <div className="row">
-                    <div className="col-md-12">
-                      <div className="user-action-time d-flex justify-content-end align-items-center"> asked <span
-                        title=""
-                        className="relativeTime m-1 d-inline-flex flex-grow-0">{new Date(question.time).toLocaleString()}</span>
-                      </div>
-                      <div className="user-details d-flex justify-content-end">
-                        <Link to={`/publicProfile/${question.userId}`}
-                              style={{ textShadow: '0px 0px 1px #0000ff', fontSize: '24' }}
-                              className="d-inline-flex flex-grow-1 align-items-end justify-content-end">{name}</Link>
-                      </div>
+                  <div className="user-details d-flex justify-content-end">
+                    <Link to={`/publicProfile/${question.userId}`} className="card-link"
+                          style={{ textShadow: '0px 0px 1px', fontSize: '24' }}>
+                      <img className="rounded-circle" style={{width: '25px',marginRight:'5px'}} alt=''
+                           src={question.avatar}/>{name}</Link>
+                  </div>
+                  <div className='d-flex justify-content-between'>
+                    <p>{question.views.length} views</p>
+                    <div className="user-action-time d-flex justify-content-end align-items-center blockquote-footer"> asked at
+                      <span title="2010-04-21 14:28:45Z"
+                            className="relativetime m-1 ">{new Date(question.time).toLocaleString()}</span>
                     </div>
                   </div>
+
                   <div className="d-flex flex-grow-1 col-md-12">
                     <div className="comment-text js-comment-text-and-form w-75">
                       <div className="comment-body js-comment-edit-hide">
-\                          <CommentFeed comments={question.comments}/>
+                          <CommentFeed comments={question.comments}/>
                           <CommentForm questionId={question._id}/>
                       </div>
                     </div>

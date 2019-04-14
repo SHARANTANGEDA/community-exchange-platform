@@ -257,14 +257,17 @@ router.get('/getAllCourses',passport.authenticate('all',{session: false}),(req,r
 })
 
 router.get('/google', passport.authenticate('google',
-  { session: false, scope: ['profile', 'email'] })
+  { session: false, scope: ['profile', 'email'] }),(req,res)=>{
+  res.json('In g route')
+  console.log('In auth google route');
+  }
 );
 
 router.get('/successGoogle', passport.authenticate('google', {session: false}),
   (req, res) => {
   User.findOne({emailId: req.user.emailId}).then(user => {
     if(!user) {
-      res.redirect('/googleRegister');
+      res.json({success: false,NotRegistered: 'Not Registered Yet'});
     } else {
       if(user.role==='student') {
         const payload = { id: user.id,role: user.role,avatar: user.avatar,applied:user.applyTA}

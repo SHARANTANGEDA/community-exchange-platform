@@ -7,9 +7,7 @@ class FacultyHomeQuestionsFeed extends Component {
     const  {questions}  = this.props;
     console.log({'QuestionsFeed':questions});
     return questions.map(question => (
-      <li>
-        <QuestionItem question={question} key={question._id}/>
-      </li>
+      <li><QuestionItem question={question} key={question._id}/></li>
     ));
   }
 }

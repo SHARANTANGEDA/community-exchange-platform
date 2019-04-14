@@ -2,27 +2,121 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92c3f002-70e8-4ff8-9b74-7304e267b2f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/authorization/Google.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/authorization/google.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/api/google.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validations/register/googleRegister.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ghotdenfinal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ghotdenfinal.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/css/material-dashboard-react.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/angular.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/chrome.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/dashboard.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/edge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/firefox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/html.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/map.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/md-react.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/notifications.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/opera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/opt_md_angular_thumbnail.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/opt_md_thumbnail.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/opt_md_vue_thumbnail.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/opt_mdr_thumbnail.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/react.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/safari.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/tables.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/userprofile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/github/vuejs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/img/apple-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/img/cover.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/img/faces/marc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/img/mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/img/new_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/img/reactlogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/img/sidebar-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/img/sidebar-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/img/sidebar-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/img/sidebar-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/img/tim_80x80.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/cardImagesStyles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/checkboxAdnRadioStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/buttonStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardAvatarStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardBodyStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardFooterStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardHeaderStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardIconStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/customInputStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/customTabsStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/footerStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/headerLinksStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/headerStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/rtlHeaderLinksStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/sidebarStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/snackbarContentStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/tableStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/tasksStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/typographyStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/dropdownStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/layouts/dashboardStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/layouts/rtlStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/tooltipStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/views/dashboardStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/views/iconsStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/views/rtlStyle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/Card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardAvatar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardBody.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardFooter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomButtons/Button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomInput/CustomInput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomTabs/CustomTabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/FixedPlugin/FixedPlugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Footer/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Grid/GridContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Grid/GridItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Navbars/AdminNavbarLinks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Navbars/Navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Navbars/RTLNavbarLinks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Sidebar/Sidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Snackbar/Snackbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Snackbar/SnackbarContent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Table/Table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Tasks/Tasks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Danger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Info.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Muted.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Primary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Quote.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Success.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Warning.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminVariables/charts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/admin/adminVariables/general.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/authorization/GoogleCallBack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/authorization/Register/GoogleRegister.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/authActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/authActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowComments/CommentDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowComments/CommentDisplay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/AddDepartment.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/AddDepartment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/AllDepartments.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/AllDepartments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/Google.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/Google.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/authorization/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/layout/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/layout/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeQuestionsFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeQuestionsFeed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/img/showcase.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/img/showcase.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/passport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Question.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/faculty.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/faculty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/hod.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/hod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/questions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,86 +130,93 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/users.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardHeader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="706">
-              <caret line="346" column="14" lean-forward="true" selection-start-line="346" selection-start-column="14" selection-end-line="346" selection-end-column="14" />
+            <state relative-caret-position="161">
+              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
               <folding>
-                <element signature="e#8540#9877#0" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validations/register/googleRegister.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validations/register/registerFaculty.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validations/register/registerHOD.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="3" column="25" selection-start-line="3" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validations/register/registerStudent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="17" column="28" lean-forward="true" selection-end-line="57" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/admin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="94" column="12" lean-forward="true" selection-start-line="86" selection-start-column="8" selection-end-line="94" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/User.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/Card.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomTabs/CustomTabs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-140">
-              <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
-            </state>
+            <state relative-caret-position="-105" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/api/hod.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
+            <state relative-caret-position="455">
+              <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#236#281#0" expanded="true" />
+              </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/css/material-dashboard-react.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-840" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/tooltipStyle.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="41" selection-start-column="41" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/checkboxAdnRadioStyle.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/dropdownStyle.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/cardImagesStyles.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-630" />
           </provider>
         </entry>
       </file>
@@ -131,16 +232,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>class</find>
-      <find>className</find>
-      <find>profile</find>
-      <find>Course</find>
-      <find>FacultyFeed</find>
-      <find>assig</find>
-      <find>faculty.cou</find>
-      <find>findOneAndUpdate</find>
-      <find>findByIdAndUpdate</find>
-      <find>co</find>
       <find>vote</find>
       <find>assignFaculty</find>
       <find>target</find>
@@ -161,10 +252,24 @@
       <find>black</find>
       <find>#343a40</find>
       <find>allUsers.css</find>
+      <find>addDepartment</find>
+      <find>card-form</find>
+      <find>/</find>
+      <find>.</find>
+      <find>Warning</find>
+      <find>assets/jss/material-dashboard-react.jsx</find>
+      <find>assets/jss/</find>
+      <find>classes</find>
+      <find>className</find>
+      <find>warning</find>
     </findStrings>
     <replaceStrings>
       <replace>black</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/client/src/components/admin/adminAssets/jss</dir>
+      <dir>$PROJECT_DIR$/client/src/components/admin</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -172,57 +277,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/routes/api/answers.js" />
-        <option value="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeQuestionsFeed.js" />
-        <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/CommentForm.js" />
-        <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js" />
-        <option value="$PROJECT_DIR$/client/src/components/Users/UserProfile.js" />
-        <option value="$PROJECT_DIR$/routes/api/admin.js" />
-        <option value="$PROJECT_DIR$/routes/api/publicProfile.js" />
-        <option value="$PROJECT_DIR$/client/src/components/Users/UserItem.js" />
-        <option value="$PROJECT_DIR$/validations/emailValidation/is-hod-email.js" />
-        <option value="$PROJECT_DIR$/client/src/reducers/hodReducer.js" />
-        <option value="$PROJECT_DIR$/client/src/components/hod/ViewCourse.js" />
-        <option value="$PROJECT_DIR$/client/src/store.js" />
-        <option value="$PROJECT_DIR$/client/src/components/faculty/TAApplications.js" />
-        <option value="$PROJECT_DIR$/client/src/components/faculty/displayApplications/ShowStudents.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/facultyActions.js" />
-        <option value="$PROJECT_DIR$/client/src/components/authorization/login/AdminLogin.js" />
-        <option value="$PROJECT_DIR$/client/src/components/admin/AddDepartment.js" />
-        <option value="$PROJECT_DIR$/client/src/components/authorization/login/HodLogin.js" />
-        <option value="$PROJECT_DIR$/client/src/components/authorization/Register/Register.js" />
-        <option value="$PROJECT_DIR$/client/src/components/authorization/Register/RegisterFaculty.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/hodActions.js" />
-        <option value="$PROJECT_DIR$/routes/api/department.js" />
-        <option value="$PROJECT_DIR$/client/src/components/hod/assignFaculty/Data.js" />
-        <option value="$PROJECT_DIR$/client/src/components/faculty/displayApplications/TAFeed.js" />
-        <option value="$PROJECT_DIR$/client/src/components/faculty/displayApplications/TAData.js" />
-        <option value="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyCourse.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/profileActions.js" />
-        <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js" />
-        <option value="$PROJECT_DIR$/client/src/components/common/ContactUs.js" />
-        <option value="$PROJECT_DIR$/client/src/components/authorization/login/FacultyLogin.js" />
-        <option value="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" />
-        <option value="$PROJECT_DIR$/client/src/components/layout/NavBar.js" />
-        <option value="$PROJECT_DIR$/client/src/App.js" />
-        <option value="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" />
-        <option value="$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js" />
-        <option value="$PROJECT_DIR$/client/src/components/layout/Footer.js" />
-        <option value="$PROJECT_DIR$/client/src/components/authorization/login/Login.js" />
-        <option value="$PROJECT_DIR$/client/src/App.css" />
-        <option value="$PROJECT_DIR$/client/src/components/authorization/Google.css" />
-        <option value="$PROJECT_DIR$/client/src/components/authorization/google.css" />
-        <option value="$PROJECT_DIR$/client/src/components/authorization/Google.js" />
-        <option value="$PROJECT_DIR$/routes/api/google.js" />
-        <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/config/passport.js" />
-        <option value="$PROJECT_DIR$/config/keys_dev.js" />
-        <option value="$PROJECT_DIR$/models/User.js" />
-        <option value="$PROJECT_DIR$/validations/register/googleRegister.js" />
-        <option value="$PROJECT_DIR$/routes/api/users.js" />
-        <option value="$PROJECT_DIR$/routes/api/faculty.js" />
-        <option value="$PROJECT_DIR$/routes/api/hod.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/typographyStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/Card.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/views/rtlStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/views/iconsStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardIconStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/views/dashboardStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/layouts/rtlStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/layouts/dashboardStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardHeaderStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/customTabsStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/footerStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/tableStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/headerStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/customInputStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/buttonStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/snackbarContentStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/sidebarStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardAvatarStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardFooterStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/tasksStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/headerLinksStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/rtlHeaderLinksStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardIcon.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardAvatar.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardBody.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Table/Table.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Footer/Footer.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Tasks/Tasks.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Muted.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Primary.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Info.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Navbars/Navbar.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Navbars/RTLNavbarLinks.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomInput/CustomInput.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Sidebar/Sidebar.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Navbars/AdminNavbarLinks.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Success.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Quote.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Danger.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomButtons/Button.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Snackbar/Snackbar.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Snackbar/SnackbarContent.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardFooter.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardHeader.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/tooltipStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/checkboxAdnRadioStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/dropdownStyle.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomTabs/CustomTabs.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react.jsx" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" />
       </list>
     </option>
   </component>
@@ -236,7 +341,7 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
+    <option name="x" value="993" />
     <option name="y" value="32" />
     <option name="width" value="927" />
     <option name="height" value="1048" />
@@ -247,6 +352,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -278,7 +384,7 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="authorization" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
@@ -286,8 +392,8 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="authorization" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="adminAssets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
@@ -295,7 +401,38 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="adminAssets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="adminAssets" type="462c0819:PsiDirectoryNode" />
+              <item name="jss" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="adminComponents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="adminComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="Card" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
@@ -313,6 +450,14 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="commonDashboard" type="462c0819:PsiDirectoryNode" />
               <item name="facultyHome" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="hod" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
@@ -375,6 +520,20 @@
             <path>
               <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
               <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -408,7 +567,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -427,19 +585,19 @@
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/../SprintWise/Sprint-1 to Submit/Ghot-Den/client/src/validation" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/src/img/us" />
-      <recent name="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome" />
-      <recent name="$PROJECT_DIR$/client/src/components/hod/assignFaculty" />
-      <recent name="$PROJECT_DIR$/client/src/components/authorization/Register" />
-      <recent name="$PROJECT_DIR$/client/src/components/faculty/displayApplications" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/components/admin" />
       <recent name="$PROJECT_DIR$/client/src/img" />
       <recent name="$PROJECT_DIR$/client/src/components/MyAccount" />
       <recent name="$PROJECT_DIR$/client/src/components/common" />
       <recent name="$PROJECT_DIR$/client/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/img" />
+      <recent name="$PROJECT_DIR$/client/src/img/us" />
+      <recent name="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome" />
+      <recent name="$PROJECT_DIR$/client/src/components/hod/assignFaculty" />
+      <recent name="$PROJECT_DIR$/client/src/components/authorization/Register" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -567,14 +725,8 @@
       <workItem from="1554786206554" duration="9701000" />
       <workItem from="1554877827329" duration="783000" />
       <workItem from="1555145481756" duration="13738000" />
-      <workItem from="1555209692854" duration="4524000" />
-    </task>
-    <task id="LOCAL-00053" summary="#Adds HOD homepage&#10;#Adds multiple routes&#10;#fixes minor bugs&#10;#Adds sidebar for faculty and hod&#10;#Adds all hods to database&#10;#TODO: All courses page bugs">
-      <created>1554145032485</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1554145032486</updated>
+      <workItem from="1555209692854" duration="5987000" />
+      <workItem from="1555237716121" duration="23276000" />
     </task>
     <task id="LOCAL-00054" summary="#Adds all courses page&#10;#Adds view course page&#10;#Made dashboard common">
       <created>1554190593146</created>
@@ -912,11 +1064,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555147693306</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="#Added Backend for google OAuth&#10;#Added Google signIn button&#10;#Fixed minor bugs in UI">
+      <created>1555214619408</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1555214619408</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="589531000" />
+    <option name="totallyTimeSpent" value="614270000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -931,20 +1090,20 @@
     <frame x="67" y="32" width="1853" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4976526" visible="true" weight="0.21146356" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4976526" visible="true" weight="0.21925431" />
       <window_info id="Structure" order="1" sideWeight="0.5023474" side_tool="true" weight="0.163606" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.40338984" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49638286" weight="0.4214689" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49638286" weight="0.4022599" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299435" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299435" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4980523" weight="0.2542373" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4980523" weight="0.42259887" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50361717" side_tool="true" weight="0.31751412" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3299435" />
       <window_info anchor="bottom" id="TypeScript" order="12" weight="0.3299435" />
@@ -1009,7 +1168,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#Updated faculty dashboard&#10;#Almost everything regarding sprint-2 is done" />
     <MESSAGE value="#Added backend for upVote, downVote, markAsHelpful&#10;#Added UI for upVote and downVote&#10;#Fixed small bug in assign Faculty backend" />
     <MESSAGE value="#removed small bug" />
     <MESSAGE value="#Added admins&#10;#Created Admin login and enabled path functionality" />
@@ -1034,155 +1192,241 @@
     <MESSAGE value="#Fixed Many bugs&#10;#FINAL PUSH FOR SPRINT-2" />
     <MESSAGE value="#FINAL PUSH FOR SPRINT-2" />
     <MESSAGE value="#FINAL PUSH FOR SPRINT-2&#10;#Fixes home bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="#FINAL PUSH FOR SPRINT-2&#10;#Fixes home bug" />
+    <MESSAGE value="#Added Backend for google OAuth&#10;#Added Google signIn button&#10;#Fixed minor bugs in UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Added Backend for google OAuth&#10;#Added Google signIn button&#10;#Fixed minor bugs in UI" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/ApplyTA.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="132" column="44" selection-start-line="132" selection-start-column="44" selection-end-line="132" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="111" column="13" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/faculty/displayApplications/TAData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="39" column="72" lean-forward="true" selection-start-line="36" selection-start-column="10" selection-end-line="39" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyCourse.js">
+    <entry file="file://$PROJECT_DIR$/config/keys_dev.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+          <caret line="12" column="69" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/Google.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="64" column="44" lean-forward="true" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/authReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/Register/GoogleRegister.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/authActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/passport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/GoogleCallBack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1225">
+          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/profileActions.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/hod/AddCourse.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="74" column="13" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+        <state relative-caret-position="-1260">
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/AnswerForm.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/layout/Landing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1995">
+        <state relative-caret-position="700">
+          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerFeed.js">
+    <entry file="file://$PROJECT_DIR$/client/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5180">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/login/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="60" column="29" lean-forward="true" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/AddDepartment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="59" column="39" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/answers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2100" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/AllQuestions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2104">
+          <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/login/HodLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1470">
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionsFeed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="195" column="24" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+        <state relative-caret-position="1518">
+          <caret line="67" column="75" selection-start-line="67" selection-start-column="75" selection-end-line="67" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyCourse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/CommentForm.js">
+    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+        <state relative-caret-position="1858">
+          <caret line="260" column="22" selection-start-line="260" selection-start-column="22" selection-end-line="260" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="82" column="61" selection-start-line="82" selection-start-column="61" selection-end-line="82" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="70" column="10" selection-start-line="65" selection-start-column="67" selection-end-line="70" selection-end-column="10" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerCommentForm.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1158">
-          <caret line="89" column="15" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="15" />
+        <state relative-caret-position="265">
+          <caret line="104" column="45" selection-start-line="104" selection-start-column="45" selection-end-line="104" selection-end-column="45" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerFeed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ShowComments/CommentFeed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="245">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ShowComments/CommentDisplay.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="248">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/faculty/displayApplications/StudentData.js">
+    <entry file="file://$PROJECT_DIR$/models/Question.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="27" column="13" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/layout/Landing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="41" column="64" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/common/ContactUs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1505">
-          <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/facultyActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="211">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeFeed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="315">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -1191,267 +1435,164 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeQuestionsFeed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="274">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/login/FacultyLogin.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        <state relative-caret-position="630">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js">
+    <entry file="file://$PROJECT_DIR$/client/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="145" column="29" lean-forward="true" selection-start-line="145" selection-start-column="29" selection-end-line="145" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="280">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/hodActions.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomInput/CustomInput.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        <state relative-caret-position="700">
+          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/AllQuestions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-840">
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Question.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/layout/NavBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="55" column="85" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="85" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/AllDepartments.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
-          <caret line="4" column="19" selection-start-line="4" selection-end-line="5" />
+          <caret line="4" column="27" selection-start-line="4" selection-end-line="5" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminVariables/charts.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        <state relative-caret-position="403">
+          <caret line="137" column="19" selection-start-line="137" selection-start-column="19" selection-end-line="137" selection-end-column="19" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/layout/Footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/layout/Sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1155">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Users/AllUsers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionsFeed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/login/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/MyAccount/MyAccount.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5915">
-          <caret line="169" column="61" selection-start-line="169" selection-start-column="61" selection-end-line="169" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/Google.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Warning.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <caret line="5" column="106" selection-start-line="5" selection-start-column="106" selection-end-line="5" selection-end-column="106" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1435">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/google.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="10" selection-start-line="10" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/keys_dev.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/typographyStyle.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.css">
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/headerLinksStyle.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5151">
-          <caret line="252" selection-start-line="252" selection-end-line="252" />
+        <state relative-caret-position="210">
+          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/authorization/google.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Users/UserItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/passport.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardBody.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
-          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/User.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardFooter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardHeader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/cardImagesStyles.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/checkboxAdnRadioStyle.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/dropdownStyle.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/tooltipStyle.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/Card.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/admin.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomTabs/CustomTabs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="94" column="12" lean-forward="true" selection-start-line="86" selection-start-column="8" selection-end-line="94" selection-end-column="12" />
-        </state>
+        <state relative-caret-position="-105" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validations/register/registerStudent.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/css/material-dashboard-react.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="17" column="28" lean-forward="true" selection-end-line="57" selection-end-column="1" />
-        </state>
+        <state relative-caret-position="-840" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validations/register/registerHOD.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="25" selection-start-line="3" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validations/register/registerAdmin.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validations/register/googleRegister.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validations/register/registerFaculty.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="346" column="14" lean-forward="true" selection-start-line="346" selection-start-column="14" selection-end-line="346" selection-end-column="14" />
+        <state relative-caret-position="280">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
           <folding>
-            <element signature="e#8540#9877#0" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/faculty.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/hod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
+        <state relative-caret-position="455">
+          <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#236#281#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

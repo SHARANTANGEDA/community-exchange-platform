@@ -41,6 +41,61 @@ export const registerUser = (userData,history) => dispatch => {
         payload: err.response.data
       }))
 };
+//Login User
+export const googleLogin = () => dispatch => {
+  console.log('In login route')
+
+  axios.get('/api/users/google')
+    .then(res => {
+      console.log({result: res})
+    })
+    .catch(err => {
+        console.log(err)
+        dispatch({
+          type: GET_ERRORS,
+          payload: err.response.data
+        })
+      }
+    );
+};
+export const successRoute = (history) => dispatch => {
+  console.log('In success route')
+  axios.get('/api/users/successGoogle')
+    .then(res => {
+      console.log({result: res.data})
+      if(res.data.success) {
+        const {token} = res.data;
+        localStorage.setItem('jwtToken',token);
+        setAuthToken(token);
+        const decoded = jwt_decode(token);
+        dispatch(setCurrentUser(decoded));
+      } else {
+        console.log(res)
+        history.push('/googleRegister');
+      }
+    })
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
+export const googleRegister = (userData) => dispatch => {
+  axios.post('/api/users/googleRegister',userData)
+    .then(res => {
+      const {token} = res.data;
+      localStorage.setItem('jwtToken',token);
+      setAuthToken(token);
+      const decoded = jwt_decode(token);
+      dispatch(setCurrentUser(decoded));
+    })
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      }));
+}
 //Register User
 export const registerFaculty = (userData,history) => dispatch => {
   axios.post('/api/faculty/register', userData)

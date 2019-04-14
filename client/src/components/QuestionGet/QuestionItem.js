@@ -64,16 +64,19 @@ class QuestionItem extends Component {
             </div>
           </div>
           <div className="user-details d-flex justify-content-end">
-
             <Link to={`/publicProfile/${question.userId}`} className="card-link"
                   style={{ textShadow: '0px 0px 1px', fontSize: '24' }}>
               <img className="rounded-circle" style={{width: '25px',marginRight:'5px'}} alt=''
                    src={question.avatar}/>{name}</Link>
           </div>
-          <div className="user-action-time d-flex justify-content-end align-items-center blockquote-footer"> asked at
-            <span title="2010-04-21 14:28:45Z"
-                  className="relativetime m-1 ">{new Date(question.time).toLocaleString()}</span>
+          <div className='d-flex justify-content-between'>
+            <p>{question.views.length} views</p>
+            <div className="user-action-time d-flex justify-content-end align-items-center blockquote-footer"> asked at
+              <span title="2010-04-21 14:28:45Z"
+                    className="relativetime m-1 ">{new Date(question.time).toLocaleString()}</span>
+            </div>
           </div>
+
         </div>
         </div>
       </div>

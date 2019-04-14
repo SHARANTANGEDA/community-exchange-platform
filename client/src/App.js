@@ -37,6 +37,9 @@ import UnAssignedFaculty from './components/hod/UnAssignedFaculty'
 import AssignFaculty from './components/hod/assignFaculty/AssignFaculty'
 import ViewCourse from './components/hod/ViewCourse'
 import ContactUs from './components/common/ContactUs'
+import GoogleRegister from './components/authorization/Register/GoogleRegister'
+import GoogleCallBack from './components/authorization/GoogleCallBack'
+import AdminDashboard from './components/admin/AdminDashboard'
 
 //Check for token
 if(localStorage.jwtToken) {
@@ -123,6 +126,15 @@ class App extends Component {
           </Switch>
           <Switch>
             <PrivateRoute exact path='/contactUs' component={ContactUs}/>
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path='/completeRegistration' component={GoogleRegister}/>
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path='/googleCallBack' component={GoogleCallBack}/>
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path='/adminDashboard' component={AdminDashboard}/>
           </Switch>
           </div>
         </div>
