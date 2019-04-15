@@ -24,5 +24,6 @@
     <orderEntry type="library" name="@types/react-autocomplete" level="application" />
     <orderEntry type="library" name="@types/react-bootstrap" level="application" />
     <orderEntry type="library" name="@types/passport-google-oauth" level="application" />
+    <orderEntry type="library" name="@types/chartist" level="application" />
   </component>
 </module>

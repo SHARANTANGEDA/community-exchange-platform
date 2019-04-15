@@ -16,33 +16,39 @@
 .ct-grid {
   stroke: rgba(255, 255, 255, 0.2);
   stroke-width: 1px;
-  stroke-dasharray: 2px;
 }
 
 .ct-series-a .ct-point,
 .ct-series-a .ct-line,
 .ct-series-a .ct-bar,
 .ct-series-a .ct-slice-donut {
-  stroke: rgba(255, 255, 255, 0.8);
+  stroke: #db1700;
+  fill: #db1700 ;/*Change color of area*/
 }
-
+/*rgba(255, 255, 255, 0.8)*/
+.ct-series-b .ct-bar, .ct-series-b .ct-line, .ct-series-b .ct-point, .ct-series-b .ct-slice-donut {
+  stroke: #db1700;
+}
 .ct-label.ct-horizontal.ct-end {
-  -webkit-box-align: flex-start;
+  -webkit-box-align: start;
   -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
+  -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-box-pack: flex-start;
+  -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
-  -ms-flex-pack: flex-start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   text-align: left;
   text-anchor: start;
+  color: black;
+
 }
 
 .ct-label {
-  color: rgba(255, 255, 255, 0.7);
-}
+  color: black;
 
+}
+/*rgba(255, 255, 255, 0.7)*/
 .ct-chart-line .ct-label,
 .ct-chart-bar .ct-label {
   display: block;
@@ -51,24 +57,26 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+
+
 }
 
 .ct-label {
-  fill: rgba(0, 0, 0, 0.4);
+  fill: #db1700;
   line-height: 1;
 }
 html * {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /*-moz-osx-font-smoothing: grayscale;*/
 }
-body {
-  background-color: #eeeeee;
-  color: #3c4858;
-  margin: 0;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.5em;
-}
+/*body {*/
+/*  background-color: #eeeeee;*/
+/*  color: #3c4858;*/
+/*  margin: 0;*/
+/*  font-family: Roboto, Helvetica, Arial, sans-serif;*/
+/*  font-weight: 300;*/
+/*  line-height: 1.5em;*/
+/*}*/
 
 blockquote footer:before,
 blockquote small:before {
@@ -79,58 +87,58 @@ small {
   font-size: 80%;
 }
 
-h1 {
-  font-size: 3em;
-  line-height: 1.15em;
-}
+/*h1 {*/
+/*  font-size: 3em;*/
+/*  line-height: 1.15em;*/
+/*}*/
 
-h2 {
-  font-size: 2.4em;
-}
+/*h2 {*/
+/*  font-size: 2.4em;*/
+/*}*/
 
-h3 {
-  font-size: 1.825em;
-  line-height: 1.4em;
-  margin: 20px 0 10px;
-}
+/*h3 {*/
+/*  font-size: 1.825em;*/
+/*  line-height: 1.4em;*/
+/*  margin: 20px 0 10px;*/
+/*}*/
 
-h4 {
-  font-size: 1.3em;
-  line-height: 1.4em;
-}
+/*h4 {*/
+/*  font-size: 1.3em;*/
+/*  line-height: 1.4em;*/
+/*}*/
 
-h5 {
-  font-size: 1.25em;
-  line-height: 1.4em;
-  margin-bottom: 15px;
-}
+/*h5 {*/
+/*  font-size: 1.25em;*/
+/*  line-height: 1.4em;*/
+/*  margin-bottom: 15px;*/
+/*}*/
 
-h6 {
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: 500;
-}
+/*h6 {*/
+/*  font-size: 1em;*/
+/*  text-transform: uppercase;*/
+/*  font-weight: 500;*/
+/*}*/
 
-body {
-  background-color: #eeeeee;
-  color: #3c4858;
-}
+/*body {*/
+/*  background-color: #eeeeee;*/
+/*  color: #3c4858;*/
+/*}*/
 
 blockquote p {
   font-style: italic;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 300;
-  line-height: 1.5em;
-}
+/*body,*/
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*h4,*/
+/*h5,*/
+/*h6 {*/
+/*  font-family: "Roboto", "Helvetica", "Arial", sans-serif;*/
+/*  font-weight: 300;*/
+/*  line-height: 1.5em;*/
+/*}*/
 
 a {
   color: #9c27b0;
@@ -148,7 +156,7 @@ legend {
 }
 
 * {
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: black;
   -webkit-tap-highlight-color: transparent;
 }
 

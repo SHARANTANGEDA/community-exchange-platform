@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{@types/axios-case-converter, @types/axios-token-interceptor, @types/bcryptjs, @types/body-parser, @types/create-react-class, @types/express, @types/jsonwebtoken, @types/mongoose, @types/nodemailer, @types/passport, @types/passport-google-oauth, @types/react, @types/react-app, @types/react-autocomplete, @types/react-bootstrap, @types/validator}" />
+    <file url="PROJECT" libraries="{@types/axios-case-converter, @types/axios-token-interceptor, @types/bcryptjs, @types/body-parser, @types/chartist, @types/create-react-class, @types/express, @types/jsonwebtoken, @types/mongoose, @types/nodemailer, @types/passport, @types/passport-google-oauth, @types/react, @types/react-app, @types/react-autocomplete, @types/react-bootstrap, @types/validator}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

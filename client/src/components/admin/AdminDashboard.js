@@ -5,7 +5,7 @@ import { getDepartments } from '../../actions/authActions'
 import { Link } from 'react-router-dom'
 // @material-ui/icons
 import Store from "@material-ui/icons/Store";
-import WarningIcon from "@material-ui/icons/Warning";
+import Warning from "@material-ui/icons/Warning";
 import DateRange from "@material-ui/icons/DateRange";
 import LocalOffer from "@material-ui/icons/LocalOffer";
 import Update from "@material-ui/icons/Update";
@@ -30,7 +30,7 @@ import CardIcon from "./adminComponents/Card/CardIcon.js";
 import CardBody from "./adminComponents/Card/CardBody.js";
 import CardFooter from "./adminComponents/Card/CardFooter.js";
 import Icon from '@material-ui/core/Icon'
-import Warning from './adminComponents/Typography/Warning'
+//import Warning from './adminComponents/Typography/Warning'
 import ChartistGraph from 'react-chartist'
 import './adminAssets/css/material-dashboard-react.css'
 import { bugs, website, server } from "./adminVariables/general.js";
@@ -40,52 +40,48 @@ import {
   emailsSubscriptionChart,
   completedTasksChart
 } from "./adminVariables/charts.js";
+import dashboardStyle from './adminAssets/jss/material-dashboard-react/views/dashboardStyle'
+import Grid from '@material-ui/core/Grid'
 class AdminDashboard extends Component {
 
   componentDidMount () {
-    this.props.getDepartments(this.props.match.params.id);
     console.log("Called");
   }
   render () {
     const { classes } = this.props;
 
     return (
-      <div className='adminDashboard'>
+      <div>
         <GridContainer>
-          <GridItem xs={12} sm={6} md={3}>
+          <Grid xs={12} sm={6} md={3} className='col-sm-6'>
             <Card>
               <CardHeader color="warning" stats icon>
-                <CardIcon color="warning">
-                  <Icon>content_copy</Icon>
-                </CardIcon>
-                <p className=''>Used Space</p>
-                <h3 className=''>
+                <p className={classes.cardCategory}>Used Space</p>
+                <h3 className={classes.cardTitle}>
                   49/50 <small>GB</small>
                 </h3>
               </CardHeader>
               <CardFooter stats>
-                <div className=''>
+                <div className={classes.stats}>
                   <Danger>
                     <Warning />
                   </Danger>
-                  <Link to="" onClick={e => e.preventDefault()}>
+                  <a href="#pablo" onClick={e => e.preventDefault()}>
                     Get more space
-                  </Link>
+                  </a>
                 </div>
               </CardFooter>
             </Card>
-          </GridItem>
+          </Grid>
           <GridItem xs={12} sm={6} md={3}>
             <Card>
               <CardHeader color="success" stats icon>
-                <CardIcon color="success">
-                  <Store />
-                </CardIcon>
-                <p className=''>Revenue</p>
-                <h3 className=''>$34,245</h3>
+
+                <p className={classes.cardCategory}>Revenue</p>
+                <h3 className={classes.cardTitle}>$34,245</h3>
               </CardHeader>
               <CardFooter stats>
-                <div className=''>
+                <div className={classes.stats}>
                   <DateRange />
                   Last 24 Hours
                 </div>
@@ -95,14 +91,12 @@ class AdminDashboard extends Component {
           <GridItem xs={12} sm={6} md={3}>
             <Card>
               <CardHeader color="danger" stats icon>
-                <CardIcon color="danger">
-                  <Icon>info_outline</Icon>
-                </CardIcon>
-                <p className=''>Fixed Issues</p>
-                <h3 className=''>75</h3>
+
+                <p className={classes.cardCategory}>Fixed Issues</p>
+                <h3 className={classes.cardTitle}>75</h3>
               </CardHeader>
               <CardFooter stats>
-                <div className=''>
+                <div className={classes.stats}>
                   <LocalOffer />
                   Tracked from Github
                 </div>
@@ -112,14 +106,12 @@ class AdminDashboard extends Component {
           <GridItem xs={12} sm={6} md={3}>
             <Card>
               <CardHeader color="info" stats icon>
-                <CardIcon color="info">
-                  <Accessibility />
-                </CardIcon>
-                <p className=''>Followers</p>
-                <h3 className=''>+245</h3>
+
+                <p className={classes.cardCategory}>Followers</p>
+                <h3 className={classes.cardTitle}>+245</h3>
               </CardHeader>
               <CardFooter stats>
-                <div className=''>
+                <div className={classes.stats}>
                   <Update />
                   Just Updated
                 </div>
@@ -140,16 +132,16 @@ class AdminDashboard extends Component {
                 />
               </CardHeader>
               <CardBody>
-                <h4 className=''>Daily Sales</h4>
-                <p className=''>
-                  <span className=''>
-                    <ArrowUpward className='' /> 55%
+                <h4 className={classes.cardTitle}>Daily Sales</h4>
+                <p className={classes.cardCategory}>
+                  <span className={classes.successText}>
+                    <ArrowUpward className={classes.upArrowCardCategory} /> 55%
                   </span>{" "}
                   increase in today sales.
                 </p>
               </CardBody>
               <CardFooter chart>
-                <div className=''>
+                <div className={classes.stats}>
                   <AccessTime /> updated 4 minutes ago
                 </div>
               </CardFooter>
@@ -157,7 +149,7 @@ class AdminDashboard extends Component {
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <Card chart>
-              <CardHeader color="warning">
+              <CardHeader color="warning" >
                 <ChartistGraph
                   className="ct-chart"
                   data={emailsSubscriptionChart.data}
@@ -168,13 +160,13 @@ class AdminDashboard extends Component {
                 />
               </CardHeader>
               <CardBody>
-                <h4 className=''>Email Subscriptions</h4>
-                <p className=''>
+                <h4 className={classes.cardTitle}>Email Subscriptions</h4>
+                <p className={classes.cardCategory}>
                   Last Campaign Performance
                 </p>
               </CardBody>
               <CardFooter chart>
-                <div className=''>
+                <div className={classes.stats}>
                   <AccessTime /> campaign sent 2 days ago
                 </div>
               </CardFooter>
@@ -192,13 +184,13 @@ class AdminDashboard extends Component {
                 />
               </CardHeader>
               <CardBody>
-                <h4 className=''>Completed Tasks</h4>
-                <p className=''>
+                <h4 className={classes.cardTitle}>Completed Tasks</h4>
+                <p className={classes.cardCategory}>
                   Last Campaign Performance
                 </p>
               </CardBody>
               <CardFooter chart>
-                <div className=''>
+                <div className={classes.stats}>
                   <AccessTime /> campaign sent 2 days ago
                 </div>
               </CardFooter>
@@ -250,8 +242,8 @@ class AdminDashboard extends Component {
           <GridItem xs={12} sm={12} md={6}>
             <Card>
               <CardHeader color="warning">
-                <h4 className=''>Employees Stats</h4>
-                <p className=''>
+                <h4 className={classes.cardTitleWhite}>Employees Stats</h4>
+                <p className={classes.cardCategoryWhite}>
                   New employees on 15th September, 2016
                 </p>
               </CardHeader>
@@ -282,9 +274,5 @@ AdminDashboard.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-const mapStateToProps = state => ({
-  hod: state.hod,
-  auth: state.auth
-})
 
-export default connect(mapStateToProps, { getDepartments })(AdminDashboard)
+export default withStyles(dashboardStyle)(AdminDashboard)

@@ -9,6 +9,7 @@ const validateLoginInput = require('../../validations/login/adminLogin')
 const validateDepartmentInput=require('../../validations/validateDepartment')
 const User = require('../../models/User')
 const Department = require('../../models/Department')
+const Question = require('../../models/Question')
 
 //@desc Register
 router.post('/register', (req, res) => {
@@ -141,9 +142,42 @@ router.post('/addDepartment',passport.authenticate('admin',{session: false}),
           .catch(err => console.log(err))
       })
     })
+});
 
-  });
-
-
-
+router.get('/adminCards',passport.authenticate('admin',{session: false}),(req,res) => {
+  let noOfStudents=0,noOfFaculty=0,noOfDepartments=0,noOfQuestions=0;
+  User.find().then(users => {
+    noOfStudents=users.filter(student => student.role==='student').length
+    noOfFaculty=users.filter(faculty => faculty.role === 'faculty').length
+    noOfDepartments=users.filter(hod => hod.role === 'hod').length
+    Question.find().then(questions => {
+      noOfQuestions=questions.length;
+      res.json({students: noOfStudents,faculty: noOfFaculty,departments: noOfDepartments, questions: noOfQuestions})
+    }).catch(err => {
+      res.json({students: noOfStudents,faculty: noOfFaculty,departments: noOfDepartments, questions: 0})
+    })
+  }).catch(err => {
+    res.json({students: 0,faculty: 0,departments: 0, questions: 0})
+  })
+})
+router.get('/adminGraphs',passport.authenticate('admin',{session: false}),(req,res) => {
+  let questionsArray=new Array(7).fill(0),weekdays =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+  Question.find().sort({time: -1}).then(async questions => {
+    const dateDiffInDays = (a, b) => {
+      // Discard the time and time-zone information.
+      const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+      const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+      return Math.floor((utc2 - utc1) /1000 * 60 * 60 * 24);
+    }
+    let now=new Date();
+      questions.map(question => {
+        if (dateDiffInDays(now, new Date(question.time)) < 7) {
+          questionsArray[dateDiffInDays(now, new Date(question.time))]++;
+        }
+    })
+  }).catch(err => {
+    res.json({notFound: 'No Question Found'})
+  })
+  res.json({questions: questionsArray,days:weekdays})
+})
 module.exports = router

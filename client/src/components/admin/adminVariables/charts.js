@@ -1,7 +1,7 @@
 // ##############################
 // // // javascript library for creating charts
 // #############################
-var Chartist = require("chartist");
+const Chartist = require("chartist");
 
 // ##############################
 // // // variables used to create animation on charts
@@ -36,6 +36,9 @@ const dailySalesChart = {
   // for animation
   animation: {
     draw: function(data) {
+      if(data.type === 'grid' && data.index === 0) {
+        data.element.attr({"style": "stroke:black;stroke-width:2"});
+      }
       if (data.type === "line" || data.type === "area") {
         data.element.animate({
           d: {
@@ -106,15 +109,16 @@ const emailsSubscriptionChart = {
       {
         seriesBarDistance: 5,
         axisX: {
-          labelInterpolationFnc: function(value) {
-            return value[0];
-          }
+          labelInterpolationFnc: value => value[0]
         }
       }
     ]
   ],
   animation: {
-    draw: function(data) {
+    draw: data => {
+      if(data.type === 'grid' && data.index === 0) {
+        data.element.attr({"style": "stroke:black;stroke-width:2"});
+      }
       if (data.type === "bar") {
         data.element.animate({
           opacity: {
@@ -153,7 +157,10 @@ const completedTasksChart = {
     }
   },
   animation: {
-    draw: function(data) {
+    draw: data => {
+      if(data.type === 'grid' && data.index === 0) {
+        data.element.attr({"style": "stroke:black;stroke-width:2"});
+      }
       if (data.type === "line" || data.type === "area") {
         data.element.animate({
           d: {
