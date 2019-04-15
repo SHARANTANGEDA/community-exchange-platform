@@ -133,9 +133,6 @@ class App extends Component {
           <Switch>
             <PrivateRoute exact path='/googleCallBack' component={GoogleCallBack}/>
           </Switch>
-          <Switch>
-            <PrivateRoute exact path='/adminDashboard' component={AdminDashboard}/>
-          </Switch>
           </div>
         </div>
         <Footer/>

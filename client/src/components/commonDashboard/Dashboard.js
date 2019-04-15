@@ -9,6 +9,8 @@ import { getHodHome } from '../../actions/hodActions'
 import FacultyFeed from '../hod/FacultyFeed'
 import { getFacultyHome } from '../../actions/facultyActions'
 import FacultyHomeFeed from './facultyHome/FacultyHomeFeed'
+import AdminDashboard from '../admin/AdminDashboard'
+import { getDetails, getGraphDetails, getNoOfCourses } from '../../actions/adminActions'
 
 class Dashboard extends Component {
 
@@ -19,6 +21,10 @@ class Dashboard extends Component {
       this.props.getHodHome(this.props.match.params.id);
     }else if(this.props.auth.user.role==='faculty') {
       this.props.getFacultyHome(this.props.match.params.id);
+    }else if(this.props.auth.user.role==='admin') {
+      this.props.getDetails(this.props.match.params.id);
+      this.props.getGraphDetails(this.props.match.params.id);
+      this.props.getNoOfCourses(this.props.match.params.id);
     }
     console.log("Called");
   }
@@ -207,6 +213,22 @@ class Dashboard extends Component {
           </div>
         </div>
       )
+    }else if(this.props.auth.user.role==='admin') {
+      const {details,graphDetails,loading,loadingGraph,loadingTable,courseDetails } = this.props.admin
+      console.log({ admin: details,graphDetails,courseDetails })
+      let dashboardContent;
+      if ((details === null) ||(courseDetails===null)||(graphDetails === null)|| loading || loadingGraph || loadingTable) {
+        dashboardContent = <Spinner/>
+      }else {
+        dashboardContent= (
+          <AdminDashboard details={details} graphDetails={graphDetails} coursesArray={courseDetails.table}/>
+        )
+      }
+      return (
+        <div className="container dashboard">
+            {dashboardContent}
+        </div>
+      )
     }
 
   }
@@ -218,13 +240,19 @@ Dashboard.propTypes = {
   getFacultyHome: PropTypes.func.isRequired,
   home: PropTypes.object.isRequired,
   hod: PropTypes.object.isRequired,
-  faculty: PropTypes.object.isRequired
+  faculty: PropTypes.object.isRequired,
+  getDetails: PropTypes.func.isRequired,
+  getGraphDetails: PropTypes.func.isRequired,
+  getNoOfCourses:PropTypes.func.isRequired,
+  admin: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
   home: state.home,
   auth: state.auth,
   hod: state.hod,
-  faculty: state.faculty
+  faculty: state.faculty,
+  admin: state.admin
 })
-export default connect(mapStateToProps, { getQuestionsHome,getHodHome,getFacultyHome })(Dashboard)
+export default connect(mapStateToProps, { getQuestionsHome,getHodHome,getFacultyHome,
+  getDetails,getGraphDetails,getNoOfCourses })(Dashboard)

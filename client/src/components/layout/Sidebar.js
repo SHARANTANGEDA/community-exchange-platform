@@ -132,9 +132,46 @@ class Sidebar extends Component {
         </ul>
       </nav>
       )
+    }else if(isAuthenticated && user.role==='admin') {
+      showContent=(
+        <nav id="sidebar" className='sidebar-nav-fixed affix' style={{height: '100%'}}>
+          <ul className="list-unstyled components"  style={{height: '100%'}}>
+            <li className="active">
+            </li>
+            <li>
+              <Link to="/dashboard" style={{textDecoration: 'none'}}>
+                <i className="fas fa-home"/>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/allProfiles" style={{textDecoration: 'none'}}>
+                <i className="fas fa-question"/>
+                All Users
+              </Link>
+            </li>
+            <li>
+              <Link to="/addDepartment" style={{textDecoration: 'none'}}>
+                Add Department
+              </Link>
+            </li>
+            <li>
+              <Link to="/allDepartments" style={{textDecoration: 'none'}}>
+                All Departments
+              </Link>
+            </li>
+            <li>
+              <Link to="/contactUs" style={{textDecoration: 'none'}}>
+                <i className="fas fa-paper-plane"/>
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      )
     }
     return (
-      <div className='' style={{minHeight: '100%'}}>
+      <div style={{minHeight: '100%'}}>
         {showContent}
       </div>
     );

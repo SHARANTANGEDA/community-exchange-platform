@@ -6,7 +6,7 @@ const gravatar = require('gravatar')
 const bcrypt = require('bcryptjs')
 const passport = require('passport')
 const validateLoginInput = require('../../validations/login/adminLogin')
-const validateDepartmentInput=require('../../validations/validateDepartment')
+const validateDepartmentInput = require('../../validations/validateDepartment')
 const User = require('../../models/User')
 const Department = require('../../models/Department')
 const Question = require('../../models/Question')
@@ -41,7 +41,7 @@ router.post('/register', (req, res) => {
           newUser
             .save()
             .then(user => {
-              const payload = { id: user.id, avatar: user.avatar ,role: user.role}
+              const payload = { id: user.id, avatar: user.avatar, role: user.role }
               //TODO change secret key and signIn options
               jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
                 (err, token) => {
@@ -85,7 +85,7 @@ router.post('/login', (req, res) => {
         // if(!user.isVerified) {
         //   return res.status(401).json({type: not-Verified, msg: 'Your account is not verified'});
         // }
-        const payload = { id: user.id,role: user.role,avatar: user.avatar}
+        const payload = { id: user.id, role: user.role, avatar: user.avatar }
         //TODO change secret key and signIn options
         jwt.sign(payload, keys.secretOrKey, { expiresIn: '12h' },
           (err, token) => {
@@ -102,13 +102,12 @@ router.post('/login', (req, res) => {
   })
 })
 
-
 //@ Create Question
-router.post('/addDepartment',passport.authenticate('admin',{session: false}),
-  (req,res) => {
-    const {errors , isValid} =validateDepartmentInput(req.body);
-    if(!isValid) {
-      return res.status(400).json(errors);
+router.post('/addDepartment', passport.authenticate('admin', { session: false }),
+  (req, res) => {
+    const { errors, isValid } = validateDepartmentInput(req.body)
+    if (!isValid) {
+      return res.status(400).json(errors)
     }
     const avatar = gravatar.url(req.body.emailId, {
       s: '200', // Size
@@ -133,7 +132,7 @@ router.post('/addDepartment',passport.authenticate('admin',{session: false}),
           .save()
           .then(user => {
             const newDepartment = new Department({
-              hod:user._id,
+              hod: user._id,
               hodEmail: req.body.emailId,
               departmentName: req.body.departmentName
             })
@@ -142,42 +141,63 @@ router.post('/addDepartment',passport.authenticate('admin',{session: false}),
           .catch(err => console.log(err))
       })
     })
-});
+  })
 
-router.get('/adminCards',passport.authenticate('admin',{session: false}),(req,res) => {
-  let noOfStudents=0,noOfFaculty=0,noOfDepartments=0,noOfQuestions=0;
+router.get('/adminCards', passport.authenticate('admin', { session: false }), (req, res) => {
+  let noOfStudents = 0, noOfFaculty = 0, noOfDepartments = 0, noOfQuestions = 0
   User.find().then(users => {
-    noOfStudents=users.filter(student => student.role==='student').length
-    noOfFaculty=users.filter(faculty => faculty.role === 'faculty').length
-    noOfDepartments=users.filter(hod => hod.role === 'hod').length
+    noOfStudents = users.filter(student => student.role === 'student').length
+    noOfFaculty = users.filter(faculty => faculty.role === 'faculty').length
+    noOfDepartments = users.filter(hod => hod.role === 'hod').length
     Question.find().then(questions => {
-      noOfQuestions=questions.length;
-      res.json({students: noOfStudents,faculty: noOfFaculty,departments: noOfDepartments, questions: noOfQuestions})
+      noOfQuestions = questions.length
+      res.json({ students: noOfStudents, faculty: noOfFaculty, departments: noOfDepartments, questions: noOfQuestions })
     }).catch(err => {
-      res.json({students: noOfStudents,faculty: noOfFaculty,departments: noOfDepartments, questions: 0})
+      res.json({ students: noOfStudents, faculty: noOfFaculty, departments: noOfDepartments, questions: 0 })
     })
   }).catch(err => {
-    res.json({students: 0,faculty: 0,departments: 0, questions: 0})
+    res.json({ students: 0, faculty: 0, departments: 0, questions: 0 })
   })
 })
-router.get('/adminGraphs',passport.authenticate('admin',{session: false}),(req,res) => {
-  let questionsArray=new Array(7).fill(0),weekdays =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-  Question.find().sort({time: -1}).then(async questions => {
+router.get('/adminGraphs', passport.authenticate('admin', { session: false }), (req, res) => {
+  let questionsArray = new Array(8).fill(0),dummy=[],
+    weekdays = ['Sun', 'Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat']
+  Question.find().sort({ time: -1 }).then(async questions => {
     const dateDiffInDays = (a, b) => {
       // Discard the time and time-zone information.
-      const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
-      const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
-      return Math.floor((utc2 - utc1) /1000 * 60 * 60 * 24);
+      const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate())
+      const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate())
+      return Math.floor((utc1 - utc2) / 1000 * 60 * 60 * 24)
     }
-    let now=new Date();
-      questions.map(question => {
+    let now = new Date()
+    questions.map(question => {
+      dummy.push(new Promise((resolve, reject) => {
         if (dateDiffInDays(now, new Date(question.time)) < 7) {
-          questionsArray[dateDiffInDays(now, new Date(question.time))]++;
+          console.log({"IN MAP":dateDiffInDays(now, new Date(question.time))})
+          questionsArray[dateDiffInDays(now, new Date(question.time))]++
+          resolve(question.time)
         }
+      }))
     })
+    console.log(questionsArray)
+    res.json({ series:await Promise.all(questionsArray),labels : weekdays})
+
   }).catch(err => {
-    res.json({notFound: 'No Question Found'})
+    res.json({ notFound: 'No Question Found' })
   })
-  res.json({questions: questionsArray,days:weekdays})
+})
+router.get('/noOfCoursesInDep',passport.authenticate('admin', { session: false }),
+  (req, res) => {
+  let data=[];
+  Department.find().then(async departments => {
+    departments.map(department => {
+      data.push(new Promise((resolve,reject) => {
+        resolve({department,noOfCourses:department.courses.length})
+      }))
+    })
+    res.json({table: await Promise.all(data)})
+  }).catch(err => {
+    res.json({notFound: 'notFound'})
+  })
 })
 module.exports = router
