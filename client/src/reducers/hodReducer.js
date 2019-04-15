@@ -1,6 +1,4 @@
-import {
-  LOADING, GET_HOME, GET_HOME_NO_FACULTY, GET_ALL_DEPARTMENTS, ASSIGN_FACULTY
-} from '../actions/types'
+import { ASSIGN_FACULTY, GET_ALL_DEPARTMENTS, GET_HOME, GET_HOME_NO_FACULTY, LOADING } from '../actions/types'
 
 const initialState = {
   loading: true,

@@ -1,10 +1,10 @@
 import {
+  CLEAR_CURRENT_PROFILE,
+  GET_ALL_PROFILES,
   GET_MY_PROFILE,
   GET_OTHER_PROFILE,
-  GET_ALL_PROFILES,
-  PROFILE_LOADING,
-  CLEAR_CURRENT_PROFILE
-} from '../actions/types';
+  PROFILE_LOADING
+} from '../actions/types'
 
 const initialState = {
   profile: null,

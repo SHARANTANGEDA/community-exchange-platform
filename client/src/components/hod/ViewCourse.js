@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
-import PropTypes  from 'prop-types'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Spinner from '../common/Spinner'
-import { getAllCourses, getCourse } from '../../actions/hodActions'
-import CourseFeed from './Courses/CourseFeed'
+import { getCourse } from '../../actions/hodActions'
 import { Link } from 'react-router-dom'
-import FacultyFeed from './FacultyFeed'
 import UserRow from '../Users/UserRow'
 
 class ViewCourse extends Component {

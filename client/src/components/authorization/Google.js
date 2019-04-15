@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import './google.css';
+import './google.css'
 import { connect } from 'react-redux'
-import { googleLogin, loginUser } from '../../actions/authActions'
+import { googleLogin } from '../../actions/authActions'
 import { PropTypes } from 'prop-types'
 
 class Google extends Component {

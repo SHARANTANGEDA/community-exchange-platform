@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { Link, withRouter } from 'react-router-dom'
-import { PropTypes } from 'prop-types';
+import { withRouter } from 'react-router-dom'
+import { PropTypes } from 'prop-types'
 import classnames from 'classnames'
-import {connect} from 'react-redux';
-import { getDepartments, registerFaculty, registerUser } from '../../../actions/authActions'
-import TextFieldGroup from '../../common/TextFieldGroup';
+import { connect } from 'react-redux'
+import { getDepartments, registerFaculty } from '../../../actions/authActions'
+import TextFieldGroup from '../../common/TextFieldGroup'
 import DepartmentFeed from './DepartmentFeed'
 
 class RegisterFaculty extends Component {

@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import './App.css';
-import jwt_decode from 'jwt-decode';
-import setAuthToken from './utils/setAuthToken';
+import React, { Component } from 'react'
+import './App.css'
+import jwt_decode from 'jwt-decode'
+import setAuthToken from './utils/setAuthToken'
 import { logoutUser, setCurrentUser } from './actions/authActions'
 
-import PrivateRoute from './components/common/PrivateRoute';
+import PrivateRoute from './components/common/PrivateRoute'
 
-import {Provider} from 'react-redux';
-import store from './store';
-import Footer from './components/layout/Footer';
-import NavBar from './components/layout/NavBar';
-import Landing from './components/layout/Landing';
-import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
-import Register from './components/authorization/Register/Register';
-import Login from './components/authorization/login/Login';
-import Dashboard from './components/commonDashboard/Dashboard';
-import AskQuestions from './components/AskQuestion/AskQuestions';
-import Sidebar from'./components/layout/Sidebar';
+import { Provider } from 'react-redux'
+import store from './store'
+import Footer from './components/layout/Footer'
+import NavBar from './components/layout/NavBar'
+import Landing from './components/layout/Landing'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Register from './components/authorization/Register/Register'
+import Login from './components/authorization/login/Login'
+import Dashboard from './components/commonDashboard/Dashboard'
+import AskQuestions from './components/AskQuestion/AskQuestions'
+import Sidebar from './components/layout/Sidebar'
 import AllQuestions from './components/QuestionGet/AllQuestions'
 import AllUsers from './components/Users/AllUsers'
 import UserProfile from './components/Users/UserProfile'
@@ -39,7 +39,6 @@ import ViewCourse from './components/hod/ViewCourse'
 import ContactUs from './components/common/ContactUs'
 import GoogleRegister from './components/authorization/Register/GoogleRegister'
 import GoogleCallBack from './components/authorization/GoogleCallBack'
-import AdminDashboard from './components/admin/AdminDashboard'
 
 //Check for token
 if(localStorage.jwtToken) {

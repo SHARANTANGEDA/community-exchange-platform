@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { askQuestion, getCourseCodes } from '../../actions/homeQuestionsActions'
-import classnames from 'classnames';
+import classnames from 'classnames'
 import GetCourses from '../commonDashboard/GetCourses'
 
 class AskQuestions extends Component {
@@ -69,7 +69,6 @@ class AskQuestions extends Component {
   render () {
     const { errors } = this.state;
     const { courses, loading } = this.props.courses;
-    const {home} = this.props;
     let content;
 
     if (courses === null || loading) {

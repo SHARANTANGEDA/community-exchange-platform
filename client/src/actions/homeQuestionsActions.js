@@ -1,13 +1,18 @@
-import axios from 'axios';
+import axios from 'axios'
 
 import {
-  GET_ERRORS,
-  CLEAR_ERRORS,
-  ASK_QUESTION,
-  QUESTION_LOADING,
-  HOME_QUESTIONS,
+  ADD_ANSWER,
   ALL_QUESTIONS,
-  GET_QUESTION, GET_COMMENT, ADD_ANSWER, GET_COURSES, GET_NO_COURSE, APPLY_TA
+  APPLY_TA,
+  ASK_QUESTION,
+  CLEAR_ERRORS,
+  GET_COMMENT,
+  GET_COURSES,
+  GET_ERRORS,
+  GET_NO_COURSE,
+  GET_QUESTION,
+  HOME_QUESTIONS,
+  QUESTION_LOADING
 } from './types'
 import { setLoading } from './hodActions'
 

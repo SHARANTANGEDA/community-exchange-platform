@@ -1,35 +1,30 @@
 import React, { Component } from 'react'
-import PropTypes  from 'prop-types'
-import { connect } from 'react-redux'
-import { getDepartments } from '../../actions/authActions'
-import { Link } from 'react-router-dom'
-// @material-ui/icons
-
-import LocalOffer from "@material-ui/icons/LocalOffer";
-import AccessTime from "@material-ui/icons/AccessTime";
+import PropTypes from 'prop-types'
+import LocalOffer from '@material-ui/icons/LocalOffer'
+import AccessTime from '@material-ui/icons/AccessTime'
 //core Components
 // @material-ui/core
-import withStyles from "@material-ui/core/styles/withStyles";
-import GridItem from "./adminComponents/Grid/GridItem.js";
-import GridContainer from "./adminComponents/Grid/GridContainer.js";
-import Table from "./adminComponents/Table/Table.js";
-import Card from "./adminComponents/Card/Card.js";
-import CardHeader from "./adminComponents/Card/CardHeader.js";
-import CardBody from "./adminComponents/Card/CardBody.js";
-import CardFooter from "./adminComponents/Card/CardFooter.js";
+import withStyles from '@material-ui/core/styles/withStyles'
+import GridItem from './adminComponents/Grid/GridItem.js'
+import GridContainer from './adminComponents/Grid/GridContainer.js'
+import Table from './adminComponents/Table/Table.js'
+import Card from './adminComponents/Card/Card.js'
+import CardHeader from './adminComponents/Card/CardHeader.js'
+import CardBody from './adminComponents/Card/CardBody.js'
+import CardFooter from './adminComponents/Card/CardFooter.js'
 import ChartistGraph from 'react-chartist'
 import './adminAssets/css/material-dashboard-react.css'
 
-import {
-  dailySalesChart,
-} from "./adminVariables/charts.js";
+import { dailySalesChart, } from './adminVariables/charts.js'
 import dashboardStyle from './adminAssets/jss/material-dashboard-react/views/dashboardStyle'
 import Grid from '@material-ui/core/Grid'
+
+// @material-ui/icons
 class AdminDashboard extends Component {
   render () {
     const { classes,details,graphDetails,coursesArray } = this.props;
     let tableData=[];
-    coursesArray.map(details => {
+    coursesArray.forEach(details => {
       tableData.push([details.department.departmentName,details.department.hodEmail,details.noOfCourses.toString()])
     })
     return (

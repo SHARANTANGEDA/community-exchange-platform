@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import PropTypes  from 'prop-types'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Spinner from '../common/Spinner'
-import { Link } from 'react-router-dom'
 import { getTAApplications } from '../../actions/facultyActions'
 import TAFeed from './displayApplications/TAFeed'
 

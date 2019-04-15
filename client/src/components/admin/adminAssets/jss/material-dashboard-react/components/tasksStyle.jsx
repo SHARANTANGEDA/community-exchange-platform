@@ -1,11 +1,7 @@
-import {
-  defaultFont,
-  primaryColor,
-  dangerColor,
-  grayColor
-} from "../../material-dashboard-react.jsx";
-import tooltipStyle from "../tooltipStyle.jsx";
-import checkboxAdnRadioStyle from "../checkboxAdnRadioStyle.jsx";
+import { dangerColor, defaultFont, grayColor, primaryColor } from '../../material-dashboard-react.jsx'
+import tooltipStyle from '../tooltipStyle.jsx'
+import checkboxAdnRadioStyle from '../checkboxAdnRadioStyle.jsx'
+
 const tasksStyle = {
   ...tooltipStyle,
   ...checkboxAdnRadioStyle,

@@ -1,12 +1,12 @@
 import {
-  defaultFont,
-  primaryColor,
-  infoColor,
-  successColor,
-  warningColor,
   dangerColor,
-  grayColor
-} from "../../material-dashboard-react.jsx";
+  defaultFont,
+  grayColor,
+  infoColor,
+  primaryColor,
+  successColor,
+  warningColor
+} from '../../material-dashboard-react.jsx'
 
 const typographyStyle = {
   defaultFontStyle: {

@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-
-import { changePassword } from '../../actions/profileActions'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import classnames from 'classnames'
 import { applyTA, getCourseCodes } from '../../actions/homeQuestionsActions'
@@ -66,7 +64,6 @@ class ApplyTA extends Component {
   render() {
     const { errors } = this.state;
     const { courses, loading } = this.props.courses;
-    const {home} = this.props;
     let content;
 
     if (courses === null || loading) {

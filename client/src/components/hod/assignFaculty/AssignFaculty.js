@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import PropTypes  from 'prop-types'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Spinner from '../../common/Spinner'
 import { Link } from 'react-router-dom'
-import { assignByCourseId} from '../../../actions/hodActions'
+import { assignByCourseId } from '../../../actions/hodActions'
 import Feed from './Feed'
 
 class AssignFaculty extends Component {

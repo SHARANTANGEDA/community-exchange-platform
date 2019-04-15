@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
-import {Collapse} from 'react-collapse';
+import { Collapse } from 'react-collapse'
 import FacultyHomeQuestionsFeed from './FacultyHomeQuestionsFeed'
-
 
 class FacultyCourse extends Component {
   constructor () {

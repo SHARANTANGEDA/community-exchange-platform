@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import Spinner from '../common/Spinner';
-import { updateProfile, getMyAccount } from '../../actions/profileActions'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import Spinner from '../common/Spinner'
+import { getMyAccount, updateProfile } from '../../actions/profileActions'
 import InputGroup from '../common/InputGroup'
 import TextFieldGroup from '../common/TextFieldGroup'
+
 const isEmpty = require('./is-empty');
 
 class MyAccount extends Component {
@@ -66,7 +67,7 @@ class MyAccount extends Component {
 
   }
   render() {
-    const { errors, displaySocialInputs } = this.state;
+    const { errors } = this.state;
     const { profile, loading } = this.props.profile;
     let profileContent;
 

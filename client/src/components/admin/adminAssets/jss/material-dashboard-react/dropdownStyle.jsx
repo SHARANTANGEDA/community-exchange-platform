@@ -1,12 +1,12 @@
 import {
-  primaryColor,
-  whiteColor,
-  primaryBoxShadow,
-  defaultFont,
   blackColor,
+  defaultFont,
   grayColor,
-  hexToRgb
-} from "../material-dashboard-react.jsx";
+  hexToRgb,
+  primaryBoxShadow,
+  primaryColor,
+  whiteColor
+} from '../material-dashboard-react.jsx'
 
 const dropdownStyle = theme => ({
   buttonLink: {

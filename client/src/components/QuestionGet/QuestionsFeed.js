@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import {PropTypes} from 'prop-types';
+import React, { Component } from 'react'
+import { PropTypes } from 'prop-types'
 import QuestionItem from './QuestionItem'
 
 class QuestionsFeed extends Component {

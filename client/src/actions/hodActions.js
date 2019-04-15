@@ -1,13 +1,6 @@
-import axios from 'axios';
+import axios from 'axios'
 
-import {
-  GET_HOME,
-  CLEAR_ERRORS,
-  GET_HOME_NO_FACULTY,
-  LOADING,
-  GET_COURSES,
-  GET_NO_COURSE, ADD_COURSE, GET_ERRORS, ASSIGN_FACULTY
-} from './types'
+import { CLEAR_ERRORS, GET_COURSES, GET_ERRORS, GET_HOME, GET_HOME_NO_FACULTY, GET_NO_COURSE, LOADING } from './types'
 
 export const getCourse = id => dispatch => {
   console.log("Started Loading All courses page")

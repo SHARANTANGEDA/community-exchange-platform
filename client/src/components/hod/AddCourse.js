@@ -29,7 +29,6 @@ class AddCourse extends Component {
 
   onSubmit (e) {
     e.preventDefault()
-    const { user } = this.props
     const newCourse = {
       courseCode: this.state.courseCode,
       courseName: this.state.courseName,

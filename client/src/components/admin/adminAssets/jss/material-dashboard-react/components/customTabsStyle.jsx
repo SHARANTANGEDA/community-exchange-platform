@@ -1,4 +1,4 @@
-import { hexToRgb, whiteColor } from "../../material-dashboard-react.jsx";
+import { hexToRgb, whiteColor } from '../../material-dashboard-react.jsx'
 
 const customTabsStyle = {
   cardTitle: {

@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-// @material-ui/icons
-
+import withStyles from '@material-ui/core/styles/withStyles'
 // core components
-import cardIconStyle from "../../adminAssets/jss/material-dashboard-react/components/cardIconStyle.jsx";
+import cardIconStyle from '../../adminAssets/jss/material-dashboard-react/components/cardIconStyle.jsx'
+
+// @material-ui/icons
 
 function CardIcon({ ...props }) {
   const { classes, className, children, color, ...rest } = props;

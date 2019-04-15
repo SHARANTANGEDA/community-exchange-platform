@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import { changePassword } from '../../actions/profileActions'
 
@@ -61,7 +61,6 @@ class ChangePassword extends Component {
   }
   render() {
     const { errors } = this.state;
-    const { profile, loading } = this.props.profile;
     let profileContent;
 
     // if (profile === null || loading) {

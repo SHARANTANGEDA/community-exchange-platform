@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import {logoutUser} from '../../actions/authActions'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { logoutUser } from '../../actions/authActions'
 
 class Navbar extends Component {
   onLogoutClick(e) {
@@ -28,16 +28,16 @@ class Navbar extends Component {
       </Link>
     );
 
-    const authLinksI = (
-    <div className="input-group md-form form-sm form-2 pl-0" style={{width: '500px',maxWidth: '700px'}}>
-      <input className="form-control my-0 py-1 lime-border" type="text" placeholder="Search" aria-label="Search"/>
-      <div className="input-group-append">
-        <span className="input-group-text cyan lighten-2" id="basic-text1">
-          <i className="fas fa-search text-grey" aria-hidden="true"/>
-        </span>
-      </div>
-    </div>
-    );
+    // const authLinksI = (
+    // <div className="input-group md-form form-sm form-2 pl-0" style={{width: '500px',maxWidth: '700px'}}>
+    //   <input className="form-control my-0 py-1 lime-border" type="text" placeholder="Search" aria-label="Search"/>
+    //   <div className="input-group-append">
+    //     <span className="input-group-text cyan lighten-2" id="basic-text1">
+    //       <i className="fas fa-search text-grey" aria-hidden="true"/>
+    //     </span>
+    //   </div>
+    // </div>
+    // );
     const authLinksII = (
       <ul className="navbar-nav ml-auto" style={{minWidth: '300px'}}>
         <li className="nav-item dropdown" >

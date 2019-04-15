@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Link, withRouter } from 'react-router-dom'
-import { PropTypes } from 'prop-types';
-import {connect} from 'react-redux';
-import TextFieldGroup from '../common/TextFieldGroup';
+import { Link } from 'react-router-dom'
+import { PropTypes } from 'prop-types'
+import { connect } from 'react-redux'
+import TextFieldGroup from '../common/TextFieldGroup'
 import { addDepartment } from '../../actions/adminActions'
 
 class AddDepartment extends Component {

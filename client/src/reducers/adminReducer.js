@@ -1,13 +1,4 @@
-import {
-  LOADING,
-  GET_HOME,
-  GET_HOME_NO_FACULTY,
-  GET_ALL_DEPARTMENTS,
-  ASSIGN_FACULTY,
-  GET_DETAILS,
-  GET_DETAILS_GRAPH,
-  GET_COURSE_DEPARTMENT
-} from '../actions/types'
+import { GET_COURSE_DEPARTMENT, GET_DETAILS, GET_DETAILS_GRAPH, LOADING } from '../actions/types'
 
 const initialState = {
   loading: true,

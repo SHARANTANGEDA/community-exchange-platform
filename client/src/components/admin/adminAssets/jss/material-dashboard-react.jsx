@@ -22,6 +22,7 @@
 // // // Example: input = 999 => output = 153, 153, 153
 // #############################
 import '../css/material-dashboard-react.css'
+
 const hexToRgb = input => {
   input = input + "";
   input = input.replace("#", "");

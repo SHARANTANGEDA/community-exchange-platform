@@ -1,14 +1,13 @@
-import axios from 'axios';
+import axios from 'axios'
 
 import {
   CLEAR_ERRORS,
-  LOADING,
-  GET_FACULTY_HOME,
-  GET_FACULTY_ERRORS,
-  GET_ERRORS_IN_APPLICATIONS,
-  GET_TA_APPLICATIONS,
-  ACCEPT_TA_APPLICATION,
   GET_ERRORS,
+  GET_ERRORS_IN_APPLICATIONS,
+  GET_FACULTY_ERRORS,
+  GET_FACULTY_HOME,
+  GET_TA_APPLICATIONS,
+  LOADING,
 } from './types'
 
 export const getFacultyHome = () => dispatch => {

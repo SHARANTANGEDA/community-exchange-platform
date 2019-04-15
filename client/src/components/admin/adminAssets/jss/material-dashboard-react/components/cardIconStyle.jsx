@@ -1,12 +1,12 @@
 import {
-  warningCardHeader,
-  successCardHeader,
   dangerCardHeader,
+  grayColor,
   infoCardHeader,
   primaryCardHeader,
   roseCardHeader,
-  grayColor
-} from "../../material-dashboard-react.jsx";
+  successCardHeader,
+  warningCardHeader
+} from '../../material-dashboard-react.jsx'
 
 const cardIconStyle = {
   cardIcon: {

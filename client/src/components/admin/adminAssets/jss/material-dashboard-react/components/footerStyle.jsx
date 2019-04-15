@@ -1,9 +1,4 @@
-import {
-  defaultFont,
-  container,
-  primaryColor,
-  grayColor
-} from "../../material-dashboard-react.jsx";
+import { container, defaultFont, grayColor, primaryColor } from '../../material-dashboard-react.jsx'
 
 const footerStyle = {
   block: {

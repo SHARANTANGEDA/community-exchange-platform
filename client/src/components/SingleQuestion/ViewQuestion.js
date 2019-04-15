@@ -9,7 +9,6 @@ import AnswerFeed from './ShowAnswers/AnswerFeed'
 import AnswerForm from './AnswerForm'
 import { connect } from 'react-redux'
 import TagFeed from '../QuestionGet/Tags/TagFeed'
-import AnswerCommentForm from './ShowAnswers/AnswerCommentForm'
 
 class ViewQuestion extends Component {
   constructor () {

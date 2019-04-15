@@ -1,6 +1,4 @@
-import {
-  LOADING, GET_HOME, GET_HOME_NO_FACULTY, GET_COURSES, GET_NO_COURSE, ADD_COURSE
-} from '../actions/types'
+import { ADD_COURSE, GET_COURSES, GET_NO_COURSE, LOADING } from '../actions/types'
 
 const initialState = {
   loading: true,

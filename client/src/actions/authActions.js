@@ -1,15 +1,8 @@
-import {
-  GET_ALL_DEPARTMENTS,
-  GET_ERRORS,
-  GET_ERRORS_IN_APPLICATIONS,
-  GET_TA_APPLICATIONS,
-  SET_CURRENT_USER
-} from './types'
+import { GET_ALL_DEPARTMENTS, GET_ERRORS, GET_ERRORS_IN_APPLICATIONS, SET_CURRENT_USER } from './types'
 import axios from 'axios'
 import setAuthToken from '../utils/setAuthToken'
-import jwt_decode from 'jwt-decode';
+import jwt_decode from 'jwt-decode'
 import { setLoading } from './facultyActions'
-
 
 export const getDepartments = () => dispatch => {
   console.log("Started Loading Ta applications page")

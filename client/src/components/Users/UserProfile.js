@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import Spinner from '../common/Spinner';
-import { getProfileById } from '../../actions/profileActions';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import Spinner from '../common/Spinner'
+import { getProfileById } from '../../actions/profileActions'
 import QuestionsFeed from '../QuestionGet/QuestionsFeed'
 
 class UserProfile extends Component {

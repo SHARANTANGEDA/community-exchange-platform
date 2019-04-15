@@ -173,13 +173,11 @@ router.get('/adminGraphs', passport.authenticate('admin', { session: false }), (
     questions.map(question => {
       dummy.push(new Promise((resolve, reject) => {
         if (dateDiffInDays(now, new Date(question.time)) < 7) {
-          console.log({"IN MAP":dateDiffInDays(now, new Date(question.time))})
           questionsArray[dateDiffInDays(now, new Date(question.time))]++
           resolve(question.time)
         }
       }))
     })
-    console.log(questionsArray)
     res.json({ series:await Promise.all(questionsArray),labels : weekdays})
 
   }).catch(err => {

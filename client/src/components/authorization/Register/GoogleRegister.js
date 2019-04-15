@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import {  withRouter } from 'react-router-dom'
-import { PropTypes } from 'prop-types';
+import { withRouter } from 'react-router-dom'
+import { PropTypes } from 'prop-types'
 import classnames from 'classnames'
-import {connect} from 'react-redux';
+import { connect } from 'react-redux'
 import { getDepartments, googleRegister } from '../../../actions/authActions'
-import TextFieldGroup from '../../common/TextFieldGroup';
+import TextFieldGroup from '../../common/TextFieldGroup'
 import DepartmentFeed from './DepartmentFeed'
 
 class GoogleRegister extends Component {

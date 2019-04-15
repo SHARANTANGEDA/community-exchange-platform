@@ -1,8 +1,7 @@
-import React,{Component} from 'react';
-import {PropTypes} from 'prop-types';
-import {connect} from 'react-redux';
-import TextFieldGroup from '../../common/TextFieldGroup';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react'
+import { PropTypes } from 'prop-types'
+import { connect } from 'react-redux'
+import TextFieldGroup from '../../common/TextFieldGroup'
 import { hodLogin } from '../../../actions/authActions'
 
 class Login extends Component{

@@ -1,7 +1,4 @@
-import {
-  QUESTION_LOADING,
-  HOME_QUESTIONS
-} from '../actions/types'
+import { HOME_QUESTIONS, QUESTION_LOADING } from '../actions/types'
 
 const initialState = {
   question: null,

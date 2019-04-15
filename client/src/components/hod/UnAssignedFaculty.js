@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import PropTypes  from 'prop-types'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Spinner from '../common/Spinner'
-import { getAllCourses, getUnAssignedFaculty } from '../../actions/hodActions'
+import { getUnAssignedFaculty } from '../../actions/hodActions'
 import FacultyFeed from './FacultyFeed'
 
 class AllCourses extends Component {

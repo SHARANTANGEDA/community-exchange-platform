@@ -1,9 +1,4 @@
-import {
-  successColor,
-  whiteColor,
-  grayColor,
-  hexToRgb
-} from "../../material-dashboard-react.jsx";
+import { grayColor, hexToRgb, successColor, whiteColor } from '../../material-dashboard-react.jsx'
 
 const dashboardStyle = {
   successText: {

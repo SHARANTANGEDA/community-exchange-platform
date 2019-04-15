@@ -1,7 +1,13 @@
-import axios from 'axios';
+import axios from 'axios'
 
 import {
-  CLEAR_ERRORS, LOADING, GET_ERRORS, GET_COURSES, GET_NO_COURSE, GET_DETAILS, GET_DETAILS_GRAPH, GET_COURSE_DEPARTMENT
+  CLEAR_ERRORS,
+  GET_COURSE_DEPARTMENT,
+  GET_DETAILS,
+  GET_DETAILS_GRAPH,
+  GET_ERRORS,
+  GET_NO_COURSE,
+  LOADING
 } from './types'
 
 //Add Department

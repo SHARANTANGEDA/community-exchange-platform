@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import PropTypes  from 'prop-types'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Spinner from '../common/Spinner'
-import UserRowFeed from './UserRowFeed';
-import {getAllProfiles} from '../../actions/profileActions'
+import { getAllProfiles } from '../../actions/profileActions'
 import UserRow from './UserRow'
 
 class AllUsers extends Component {

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import {PropTypes} from 'prop-types';
+import React, { Component } from 'react'
+import { PropTypes } from 'prop-types'
 import Tags from './Tags'
 
 class TagFeed extends Component {

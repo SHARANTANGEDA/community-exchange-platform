@@ -1,4 +1,4 @@
-import { blackColor, hexToRgb } from "../material-dashboard-react.jsx";
+import { blackColor, hexToRgb } from '../material-dashboard-react.jsx'
 
 const tooltipStyle = {
   tooltip: {

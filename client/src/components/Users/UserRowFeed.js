@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import {PropTypes} from 'prop-types';
+import React, { Component } from 'react'
+import { PropTypes } from 'prop-types'
 import UserRow from './UserRow'
 
 class UserRowFeed extends Component {

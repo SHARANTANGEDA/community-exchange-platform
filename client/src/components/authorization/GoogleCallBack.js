@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { PropTypes } from 'prop-types';
-import {connect} from 'react-redux';
-import { successRoute} from '../../actions/authActions'
+import { PropTypes } from 'prop-types'
+import { connect } from 'react-redux'
+import { successRoute } from '../../actions/authActions'
 import Spinner from '../common/Spinner'
 
 class GoogleCallBack extends Component {

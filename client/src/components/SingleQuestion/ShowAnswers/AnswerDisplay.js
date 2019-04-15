@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
 import CommentFeed from '../ShowComments/CommentFeed'
 import AnswerCommentForm from './AnswerCommentForm'
-import { downVoteAnswer, downVoteQuestion, upVoteAnswer, upVoteQuestion } from '../../../actions/homeQuestionsActions'
+import { downVoteAnswer, upVoteAnswer } from '../../../actions/homeQuestionsActions'
 
 class AnswerDisplay extends Component {
   constructor () {
