@@ -10,20 +10,20 @@ opts.jwtFromRequest = extractJWT.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = keys.secretOrKey;
 
 module.exports = passport => {
-  passport.use('google',
-    new GoogleStrategy({
-    clientID: keys.GOOGLE_CLIENT_ID,
-    clientSecret: keys.GOOGLE_CLIENT_SECRET,
-    callbackURL: keys.GOOGLE_CALLBACK_URL //TODO CHANGE CALLBACK URL
-  },(accessToken, refreshToken, profile, done) => {
-      console.log('In google passport strategy')
-      let user = {
-      emailId: profile.emails[0].value,
-      name: profile.displayName,
-      token: accessToken
-    };
-    done(null, user)
-    }))
+  // passport.use('google',
+  //   new GoogleStrategy({
+  //   clientID: keys.GOOGLE_CLIENT_ID,
+  //   clientSecret: keys.GOOGLE_CLIENT_SECRET,
+  //   callbackURL: keys.GOOGLE_CALLBACK_URL //TODO CHANGE CALLBACK URL
+  // },(accessToken, refreshToken, profile, done) => {
+  //     console.log('In google passport strategy')
+  //     let user = {
+  //     emailId: profile.emails[0].value,
+  //     name: profile.displayName,
+  //     token: accessToken
+  //   };
+  //   done(null, user)
+  //   }))
   passport.use('admin',
     new JWTStrategy(opts, (jwt_payload, done) => {
       User.findById(jwt_payload.id)

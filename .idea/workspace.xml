@@ -3,152 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="92c3f002-70e8-4ff8-9b74-7304e267b2f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/adminActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/adminActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/authActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/authActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/facultyActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/facultyActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/hodActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/hodActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/homeQuestionsActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/profileActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/profileActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AskQuestion/AskQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AskQuestion/AskQuestions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/MyAccount/ChangePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/MyAccount/ChangePassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/MyAccount/MyAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/MyAccount/MyAccount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/MyAccount/TabPaneSwitch.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/MyAccount/TabPaneSwitch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/QuestionGet/AllQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/QuestionGet/AllQuestions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/QuestionGet/QuestionsFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/QuestionGet/QuestionsFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/QuestionGet/Tags/TagFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/QuestionGet/Tags/TagFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/QuestionGet/Tags/Tags.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/QuestionGet/Tags/Tags.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/AnswerForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/AnswerForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/CommentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/CommentForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerCommentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerCommentForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowComments/CommentDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowComments/CommentDisplay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowComments/CommentFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowComments/CommentFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Users/AllUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/AllUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Users/UserItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/UserItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Users/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/UserProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Users/UserRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/UserRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Users/UserRowFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/UserRowFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/AddDepartment.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/AddDepartment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/AllDepartments.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/AllDepartments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/DepartmentData.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/DepartmentData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/DepartmentFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/DepartmentFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/TableDataFeed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/checkboxAdnRadioStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/checkboxAdnRadioStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/buttonStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/buttonStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardAvatarStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardAvatarStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardFooterStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardFooterStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardHeaderStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardHeaderStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardIconStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardIconStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/cardStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/customInputStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/customInputStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/customTabsStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/customTabsStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/footerStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/footerStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/headerLinksStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/headerLinksStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/headerStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/headerStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/rtlHeaderLinksStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/rtlHeaderLinksStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/sidebarStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/sidebarStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/snackbarContentStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/snackbarContentStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/tableStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/tableStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/tasksStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/tasksStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/typographyStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/typographyStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/dropdownStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/dropdownStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/layouts/dashboardStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/layouts/dashboardStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/layouts/rtlStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/layouts/rtlStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/tooltipStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/tooltipStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/views/dashboardStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/views/dashboardStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/views/iconsStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/views/iconsStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/views/rtlStyle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/views/rtlStyle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardAvatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardAvatar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardBody.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomButtons/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomButtons/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomInput/CustomInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomInput/CustomInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomTabs/CustomTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomTabs/CustomTabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/FixedPlugin/FixedPlugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/FixedPlugin/FixedPlugin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Grid/GridContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Grid/GridContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Grid/GridItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Grid/GridItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Navbars/AdminNavbarLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Navbars/AdminNavbarLinks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Navbars/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Navbars/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Navbars/RTLNavbarLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Navbars/RTLNavbarLinks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Sidebar/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Snackbar/Snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Snackbar/Snackbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Snackbar/SnackbarContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Snackbar/SnackbarContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Table/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Tasks/Tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Tasks/Tasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Danger.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Danger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Info.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Muted.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Muted.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Primary.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Primary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Quote.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Quote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Success.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Success.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Warning.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Warning.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/Google.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/Google.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/GoogleCallBack.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/GoogleCallBack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/Register/DepartmentFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/Register/DepartmentFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/Register/GoogleRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/Register/GoogleRegister.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/Register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/Register/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/Register/RegisterFaculty.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/Register/RegisterFaculty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/login/AdminLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/login/AdminLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/login/FacultyLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/login/FacultyLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/login/HodLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/login/HodLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authorization/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authorization/login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/common/ContactUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/common/ContactUs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/common/InputGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/common/InputGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/common/PrivateRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/common/PrivateRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/common/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/common/Spinner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/common/TextAreaGroupField.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/common/TextAreaGroupField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/common/TextFieldGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/common/TextFieldGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/commonDashboard/ApplyTA.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/ApplyTA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/commonDashboard/GetCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/GetCourses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeQuestionsFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/facultyHome/FacultyHomeQuestionsFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/faculty/TAApplications.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/faculty/TAApplications.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/faculty/displayApplications/ShowStudents.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/faculty/displayApplications/ShowStudents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/faculty/displayApplications/StudentData.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/faculty/displayApplications/StudentData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/faculty/displayApplications/TAData.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/faculty/displayApplications/TAData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/faculty/displayApplications/TAFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/faculty/displayApplications/TAFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/AddCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/AddCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/AllCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/AllCourses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/Courses/CourseData.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/Courses/CourseData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/Courses/CourseFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/Courses/CourseFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/FacultyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/FacultyData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/FacultyFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/FacultyFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/UnAssignedFaculty.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/UnAssignedFaculty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/ViewCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/ViewCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/assignFaculty/AssignFaculty.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/assignFaculty/AssignFaculty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/assignFaculty/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/assignFaculty/Data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/hod/assignFaculty/Feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/hod/assignFaculty/Feed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/layout/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/layout/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/Landing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/layout/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/adminReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/adminReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/askQuestionReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/askQuestionReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/authReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/courseReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/courseReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/errorReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/errorReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/facultyReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/facultyReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/hodReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/hodReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/homeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/homeReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/profileReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/setAuthToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/setAuthToken.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/passport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -160,111 +16,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/hod/ViewCourse.js">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+            <state relative-caret-position="525">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/actions/authActions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/Users/AllUsers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/hod/AddCourse.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/MyAccount/ChangePassword.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/MyAccount/MyAccount.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/AskQuestion/AskQuestions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/layout/NavBar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="43" column="49" lean-forward="true" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/validations/register/googleRegister.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/api/admin.js">
+        <entry file="file://$PROJECT_DIR$/config/passport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="54" column="33" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="33" />
+            <state relative-caret-position="455">
+              <caret line="25" column="10" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="25" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -326,8 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardIcon.js" />
-        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardAvatar.js" />
         <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardBody.js" />
         <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Table/Table.js" />
         <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Footer/Footer.js" />
@@ -377,6 +146,8 @@
         <option value="$PROJECT_DIR$/client/src/components/AskQuestion/AskQuestions.js" />
         <option value="$PROJECT_DIR$/client/src/components/layout/NavBar.js" />
         <option value="$PROJECT_DIR$/routes/api/admin.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/config/passport.js" />
       </list>
     </option>
   </component>
@@ -401,7 +172,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -454,6 +224,11 @@
             <path>
               <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
               <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -482,6 +257,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -643,14 +419,8 @@
       <workItem from="1555209692854" duration="5987000" />
       <workItem from="1555237716121" duration="23721000" />
       <workItem from="1555294829199" duration="18864000" />
-      <workItem from="1555329587866" duration="365000" />
-    </task>
-    <task id="LOCAL-00057" summary="#Adds Faculty homepage&#10;#adds ta homepage button">
-      <created>1554207454115</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1554207454115</updated>
+      <workItem from="1555329587866" duration="785000" />
+      <workItem from="1555330489378" duration="114000" />
     </task>
     <task id="LOCAL-00058" summary="#adds TA application page">
       <created>1554220490816</created>
@@ -988,11 +758,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555328605174</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="#Optimized  All Imports&#10;#Removed un-used Props">
+      <created>1555330046853</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1555330046853</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="633944000" />
+    <option name="totallyTimeSpent" value="634478000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1019,11 +796,11 @@
       <window_info anchor="bottom" id="TODO" order="5" weight="0.3299435" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3299435" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980523" weight="0.42259887" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980523" visible="true" weight="0.07909604" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50361717" side_tool="true" weight="0.31751412" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3299435" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.3299435" />
-      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.49638286" visible="true" weight="0.29039547" />
+      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.49638286" weight="0.45310736" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1085,7 +862,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#Fixed small bug in adminActions" />
     <MESSAGE value="#Added test hod email" />
     <MESSAGE value="#Fixed bugs in Add Department" />
     <MESSAGE value="#Fixed bugs in Add Department validation" />
@@ -1110,30 +886,10 @@
     <MESSAGE value="#Fixed minor bugs&#10;#Added number of views&#10;#Added AdminDashboard Designs" />
     <MESSAGE value="#Added backend for admin Dashboard&#10;#Refinde UI For adminDashboard" />
     <MESSAGE value="#Completed Admin Dashboard&#10;#Added Sidebar to Admin&#10;#Changed Redirect Links" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Completed Admin Dashboard&#10;#Added Sidebar to Admin&#10;#Changed Redirect Links" />
+    <MESSAGE value="#Optimized  All Imports&#10;#Removed un-used Props" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Optimized  All Imports&#10;#Removed un-used Props" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/typographyStyle.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/components/headerLinksStyle.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardFooter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomTabs/CustomTabs.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1501,6 +1257,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="54" column="33" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validations/register/googleRegister.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/passport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="25" column="10" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="25" selection-end-column="10" />
         </state>
       </provider>
     </entry>
