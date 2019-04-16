@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="92c3f002-70e8-4ff8-9b74-7304e267b2f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/passport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/img/admin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/img/logoNew.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/img/showcase.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/img/showcase.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,25 +19,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validations/register/googleRegister.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/passport.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="25" column="10" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="25" selection-end-column="10" />
+            <state relative-caret-position="408">
+              <caret line="253" column="25" lean-forward="true" selection-start-line="253" selection-start-column="25" selection-end-line="253" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,8 +43,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>target</find>
-      <find>QuestionItem</find>
       <find>comment-text</find>
       <find>js-comment-edit-hide</find>
       <find>comment-body</find>
@@ -82,6 +71,8 @@
       <find>warning</find>
       <find>width</find>
       <find>console</find>
+      <find>top</find>
+      <find>recent</find>
     </findStrings>
     <replaceStrings>
       <replace>black</replace>
@@ -128,7 +119,6 @@
         <option value="$PROJECT_DIR$/client/src/actions/types.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/adminReducer.js" />
         <option value="$PROJECT_DIR$/client/src/components/admin/TableDataFeed.js" />
-        <option value="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" />
         <option value="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" />
         <option value="$PROJECT_DIR$/client/src/components/authorization/login/AdminLogin.js" />
         <option value="$PROJECT_DIR$/client/src/actions/facultyActions.js" />
@@ -148,6 +138,7 @@
         <option value="$PROJECT_DIR$/routes/api/admin.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/config/passport.js" />
+        <option value="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" />
       </list>
     </option>
   </component>
@@ -203,55 +194,14 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="AskQuestion" type="462c0819:PsiDirectoryNode" />
+              <item name="commonDashboard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
               <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MyAccount" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
-              <item name="validations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
-              <item name="validations" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -420,14 +370,8 @@
       <workItem from="1555237716121" duration="23721000" />
       <workItem from="1555294829199" duration="18864000" />
       <workItem from="1555329587866" duration="785000" />
-      <workItem from="1555330489378" duration="114000" />
-    </task>
-    <task id="LOCAL-00058" summary="#adds TA application page">
-      <created>1554220490816</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1554220490816</updated>
+      <workItem from="1555330489378" duration="449000" />
+      <workItem from="1555402857988" duration="358000" />
     </task>
     <task id="LOCAL-00059" summary="#Changed My Account auth to all.&#10;#TODO:To change again in sprint-3.&#10;#Fixed Tags bug">
       <created>1554306995926</created>
@@ -765,11 +709,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555330046853</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="#Optimized  All Imports&#10;#Removed un-used Props&#10;#Added pivotal tracker csv file">
+      <created>1555330636849</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1555330636850</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="634478000" />
+    <option name="totallyTimeSpent" value="635171000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -782,7 +733,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="32" width="1853" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5023474" side_tool="true" weight="0.163606" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -796,7 +746,7 @@
       <window_info anchor="bottom" id="TODO" order="5" weight="0.3299435" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3299435" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980523" visible="true" weight="0.07909604" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980523" weight="0.41468927" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50361717" side_tool="true" weight="0.31751412" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3299435" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.3299435" />
@@ -862,7 +812,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#Added test hod email" />
     <MESSAGE value="#Fixed bugs in Add Department" />
     <MESSAGE value="#Fixed bugs in Add Department validation" />
     <MESSAGE value="#Fixed small path bug in all courses" />
@@ -887,7 +836,8 @@
     <MESSAGE value="#Added backend for admin Dashboard&#10;#Refinde UI For adminDashboard" />
     <MESSAGE value="#Completed Admin Dashboard&#10;#Added Sidebar to Admin&#10;#Changed Redirect Links" />
     <MESSAGE value="#Optimized  All Imports&#10;#Removed un-used Props" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Optimized  All Imports&#10;#Removed un-used Props" />
+    <MESSAGE value="#Optimized  All Imports&#10;#Removed un-used Props&#10;#Added pivotal tracker csv file" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Optimized  All Imports&#10;#Removed un-used Props&#10;#Added pivotal tracker csv file" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomTabs/CustomTabs.js">
@@ -1127,16 +1077,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="223" column="84" selection-start-line="223" selection-start-column="72" selection-end-line="223" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/actions/facultyActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1272,8 +1212,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/passport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="25" selection-end-column="10" />
+        <state relative-caret-position="490">
+          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="253" column="25" lean-forward="true" selection-start-line="253" selection-start-column="25" selection-end-line="253" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
