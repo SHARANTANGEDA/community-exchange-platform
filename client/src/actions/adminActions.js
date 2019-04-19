@@ -36,6 +36,7 @@ export const getDetails = () => dispatch => {
   )
 };
 export const getGraphDetails = () => dispatch => {
+  console.log('In graphh actions')
   axios.get('/api/admin/adminGraphs')
     .then(res => {
       dispatch({

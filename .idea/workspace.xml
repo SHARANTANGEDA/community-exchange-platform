@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="92c3f002-70e8-4ff8-9b74-7304e267b2f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/img/admin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/img/logoNew.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/img/showcase.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/img/showcase.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/adminActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/adminActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/admin/adminVariables/charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/adminVariables/charts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/admin.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,15 +18,54 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="253" column="25" lean-forward="true" selection-start-line="253" selection-start-column="25" selection-end-line="253" selection-end-column="25" />
+            <state relative-caret-position="334">
+              <caret line="257" column="18" selection-start-line="257" selection-start-column="18" selection-end-line="257" selection-end-column="18" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/actions/adminActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-702">
+              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="156" column="6" lean-forward="true" selection-start-line="156" selection-start-column="6" selection-end-line="156" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="107" column="35" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminVariables/charts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -115,7 +154,6 @@
         <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react.jsx" />
         <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/css/material-dashboard-react.css" />
         <option value="$PROJECT_DIR$/client/src/reducers/index.js" />
-        <option value="$PROJECT_DIR$/client/src/components/admin/adminVariables/charts.js" />
         <option value="$PROJECT_DIR$/client/src/actions/types.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/adminReducer.js" />
         <option value="$PROJECT_DIR$/client/src/components/admin/TableDataFeed.js" />
@@ -123,22 +161,23 @@
         <option value="$PROJECT_DIR$/client/src/components/authorization/login/AdminLogin.js" />
         <option value="$PROJECT_DIR$/client/src/actions/facultyActions.js" />
         <option value="$PROJECT_DIR$/client/src/App.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/adminActions.js" />
         <option value="$PROJECT_DIR$/client/src/components/commonDashboard/ApplyTA.js" />
         <option value="$PROJECT_DIR$/client/src/components/faculty/TAApplications.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/ViewCourse.js" />
         <option value="$PROJECT_DIR$/client/src/actions/authActions.js" />
         <option value="$PROJECT_DIR$/client/src/components/Users/AllUsers.js" />
-        <option value="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" />
         <option value="$PROJECT_DIR$/client/src/components/hod/AddCourse.js" />
         <option value="$PROJECT_DIR$/client/src/components/MyAccount/ChangePassword.js" />
         <option value="$PROJECT_DIR$/client/src/components/MyAccount/MyAccount.js" />
         <option value="$PROJECT_DIR$/client/src/components/AskQuestion/AskQuestions.js" />
         <option value="$PROJECT_DIR$/client/src/components/layout/NavBar.js" />
-        <option value="$PROJECT_DIR$/routes/api/admin.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/config/passport.js" />
         <option value="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" />
+        <option value="$PROJECT_DIR$/client/src/actions/adminActions.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" />
+        <option value="$PROJECT_DIR$/routes/api/admin.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/adminVariables/charts.js" />
       </list>
     </option>
   </component>
@@ -194,6 +233,14 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="commonDashboard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -202,6 +249,17 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -371,14 +429,11 @@
       <workItem from="1555294829199" duration="18864000" />
       <workItem from="1555329587866" duration="785000" />
       <workItem from="1555330489378" duration="449000" />
-      <workItem from="1555402857988" duration="358000" />
-    </task>
-    <task id="LOCAL-00059" summary="#Changed My Account auth to all.&#10;#TODO:To change again in sprint-3.&#10;#Fixed Tags bug">
-      <created>1554306995926</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1554306995926</updated>
+      <workItem from="1555402857988" duration="702000" />
+      <workItem from="1555405003138" duration="1233000" />
+      <workItem from="1555548443357" duration="617000" />
+      <workItem from="1555549204348" duration="635000" />
+      <workItem from="1555641498999" duration="2118000" />
     </task>
     <task id="LOCAL-00060" summary="#Added authentication to user accounts">
       <created>1554307486801</created>
@@ -716,11 +771,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555330636850</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="#Reduced Landing Image size&#10;#Changed top questions text to Recent Questions">
+      <created>1555403287973</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1555403287975</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="635171000" />
+    <option name="totallyTimeSpent" value="640118000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -733,11 +795,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="32" width="1853" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5023474" side_tool="true" weight="0.163606" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.4976526" visible="true" weight="0.18864775" />
+      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.4976526" visible="true" weight="0.18864775" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.40338984" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
@@ -750,7 +813,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50361717" side_tool="true" weight="0.31751412" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3299435" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.3299435" />
-      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.49638286" weight="0.45310736" />
+      <window_info active="true" anchor="bottom" id="Run" order="12" sideWeight="0.49638286" visible="true" weight="0.35141242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -812,7 +875,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#Fixed bugs in Add Department" />
     <MESSAGE value="#Fixed bugs in Add Department validation" />
     <MESSAGE value="#Fixed small path bug in all courses" />
     <MESSAGE value="#Fixed bug in add courses" />
@@ -837,7 +899,8 @@
     <MESSAGE value="#Completed Admin Dashboard&#10;#Added Sidebar to Admin&#10;#Changed Redirect Links" />
     <MESSAGE value="#Optimized  All Imports&#10;#Removed un-used Props" />
     <MESSAGE value="#Optimized  All Imports&#10;#Removed un-used Props&#10;#Added pivotal tracker csv file" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Optimized  All Imports&#10;#Removed un-used Props&#10;#Added pivotal tracker csv file" />
+    <MESSAGE value="#Reduced Landing Image size&#10;#Changed top questions text to Recent Questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Reduced Landing Image size&#10;#Changed top questions text to Recent Questions" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomTabs/CustomTabs.js">
@@ -912,9 +975,6 @@
           <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/node_modules/react-chartist/dist/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Question.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1015,13 +1075,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminVariables/charts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/actions/types.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="626">
@@ -1091,13 +1144,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/adminActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/ApplyTA.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2100">
@@ -1130,16 +1176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1193,13 +1229,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="54" column="33" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -1219,11 +1248,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="253" column="25" lean-forward="true" selection-start-line="253" selection-start-column="25" selection-end-line="253" selection-end-column="25" />
+        <state relative-caret-position="334">
+          <caret line="257" column="18" selection-start-line="257" selection-start-column="18" selection-end-line="257" selection-end-column="18" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/adminActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/node_modules/react-chartist/dist/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="156" column="6" lean-forward="true" selection-start-line="156" selection-start-column="6" selection-end-line="156" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="107" column="35" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/adminVariables/charts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
         </state>
       </provider>
     </entry>

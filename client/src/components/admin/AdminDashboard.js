@@ -23,14 +23,15 @@ import Grid from '@material-ui/core/Grid'
 class AdminDashboard extends Component {
   render () {
     const { classes,details,graphDetails,coursesArray } = this.props;
-    let tableData=[];
+    let tableData=[],series=[],labels=graphDetails.labels;
+    series.push(graphDetails.series);
     coursesArray.forEach(details => {
       tableData.push([details.department.departmentName,details.department.hodEmail,details.noOfCourses.toString()])
     })
     return (
       <div>
         <GridContainer>
-          <Grid xs={12} sm={6} md={3} className='col-sm-6'>
+          <GridItem xs={12} sm={6} md={3} className='col-sm-6'>
             <Card>
               <CardHeader color="warning" stats icon>
                 <p className={classes.cardCategory}>Students</p>
@@ -45,7 +46,7 @@ class AdminDashboard extends Component {
                 </div>
               </CardFooter>
             </Card>
-          </Grid>
+          </GridItem>
           <GridItem xs={12} sm={6} md={3}>
             <Card>
               <CardHeader color="warning" stats icon>
@@ -101,7 +102,7 @@ class AdminDashboard extends Component {
               <CardHeader color="success">
                 <ChartistGraph
                   className="ct-chart"
-                  data={graphDetails}
+                  data={{series,labels}}
                   type="Line"
                   options={dailySalesChart.options}
                   listener={dailySalesChart.animation}
