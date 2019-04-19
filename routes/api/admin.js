@@ -161,7 +161,8 @@ router.get('/adminCards', passport.authenticate('admin', { session: false }), (r
 })
 router.get('/adminGraphs', passport.authenticate('admin', { session: false }), (req, res) => {
   let questionsArray = new Array(8).fill(0),dummy=[],
-    weekdays = ['Sun', 'Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat']
+    weekdays = ['Sun', 'Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat'],
+    days=[]
   Question.find().sort({ time: -1 }).then(async questions => {
     const dateDiffInDays = (a, b) => {
       // Discard the time and time-zone information.
@@ -170,6 +171,17 @@ router.get('/adminGraphs', passport.authenticate('admin', { session: false }), (
       return Math.floor((utc1 - utc2) / (1000 * 60 * 60 * 24))
     }
     let now = new Date()
+    console.log(now.getDay());
+    dummy.push(new Promise((resolve,reject) => {
+      for (let i = 6; i >= 1; i--) {
+        if(now.getDay()-i>=0) {
+          days.push(weekdays[now.getDay()-i]);
+        } else {
+          days.push(weekdays[now.getDay()+7-i])
+        }
+      }
+      days.push(weekdays[now.getDay()])
+    }))
     questions.map(question => {
       dummy.push(new Promise((resolve, reject) => {
         if (dateDiffInDays(now, new Date(question.time)) < 7) {
@@ -178,7 +190,9 @@ router.get('/adminGraphs', passport.authenticate('admin', { session: false }), (
         }
       }))
     })
-    res.json({ series:await Promise.all(questionsArray),labels : weekdays})
+    questionsArray.reverse()
+    console.log({ series:await Promise.all(questionsArray),labels : await Promise.all(days)})
+    res.json({ series:await Promise.all(questionsArray),labels : await Promise.all(days)})
 
   }).catch(err => {
     res.json({ notFound: 'No Question Found' })

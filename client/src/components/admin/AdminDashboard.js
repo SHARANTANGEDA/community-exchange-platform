@@ -24,6 +24,10 @@ class AdminDashboard extends Component {
   render () {
     const { classes,details,graphDetails,coursesArray } = this.props;
     let tableData=[],series=[],labels=graphDetails.labels;
+    // graphDetails.series.forEach(num => {
+    //   num=num+25;
+    // })
+    console.log(graphDetails.series)
     series.push(graphDetails.series);
     coursesArray.forEach(details => {
       tableData.push([details.department.departmentName,details.department.hodEmail,details.noOfCourses.toString()])

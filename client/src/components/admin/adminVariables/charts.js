@@ -17,8 +17,8 @@ var delays2 = 80,
 
 const dailySalesChart = {
   data: {
-    labels: ["M", "T", "W", "T", "F", "S", "S"],
-    series: [[12, 17, 7, 17, 23, 18, 38]]
+    //labels: ["M", "T", "W", "T", "F", "S", "S"],
+    //series: [[12, 17, 7, 17, 23, 18, 38]]
   },
   options: {
     lineSmooth: Chartist.Interpolation.cardinal({
@@ -32,8 +32,15 @@ const dailySalesChart = {
       bottom: 0,
       left: 0
     },
+    showArea: true,
     width: '400px',
     height: '400px',
+     axisY: {
+    //   type: Chartist.FixedScaleAxis,
+    //   ticks: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100,110,120,130,140,150,160,170,180,190,200],
+      low: 0,
+      onlyInteger: true
+    }
   },
   // for animation
   animation: {
