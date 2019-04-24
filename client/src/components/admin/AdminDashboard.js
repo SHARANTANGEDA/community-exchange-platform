@@ -14,10 +14,11 @@ import CardBody from './adminComponents/Card/CardBody.js'
 import CardFooter from './adminComponents/Card/CardFooter.js'
 import ChartistGraph from 'react-chartist'
 import './adminAssets/css/material-dashboard-react.css'
+import classnames from 'classnames'
+
 
 import { dailySalesChart, } from './adminVariables/charts.js'
 import dashboardStyle from './adminAssets/jss/material-dashboard-react/views/dashboardStyle'
-import Grid from '@material-ui/core/Grid'
 
 // @material-ui/icons
 class AdminDashboard extends Component {
@@ -36,15 +37,15 @@ class AdminDashboard extends Component {
       <div>
         <GridContainer>
           <GridItem xs={12} sm={6} md={3} className='col-sm-6'>
-            <Card>
-              <CardHeader color="warning" stats icon>
-                <p className={classes.cardCategory}>Students</p>
-                <h3 className={classes.cardTitle}>
+            <Card style={{backgroundColor:'#00acc1'}}>
+              <CardHeader color="warning" stats icon className='text-center'>
+                <p className={classes.cardCategory} style={{color:'white'}}>Students</p>
+                <h1 className={classnames("text-center imp",{imp:classes.cardTitle})} style={{color:'white', fontWeight:'bold'}}>
                   {details.students}
-                </h3>
+                </h1>
               </CardHeader>
               <CardFooter stats>
-                <div className={classes.stats}>
+                <div className={classes.stats} style={{color:'white'}}>
                   <LocalOffer />
                   Registered till now
                 </div>
@@ -52,15 +53,15 @@ class AdminDashboard extends Component {
             </Card>
           </GridItem>
           <GridItem xs={12} sm={6} md={3}>
-            <Card>
-              <CardHeader color="warning" stats icon>
-                <p className={classes.cardCategory}>Faculty</p>
-                <h3 className={classes.cardTitle}>
+            <Card style={{backgroundColor:'#f44336'}}>
+              <CardHeader color="warning" stats icon className='text-center'>
+                <p className={classes.cardCategory} style={{color:'white'}}>Faculty</p>
+                <h1 className={classnames("text-center imp",{imp:classes.cardTitle})} style={{color:'white', fontWeight:'bold'}}>
                   {details.faculty}
-                </h3>
+                </h1>
               </CardHeader>
               <CardFooter stats>
-                <div className={classes.stats}>
+                <div className={classes.stats} style={{color:'white'}}>
                   <LocalOffer />
                   Registered till now
                 </div>
@@ -68,15 +69,15 @@ class AdminDashboard extends Component {
             </Card>
           </GridItem>
           <GridItem xs={12} sm={6} md={3}>
-            <Card>
-              <CardHeader color="warning" stats icon>
-                <p className={classes.cardCategory}>Departments</p>
-                <h3 className={classes.cardTitle}>
+            <Card style={{backgroundColor:'#4caf50'}}>
+              <CardHeader color="warning" stats icon className='text-center'>
+                <p className={classes.cardCategory} style={{color:'white'}}>Departments</p>
+                <h1 className={classnames("text-center imp",{imp:classes.cardTitle})} style={{color:'white', fontWeight:'bold'}}>
                   {details.departments}
-                </h3>
+                </h1>
               </CardHeader>
               <CardFooter stats>
-                <div className={classes.stats}>
+                <div className={classes.stats} style={{color:'white'}}>
                   <LocalOffer />
                   Created till now
                 </div>
@@ -84,15 +85,15 @@ class AdminDashboard extends Component {
             </Card>
           </GridItem>
           <GridItem xs={12} sm={6} md={3}>
-            <Card>
-              <CardHeader color="warning" stats icon>
-                <p className={classes.cardCategory}>Questions</p>
-                <h3 className={classes.cardTitle}>
+            <Card style={{backgroundColor:'#ffa726'}}>
+              <CardHeader color="warning" stats icon className='text-center'>
+                <p className={classes.cardCategory} style={{color:'white'}}>Questions</p>
+                <h1 className={classnames("text-center imp",{imp:classes.cardTitle})} style={{color:'white', fontWeight:'bold'}}>
                   {details.questions}
-                </h3>
+                </h1>
               </CardHeader>
               <CardFooter stats>
-                <div className={classes.stats}>
+                <div className={classes.stats} style={{color:'white'}}>
                   <LocalOffer />
                   Asked till now
                 </div>
@@ -113,29 +114,29 @@ class AdminDashboard extends Component {
                 />
               </CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>Weekly Stats</h4>
-
+                <h4 className={classes.cardTitle}>Questions per day over last week</h4>
               </CardBody>
-              <CardFooter chart>
-                <div className={classes.stats}>
-                  <AccessTime /> Questions asked daily in a week
-                </div>
-              </CardFooter>
+              {/*<CardFooter chart>*/}
+              {/*  <div className={classes.stats}>*/}
+              {/*    <AccessTime /> Questions asked daily in a week*/}
+              {/*  </div>*/}
+              {/*</CardFooter>*/}
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={6}>
-            <Card>
-              <CardHeader color="warning">
-                <h4 className={classes.cardTitleWhite}>Employees Stats</h4>
-                <p className={classes.cardCategoryWhite}>
-                  New employees on 15th September, 2016
-                </p>
-              </CardHeader>
-              <CardBody>
+            <Card className="scrollbar  scrollbar-warning force-overflow">
+              {/*<CardHeader color="warning">*/}
+              {/*  <h4 className={classes.cardTitleWhite}>Employees Stats</h4>*/}
+              {/*  <p className={classes.cardCategoryWhite}>*/}
+              {/*    New employees on 15th September, 2016*/}
+              {/*  </p>*/}
+              {/*</CardHeader>*/}
+              <CardBody >
                 <Table
                   tableHeaderColor="warning"
                   tableHead={["Department Name", "Hod Email", "Number of Courses"]}
                   tableData={tableData}
+
                 />
               </CardBody>
             </Card>

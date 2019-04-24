@@ -44,10 +44,6 @@
 
 }
 
-.ct-label {
-  color: black;
-
-}
 /*rgba(255, 255, 255, 0.7)*/
 .ct-chart-line .ct-label,
 .ct-chart-bar .ct-label {
@@ -60,7 +56,31 @@
 
 
 }
+.scrollbar {
+  margin-right: 10px;
+  float: right;
+  height: 300px;
+  width: 65px;
+  background: #fff;
+  overflow-y: scroll;
+  margin-bottom: 25px;
+}
+.force-overflow {
+  min-height: 500px;
+}
+.scrollbar-warning::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #F5F5F5;
+  border-radius: 10px; }
 
+.scrollbar-warning::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5; }
+
+.scrollbar-warning::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #FF8800; }
 .ct-label {
   fill: #db1700;
   line-height: 1;
@@ -157,7 +177,7 @@ legend {
 
 * {
   -webkit-tap-highlight-color: black;
-  -webkit-tap-highlight-color: transparent;
+  /*-webkit-tap-highlight-color: transparent;*/
 }
 
 *:focus {
@@ -251,7 +271,6 @@ footer ul li a:hover {
   font-weight: 300;
   line-height: 1.5em;
   position: fixed;
-  top: 180px;
   right: 0;
   width: 64px;
   background: rgba(0, 0, 0, 0.3);

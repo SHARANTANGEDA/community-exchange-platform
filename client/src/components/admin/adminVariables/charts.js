@@ -25,7 +25,7 @@ const dailySalesChart = {
       tension: 0
     }),
     low: 0,
-    high: 400, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+    high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
     chartPadding: {
       top: 0,
       right: 0,
@@ -36,8 +36,6 @@ const dailySalesChart = {
     width: '400px',
     height: '400px',
      axisY: {
-    //   type: Chartist.FixedScaleAxis,
-    //   ticks: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100,110,120,130,140,150,160,170,180,190,200],
       low: 0,
       onlyInteger: true
     }
@@ -55,7 +53,7 @@ const dailySalesChart = {
             dur: 700,
             from: data.path
               .clone()
-              .scale(1, 0)
+              .scale(2, 0)
               .translate(0, data.chartRect.height())
               .stringify(),
             to: data.path.clone().stringify(),
