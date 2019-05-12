@@ -57,11 +57,15 @@ const QuestionSchema = new Schema({
       ref: 'users'
     }
   }],
-  vote: [{
-
-
+  image: [{
+    name: {
+      type: String,
+      default: "none"
+    },
+    data: {
+      type: String
+    }
   }],
-
   //TODO Add image functionality
   comments: [
     {

@@ -3,10 +3,37 @@ const app = express();
 const router = express.Router();
 const passport = require('passport');
 const bodyParser = require('body-parser');
+const multer = require('multer');
 
 //Mongo Model
 const Question = require('../../models/Question');
 const User = require('../../models/User');
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, './uploads/');
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + file.originalname);
+  }
+});
+
+const fileFilter = (req, file, cb) => {
+  if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+    cb(null, true);
+  } else {
+    // rejects storing a file
+    cb(null, false);
+  }
+}
+
+const upload = multer({
+  storage: storage,
+  limits: {
+    fileSize: 1024 * 1024 * 5
+  },
+  fileFilter: fileFilter
+});
 
 const validateQuestionInput = require('../../validations/askQuestions')
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -90,7 +117,7 @@ router.get('/:id',passport.authenticate('all',{session: false}),(req,res) => {
 router.post('/ask',passport.authenticate('all',{session: false}),
   (req,res) => {
   const {errors , isValid} =validateQuestionInput(req.body);
-    let toStoreTag = req.body.tags;
+    let toStoreTag = req.body.tags,image=[];
     if(toStoreTag.endsWith(',')) {
       toStoreTag = toStoreTag.substr(0,toStoreTag.length-1);
     }
@@ -124,7 +151,7 @@ router.post('/ask',passport.authenticate('all',{session: false}),
     avatar: req.user.avatar,
     userId: req.user._id,
     user: req.user._id,
-    course:req.body.course
+    course:req.body.course,
   });
 
   newQuestion.save().then(question => res.json(question)).catch(err => res.json(errors));

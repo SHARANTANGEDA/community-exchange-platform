@@ -4,21 +4,34 @@ import { connect } from 'react-redux'
 import { askQuestion, getCourseCodes } from '../../actions/homeQuestionsActions'
 import classnames from 'classnames'
 import GetCourses from '../commonDashboard/GetCourses'
+// import addLinkPlugin from '../common/plugins/addLinkPlugin';
+// import BlockStyleToolbar, { getBlockStyle } from "../common/blockStyles/BlockStyleToolbar";
+import CKEditor from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+//import CreatableSelect from 'react-select/lib/Creatable'
+import Select from 'react-select'
+import CreatableSelect from 'react-select/lib/Creatable';
+
 
 class AskQuestions extends Component {
   constructor () {
     super()
     this.state = {
       title: '',
-      description: '',
-      tags: '',
+      description:'',
+      tags: null,
       course: 'Choose Course',
       errors: {}
 
     }
+    //
+    // this.plugins = [
+    //   addLinkPlugin
+    // ];
 
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
+    this.onTagsChange = this.onTagsChange.bind(this)
   }
 
   componentDidMount() {
@@ -32,6 +45,28 @@ class AskQuestions extends Component {
     }
 
   }
+  //
+  // handleKeyCommand = (command) => {
+  //   const newState = RichUtils.handleKeyCommand(this.state.editorState, command)
+  //   if (newState) {
+  //     this.onDescriptionChange(newState);
+  //     return 'handled';
+  //   }
+  //   return 'not-handled';
+  // }
+  // onUnderlineClick = () => {
+  //   this.onDescriptionChange(RichUtils.toggleInlineStyle(this.state.editorState, 'UNDERLINE'));
+  // }
+  // toggleBlockType = (blockType) => {
+  //   this.onDescriptionChange(RichUtils.toggleBlockType(this.state.editorState, blockType));
+  // };
+  // onBoldClick = () => {
+  //   this.onDescriptionChange(RichUtils.toggleInlineStyle(this.state.editorState, 'BOLD'))
+  // }
+  //
+  // onItalicClick = () => {
+  //   this.onDescriptionChange(RichUtils.toggleInlineStyle(this.state.editorState, 'ITALIC'))
+  // }
 
 
   onSubmit (e) {
@@ -47,7 +82,7 @@ class AskQuestions extends Component {
       course:this.state.course
     }
     this.props.askQuestion(newQuestion);
-    if(this.state.title==='' || this.state.description==='' || this.state.tags==='') {
+    if(this.state.title==='' || this.state.description==='' || this.state.tags===null) {
 
     }else {
       this.props.history.push('/dashboard');
@@ -57,10 +92,42 @@ class AskQuestions extends Component {
   onChange (e) {
     this.setState({ [e.target.name]: e.target.value })
   }
+  onTagsChange(e) {
+    console.log(e)
+    this.setState({tags: e})
+    console.log(this.state.tags)
+  }
+  onCourseChange (e) {
+    console.log(e)
+    this.setState({course: e})
+    console.log(this.state.tags)
+  }
+  // onDescriptionChange(e) {
+  //   this.setState({description:e})
+  // }
+  // onStrikeThroughClick = () => {
+  //   this.onChange(
+  //     RichUtils.toggleInlineStyle(this.state.editorState, "STRIKETHROUGH")
+  //   );
+  // };
+  // onAddLink = () => {
+  //   const editorState = this.state.editorState;
+  //   const selection = editorState.getSelection();
+  //   const link = window.prompt('Paste the link -')
+  //   if (!link) {
+  //     this.onChange(RichUtils.toggleLink(editorState, selection, null));
+  //     return 'handled';
+  //   }
+  //   const content = editorState.getCurrentContent();
+  //   const contentWithEntity = content.createEntity('LINK', 'MUTABLE', { url: link });
+  //   const newEditorState = EditorState.push(editorState, contentWithEntity, 'create-entity');
+  //   const entityKey = contentWithEntity.getLastCreatedEntityKey();
+  //   this.onDescriptionChange(RichUtils.toggleLink(newEditorState, selection, entityKey))
+  // }
   onClickDiscard(e) {
     this.setState({ title: '' })
     this.setState({ description: '' })
-    this.setState({ tags: '' })
+    this.setState({ tags: null })
     this.setState({ course: 'Choose Course' })
 
   }
@@ -69,16 +136,19 @@ class AskQuestions extends Component {
   render () {
     const { errors } = this.state;
     const { courses, loading } = this.props.courses;
-    let content;
+    const {tags,course} = this.state
+    let content=[],tagContent=[];
 
     if (courses === null || loading) {
-      content = null;
+      content = [];
+      tagContent = [];
     } else {
       let codes=courses.allCourses;
       console.log({codes:codes})
-      content = (
-        <GetCourses codes={codes}/>
-      )
+      codes.map(course => (
+        content.push({value: course,label: course})
+      ));
+
     }
     console.log("In Ask Question")
     return (
@@ -100,7 +170,7 @@ class AskQuestions extends Component {
                         </label>
                         <div className="fl1 ps-relative form-group">
                           <input name="title" type="text" maxLength="300" tabIndex="100"
-                                 placeholder="Be specific."
+                                 placeholder="Be Clear and don't write topic name"
                                  className={classnames("s-input js-ask-title h100 mt0 ask-title-field w-75 form-control",
                                    {'is-invalid':errors.title})}
                                   onChange={this.onChange} value={this.state.title}/>
@@ -115,28 +185,45 @@ class AskQuestions extends Component {
               </div>
             </div>
             <div id="post-editor" className="post-editor js-post-editor js-wz-element">
-              <div className="ps-relative w-75">
+              <div className="ps-relative w-75" style={{minHeight: '175px'}}>
                 <label className="s-label mb4 d-block w-100" htmlFor="wmd-input">
                   <h4>Body</h4>
                 </label>
-                <div className="wmd-container mb8 w-100 form-group">
-                    <textarea className={classnames("wmd-input js-wz-element s-input bar0 w-100 form-control"
-                      ,{'is-invalid':errors.description})} name="description"
-                              cols="90" rows="15" tabIndex="101" onChange={this.onChange}
-                              value={this.state.description} />
-                    {errors.description &&
-                    (<div className="invalid-feedback" >{errors.description}</div>)
-                    }
-                </div>
+
+                <CKEditor
+                  editor={ ClassicEditor }
+                  data={this.state.description}
+                  onChange={ ( event, editor ) => {
+                    const data = editor.getData();
+                    this.setState({description: data})
+                    console.log( { event, editor, data } );
+                  } }
+                  onBlur={ editor => {
+                    console.log( 'Blur.', editor );
+                  } }
+                  onFocus={ editor => {
+                    console.log( 'Focus.', editor );
+                  } }
+                />
+
+                {/*<div className="wmd-container mb8 w-100 form-group">*/}
+                {/*    <textarea className={classnames("wmd-input js-wz-element s-input bar0 w-100 form-control"*/}
+                {/*      ,{'is-invalid':errors.description})} name="description"*/}
+                {/*              cols="90" rows="15" tabIndex="101" onChange={this.onChange}*/}
+                {/*              value={this.state.description} />*/}
+                {/*    {errors.description &&*/}
+                {/*    (<div className="invalid-feedback" >{errors.description}</div>)*/}
+                {/*    }*/}
+                {/*</div>*/}
               </div>
             </div>
-            <div className="wrap-input100 input100-select form-group">
-              <select className={classnames("selection-2 form-control form-control-lg",{'is-invalid': errors.course})}
-                      name="course" value={this.state.course} onChange={this.onChange}>
-
-                <option>Choose Course</option>
-                {content}
-              </select>
+            <div className="form-group w-75" style={{marginTop: '10px'}}>
+              <label className="s-label mb4 d-block w-100" htmlFor="wmd-input">
+                <h4>Course</h4>
+              </label>
+              <Select options={content} className={classnames("isSearchable",{'is-invalid': errors.course})} placeholder="You can add it to a course..."
+                               name="course" value={course} onChange={this.onCourseChange}>
+              </Select>
               {errors.course && (
                 <div className="invalid-feedback">{errors.course}</div>
               )}
@@ -147,9 +234,12 @@ class AskQuestions extends Component {
                   <h4>Tags</h4>
                 </label>
                 <div className="ps-relative form-group">
-                  <input className={classnames("s-input box-border form-control",{'is-invalid':errors.tags})} name="tags" type="text"
-                         tabIndex="103" placeholder="Type Tags with separated commas" onChange={this.onChange}
-                         value={this.state.tags}/>
+                  {/*<input className={classnames("s-input box-border form-control",{'is-invalid':errors.tags})} name="tags" type="text"*/}
+                  {/*       tabIndex="103" placeholder="Type Tags with separated commas" onChange={this.onChange}*/}
+                  {/*       value={this.state.tags}/>*/}
+                  <CreatableSelect isMulti options={tagContent} className="isSearchable w-75" placeholder="select or create multiple tags"
+                           name="tags" value={tags} onChange={this.onTagsChange}>
+                  </CreatableSelect>
                   {errors.tags &&
                   (<div className="invalid-feedback" >{errors.tags}</div>)
                   }
@@ -170,7 +260,51 @@ class AskQuestions extends Component {
     )
   }
 }
+//
+// {/*<button onClick={this.onUnderlineClick}>U</button>*/}
+// {/*<button onClick={this.onBoldClick}><b>B</b></button>*/}
+// {/*<button onClick={this.onItalicClick}><em>I</em></button>*/}
+// {/*<button*/}
+// {/*  className="inline styleButton strikethrough"*/}
+// {/*  onClick={this.onStrikeThroughClick}*/}
+// {/*>*/}
+// {/*  abc*/}
+// {/*</button>*/}
+// {/*<button id="link_url" onClick={this.onAddLink} className="add-link">*/}
+// {/*  <i className="material-icons">attach_file</i>*/}
+// {/*</button>*/}
+// {/*<div style={{borderWidth: '5px', minHeight:'90px',borderColor: 'black'}}>/*/}
+// {/*  <BlockStyleToolbar*/}
+// {/*    editorState={this.state.editorState}*/}
+// {/*    onToggle={this.toggleBlockType}*/}
+// {/*  />*/}
+// {/*  <Editor editorState={this.state.description} onChange={this.onDescriptionChange}*/}
+// {/*          blockStyleFn={getBlockStyle}*/}
+// {/*          handleKeyCommand={this.handleKeyCommand}*/}
+// {/*          plugins={this.plugins} className='wmd-input js-wz-element s-input bar0 w-100 form-control'*/}
+// {/*          style={{borderWidth: '5px', minHeight:'90px',borderColor: 'black'}}/>\*/}
+// {/*</div>*/}
 
+// //TEMPLATE OF RICH TEXT
+// <CKEditor
+//   editor={ ClassicEditor }
+//   data={this.state.description}
+//   onInit={ editor => {
+//     // You can store the "editor" and use when it is needed.
+//     console.log( 'Editor is ready to use!', editor );
+//   } }
+//   onChange={ ( event, editor ) => {
+//     const data = editor.getData();
+//     this.setState({description: data})
+//     console.log( { event, editor, data } );
+//   } }
+//   onBlur={ editor => {
+//     console.log( 'Blur.', editor );
+//   } }
+//   onFocus={ editor => {
+//     console.log( 'Focus.', editor );
+//   } }
+// />
 AskQuestions.propTypes = {
   askQuestion: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,

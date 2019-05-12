@@ -13,6 +13,7 @@ const faculty = require('./routes/api/faculty');
 const hod = require('./routes/api/hod');
 const department = require('./routes/api/department')
 const google = require('./routes/api/google')
+const imageUpload=require('./routes/api/imageUpload')
 
 const path = require('path');
 
@@ -39,6 +40,8 @@ app.use('/api/admin',admin);
 app.use('/api/faculty',faculty);
 app.use('/api/hod',hod);
 app.use('/api/department',department)
+app.use('/api/imageUpload',imageUpload)
+app.use('/uploads',express.static('uploads'))
 
 
 
