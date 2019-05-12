@@ -43,6 +43,7 @@ div {
 
 .form-control::placeholder {
   color: #bbb !important;
+  color: #008dbb;
 }
 
 .input-group.md-form.form-sm.form-2 input {

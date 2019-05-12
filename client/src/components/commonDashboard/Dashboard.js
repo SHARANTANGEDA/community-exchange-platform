@@ -38,7 +38,6 @@ class Dashboard extends Component {
         } else {
           dashboardContent = (
             <div>
-              {/*<h1>Dashboard Loads</h1>*/}
               <QuestionsFeed questions={questions}/>
             </div>
           )
@@ -52,8 +51,10 @@ class Dashboard extends Component {
                   <div className="grid">
                     <p style={{color: 'white',background: 'green'}} className='btn w-100'>Your TA application is in progress</p>
                     <div className="row d-flex justify-content-between">
-                      <h1 className="grid--cell fl1 fs-headline1 text-center" style={{fontFamily: "Lobster",color: 'black',fontSize:'48px'}}> Recent Questions </h1>
-                      <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '150px'}} to="/askQuestion">Ask
+                      <h1 className="grid--cell fl1 fs-headline1 text-center" style={{fontFamily: "Lobster",
+                        color: 'black',fontSize:'48px'}}> Recent Questions </h1>
+                      <div className="pull-right" style={{minWidth: '250px'}}>
+                        <Link className="btn btn-primary btn-lg w-75" style={{minWidth: '150px'}} to="/askQuestion">Ask
                         Question</Link>
                       </div>
                     </div>
@@ -90,7 +91,6 @@ class Dashboard extends Component {
                   <div className="grid">
                     <div className="row d-flex justify-content-between">
                       <h1 className="grid--cell fl1 fs-headline1 text-center" style={{fontFamily: "Lobster",color: 'black',fontSize:'48px'}}> Recent Questions </h1>
-                      <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '250px',margin:'5px'}} to="/applyTA">Apply For TA</Link>
                       <div className="pull-right" style={{minWidth: '250px'}}><Link className="btn btn-primary btn-lg w-75" style={{minWidth: '250px',margin:'5px'}} to="/askQuestion">Ask
                         Question</Link>
                       </div>
@@ -104,7 +104,6 @@ class Dashboard extends Component {
                 </div>
               </div>
             </div>
-          </div>
           </div>
         )
       }

@@ -1,0 +1,7 @@
+organization=sharantangeda-github
+projectKey=SHARANTANGEDA_Ghot-Den
+serverUrl=https://sonarcloud.io
+serverVersion=7.8.0.23906
+dashboardUrl=https://sonarcloud.io/dashboard?id=SHARANTANGEDA_Ghot-Den
+ceTaskId=AWpPQYPuqgf9CEMuI-Ka
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWpPQYPuqgf9CEMuI-Ka

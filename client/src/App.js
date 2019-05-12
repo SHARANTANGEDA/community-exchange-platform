@@ -27,7 +27,6 @@ import AdminLogin from './components/authorization/login/AdminLogin'
 import FacultyLogin from './components/authorization/login/FacultyLogin'
 import HodLogin from './components/authorization/login/HodLogin'
 import AllCourses from './components/hod/AllCourses'
-import ApplyTA from './components/commonDashboard/ApplyTA'
 import AddCourse from './components/hod/AddCourse'
 import RegisterFaculty from './components/authorization/Register/RegisterFaculty'
 import AddDepartment from './components/admin/AddDepartment'
@@ -63,7 +62,7 @@ class App extends Component {
         <NavBar/>
         <Route exact path="/" component={Landing}/>
         <div className="wrapper" >
-        <Sidebar/>
+        <Route component={Sidebar}/>
 
         <div className="container">
           <Route exact path="/register" component={Register} />
@@ -98,9 +97,6 @@ class App extends Component {
             </Switch>
           <Switch>
             <PrivateRoute exact path='/allCourses' component={AllCourses}/>
-          </Switch>
-          <Switch>
-            <PrivateRoute exact path='/applyTA' component={ApplyTA}/>
           </Switch>
           <Switch>
             <PrivateRoute exact path='/addCourse' component={AddCourse}/>
