@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import GetCourses from '../commonDashboard/GetCourses'
 import { applyTA, getCourseCodes } from '../../actions/homeQuestionsActions'
-import classnames from 'classnames'
 import Select from 'react-select';
 
 class Sidebar extends Component {
@@ -110,7 +108,9 @@ class Sidebar extends Component {
                   <span className="focus-input100"/>
                   <div className="form-group">
                     <div className="col-xs-12 text-center">
-                      <button className="btn btn-primary w-30 my-1" type="submit" style={{background: 'white', color:'#008dbb',borderRadius:'10px'}}>Send Application</button>
+                      <button className="btn btn-primary w-30 my-1" type="submit"
+                              style={{background: 'white', color:'#008dbb',borderRadius:'10px'}}>
+                        Send Application</button>
                     </div>
                   </div>
                 </form>

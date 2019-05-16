@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
 import { addAnswer } from '../../actions/homeQuestionsActions'
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
+import CKEditor from '@ckeditor/ckeditor5-react'
 
 class AnswerForm extends Component {
   constructor() {
@@ -58,13 +60,25 @@ class AnswerForm extends Component {
           <h3 className="card-title"><b>Post your Answer Here</b></h3>
           <div className="row">
             <div className="col-md-12 form-group">
-              <textarea
-                className={
-                  classnames(
-                    " form-control form-control-lg  mt-1 d-flex flex-grow-1 w-100"
-                    ,{'is-invalid':errors.text})}
-                name="text" cols="90" rows="10" tabIndex="101"
-                placeholder="Write Your Answer Here" value={this.state.text} onChange={this.onChange}/>
+              {/*<textarea*/}
+              {/*  className={*/}
+              {/*    classnames(*/}
+              {/*      " form-control form-control-lg  mt-1 d-flex flex-grow-1 w-100"*/}
+              {/*      ,{'is-invalid':errors.text})}*/}
+              {/*  name="text" cols="90" rows="10" tabIndex="101"*/}
+              {/*  placeholder="Write Your Answer Here" value={this.state.text} onChange={this.onChange}/>*/}
+              <CKEditor
+                editor={ ClassicEditor }
+                data={this.state.text}
+                onChange={ ( event, editor ) => {
+                  const data = editor.getData();
+                  this.setState({text: data})
+                  console.log( { event, editor, data } );
+                } }
+                config={{
+                  fontColor: 'black'
+                }}
+              />
               {errors.text &&
               (<div className="invalid-feedback" >{errors.text}</div>)
               }

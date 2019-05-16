@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92c3f002-70e8-4ff8-9b74-7304e267b2f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/common/blockStyles/BlockStyleButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/common/blockStyles/BlockStyleToolbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/common/blockStyles/HeaderStyleDropdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/common/plugins/addLinkPlugin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/api/imageUpload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/sharan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/sharan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/AskQuestion/AskQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AskQuestion/AskQuestions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/common/ContactUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/common/ContactUs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/AnswerForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/AnswerForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/CommentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/CommentForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,80 +26,84 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Question.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/AskQuestion/AskQuestions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2100">
-              <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/imageUpload.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="805">
-              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="670">
-              <caret line="143" selection-start-line="143" selection-end-line="143" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/department.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1505">
-              <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/layout/Sidebar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1505">
-              <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
+            <state relative-caret-position="6078">
+              <caret line="205" column="18" lean-forward="true" selection-start-line="194" selection-start-column="16" selection-end-line="205" selection-end-column="18" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#445#494#0" expanded="true" />
+                <element signature="e#617#650#0" expanded="true" />
+                <element signature="e#1459#1461#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/layout/NavBar.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+            <state relative-caret-position="665">
+              <caret line="126" column="114" selection-start-line="126" selection-start-column="114" selection-end-line="126" selection-end-column="114" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/components/AskQuestion/AskQuestions.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/CommentForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2175">
-              <caret line="104" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="690">
+              <caret line="68" column="62" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerFeed.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="76" column="47" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/App.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2660">
+              <caret line="76" column="12" lean-forward="true" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
-                <element signature="e#445#494#0" expanded="true" />
-                <element signature="e#617#650#0" expanded="true" />
-                <element signature="e#3053#3080#0" />
-                <element signature="e#10162#10164#0" />
-                <element signature="e#11312#11338#0" />
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/AnswerForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="74" column="45" lean-forward="true" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -112,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state relative-caret-position="245">
+              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -139,10 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>comment-body</find>
-      <find>js-wz-element</find>
-      <find>wmd-input</find>
-      <find>bar0</find>
       <find>filter</find>
       <find>viewCourse</find>
       <find>course</find>
@@ -169,6 +164,10 @@
       <find>recent</find>
       <find>classnames</find>
       <find>EditorState</find>
+      <find>link</find>
+      <find>Link</find>
+      <find>para</find>
+      <find>border</find>
     </findStrings>
     <replaceStrings>
       <replace>black</replace>
@@ -184,10 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Typography/Danger.js" />
-        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/CustomButtons/Button.js" />
-        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Snackbar/Snackbar.js" />
-        <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Snackbar/SnackbarContent.js" />
         <option value="$PROJECT_DIR$/client/src/components/admin/adminComponents/Card/CardFooter.js" />
         <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/tooltipStyle.jsx" />
         <option value="$PROJECT_DIR$/client/src/components/admin/adminAssets/jss/material-dashboard-react/checkboxAdnRadioStyle.jsx" />
@@ -218,10 +213,7 @@
         <option value="$PROJECT_DIR$/routes/api/admin.js" />
         <option value="$PROJECT_DIR$/validations/emailValidation/is-admin-email.js" />
         <option value="$PROJECT_DIR$/client/src/components/commonDashboard/ApplyTA.js" />
-        <option value="$PROJECT_DIR$/client/package.json" />
-        <option value="$PROJECT_DIR$/client/src/App.css" />
         <option value="$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js" />
-        <option value="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" />
         <option value="$PROJECT_DIR$/client/src/App.js" />
         <option value="$PROJECT_DIR$/client/src/components/layout/NavBar.js" />
         <option value="$PROJECT_DIR$/client/src/components/common/ContactUs.js" />
@@ -234,7 +226,14 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/routes/api/imageUpload.js" />
         <option value="$PROJECT_DIR$/routes/api/questions.js" />
+        <option value="$PROJECT_DIR$/client/src/components/layout/Sidebar.js" />
+        <option value="$PROJECT_DIR$/client/package.json" />
         <option value="$PROJECT_DIR$/client/src/components/AskQuestion/AskQuestions.js" />
+        <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/AnswerForm.js" />
+        <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js" />
+        <option value="$PROJECT_DIR$/client/src/App.css" />
+        <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js" />
+        <option value="$PROJECT_DIR$/client/src/components/SingleQuestion/CommentForm.js" />
       </list>
     </option>
   </component>
@@ -314,6 +313,22 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="QuestionGet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ghotdenfinal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="SingleQuestion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ghotdenfinal" type="b2602c69:ProjectViewProjectNode" />
@@ -512,14 +527,9 @@
       <workItem from="1557584223846" duration="651000" />
       <workItem from="1557588003069" duration="706000" />
       <workItem from="1557624345665" duration="28669000" />
-      <workItem from="1557675516914" duration="674000" />
-    </task>
-    <task id="LOCAL-00065" summary="#Added registration for faculty&#10;#Changed target routes of few buttons">
-      <created>1554521475289</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1554521475289</updated>
+      <workItem from="1557675516914" duration="825000" />
+      <workItem from="1557709639161" duration="7254000" />
+      <workItem from="1558019146401" duration="3381000" />
     </task>
     <task id="LOCAL-00066" summary="#Added Assign TA option&#10;#Except faculty home all pages are done">
       <created>1554533992754</created>
@@ -857,11 +867,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557636875708</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="#Added Rich Text Formatting&#10;#Changed Tags complex input style to simple&#10; customizable Cool dropdown&#10;#Changed menu style for course also">
+      <created>1557679862853</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1557679862856</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="685875000" />
+    <option name="totallyTimeSpent" value="696661000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -887,11 +904,11 @@
       <window_info anchor="bottom" id="TODO" order="5" weight="0.3299435" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3299435" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980523" weight="0.39173013" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980523" weight="0.4178455" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50361717" side_tool="true" weight="0.31751412" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3299435" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.3299435" />
-      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.49638286" weight="0.15560392" />
+      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.49638286" visible="true" weight="0.04134929" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -953,7 +970,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#Completed reputation" />
     <MESSAGE value="#Fixed bug and updated model in get questions" />
     <MESSAGE value="#Fixed add department bug and added all departments page for admin" />
     <MESSAGE value="#Fixed all bugs except TA application page" />
@@ -978,64 +994,10 @@
     <MESSAGE value="#CHANGED UI OF ADMIN DASHBOARD&#10;#RE-SCALED GRAPH &#10;#FINAL PUSH FOR PROJECT SPRINT-3" />
     <MESSAGE value="#FINAL PUSH FOR PROJECT SPRINT-3&#10;#Added rohan,dheeraj, SE prof admin accounts" />
     <MESSAGE value="#Removed Apply TA page and added option in option in side bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Removed Apply TA page and added option in option in side bar" />
+    <MESSAGE value="#Added Rich Text Formatting&#10;#Changed Tags complex input style to simple&#10; customizable Cool dropdown&#10;#Changed menu style for course also" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Added Rich Text Formatting&#10;#Changed Tags complex input style to simple&#10; customizable Cool dropdown&#10;#Changed menu style for course also" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/actions/facultyActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/faculty/TAApplications.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/hod/ViewCourse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/authActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Users/AllUsers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/hod/AddCourse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/MyAccount/ChangePassword.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/MyAccount/MyAccount.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35">
@@ -1183,13 +1145,6 @@
     <entry file="file://$PROJECT_DIR$/client/src/index.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="45" column="16" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/commonDashboard/Dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="910">
@@ -1293,20 +1248,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/department.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1505">
           <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/layout/Sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1505">
-          <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1317,10 +1265,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5740">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/layout/Sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3745">
+          <caret line="112" column="24" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/QuestionGet/QuestionItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="245">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1331,28 +1314,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/department.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/questions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/AskQuestion/AskQuestions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2175">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="6078">
+          <caret line="205" column="18" lean-forward="true" selection-start-line="194" selection-start-column="16" selection-end-line="205" selection-end-column="18" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
             <element signature="e#445#494#0" expanded="true" />
             <element signature="e#617#650#0" expanded="true" />
-            <element signature="e#3053#3080#0" />
-            <element signature="e#10162#10164#0" />
-            <element signature="e#11312#11338#0" />
+            <element signature="e#1459#1461#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/AnswerForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="74" column="45" lean-forward="true" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerFeed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2660">
+          <caret line="76" column="12" lean-forward="true" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ShowAnswers/AnswerDisplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="76" column="47" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/ViewQuestion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="126" column="114" selection-start-line="126" selection-start-column="114" selection-end-line="126" selection-end-column="114" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/SingleQuestion/CommentForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="68" column="62" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
         </state>
       </provider>
     </entry>

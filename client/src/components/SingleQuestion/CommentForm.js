@@ -54,7 +54,7 @@ class CommentForm extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <div className="row">
+        <div className="row w-100">
           <div className="col-lg-12 form-group">
             <textarea
               className=
@@ -66,8 +66,9 @@ class CommentForm extends Component {
             (<div className="invalid-feedback" >{errors.text}</div>)
             }
           </div>
-          <div className="col-md-12">
-            <button className="btn btn-primary w-70 my-2 px-4" type="submit">Post</button></div>
+          <div className="col-md-12 d-flex justify-content-end">
+            <button className="btn btn-primary w-70 my-2 px-4 "
+                    type="submit">Post</button></div>
         </div>
       </form>
     );

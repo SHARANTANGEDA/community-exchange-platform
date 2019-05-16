@@ -13,14 +13,15 @@ import Select from 'react-select'
 import CreatableSelect from 'react-select/lib/Creatable';
 
 
+
 class AskQuestions extends Component {
   constructor () {
     super()
     this.state = {
       title: '',
       description:'',
-      tags: null,
-      course: 'Choose Course',
+      tags: '',
+      course: null,
       errors: {}
 
     }
@@ -32,6 +33,7 @@ class AskQuestions extends Component {
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
     this.onTagsChange = this.onTagsChange.bind(this)
+    this.onCourseChange = this.onCourseChange.bind(this)
   }
 
   componentDidMount() {
@@ -79,7 +81,7 @@ class AskQuestions extends Component {
       firstName: user.firstName,
       lastName: user.lastName,
       avatar: user.avatar,
-      course:this.state.course
+      course:this.state.course.value
     }
     this.props.askQuestion(newQuestion);
     if(this.state.title==='' || this.state.description==='' || this.state.tags===null) {
@@ -98,7 +100,7 @@ class AskQuestions extends Component {
     console.log(this.state.tags)
   }
   onCourseChange (e) {
-    console.log(e)
+    console.log({course:e})
     this.setState({course: e})
     console.log(this.state.tags)
   }
@@ -198,12 +200,9 @@ class AskQuestions extends Component {
                     this.setState({description: data})
                     console.log( { event, editor, data } );
                   } }
-                  onBlur={ editor => {
-                    console.log( 'Blur.', editor );
-                  } }
-                  onFocus={ editor => {
-                    console.log( 'Focus.', editor );
-                  } }
+                  config={{
+                    fontColor: 'black'
+                  }}
                 />
 
                 {/*<div className="wmd-container mb8 w-100 form-group">*/}
@@ -221,7 +220,8 @@ class AskQuestions extends Component {
               <label className="s-label mb4 d-block w-100" htmlFor="wmd-input">
                 <h4>Course</h4>
               </label>
-              <Select options={content} className={classnames("isSearchable",{'is-invalid': errors.course})} placeholder="You can add it to a course..."
+              <Select options={content} className={classnames("isSearchable",{'is-invalid': errors.course})}
+                      placeholder="You can add it to a course..."
                                name="course" value={course} onChange={this.onCourseChange}>
               </Select>
               {errors.course && (
@@ -234,12 +234,13 @@ class AskQuestions extends Component {
                   <h4>Tags</h4>
                 </label>
                 <div className="ps-relative form-group">
-                  {/*<input className={classnames("s-input box-border form-control",{'is-invalid':errors.tags})} name="tags" type="text"*/}
-                  {/*       tabIndex="103" placeholder="Type Tags with separated commas" onChange={this.onChange}*/}
-                  {/*       value={this.state.tags}/>*/}
-                  <CreatableSelect isMulti options={tagContent} className="isSearchable w-75" placeholder="select or create multiple tags"
-                           name="tags" value={tags} onChange={this.onTagsChange}>
-                  </CreatableSelect>
+                  <input className={classnames("s-input box-border form-control",{'is-invalid':errors.tags})} name="tags" type="text"
+                         tabIndex="103" placeholder="Type Tags with separated commas" onChange={this.onChange}
+                         value={this.state.tags}/>
+                  {/*<CreatableSelect isMulti options={tagContent} className={classnames("isSearchable w-75",*/}
+                  {/*  {'is-invalid': errors.course})} placeholder="select or create multiple tags"*/}
+                  {/*         name="tags" value={tags} onChange={this.onTagsChange}>*/}
+                  {/*</CreatableSelect>*/}
                   {errors.tags &&
                   (<div className="invalid-feedback" >{errors.tags}</div>)
                   }

@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 import CommentFeed from '../ShowComments/CommentFeed'
 import AnswerCommentForm from './AnswerCommentForm'
 import { downVoteAnswer, upVoteAnswer } from '../../../actions/homeQuestionsActions'
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
+import CKEditor from '@ckeditor/ckeditor5-react'
 
 class AnswerDisplay extends Component {
   constructor () {
@@ -50,7 +52,15 @@ class AnswerDisplay extends Component {
               </div>
               <div className="col-md-10 flex-grow-1 d-flex">
                 <div className="col-md-12 h-25 d-flex flex-grow-1" style={{ minHeight: '50%' }}>
-                  <p className="d-flex flex-grow-1 h-50 ">{answer.text}</p>
+                  {/*<p className="d-flex flex-grow-1 h-50 ">{answer.text}</p>*/}
+                  <CKEditor
+                    editor={ ClassicEditor}
+                    data={answer.text}
+                    disabled={true}
+                    config={{
+                      removePlugins: 'Heading,Link,bold,italic,bulletedList,numberedList,blockQuote',
+                    }}
+                  />
                 </div>
               </div>
             </div>
@@ -58,13 +68,14 @@ class AnswerDisplay extends Component {
               <div className="col-md-12">
                 <div className="user-details d-flex justify-content-end">
                   <Link to={`/publicProfile/${answer.userId}`}
-                        style={{ textShadow: '0px 0px 1px #0000ff', fontSize: '24' }}
+                        style={{ fontSize: '24', color: 'blue'}}
                         className="d-inline-flex flex-grow-1 align-items-end justify-content-end">
                     <img className="rounded-circle" style={{width: '25px',marginRight:'5px'}} alt=''
                          src={answer.avatar}/>{name}</Link>
                 </div>
-                <div className="user-action-time d-flex justify-content-end align-items-center"> answered <span
-                  title="2010-04-21 14:28:45Z"
+                <div className="user-action-time d-flex justify-content-end align-items-center"
+                     style={{fontSize: '10px'}}> answered <span
+                  title="2010-04-21 14:28:45Z" style={{fontSize: '10px'}}
                   className="relativeTime m-1 d-inline-flex flex-grow-0">at {new Date(answer.time).toLocaleString()}</span>
                 </div>
               </div>
